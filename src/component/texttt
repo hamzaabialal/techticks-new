@@ -1,0 +1,19 @@
+<div className='corr-glass-card corr-results-section'>
+								<h4>{activeService.resultsTitle}</h4>
+								<p className='corr-results-sub'>
+									{activeService.resultsSub}
+								</p>
+								<div className='corr-results-grid'>
+									<div className='corr-result-img1'></div>
+									<div className='corr-result-img2'></div>
+								</div>
+								<div className='corr-action-footer'>
+									<button className='corr-view-btn'>
+										View All Projects{' '}
+										<img
+											src={rightarrow}
+											alt=''
+										/>
+									</button>
+								</div>
+							</div>

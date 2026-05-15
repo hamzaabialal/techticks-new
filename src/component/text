@@ -1,0 +1,78 @@
+import { useEffect, useRef } from 'react'
+import { FaTwitter } from 'react-icons/fa'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const Testimonials = ({ testimonials }) => {
+	const testimonialsRowRef = useRef(null)
+
+	useEffect(() => {
+		const row = testimonialsRowRef.current
+		const cards = row.children
+		const totalCards = cards.length
+
+		gsap.to(row, {
+			xPercent: -100 * (totalCards - 1),
+			ease: 'none',
+			scrollTrigger: {
+				trigger: row,
+				pin: true, // Pin the section while scrolling
+				scrub: true, // Smooth scrubbing
+				end: () => `+=${row.scrollWidth}`, // Scroll distance = total width of cards
+			},
+		})
+	}, [])
+
+	return (
+		<section
+			id='Testimonials'
+			className='testimonials-section'>
+			<div className='testimonials-container'>
+				<div className='text-center mb-5'>
+					<h2 className='title'>Our Testimonials</h2>
+					<p className='subtitle'>
+						Don't just take our word for it; hear what our satisfied
+						clients have to say about their experience with DigitX.
+					</p>
+				</div>
+
+				<div
+					className='testimonials-row'
+					ref={testimonialsRowRef}>
+					{testimonials.map((item, index) => (
+						<div
+							key={index}
+							className='col-lg-4 col-md-6 testimonial-wrapper'
+							style={{ animationDelay: `${index * 0.2}s` }}>
+							<div className='testimonial-card'>
+								<div className='icon'>
+									<FaTwitter />
+								</div>
+								<p className='text'>{item.text}</p>
+								<div className='user'>
+									<img
+										src={item.img}
+										alt={item.name}
+									/>
+									<div>
+										<h6>{item.title}</h6>
+										<span>{item.subtitle}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	)
+}
+
+export default Testimonials
+
+
+
+/**          testonomialll code */
+
