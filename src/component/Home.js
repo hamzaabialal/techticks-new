@@ -1,9 +1,5 @@
-import { useState, useLayoutEffect, useRef } from 'react'
-import { useEffect } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useState } from 'react'
 import EnhancedParticlesLikeSpline from '../component/SplineBackground'
-
 import ourWork1 from '../component/images/ourWork1.png'
 import ourWork2 from '../component/images/ourWork2.png'
 import picture1 from '../component/images/slideriImages/Group 319.png'
@@ -28,6 +24,7 @@ import picture19 from '../component/images/slideriImages/Group 320.png'
 import picture20 from '../component/images/slideriImages/Group 321.png'
 import picture21 from '../component/images/slideriImages/Group 322.png'
 import Slider from '../slider'
+import frameIcon from '../component/images/Frame.png'
 import CtaCard from './Cta-card'
 
 import {
@@ -43,20 +40,17 @@ import {
 	FaChevronUp,
 } from 'react-icons/fa'
 
-import { Activity, Globe, Code } from 'lucide-react'
-import { FaReact } from 'react-icons/fa'
-import { BsLaptop } from 'react-icons/bs'
-import { FaMobileScreen } from 'react-icons/fa6'
-import { PiFolderLockFill, PiCellTowerDuotone } from 'react-icons/pi'
+import { Chrome, Code2, Hourglass } from 'lucide-react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { GoFileDirectory } from 'react-icons/go'
+import { LuRadioTower } from 'react-icons/lu'
+import { BsLaptop, BsPhone } from 'react-icons/bs'
 import Testimonials from './testonomial'
 import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
-gsap.registerPlugin(ScrollTrigger)
 
 function Home() {
 	const navigate = useNavigate()
-
 	const faqData = [
 		{
 			question: 'What types of businesses do you work with?',
@@ -74,49 +68,11 @@ function Home() {
 		// You can add more items
 	]
 
-	const [openIndex, setOpenIndex] = useState(null)
+	const [openIndex, setOpenIndex] = useState(0)
 
 	const toggleFAQ = (index) => {
 		setOpenIndex(openIndex === index ? null : index)
 	}
-	const containerRef = useRef(null)
-	const cardsRef = useRef(null)
-
-	useLayoutEffect(() => {
-		const cards = gsap.utils.toArray('.s-card')
-		const totalCards = cards.length
-
-		if (totalCards === 0 || !containerRef.current) return
-
-		const ctx = gsap.context(() => {
-			gsap.to(cardsRef.current, {
-				x: () => -(cardsRef.current.scrollWidth - window.innerWidth),
-				ease: 'none',
-				scrollTrigger: {
-					trigger: containerRef.current,
-					start: 'top top',
-					end: () =>
-						`+=${cardsRef.current.scrollWidth - window.innerWidth}`,
-					scrub: 1.5,
-					pin: true,
-					pinSpacing: true,
-					anticipatePin: 1,
-					invalidateOnRefresh: true,
-
-					snap: {
-						snapTo: 1 / (totalCards - 1),
-						duration: { min: 0.3, max: 0.8 },
-						ease: 'power1.out',
-					},
-
-					markers: false,
-				},
-			})
-		}, containerRef)
-
-		return () => ctx.revert()
-	}, [])
-
 	const sendEmail = (e) => {
 		e.preventDefault()
 
@@ -143,7 +99,7 @@ function Home() {
 			})
 	}
 	return (
-		<div>
+		<div className='home-layout'>
 			<section
 				id='Home'
 				className='home-page'>
@@ -625,57 +581,34 @@ function Home() {
 				{' '}
 				<div
 					id='Service'
-					className='servSection'
-					style={{ paddingBottom: '200px' }}>
-					<div className='servHeading'>
-						<h1>
-							We’re here to simplify
-							<br /> technology for every
-							<br /> business.
-						</h1>
-						<p>
-							Expend your reach and connect with customers online.
-						</p>
+					className='service-figma'>
+					<div className='service-figma-copy'>
+						<h1>We’re here to simplify technology for every business.</h1>
+						<p>Expend your reach and connect with customers online.</p>
 					</div>
-					<div className='servBlock'>
-						<div
-							className='servBlockOne'
-							id='serBlockBottom'>
-							<div className='subServBlockOne'>
-								<h3>Built to Scale</h3>
-								<p>
-									Grow today, upgrade <br />
-									tomorrow.
-								</p>
-							</div>
-							<div className='subServBlockOne'>
-								<h3>Quality, Every Time</h3>
-								<p>
-									Fast delivery. Zero <br />
-									shortcuts.
-								</p>
-							</div>
+
+					<div className='service-figma-grid'>
+						<span className='service-line service-line-mid'></span>
+						<span className='service-line service-line-center'></span>
+						<span className='service-line service-line-left-lower'></span>
+						<span className='service-line service-line-bottom'></span>
+
+						<div className='service-figma-item'>
+							<h3>Built to Scale</h3>
+							<p>Grow today, upgrade tomorrow.</p>
 						</div>
-						<div className='servBlockOne'>
-							<div className='subServBlockOne'>
-								<h3>Support That Stays</h3>
-								<p>
-									We’re here long after <br />
-									launch.
-								</p>
-							</div>
-							<div className='subServBlockOne'>
-								<h3>Efficiency Obsessed</h3>
-								<p>
-									Less chaos, more <br />
-									results.
-								</p>
-							</div>
+						<div className='service-figma-item'>
+							<h3>Quality, Every Time</h3>
+							<p>Fast delivery. Zero shortcuts.</p>
 						</div>
-						<div className='lines lineone'></div>
-						<div className='lines linetwo'></div>
-						<div className='lines linethree'></div>
-						<div className='lines linefour'></div>
+						<div className='service-figma-item'>
+							<h3>Support That Stays</h3>
+							<p>We’re here long after launch.</p>
+						</div>
+						<div className='service-figma-item'>
+							<h3>Efficiency Obsessed</h3>
+							<p>Less chaos, more results.</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -684,8 +617,7 @@ function Home() {
 
 			<section
 				id='Testonomials'
-				className='services-section'
-				ref={containerRef}>
+				className='services-section'>
 				{/* Heading Bahar rakho - yeh pin nahi hoga */}
 				<div className='text-center mb-12'>
 					<h2 className='title'>Our Services</h2>
@@ -694,16 +626,12 @@ function Home() {
 					</p>
 				</div>
 
-				<div
-					className='horizontal-wrapper'
-					ref={containerRef}>
-					<div
-						className='s-cards'
-						ref={cardsRef}>
+				<div className='horizontal-wrapper'>
+					<div className='s-cards'>
 						{/* Card 1 */}
 						<div className='s-card'>
 							<div className='s-icon '>
-								<Activity />
+								<img src={frameIcon} alt='design icon' style={{ width: '32px', height: '32px' }} />
 							</div>
 
 							<div className='s-card-content'>
@@ -719,7 +647,7 @@ function Home() {
 						{/**card-2 */}
 						<div className='s-card'>
 							<div className='s-icon '>
-								<Globe />
+								<Chrome />
 							</div>
 
 							<div className='s-card-content'>
@@ -735,7 +663,7 @@ function Home() {
 						{/**card-3 */}
 						<div className='s-card'>
 							<div className='s-icon '>
-								<Code />
+								<Code2 />
 							</div>
 
 							<div className='s-card-content'>
@@ -751,7 +679,7 @@ function Home() {
 						{/**card-4 */}
 						<div className='s-card'>
 							<div className='s-icon '>
-								<FaReact />
+								<Hourglass />
 							</div>
 
 							<div className='s-card-content'>
@@ -783,7 +711,7 @@ function Home() {
 						{/**card-6 */}
 						<div className='s-card'>
 							<div className='s-icon '>
-								<FaMobileScreen />
+							<BsPhone />
 							</div>
 
 							<div className='s-card-content'>
@@ -799,11 +727,11 @@ function Home() {
 						{/**card-7 */}
 						<div className='s-card'>
 							<div className='s-icon '>
-								<PiFolderLockFill />
+								 <GoFileDirectory /> 
 							</div>
 
 							<div className='s-card-content'>
-								<h5> MIGRATIONT</h5>
+								<h5> MIGRATION</h5>
 								<p className='s-text'>
 									We handle smooth website and ecommerce
 									migrations while preserving data,
@@ -814,7 +742,7 @@ function Home() {
 						{/**card-8 */}
 						<div className='s-card'>
 							<div className='s-icon '>
-								<PiCellTowerDuotone />
+								<LuRadioTower />
 							</div>
 
 							<div className='s-card-content'>
@@ -835,7 +763,7 @@ function Home() {
 						href='/Services'
 						rel='noopener noreferrer'>
 						{' '}
-						<button className='s-btn'>Show all Services</button>
+						<button className='s-btn'>Show all services</button>
 					</a>
 				</div>
 			</section>
@@ -848,10 +776,8 @@ function Home() {
 					className='why-choose-us bg'>
 					<div className='gradient-bg'></div>
 
-					<div className='container-lg  px-lg-0'>
-						<div className='row all min-vh-100 '>
-							{/* Left Side - Title */}
-							<div className='col-lg-5 mb-5 mb-lg-0'>
+					<div className='why-choose-frame'>
+						<div className='why-choose-copy'>
 								<h1 className='title-main'>Why Choose Us?</h1>
 								<p className='subtitle-main'>
 									Expend your reach and connect with customers
@@ -859,8 +785,6 @@ function Home() {
 								</p>
 							</div>
 
-							{/* Right Side - 3 Hardcoded Cards */}
-							<div className='col-lg-7'>
 								<div className='cards-wrapper'>
 									{/* Card 1 */}
 									<div
@@ -905,8 +829,6 @@ function Home() {
 										</p>
 									</div>
 								</div>
-							</div>
-						</div>
 					</div>
 				</section>
 			</section>
@@ -923,10 +845,10 @@ function Home() {
 					<p>
 						Witness the brilliance of our previous projects. Our
 						portfolio showcases the successful{' '}
-						<br class='d-none d-md-block' />
+						<br className='d-none d-md-block' />
 						collaborations we've had with diverse clients across
 						various industries. Let our work speak
-						<br class='d-none d-md-block' />
+						<br className='d-none d-md-block' />
 						for itself.
 					</p>
 				</div>
@@ -935,26 +857,18 @@ function Home() {
 						<div className='subWork'>
 							<div className='workImageBtn'>
 								<img
-									src={ourWork1}
+									src={ourWork2}
 									alt=''
 									className='workImage'
 								/>
-								<button className='work-btn gradient-btn'>
-									View Projects Details
-								</button>
 							</div>
 							<div className='workDetails'>
-								<h1>Innovative E-commerce Platform</h1>
-								<div className='cat-date'>
-									<h3>Category: Web Development.</h3>
-									<h3>January 2022</h3>
-								</div>
+								<h1>Amazon PPC & Account Growth Case Study</h1>
 								<p>
-									Witness our groundbreaking e-commerce
-									platform that seamlessly connects buyers and
-									sellers worldwide. With an intuitive user
-									interface and secure payment gateways, this
-									project revolutionizes online shopping.
+									Strategically scaled a Home & Kitchen brand
+									to $528K in 30 days through data-driven PPC
+									optimization, strong organic ranking, and
+									efficient ACOS/TACOS management.
 								</p>
 							</div>
 						</div>
@@ -963,26 +877,17 @@ function Home() {
 						<div className='subWork'>
 							<div className='workImageBtn'>
 								<img
-									src={ourWork2}
+									src={ourWork1}
 									alt=''
 									className='workImage'
 								/>
-								<button className='work-btn gradient-btn'>
-									View Projects Details
-								</button>
 							</div>
 							<div className='workDetails'>
-								<h1>Mobile App for Enhanced Fitness</h1>
-								<div className='cat-date'>
-									<h3>Category: Mobile App Development.</h3>
-									<h3>March 2022</h3>
-								</div>
+								<h1>Amazon PPC A/B Testing</h1>
 								<p>
-									Our fitness app helps users stay fit and
-									motivated with personalized workout plans
-									and progress tracking. Its user-friendly
-									design and comprehensive features make
-									staying healthy an enjoyable experience.
+									Ran strategic bid, copy, and placement tests
+									to reduce ACOS from 24.5% to 19.8% and scale
+									campaigns more profitably.
 								</p>
 							</div>
 						</div>

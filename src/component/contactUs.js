@@ -27,12 +27,12 @@ function ContactUs() {
 				'_OkziMgM7xZC51NDs',
 			)
 			.then(() => {
-				alert('Message sent successfully ✅')
+				alert('Message sent successfully')
 				e.target.reset()
 			})
 			.catch((error) => {
 				console.log(error)
-				alert('Failed ❌')
+				alert('Failed')
 			})
 	}
 	return (
@@ -55,8 +55,8 @@ function ContactUs() {
 					<div className='about'>
 						<div className='heading amazon-heading'>
 							<h1>
-								<span>Contact Us —</span>
-								<span>Let’s</span>
+								<span>Contact Us -</span>
+								<span>Let's</span>
 								<span>Build</span>
 								<span>Something</span>
 								<span>Great</span>
@@ -66,7 +66,7 @@ function ContactUs() {
 							<p>
 								Have a project in mind or need help with your
 								business? Our team is ready to assist you. Reach
-								out and we’ll get back to you quickly.
+								out and we'll get back to you quickly.
 							</p>
 						</div>
 					</div>
@@ -77,7 +77,7 @@ function ContactUs() {
 									.getElementById('contact-p-right')
 									.scrollIntoView({ behavior: 'smooth' })
 							}}>
-							Send Meassage
+							Send Message
 						</button>
 					</div>
 				</div>

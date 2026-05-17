@@ -1,112 +1,141 @@
-import { useRef, useMemo } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import * as THREE from 'three'
-function SideTinyStars({ count = 2500 }) {
-	const ref = useRef()
-	const targetMouse = useRef(new THREE.Vector3())
-	const isHovering = useRef(false)
+import { useEffect, useRef } from 'react'
 
-	// store base positions separately (important)
-	const basePositions = useMemo(() => {
-		const arr = new Float32Array(count * 3)
+export default function SideTinyStarsBg() {
+	const canvasRef = useRef(null)
 
-		for (let i = 0; i < count; i++) {
-			arr[i * 3] = (Math.random() - 0.5) * 30 // full width
-			arr[i * 3 + 1] = (Math.random() - 0.5) * 18 // full height
-			arr[i * 3 + 2] = (Math.random() - 0.5) * 20 // depth
-		}
-		return arr
-	}, [count])
+	useEffect(() => {
+		const canvas = canvasRef.current
+		if (!canvas) return
 
-	const positions = useMemo(
-		() => new Float32Array(basePositions),
-		[basePositions],
-	)
+		const ctx = canvas.getContext('2d')
+		let animationId
+		let particles = []
 
-	useFrame((state) => {
-		if (!ref.current) return
-		const { clock, pointer } = state
-		const t = clock.getElapsedTime()
-		const posArray = ref.current.geometry.attributes.position.array
+		const createParticles = () => {
+			const rect = canvas.getBoundingClientRect()
+			const dpr = window.devicePixelRatio || 1
 
-		// 🌫️ soft floating movement (NO rotation)
-		for (let i = 0; i < count; i++) {
-			const ix = i * 3
-			const iy = i * 3 + 1
-			const iz = i * 3 + 2
+			canvas.width = Math.max(1, Math.floor(rect.width * dpr))
+			canvas.height = Math.max(1, Math.floor(rect.height * dpr))
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 
-			posArray[ix] = basePositions[ix] + Math.sin(t + ix) * 0.05
-			posArray[iy] = basePositions[iy] + Math.cos(t + iy) * 0.05
-			posArray[iz] = basePositions[iz]
-		}
+			const width = rect.width
+			const height = rect.height
+			const count = Math.max(1100, Math.floor((width * height) / 220))
+			const cols = Math.ceil(Math.sqrt(count * (width / Math.max(height, 1))))
+			const rows = Math.ceil(count / cols)
 
-		//  hover repulsion
-		if (isHovering.current) {
-			targetMouse.current.set(pointer.x * 10, pointer.y * 6, 0)
+			particles = Array.from({ length: count }, (_, index) => {
+				const col = index % cols
+				const row = Math.floor(index / cols)
+				const cellWidth = width / cols
+				const cellHeight = height / rows
 
-			for (let i = 0; i < count; i++) {
-				const ix = i * 3
-				const iy = i * 3 + 1
-				const iz = i * 3 + 2
+				return {
+					x: col * cellWidth + Math.random() * cellWidth,
+					y: row * cellHeight + Math.random() * cellHeight,
+					radius: Math.random() * 0.6 + 0.28,
+					alpha: Math.random() * 0.17 + 0.09,
+					vx: (Math.random() - 0.5) * 0.08,
+					vy: (Math.random() - 0.5) * 0.08,
+					phase: Math.random() * Math.PI * 2,
+				}
+			})
 
-				const dx = posArray[ix] - targetMouse.current.x
-				const dy = posArray[iy] - targetMouse.current.y
-				const dz = posArray[iz] - targetMouse.current.z
-				const dist = Math.sqrt(dx * dx + dy * dy + dz * dz)
+			const bottomBandHeight = Math.max(54, height * 0.32)
+			const bottomCols = Math.ceil(width / 14)
+			const bottomRows = 5
+			const bottomCellWidth = width / bottomCols
+			const bottomCellHeight = bottomBandHeight / bottomRows
 
-				const force = Math.min(0.02 / (dist * dist + 0.001), 0.01)
+			for (let row = 0; row < bottomRows; row++) {
+				for (let col = 0; col < bottomCols; col++) {
+					particles.push({
+						x: col * bottomCellWidth + Math.random() * bottomCellWidth,
+						y:
+							height -
+							bottomBandHeight +
+							row * bottomCellHeight +
+							Math.random() * bottomCellHeight,
+						radius: Math.random() * 0.5 + 0.25,
+						alpha: Math.random() * 0.13 + 0.075,
+						vx: (Math.random() - 0.5) * 0.06,
+						vy: (Math.random() - 0.5) * 0.06,
+						phase: Math.random() * Math.PI * 2,
+					})
+				}
+			}
 
-				posArray[ix] += dx * force
-				posArray[iy] += dy * force
-				posArray[iz] += dz * force
+			const bottomEdgeCols = Math.ceil(width / 9)
+			const bottomEdgeRows = 3
+			const bottomEdgeHeight = 22
+			const edgeCellWidth = width / bottomEdgeCols
+			const edgeCellHeight = bottomEdgeHeight / bottomEdgeRows
+
+			for (let row = 0; row < bottomEdgeRows; row++) {
+				for (let col = 0; col < bottomEdgeCols; col++) {
+					particles.push({
+						x: col * edgeCellWidth + Math.random() * edgeCellWidth,
+						y:
+							height -
+							bottomEdgeHeight +
+							row * edgeCellHeight +
+							Math.random() * edgeCellHeight,
+						radius: Math.random() * 0.45 + 0.25,
+						alpha: Math.random() * 0.11 + 0.07,
+						vx: (Math.random() - 0.5) * 0.045,
+						vy: (Math.random() - 0.5) * 0.035,
+						phase: Math.random() * Math.PI * 2,
+					})
+				}
 			}
 		}
 
-		ref.current.geometry.attributes.position.needsUpdate = true
-	})
+		const draw = (time = 0) => {
+			const rect = canvas.getBoundingClientRect()
+			const width = rect.width
+			const height = rect.height
+
+			ctx.clearRect(0, 0, width, height)
+			ctx.fillStyle = '#000000'
+			ctx.fillRect(0, 0, width, height)
+
+			for (const particle of particles) {
+				particle.x += particle.vx + Math.sin(time * 0.00045 + particle.phase) * 0.012
+				particle.y += particle.vy + Math.cos(time * 0.00045 + particle.phase) * 0.012
+
+				if (particle.x < 0) particle.x = width
+				if (particle.x > width) particle.x = 0
+				if (particle.y < 0) particle.y = height
+				if (particle.y > height) particle.y = 0
+
+				ctx.beginPath()
+				ctx.fillStyle = `rgba(255, 255, 255, ${particle.alpha})`
+				ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
+				ctx.fill()
+			}
+
+			animationId = requestAnimationFrame(draw)
+		}
+
+		createParticles()
+		draw()
+
+		const resizeObserver = new ResizeObserver(() => {
+			createParticles()
+		})
+		resizeObserver.observe(canvas)
+
+		return () => {
+			cancelAnimationFrame(animationId)
+			resizeObserver.disconnect()
+		}
+	}, [])
 
 	return (
-		<points
-			ref={ref}
-			onPointerOver={() => (isHovering.current = true)}
-			onPointerOut={() => (isHovering.current = false)}>
-			<bufferGeometry>
-				<bufferAttribute
-					attach='attributes-position'
-					array={positions}
-					count={count}
-					itemSize={3}
-				/>
-			</bufferGeometry>
-
-			<pointsMaterial
-				color='#ffffff'
-				size={0.02}
-				sizeAttenuation
-				transparent
-				opacity={0.35}
-				depthWrite={false}
-			/>
-		</points>
-	)
-}
-
-export default function SideTinyStarsBg() {
-	return (
-		<Canvas
-			camera={{ position: [0, 0, 14], fov: 60 }}
-			style={{
-				position: 'absolute',
-				inset: 0,
-				zIndex: 0,
-				pointerEvents: 'auto',
-			}}>
-			<color
-				attach='background'
-				args={['#000000']}
-			/>
-
-			<SideTinyStars count={15000} />
-		</Canvas>
+		<canvas
+			ref={canvasRef}
+			aria-hidden='true'
+		/>
 	)
 }

@@ -15,7 +15,7 @@ function Header() {
 	}, [location])
 
 	return (
-		<div>
+		<div className='techticks-header'>
 			<SideTinyStarsBg />
 			<div className='Navbar'>
 				<div className='upper-content'>
