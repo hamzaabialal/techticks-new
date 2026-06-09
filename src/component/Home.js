@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import EnhancedParticlesLikeSpline from '../component/SplineBackground'
 import ourWork1 from '../component/images/ourWork1.png'
 import ourWork2 from '../component/images/ourWork2.png'
@@ -70,8 +70,231 @@ function Home() {
 
 	const [openIndex, setOpenIndex] = useState(0)
 
+	const servicesData = [
+		{
+			icon: (
+				<img
+					src={frameIcon}
+					alt='design icon'
+					style={{ width: '32px', height: '32px' }}
+				/>
+			),
+			title: 'DESIGN',
+			text: 'We create conversion-focused designs, including UI/UX, branding, social media creatives, and Amazon listing visuals that performs across all platforms.',
+		},
+		{
+			icon: <Chrome />,
+			title: 'SEO',
+			text: 'We improve your search visibility through technical optimization, keyword strategy, and content structure built for long-term organic growth.',
+		},
+		{
+			icon: <Code2 />,
+			title: 'DEVELOPMENT',
+			text: 'We build fast, secure, and scalable websites and digital products designed for performance, reliability, and future expansion.',
+		},
+		{
+			icon: <Hourglass />,
+			title: 'ADVERTISING',
+			text: 'We run data-driven advertising campaigns across search, social, and ecommerce platforms to generate measurable results and controlled growth.',
+		},
+		{
+			icon: <BsLaptop />,
+			title: 'MAINTENANCE',
+			text: 'We maintain your accounts and websites end-to-end, handling updates, performance monitoring, security, and ongoing support to keep everything running smoothly.',
+		},
+		{
+			icon: <BsPhone />,
+			title: 'SOCIAL MEDIA',
+			text: 'We manage and structure social media presence to maintain consistency, engagement, and alignment with your brand strategy.',
+		},
+		{
+			icon: <GoFileDirectory />,
+			title: 'MIGRATION',
+			text: 'We handle smooth website and ecommerce migrations while preserving data, performance, and SEO value.',
+		},
+		{
+			icon: <LuRadioTower />,
+			title: 'ECOMMERCE BY INDUSTRY',
+			text: 'We deliver industry-specific ecommerce solutions tailored to product type, customer behavior, and market demands.',
+		},
+	]
+
+	// Services carousel: auto-scroll + manual horizontal scroll / drag.
+	// Cards are duplicated in the markup, so when scrollLeft passes the first
+	// set we subtract its width to loop seamlessly.
+	const servicesTrackRef = useRef(null)
+
+	useEffect(() => {
+		const el = servicesTrackRef.current
+		if (!el) return
+
+		const reduceMotion = window.matchMedia(
+			'(prefers-reduced-motion: reduce)',
+		).matches
+
+		let raf = 0
+		let half = 0 // width of one card set; cached to avoid per-frame reflow
+		let paused = false
+		let resumeTimer = 0
+
+		const measure = () => {
+			half = el.scrollWidth / 2
+		}
+
+		// auto-advance using a cached width (no scrollWidth read inside the loop)
+		const speed = 0.5 // px per frame
+		const tick = () => {
+			if (!paused && half > 0) {
+				let next = el.scrollLeft + speed
+				if (next >= half) next -= half
+				el.scrollLeft = next
+			}
+			raf = requestAnimationFrame(tick)
+		}
+
+		const pause = () => {
+			paused = true
+		}
+		const resume = () => {
+			paused = false
+		}
+		// pause, then auto-resume a moment after the user stops interacting
+		const nudge = () => {
+			paused = true
+			clearTimeout(resumeTimer)
+			resumeTimer = setTimeout(() => {
+				paused = false
+			}, 1400)
+		}
+
+		// drag-to-scroll (pointer events scoped to the element, with capture)
+		let isDown = false
+		let startX = 0
+		let startScroll = 0
+		const onDown = (e) => {
+			isDown = true
+			paused = true
+			startX = e.pageX
+			startScroll = el.scrollLeft
+			el.classList.add('dragging')
+			el.setPointerCapture?.(e.pointerId)
+		}
+		const onMove = (e) => {
+			if (!isDown) return
+			el.scrollLeft = startScroll - (e.pageX - startX)
+		}
+		const onUp = () => {
+			if (!isDown) return
+			isDown = false
+			el.classList.remove('dragging')
+			nudge()
+		}
+
+		measure()
+		if (!reduceMotion) raf = requestAnimationFrame(tick)
+
+		window.addEventListener('resize', measure)
+		el.addEventListener('mouseenter', pause)
+		el.addEventListener('mouseleave', resume)
+		el.addEventListener('wheel', nudge, { passive: true })
+		el.addEventListener('touchstart', pause, { passive: true })
+		el.addEventListener('touchend', nudge)
+		el.addEventListener('pointerdown', onDown)
+		el.addEventListener('pointermove', onMove)
+		el.addEventListener('pointerup', onUp)
+		el.addEventListener('pointercancel', onUp)
+
+		return () => {
+			cancelAnimationFrame(raf)
+			clearTimeout(resumeTimer)
+			window.removeEventListener('resize', measure)
+			el.removeEventListener('mouseenter', pause)
+			el.removeEventListener('mouseleave', resume)
+			el.removeEventListener('wheel', nudge)
+			el.removeEventListener('touchstart', pause)
+			el.removeEventListener('touchend', nudge)
+			el.removeEventListener('pointerdown', onDown)
+			el.removeEventListener('pointermove', onMove)
+			el.removeEventListener('pointerup', onUp)
+			el.removeEventListener('pointercancel', onUp)
+		}
+	}, [])
+
+	// "Why Choose Us" cards: staggered reveal once they scroll into view
+	const whyCardsRef = useRef(null)
+
+	useEffect(() => {
+		const el = whyCardsRef.current
+		if (!el) return
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						el.classList.add('reveal-in')
+						observer.unobserve(el)
+					}
+				})
+			},
+			{ threshold: 0.2 },
+		)
+		observer.observe(el)
+		return () => observer.disconnect()
+	}, [])
+
+	// Contact section: slide-in reveal when scrolled into view.
+	// Driven by state (not classList) so a re-render can't strip the class,
+	// and re-triggers each time the section enters the viewport.
+	const contactRef = useRef(null)
+	const [contactVisible, setContactVisible] = useState(false)
+
+	useEffect(() => {
+		const el = contactRef.current
+		if (!el) return
+
+		const observer = new IntersectionObserver(
+			([entry]) => setContactVisible(entry.isIntersecting),
+			{ threshold: 0.15 },
+		)
+		observer.observe(el)
+		return () => observer.disconnect()
+	}, [])
+
 	const toggleFAQ = (index) => {
 		setOpenIndex(openIndex === index ? null : index)
+	}
+
+	// FAQ: open on hover, close on leave (with a short delay so it doesn't
+	// flicker when the cursor passes over quickly). Click/tap still works for
+	// touch devices that have no hover.
+	const faqCloseTimer = useRef(null)
+
+	const openFAQ = (index) => {
+		clearTimeout(faqCloseTimer.current)
+		setOpenIndex(index)
+	}
+
+	const scheduleCloseFAQ = (index) => {
+		clearTimeout(faqCloseTimer.current)
+		faqCloseTimer.current = setTimeout(() => {
+			setOpenIndex((current) => (current === index ? null : current))
+		}, 220)
+	}
+
+	useEffect(() => () => clearTimeout(faqCloseTimer.current), [])
+
+	// Contact heading: move the gradient "spotlight" to follow the cursor
+	const moveHeadingGradient = (e) => {
+		const el = e.currentTarget
+		const rect = el.getBoundingClientRect()
+		const x = ((e.clientX - rect.left) / rect.width) * 100
+		const y = ((e.clientY - rect.top) / rect.height) * 100
+		el.style.setProperty('--mx', `${x}%`)
+		el.style.setProperty('--my', `${y}%`)
+	}
+	const resetHeadingGradient = (e) => {
+		e.currentTarget.style.setProperty('--mx', '50%')
+		e.currentTarget.style.setProperty('--my', '50%')
 	}
 	const sendEmail = (e) => {
 		e.preventDefault()
@@ -626,135 +849,24 @@ function Home() {
 					</p>
 				</div>
 
-				<div className='horizontal-wrapper'>
+				<div
+						className='horizontal-wrapper'
+						ref={servicesTrackRef}>
 					<div className='s-cards'>
-						{/* Card 1 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-								<img src={frameIcon} alt='design icon' style={{ width: '32px', height: '32px' }} />
-							</div>
+							{[...servicesData, ...servicesData].map((card, index) => (
+								<div
+									className='s-card'
+									key={index}
+									aria-hidden={index >= servicesData.length}>
+									<div className='s-icon '>{card.icon}</div>
 
-							<div className='s-card-content'>
-								<h5> DESIGN</h5>
-								<p className='s-text'>
-									We create conversion-focused designs,
-									including UI/UX, branding, social media
-									creatives, and Amazon listing visuals that
-									performs across all platforms.
-								</p>
-							</div>
+									<div className='s-card-content'>
+										<h5> {card.title}</h5>
+										<p className='s-text'>{card.text}</p>
+									</div>
+								</div>
+							))}
 						</div>
-						{/**card-2 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-								<Chrome />
-							</div>
-
-							<div className='s-card-content'>
-								<h5> SEO</h5>
-								<p className='s-text'>
-									We improve your search visibility through
-									technical optimization, keyword strategy,
-									and content structure built for long-term
-									organic growth.
-								</p>
-							</div>
-						</div>
-						{/**card-3 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-								<Code2 />
-							</div>
-
-							<div className='s-card-content'>
-								<h5> DEVELOPMENT</h5>
-								<p className='s-text'>
-									We build fast, secure, and scalable websites
-									and digital products designed for
-									performance, reliability, and future
-									expansion.
-								</p>
-							</div>
-						</div>
-						{/**card-4 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-								<Hourglass />
-							</div>
-
-							<div className='s-card-content'>
-								<h5> ADVERTISING</h5>
-								<p className='s-text'>
-									We run data-driven advertising campaigns
-									across search, social, and ecommerce
-									platforms to generate measurable results and
-									controlled growth.
-								</p>
-							</div>
-						</div>
-						{/**card-5 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-								<BsLaptop />
-							</div>
-
-							<div className='s-card-content'>
-								<h5> MAINTENANCE</h5>
-								<p className='s-text'>
-									We maintain your accounts and websites
-									end-to-end, handling updates, performance
-									monitoring, security, and ongoing support to
-									keep everything running smoothly.
-								</p>
-							</div>
-						</div>
-						{/**card-6 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-							<BsPhone />
-							</div>
-
-							<div className='s-card-content'>
-								<h5> SOCIAL MEDIA</h5>
-								<p className='s-text'>
-									We manage and structure social media
-									presence to maintain consistency,
-									engagement, and alignment with your brand
-									strategy.
-								</p>
-							</div>
-						</div>
-						{/**card-7 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-								 <GoFileDirectory /> 
-							</div>
-
-							<div className='s-card-content'>
-								<h5> MIGRATION</h5>
-								<p className='s-text'>
-									We handle smooth website and ecommerce
-									migrations while preserving data,
-									performance, and SEO value.
-								</p>
-							</div>
-						</div>
-						{/**card-8 */}
-						<div className='s-card'>
-							<div className='s-icon '>
-								<LuRadioTower />
-							</div>
-
-							<div className='s-card-content'>
-								<h5> ECOMMERCE BY INDUSTRY</h5>
-								<p className='s-text'>
-									We deliver industry-specific ecommerce
-									solutions tailored to product type, customer
-									behavior, and market demands.
-								</p>
-							</div>
-						</div>
-					</div>
 				</div>
 
 				{/* Button bhi bahar */}
@@ -785,7 +897,9 @@ function Home() {
 								</p>
 							</div>
 
-								<div className='cards-wrapper'>
+								<div
+										className='cards-wrapper'
+										ref={whyCardsRef}>
 									{/* Card 1 */}
 									<div
 										className='glass-card'
@@ -914,10 +1028,14 @@ function Home() {
 			{/** contact section */}
 
 			<section className='contact-section'>
-				<div className='contact-container'>
+				<div
+						className={`contact-container${contactVisible ? ' reveal-in' : ''}`}
+						ref={contactRef}>
 					{/* LEFT SIDE */}
 					<div className='contact-left'>
-						<h1>
+						<h1
+							onMouseMove={moveHeadingGradient}
+							onMouseLeave={resetHeadingGradient}>
 							<span>Feel</span> <span>free</span> <span>to</span>{' '}
 							<br />
 							<span>Contact</span> <span>Us</span>
@@ -1040,7 +1158,9 @@ function Home() {
 					{faqData.map((item, index) => (
 						<div
 							key={index}
-							className={`faq-item ${openIndex === index ? 'active' : ''}`}>
+							className={`faq-item ${openIndex === index ? 'active' : ''}`}
+							onMouseEnter={() => openFAQ(index)}
+							onMouseLeave={() => scheduleCloseFAQ(index)}>
 							<button
 								className='faq-question'
 								onClick={() => toggleFAQ(index)}

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
 import { FaTwitter } from 'react-icons/fa'
@@ -88,6 +89,21 @@ function Testimonials() {
 		]
 	)
 
+	// reveal the whole section when it scrolls into view
+	const sectionRef = useRef(null)
+	const [visible, setVisible] = useState(false)
+
+	useEffect(() => {
+		const el = sectionRef.current
+		if (!el) return
+		const observer = new IntersectionObserver(
+			([entry]) => setVisible(entry.isIntersecting),
+			{ threshold: 0.15 },
+		)
+		observer.observe(el)
+		return () => observer.disconnect()
+	}, [])
+
 	const Card = ({ item }) => (
 		<article className='fig-testi-card'>
 			<div className='fig-testi-box-wrap'>
@@ -114,7 +130,9 @@ function Testimonials() {
 	)
 
 	return (
-		<section className='fig-testimonials'>
+		<section
+			className={`fig-testimonials${visible ? ' reveal-in' : ''}`}
+			ref={sectionRef}>
 			<div className='fig-testi-heading'>
 				<h2>Our Testimonials</h2>
 				<p>
