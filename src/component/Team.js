@@ -98,11 +98,13 @@ function Team() {
 								</span>
 								<p>{p.bio}</p>
 								<div className='team-leader-socials'>
+									{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 									<a
 										href='#'
 										aria-label='LinkedIn'>
 										<FaLinkedin />
 									</a>
+									{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 									<a
 										href='#'
 										aria-label='Twitter'>

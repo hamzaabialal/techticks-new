@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { FaChevronDown, FaChevronUp, FaTwitter } from 'react-icons/fa'
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import Testimonials from './testonomial'
-import { color } from 'framer-motion'
 import { AiOutlineChrome } from 'react-icons/ai'
 import { FaCode } from 'react-icons/fa6'
 import { GrReactjs } from 'react-icons/gr'
@@ -144,6 +143,7 @@ function Services() {
 			<section class='service-what-we-do'>
 				<div class='swwd-header'>
 					<h1>What We Do</h1>
+					{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 					<a
 						href='#'
 						class='swwd-btn'>
