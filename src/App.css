@@ -3533,17 +3533,31 @@ body {
 	background: linear-gradient(to left, #1a1a1a90, transparent);
 }
 
-.s-slide img {
-	height: 200px;
-	width: auto;
-	object-fit: contain;
-}
-
+/* lower brand row: consistent, larger logos with even spacing (matches the
+   top "Our Partners" row hierarchy) */
 .s-slide-track {
 	display: flex;
-	width: calc(300px * 14);
+	width: max-content;
 	animation: scroll 40s linear infinite;
-	justify-content: space-between;
+	align-items: center;
+	gap: 64px;
+}
+
+.s-slide-track .slide,
+.s-slide-track .s-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	padding: 0;
+}
+
+.s-slide-track .slide img,
+.s-slide-track .s-slide img {
+	height: 64px;
+	width: auto;
+	max-width: 190px;
+	object-fit: contain;
 }
 
 /* Service sec */
@@ -6465,23 +6479,23 @@ body {
 		margin-bottom: 20px !important;
 	}
 	.slider {
-		height: 60px !important;
+		height: 88px !important;
 	}
 	.slider::before,
 	.slider::after {
 		width: 40px !important;
 	}
 	.slide {
-		gap: 1rem !important;
+		gap: 1.5rem !important;
 	}
 	.slide img {
-		height: 28px !important;
+		height: 48px !important;
 		width: auto !important;
-		max-width: 110px;
+		max-width: 150px;
 	}
 	.slide img[style*="width: 30px"],
 	.slide img[style*="height: 30px"] {
-		height: 24px !important;
+		height: 48px !important;
 		width: auto !important;
 	}
 
@@ -12493,5 +12507,114 @@ textarea,
 		flex-direction: column !important;
 		align-items: flex-start !important;
 		gap: 12px !important;
+	}
+}
+
+/* =========================================================
+   MOBILE VIEW REFINEMENTS (center alignment + footer logo)
+   ========================================================= */
+@media (max-width: 768px) {
+	/* Hero — center headline + body text */
+	.home-page .main-content {
+		align-items: center !important;
+		text-align: center !important;
+	}
+	.home-page .heading,
+	.home-page .heading h1,
+	.home-page .sub-heading,
+	.home-page .sub-heading p {
+		text-align: center !important;
+	}
+
+	/* Features ("We're here to simplify…") — center all text.
+	   The copy has a left margin (--left-pad) + width:100%, which pushed the
+	   heading off the right edge on mobile; reset it so it fits and centers. */
+	.service-figma-copy {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		padding: 0 20px !important;
+		box-sizing: border-box !important;
+		text-align: center !important;
+	}
+	.service-figma-copy h1,
+	.service-figma-copy p {
+		max-width: 100% !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		text-align: center !important;
+	}
+	.service-figma-item,
+	.service-figma-item h3,
+	.service-figma-item p {
+		text-align: center !important;
+		align-items: center !important;
+	}
+
+	/* Project showcase ("Our Works") — center text */
+	.workHeading,
+	.workHeading h1,
+	.workHeading p,
+	.workDetails,
+	.workDetails h1,
+	.workDetails h3,
+	.workDetails p {
+		text-align: center !important;
+	}
+	.subWork,
+	.workDetails {
+		align-items: center !important;
+	}
+
+	/* Testimonials — center heading + card content */
+	.fig-testi-heading,
+	.fig-testi-heading h2,
+	.fig-testi-heading p {
+		text-align: center !important;
+	}
+	.fig-testi-card,
+	.fig-testi-box,
+	.fig-testi-box-wrap {
+		align-items: center !important;
+	}
+	.fig-testi-text {
+		text-align: center !important;
+	}
+	.fig-testi-tip {
+		margin-left: 0 !important;
+	}
+	.fig-testi-user {
+		justify-content: center !important;
+	}
+
+	/* Footer — move the TechTicks logo to the left */
+	.logo-social-container {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		justify-content: flex-start !important;
+		text-align: left !important;
+		width: 100% !important;
+	}
+	.footer-image {
+		align-self: flex-start !important;
+		margin: 0 auto 0 0 !important;
+	}
+	.footer-image img {
+		margin: 0 !important;
+	}
+	.social-section {
+		align-items: flex-start !important;
+		justify-content: flex-start !important;
+	}
+
+	/* lower brand-logo row sizing stays consistent on mobile */
+	.s-slide-track {
+		gap: 44px !important;
+	}
+	.s-slide-track .slide img,
+	.s-slide-track .s-slide img {
+		height: 52px !important;
+		max-width: 150px !important;
 	}
 }

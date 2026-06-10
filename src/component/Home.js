@@ -172,6 +172,9 @@ function Home() {
 		let startX = 0
 		let startScroll = 0
 		const onDown = (e) => {
+			// touch/pen use native horizontal scrolling so vertical page
+			// scrolling keeps working — only the mouse uses click-drag
+			if (e.pointerType && e.pointerType !== 'mouse') return
 			isDown = true
 			paused = true
 			startX = e.pageX
@@ -1034,8 +1037,9 @@ function Home() {
 					{/* LEFT SIDE */}
 					<div className='contact-left'>
 						<h1
-							onMouseMove={moveHeadingGradient}
-							onMouseLeave={resetHeadingGradient}>
+							onPointerMove={moveHeadingGradient}
+							onPointerLeave={resetHeadingGradient}
+							style={{ touchAction: 'pan-y' }}>
 							<span>Feel</span> <span>free</span> <span>to</span>{' '}
 							<br />
 							<span>Contact</span> <span>Us</span>
