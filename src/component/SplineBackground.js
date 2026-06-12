@@ -208,18 +208,24 @@ export default function EnhancedParticlesLikeSpline() {
 	return (
 		<div
 			ref={containerRef}
-			style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+			style={{ position: 'absolute', inset: 0, zIndex: 2 }}>
 			<Canvas
 				camera={{ position: [0, 0, 14], fov: 60 }}
+				dpr={[1, 2]}
+				frameloop='always'
+				gl={{
+					alpha: true,
+					antialias: true,
+					powerPreference: 'high-performance',
+					failIfMajorPerformanceCaveat: false,
+					preserveDrawingBuffer: false,
+				}}
 				style={{
 					width: '100%',
 					height: '100%',
 					pointerEvents: 'none',
+					background: 'transparent',
 				}}>
-				<color
-					attach='background'
-					args={['#000000']}
-				/>
 				<BackgroundStars
 					count={4000}
 					radius={6}

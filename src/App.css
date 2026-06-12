@@ -4707,6 +4707,41 @@ body {
 	z-index: 5;
 }
 
+/* Hero glow: purple light flanking the button (left & right), fading to
+   black just below it — replaces the top-anchored PNG glow on these heroes */
+.about-page .leftrect-amazon,
+.about-page .rightrect-amazon {
+	display: none !important;
+}
+
+.about-page::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	pointer-events: none;
+	background:
+		/* fade the lower part to solid black, just below the button */
+		linear-gradient(
+			to bottom,
+			transparent 56%,
+			rgba(0, 0, 0, 0.85) 84%,
+			#000 100%
+		),
+		/* left glow, centered at the button's height */
+		radial-gradient(
+			46% 42% at -4% 60%,
+			rgba(74, 53, 217, 0.5),
+			transparent 70%
+		),
+		/* right glow */
+		radial-gradient(
+			46% 42% at 104% 56%,
+			rgba(46, 70, 200, 0.42),
+			transparent 70%
+		);
+}
+
 .about-page::before {
 	background: linear-gradient(
 		90deg,

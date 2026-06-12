@@ -83,11 +83,11 @@ function Services() {
 						<button onClick={() => navigate('/contactUs')}>
 							Start Now
 						</button>
-
-						<Slider />
 					</div>
 				</div>
 			</section>
+
+			<Slider />
 			{/** why choose tichticks */}
 			<section class='why-choose-section'>
 				<h1>Why Choose Techticks?</h1>
