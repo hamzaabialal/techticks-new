@@ -3476,7 +3476,8 @@ body {
 	}
 
 	100% {
-		transform: translateX(calc(-250px * 7));
+		/* shift by exactly one logo set; second identical set takes its place → seamless loop */
+		transform: translateX(-50%);
 	}
 }
 
@@ -3545,7 +3546,6 @@ body {
 	width: max-content;
 	animation: scroll 40s linear infinite;
 	align-items: center;
-	gap: 64px;
 }
 
 .s-slide-track .slide,
@@ -3554,6 +3554,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex: 0 0 auto;
+	/* spacing lives on each item (not flex gap) so the -50% loop is seamless */
+	margin: 0 32px;
 	padding: 0;
 }
 
@@ -12692,8 +12694,9 @@ textarea,
 	}
 
 	/* lower brand-logo row sizing stays consistent on mobile */
-	.s-slide-track {
-		gap: 44px !important;
+	.s-slide-track .slide,
+	.s-slide-track .s-slide {
+		margin: 0 22px !important;
 	}
 	.s-slide-track .slide img,
 	.s-slide-track .s-slide img {
