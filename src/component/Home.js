@@ -335,7 +335,19 @@ function Home() {
 			<section
 				id='Home'
 				className='home-page'>
-				{/* 3D Background */}
+				{/* Hero gradient glow — matches the inner pages */}
+				<img
+					src='/contactrectleft.png'
+					alt=''
+					className='leftrect-amazon'
+				/>
+				<img
+					src='/contactrectright.png'
+					alt=''
+					className='rightrect-amazon'
+				/>
+
+				{/* 3D particle background — home page only */}
 				<EnhancedParticlesLikeSpline />
 
 				<hr style={{ color: 'white' }} />

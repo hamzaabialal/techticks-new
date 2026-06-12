@@ -4694,6 +4694,17 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-bottom: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Inner-page hero fills the viewport & centers content — matches the home hero */
+.about-page .main-content {
+	min-height: calc(100vh - 142px);
+	min-height: calc(100svh - 142px);
+	justify-content: center;
+	position: relative;
+	z-index: 5;
 }
 
 .about-page::before {
@@ -5057,6 +5068,7 @@ body {
 	mask-position: center;
 	mask-composite: intersect;
 	z-index: 1;
+	pointer-events: none;
 }
 
 .founders h2 {
@@ -5074,6 +5086,8 @@ body {
 	justify-content: center;
 	gap: 40px;
 	height: 700px;
+	position: relative;
+	z-index: 2;
 }
 
 .founder-card {
@@ -11457,6 +11471,12 @@ body,
 	gap: 5px !important;
 	padding: 0 clamp(16px, 5vw, 40px) !important;
 	width: 100% !important;
+	z-index: 5 !important;
+}
+
+/* Home hero base + gradient glow sit behind the centered text */
+.home-page {
+	background: #000 !important;
 }
 
 .home-page > hr {
@@ -12696,6 +12716,16 @@ textarea,
    FOUNDER / TEAM PHOTOS — turn colourful on hover.
    Greyscale at rest, full colour + subtle zoom on hover.
    ========================================================= */
+/* Lift the cards above the .founders::before glow so they receive hover */
+.founders {
+	position: relative;
+}
+.founder-boxes,
+.founder-card {
+	position: relative;
+	z-index: 2;
+}
+
 .founder-card img,
 .team-leader-image img {
 	filter: grayscale(100%);
@@ -12706,9 +12736,10 @@ textarea,
 }
 
 .founder-card:hover img,
+.founder-card img:hover,
 .team-leader-card:hover .team-leader-image img,
 .team-leader-image:hover img {
-	filter: grayscale(0%) brightness(1.05) contrast(1.03);
+	filter: grayscale(0%) brightness(1.05) contrast(1.03) !important;
 	transform: scale(1.04);
 }
 
