@@ -12711,3 +12711,51 @@ textarea,
 	filter: grayscale(0%) brightness(1.05) contrast(1.03);
 	transform: scale(1.04);
 }
+
+/* =========================================================
+   MOBILE — section headings stay centered (they're centered on
+   desktop) while body/card text stays left. Overrides the global
+   "mobile left-align" block. Targets heading + subtitle elements
+   only, so card text sitting next to them is never affected.
+   ========================================================= */
+@media (max-width: 767px) {
+	.heading_brands h1,
+	.corr-main-header,
+	.corr-main-header h2,
+	.corr-main-header p,
+	.fig-testi-heading,
+	.fig-testi-heading h2,
+	.fig-testi-heading p,
+	.itworks-header,
+	.itworks-header h2,
+	.itworks-header p,
+	.team-cta,
+	.team-cta h2,
+	.team-cta p,
+	.services-section .title,
+	.services-section .subtitle,
+	.why-choose-section h1,
+	.why-choose-section .why-choose-subtitle,
+	.faq-section h2,
+	.faq-section .subtitle,
+	.founders h2,
+	.founders p {
+		text-align: center !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	/* Flex heading wrappers — center on the cross axis too */
+	.workHeading {
+		align-items: center !important;
+		justify-content: center !important;
+		text-align: center !important;
+	}
+	.workHeading h1,
+	.workHeading p {
+		text-align: center !important;
+	}
+	.heading_brands {
+		align-items: center !important;
+	}
+}
