@@ -53,16 +53,16 @@ function Home() {
 	const navigate = useNavigate()
 	const faqData = [
 		{
-			question: 'What types of businesses do you work with?',
-			answer: 'We work with startups, growing brands, and established businesses across ecommerce, SaaS, real estate, and service-based industries.',
+			question: 'What types of brands do you work with?',
+			answer: 'We work with US ecommerce brands — from solo Amazon sellers doing $50K a month to seven-figure Shopify DTC brands and multi-channel retailers across Amazon, TikTok Shop, Shopify, Walmart, eBay and Etsy.',
 		},
 		{
-			question: 'Can I hire Techticks for a single service?',
-			answer: 'Yes, you can absolutely hire Techticks for a single service. We offer flexible solutions tailored to your needs, so whether you require help with design, SEO, development, or any other service, you can choose exactly what you need without committing to a full package.',
+			question: 'Can I hire TechTicks for a single platform or service?',
+			answer: 'Yes. Whether you need only Amazon PPC, a Shopify build, TikTok Shop management, or a single design or marketing service, you can choose exactly what you need without committing to a full package.',
 		},
 		{
 			question: 'Do you offer ongoing account and website management?',
-			answer: 'Yes, we offer ongoing account and website management. Our team provides continuous support, including updates, performance monitoring, security checks, and optimization, ensuring your website and digital assets run smoothly and stay up to date.',
+			answer: 'Yes. We provide ongoing management across all six marketplaces and your owned channels — handling listings, ads, updates, performance monitoring, security, and continuous optimisation so everything keeps running and growing.',
 		},
 
 		// You can add more items
@@ -79,43 +79,43 @@ function Home() {
 					style={{ width: '32px', height: '32px' }}
 				/>
 			),
-			title: 'DESIGN',
-			text: 'We create conversion-focused designs, including UI/UX, branding, social media creatives, and Amazon listing visuals that performs across all platforms.',
+			title: 'AMAZON',
+			text: 'Listings, PPC, A+ Content, Brand Registry, and full Seller Central account management built around your actual margins.',
 		},
 		{
 			icon: <Chrome />,
-			title: 'SEO',
-			text: 'We improve your search visibility through technical optimization, keyword strategy, and content structure built for long-term organic growth.',
+			title: 'TIKTOK SHOP',
+			text: 'Store setup, creator affiliate programs, UGC content strategy, and TikTok Ads that turn views into sales.',
 		},
 		{
 			icon: <Code2 />,
-			title: 'DEVELOPMENT',
-			text: 'We build fast, secure, and scalable websites and digital products designed for performance, reliability, and future expansion.',
+			title: 'SHOPIFY',
+			text: 'Custom store development, CRO, app integration, and clean migrations engineered to convert for DTC brands.',
 		},
 		{
 			icon: <Hourglass />,
-			title: 'ADVERTISING',
-			text: 'We run data-driven advertising campaigns across search, social, and ecommerce platforms to generate measurable results and controlled growth.',
+			title: 'WALMART',
+			text: 'Seller Center setup, listing optimisation, Walmart Connect Ads, and WFS — less competition, profitable sales.',
 		},
 		{
 			icon: <BsLaptop />,
-			title: 'MAINTENANCE',
-			text: 'We maintain your accounts and websites end-to-end, handling updates, performance monitoring, security, and ongoing support to keep everything running smoothly.',
+			title: 'EBAY',
+			text: 'Store setup, Cassini-optimised listings, Promoted Listings, and repricing strategy that protects your margin.',
 		},
 		{
 			icon: <BsPhone />,
-			title: 'SOCIAL MEDIA',
-			text: 'We manage and structure social media presence to maintain consistency, engagement, and alignment with your brand strategy.',
+			title: 'ETSY',
+			text: 'Shop optimisation, listing SEO, Etsy Ads, and Star Seller strategy to reach buyers with real purchase intent.',
 		},
 		{
 			icon: <GoFileDirectory />,
-			title: 'MIGRATION',
-			text: 'We handle smooth website and ecommerce migrations while preserving data, performance, and SEO value.',
+			title: 'DIGITAL MARKETING',
+			text: 'Meta Ads, Google Ads, SEO, email & SMS, and social media — built as one integrated system, not separate campaigns.',
 		},
 		{
 			icon: <LuRadioTower />,
-			title: 'ECOMMERCE BY INDUSTRY',
-			text: 'We deliver industry-specific ecommerce solutions tailored to product type, customer behavior, and market demands.',
+			title: 'WEBSITE DEVELOPMENT',
+			text: 'Fast, secure, conversion-ready Shopify, WordPress, and custom builds — no bloat, no checkout that leaks revenue.',
 		},
 	]
 
@@ -127,6 +127,12 @@ function Home() {
 	useEffect(() => {
 		const el = servicesTrackRef.current
 		if (!el) return
+
+		// On phones, let the browser handle it natively: a horizontally
+		// scrollable container with momentum. No JS auto-scroll — horizontal
+		// swipes move the cards, vertical swipes scroll the page through.
+		const nativeScroll = window.matchMedia('(max-width: 768px)').matches
+		if (nativeScroll) return
 
 		const reduceMotion = window.matchMedia(
 			'(prefers-reduced-motion: reduce)',
@@ -337,29 +343,36 @@ function Home() {
 				<div className='main-content'>
 					<div className='heading'>
 						<h1>
-							<span>Give</span>
+							<span>Grow</span>
 							<span>Your</span>
-							<span>Business</span>
-							<span>the</span>
-							<span>Digital</span>
-							<span>Edge</span>
-							<span>It</span>
-							<span>Deserves</span>
+							<span>Brand</span>
+							<span>on</span>
+							<span>Amazon,</span>
+							<span>TikTok</span>
+							<span>Shop,</span>
+							<span>Shopify</span>
+							<span>&</span>
+							<span>Every</span>
+							<span>Channel</span>
+							<span>That</span>
+							<span>Matters</span>
 						</h1>
 					</div>
 
 					<div className='sub-heading'>
 						<p>
-							Transform your brand’s presence with cutting-edge
-							design,
-							<br></br> marketing, and eCommerce solutions built
-							for growth.
+							TechTicks is a full-service ecommerce agency that
+							handles everything from Amazon PPC and TikTok creator
+							affiliate programs
+							<br></br> to Shopify builds and paid social — so you
+							can focus on your product while we focus on your
+							growth.
 						</p>
 					</div>
 
 					<div>
 						<button onClick={() => navigate('/contactUs')}>
-							Start Now
+							Book a Free Strategy Call
 						</button>
 					</div>
 				</div>
@@ -809,8 +822,8 @@ function Home() {
 					id='Service'
 					className='service-figma'>
 					<div className='service-figma-copy'>
-						<h1>We’re here to simplify technology for every business.</h1>
-						<p>Expend your reach and connect with customers online.</p>
+						<h1>One Agency for Every Channel Your Brand Sells On</h1>
+						<p>Most brands run ecommerce, paid ads, design, and their website through four vendors that never talk to each other. At TechTicks, it all runs under one roof.</p>
 					</div>
 
 					<div className='service-figma-grid'>
@@ -820,20 +833,20 @@ function Home() {
 						<span className='service-line service-line-bottom'></span>
 
 						<div className='service-figma-item'>
-							<h3>Built to Scale</h3>
-							<p>Grow today, upgrade tomorrow.</p>
+							<h3>Ecommerce Management</h3>
+							<p>Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy.</p>
 						</div>
 						<div className='service-figma-item'>
-							<h3>Quality, Every Time</h3>
-							<p>Fast delivery. Zero shortcuts.</p>
+							<h3>Digital Marketing</h3>
+							<p>Meta Ads, Google Ads, SEO, email & social.</p>
 						</div>
 						<div className='service-figma-item'>
-							<h3>Support That Stays</h3>
-							<p>We’re here long after launch.</p>
+							<h3>UX/UI & Graphic Design</h3>
+							<p>Brand identity, ad creatives & A+ Content.</p>
 						</div>
 						<div className='service-figma-item'>
-							<h3>Efficiency Obsessed</h3>
-							<p>Less chaos, more results.</p>
+							<h3>Website Development</h3>
+							<p>Fast, conversion-ready Shopify & custom builds.</p>
 						</div>
 					</div>
 				</div>
@@ -848,7 +861,8 @@ function Home() {
 				<div className='text-center mb-12'>
 					<h2 className='title'>Our Services</h2>
 					<p className='subtitle'>
-						Expend your reach and connect with customers online.
+						Everything your brand needs to grow across every channel
+						that matters.
 					</p>
 				</div>
 
@@ -893,10 +907,10 @@ function Home() {
 
 					<div className='why-choose-frame'>
 						<div className='why-choose-copy'>
-								<h1 className='title-main'>Why Choose Us?</h1>
+								<h1 className='title-main'>Why TechTicks?</h1>
 								<p className='subtitle-main'>
-									Expend your reach and connect with customers
-									online.
+									Operators, not just marketers — here's what
+									makes us different.
 								</p>
 							</div>
 
@@ -908,13 +922,13 @@ function Home() {
 										className='glass-card'
 										style={{ '--card-index': 0 }}>
 										<h3 className='card-title text-white'>
-											Smart Innovation
+											Every Channel Connects
 										</h3>
 										<p className='card-text'>
-											We build modern, scalable solutions
-											powered by the latest technology to
-											keep your business ahead of the
-											curve.
+											Your Amazon data informs your Meta
+											creative, and your Shopify CRO feeds
+											your Google strategy. We manage the
+											whole picture, not isolated channels.
 										</p>
 									</div>
 
@@ -923,12 +937,12 @@ function Home() {
 										className='glass-card'
 										style={{ '--card-index': 1 }}>
 										<h3 className='card-title text-white'>
-											User-First
+											US Market Focus
 										</h3>
 										<p className='card-text'>
-											Every product is designed with your
-											audience in mind. Engaging, and
-											built to convert.
+											We know American buyers, US platform
+											algorithms, and what it takes to
+											compete in crowded US categories.
 										</p>
 									</div>
 
@@ -937,12 +951,12 @@ function Home() {
 										className='glass-card'
 										style={{ '--card-index': 2 }}>
 										<h3 className='card-title text-white'>
-											Trusted Partnership
+											Straight Reporting
 										</h3>
 										<p className='card-text'>
-											We value long-term relationships,
-											clear communication, and reliable
-											support at every step.
+											Real numbers, not dashboards built to
+											look good — what's working, what
+											isn't, and what we're doing about it.
 										</p>
 									</div>
 								</div>
@@ -960,13 +974,13 @@ function Home() {
 				<div className='workHeading'>
 					<h1>Our Works</h1>
 					<p>
-						Witness the brilliance of our previous projects. Our
-						portfolio showcases the successful{' '}
+						A few things we're proud of. Real brands, real numbers
+						{' '}
 						<br className='d-none d-md-block' />
-						collaborations we've had with diverse clients across
-						various industries. Let our work speak
+						across Amazon, TikTok Shop, and the channels that move
+						revenue. Let the
 						<br className='d-none d-md-block' />
-						for itself.
+						results speak for themselves.
 					</p>
 				</div>
 				<div className='workContainer'>
@@ -1040,14 +1054,16 @@ function Home() {
 							onPointerMove={moveHeadingGradient}
 							onPointerLeave={resetHeadingGradient}
 							style={{ touchAction: 'pan-y' }}>
-							<span>Feel</span> <span>free</span> <span>to</span>{' '}
+							<span>Let's</span> <span>Look</span> <span>at</span>{' '}
 							<br />
-							<span>Contact</span> <span>Us</span>
+							<span>Your</span> <span>Brand</span> <span>Together</span>
 						</h1>
 
 						<p>
-							Have any questions or ready to scale your business
-							to next level?
+							Book a free 30-minute strategy call. We'll review
+							what you're doing, give you an honest read on the
+							biggest opportunities, and walk you through what we'd
+							do first.
 						</p>
 
 						<div className='contact-card'>
@@ -1145,7 +1161,7 @@ function Home() {
 								placeholder='Message'
 								required></textarea>
 
-							<button>Send Message</button>
+							<button>Send My Request</button>
 						</form>
 					</div>
 				</div>
@@ -1155,7 +1171,7 @@ function Home() {
 			<div className='faq-section'>
 				<h2>Frequently Asked Questions</h2>
 				<p className='subtitle'>
-					Expend your reach and connect with customers online.
+					Straight answers about how we work with ecommerce brands.
 				</p>
 
 				<div className='faq-list'>

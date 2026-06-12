@@ -47,42 +47,6 @@ function ContactUs() {
 				alt=''
 				className='contact-rightrect'
 			/>
-			<section
-				id='about'
-				className='about-page '>
-				<hr style={{ color: 'white' }}></hr>
-				<div className='main-content '>
-					<div className='about'>
-						<div className='heading amazon-heading'>
-							<h1>
-								<span>Contact Us -</span>
-								<span>Let's</span>
-								<span>Build</span>
-								<span>Something</span>
-								<span>Great</span>
-							</h1>
-						</div>
-						<div className='sub-heading'>
-							<p>
-								Have a project in mind or need help with your
-								business? Our team is ready to assist you. Reach
-								out and we'll get back to you quickly.
-							</p>
-						</div>
-					</div>
-					<div>
-						<button
-							onClick={() => {
-								document
-									.getElementById('contact-p-right')
-									.scrollIntoView({ behavior: 'smooth' })
-							}}>
-							Send Message
-						</button>
-					</div>
-				</div>
-			</section>
-
 			<section className='contact-page'>
 				<div className='contact-p-container'>
 					{/* LEFT SIDE */}

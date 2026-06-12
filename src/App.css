@@ -3172,10 +3172,15 @@ body,
 }
 
 .main-content button {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	font-weight: 100;
 	height: 56px;
-	width: 218px;
+	width: auto;
+	min-width: 218px;
+	padding: 0 34px;
+	white-space: nowrap;
 	font-size: 24px;
 	font-weight: bold;
 	color: #ffffff;
@@ -12608,6 +12613,29 @@ textarea,
 		justify-content: flex-start !important;
 	}
 
+	/* native horizontal scroll on mobile: swipe scrolls the cards with
+	   momentum, vertical swipes pass through to the page, no forced snap */
+	.horizontal-wrapper {
+		overflow-x: auto !important;
+		overflow-y: hidden !important;
+		-webkit-overflow-scrolling: touch !important;
+		scroll-snap-type: none !important;
+		scroll-behavior: auto !important;
+		overscroll-behavior-x: contain !important;
+		overscroll-behavior-y: auto !important;
+		touch-action: pan-x pan-y !important;
+		cursor: default !important;
+	}
+	.s-cards,
+	.s-card {
+		scroll-snap-align: none !important;
+	}
+	/* drop the duplicate set (only needed for the desktop auto-scroll loop)
+	   so the mobile native scroll shows each service once */
+	.s-card[aria-hidden='true'] {
+		display: none !important;
+	}
+
 	/* lower brand-logo row sizing stays consistent on mobile */
 	.s-slide-track {
 		gap: 44px !important;
@@ -12617,4 +12645,69 @@ textarea,
 		height: 52px !important;
 		max-width: 150px !important;
 	}
+}
+
+/* =========================================================
+   HERO TEXT — center on every page (mobile) to match the home hero.
+   Overrides the global "mobile left-align" block above.
+   ========================================================= */
+@media (max-width: 767px) {
+	.about-page .main-content,
+	.about-page .about,
+	.about-page .heading,
+	.about-page .sub-heading,
+	.portfolioPage .main-content,
+	.portfolioPage .main-content .heading {
+		justify-content: center !important;
+		align-items: center !important;
+		text-align: center !important;
+	}
+	.about-page .heading h1,
+	.about-page .heading h1 span,
+	.about-page .about h1,
+	.about-page .about p,
+	.about-page .sub-heading,
+	.about-page .sub-heading p,
+	.portfolioPage .main-content .heading h1,
+	.portfolioPage .main-content .heading h1 span {
+		text-align: center !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	/* Legal / Team / Help / Policy hero blocks */
+	.legal-hero-inner {
+		align-items: center !important;
+		text-align: center !important;
+	}
+	.legal-hero-inner h1,
+	.legal-hero h1,
+	.legal-hero-inner p,
+	.legal-hero p,
+	.legal-hero .legal-eyebrow,
+	.legal-eyebrow {
+		text-align: center !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+
+/* =========================================================
+   FOUNDER / TEAM PHOTOS — turn colourful on hover.
+   Greyscale at rest, full colour + subtle zoom on hover.
+   ========================================================= */
+.founder-card img,
+.team-leader-image img {
+	filter: grayscale(100%);
+	transition:
+		filter 0.5s ease,
+		transform 0.5s ease;
+	will-change: filter, transform;
+}
+
+.founder-card:hover img,
+.team-leader-card:hover .team-leader-image img,
+.team-leader-image:hover img {
+	filter: grayscale(0%) brightness(1.05) contrast(1.03);
+	transform: scale(1.04);
 }
