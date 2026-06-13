@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import {
 	FaLinkedin,
@@ -8,6 +9,21 @@ import {
 	FaWhatsapp,
 } from 'react-icons/fa'
 import { FaXTwitter, FaThreads } from 'react-icons/fa6'
+
+const container = {
+	hidden: {},
+	show: { transition: { staggerChildren: 0.12, delayChildren: 0.08 } },
+}
+
+const item = {
+	hidden: { opacity: 0, y: 24 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+}
+
+const formReveal = {
+	hidden: { opacity: 0, x: 40 },
+	show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+}
 
 function ContactUs() {
 	const sendEmail = (e) => {
@@ -35,6 +51,30 @@ function ContactUs() {
 				alert('Failed')
 			})
 	}
+
+	const socials = [
+		{
+			href: 'https://www.linkedin.com/company/aatechticks/posts/?feedView=all',
+			icon: <FaLinkedin />,
+		},
+		{
+			href: 'https://www.facebook.com/share/16iV8H9B6q/?mibextid=wwXIfr',
+			icon: <FaFacebook />,
+		},
+		{
+			href: 'https://www.instagram.com/techticks2020?igsh=MWEyenBrdHlhYjVueQ==',
+			icon: <FaInstagram />,
+		},
+		{
+			href: 'https://www.threads.com/@techticks2020?igshid=NTc4MTIwNjQ2YQ==',
+			icon: <FaThreads />,
+		},
+		{
+			href: 'https://x.com/techticks2020?s=21&t=dUXp1ZW478y4kVDJKGGyGQ',
+			icon: <FaXTwitter />,
+		},
+	]
+
 	return (
 		<div>
 			<img
@@ -50,19 +90,27 @@ function ContactUs() {
 			<section className='contact-page'>
 				<div className='contact-p-container'>
 					{/* LEFT SIDE */}
-					<div className='contact-p-left'>
-						<h1>
+					<motion.div
+						className='contact-p-left'
+						variants={container}
+						initial='hidden'
+						whileInView='show'
+						viewport={{ once: true, amount: 0.2 }}>
+						<motion.h1 variants={item}>
 							<span>Get</span>
 							<span>In</span>
 							<span>Touch</span>
-						</h1>
+						</motion.h1>
 
-						<p>
-							Have any questions or ready to scale your business
-							to next level?
-						</p>
+						<motion.p variants={item}>
+							Have any questions or ready to scale your business to
+							next level?
+						</motion.p>
 
-						<div className='contact-p-card'>
+						<motion.div
+							className='contact-p-card'
+							variants={item}
+							whileHover={{ y: -4 }}>
 							<div className=''>
 								<div className='icons'> </div>
 								<div className='contact-card-content'>
@@ -75,9 +123,12 @@ function ContactUs() {
 									</div>
 								</div>
 							</div>
-						</div>
+						</motion.div>
 
-						<div className='contact-card-content contact-p-card'>
+						<motion.div
+							className='contact-card-content contact-p-card'
+							variants={item}
+							whileHover={{ y: -4 }}>
 							<div className=''>
 								<div className='icons'> </div>
 								<div className='c-card-content'>
@@ -90,54 +141,37 @@ function ContactUs() {
 									</div>
 								</div>
 							</div>
-						</div>
+						</motion.div>
 
-						<div className='follow-contact contact-card-content contact-p-card'>
+						<motion.div
+							className='follow-contact contact-card-content contact-p-card'
+							variants={item}>
 							<h4>Follow Us</h4>
 
 							<div className='socials'>
-								<div>
-									<a
-										href='https://www.linkedin.com/company/aatechticks/posts/?feedView=all'
-										target='blank'>
-										<FaLinkedin className='contact-icon' />{' '}
-									</a>
-								</div>
-								<div>
-									<a
-										href='https://www.facebook.com/share/16iV8H9B6q/?mibextid=wwXIfr'
-										target='blank'>
-										{' '}
-										<FaFacebook />{' '}
-									</a>
-								</div>
-								<div>
-									{' '}
-									<a
-										href='https://www.instagram.com/techticks2020?igsh=MWEyenBrdHlhYjVueQ=='
-										target='blank'>
-										{' '}
-										<FaInstagram />{' '}
-									</a>
-								</div>
-								<div>
-									<a href='https://www.threads.com/@techticks2020?igshid=NTc4MTIwNjQ2YQ=='>
-										<FaThreads />
-									</a>
-								</div>
-								<div>
-									<a href='https://x.com/techticks2020?s=21&t=dUXp1ZW478y4kVDJKGGyGQ'>
-										<FaXTwitter />
-									</a>
-								</div>
+								{socials.map((s, i) => (
+									<motion.div
+										key={i}
+										whileHover={{ y: -4, scale: 1.08 }}>
+										<a
+											href={s.href}
+											target='blank'>
+											{s.icon}
+										</a>
+									</motion.div>
+								))}
 							</div>
-						</div>
-					</div>
+						</motion.div>
+					</motion.div>
 
 					{/* RIGHT SIDE FORM */}
-					<div
+					<motion.div
 						id='contact-p-right'
-						className='contact-p-right'>
+						className='contact-p-right'
+						variants={formReveal}
+						initial='hidden'
+						whileInView='show'
+						viewport={{ once: true, amount: 0.2 }}>
 						<form
 							className='contact-p-form'
 							onSubmit={sendEmail}>
@@ -158,9 +192,13 @@ function ContactUs() {
 								placeholder='Message'
 								required></textarea>
 
-							<button>Send Message</button>
+							<motion.button
+								whileHover={{ scale: 1.02 }}
+								whileTap={{ scale: 0.98 }}>
+								Send Message
+							</motion.button>
 						</form>
-					</div>
+					</motion.div>
 				</div>
 			</section>
 		</div>

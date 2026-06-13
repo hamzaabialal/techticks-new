@@ -109,9 +109,9 @@ body {
 	}
 }
 .corr-content-area {
-	overflow-y: auto;
-	overflow-x: hidden;
-	height: 100%;
+	/* scroll-jack removed — let hover/scale animations breathe without clipping */
+	overflow: visible;
+	height: auto;
 	padding-right: 16px;
 
 	/* Dark theme scrollbar styling */
@@ -847,12 +847,13 @@ html,
 body,
 #root {
 	max-width: 100% !important;
-	overflow-x: hidden !important;
+	/* clip (not hidden) prevents horizontal scroll WITHOUT breaking position: sticky */
+	overflow-x: clip !important;
 }
 
 .home-layout {
 	max-width: 100% !important;
-	overflow-x: hidden !important;
+	overflow-x: clip !important;
 }
 
 .home-layout .service-figma::before {
@@ -4494,11 +4495,20 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: none;
+	border: 1px solid rgba(255, 255, 255, 0.06);
 	border-radius: 16px;
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
+	transition:
+		border-color 0.3s ease,
+		box-shadow 0.3s ease,
+		background-color 0.3s ease;
+}
+
+.contact-p-card:hover {
+	border-color: rgba(106, 92, 255, 0.55);
+	box-shadow: 0 10px 30px rgba(74, 53, 217, 0.25);
 }
 .contact-card-content {
 	display: flex;
@@ -4626,7 +4636,34 @@ body {
 }
 
 .contact-p-form button:hover {
-	opacity: 0.9;
+	opacity: 0.95;
+	box-shadow: 0 10px 28px rgba(0, 194, 255, 0.35);
+}
+
+/* ── Contact page hover / focus polish ── */
+.contact-p-left .socials div {
+	transition:
+		background 0.3s ease,
+		box-shadow 0.3s ease,
+		transform 0.3s ease;
+}
+
+.contact-p-left .socials div:hover {
+	background: linear-gradient(105.02deg, #6a5cff 4.84%, #00c2ff 120%);
+	box-shadow: 0 8px 22px rgba(106, 92, 255, 0.4);
+}
+
+.contact-p-form input,
+.contact-p-form textarea {
+	transition:
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.contact-p-form input:focus,
+.contact-p-form textarea:focus {
+	border-color: rgba(106, 92, 255, 0.7);
+	box-shadow: 0 0 0 3px rgba(106, 92, 255, 0.15);
 }
 
 /* RESPONSIVE */
@@ -4778,7 +4815,7 @@ body {
 	align-items: center;
 }
 .amazon-heading {
-	max-width: 53.5rem;
+	max-width: 50rem;
 	width: auto;
 }
 
@@ -5293,6 +5330,8 @@ body {
 	margin-bottom: 15px;
 	padding-right: 10px;
 	line-height: 1.3;
+	/* reserve two lines so every step's description starts at the same height */
+	min-height: 2.6em;
 }
 
 .itworks-step p {
@@ -5355,6 +5394,24 @@ body {
 	max-width: 1250px;
 	margin: 0 auto;
 	z-index: 100;
+}
+
+/* Pinned frame for the scroll-through Core Services — content centered so
+   the pinned view is always full (no empty space) */
+.corr-sticky-frame {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	padding: 40px 0;
+	box-sizing: border-box;
+}
+
+.corr-sticky-frame .corr-main-header {
+	margin-bottom: 32px;
 }
 
 /* Header */
@@ -5960,6 +6017,34 @@ body {
 .portfolioPage-container {
 	min-width: 90vw;
 	padding: 0 5% 80px;
+}
+
+/* Portfolio hero (first panel) — blue gradient glow like the other hero pages */
+.portfolioPage-container:first-child {
+	position: relative;
+}
+.portfolioPage-container:first-child::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background:
+		radial-gradient(
+			48% 45% at -6% 42%,
+			rgba(74, 53, 217, 0.5),
+			transparent 70%
+		),
+		radial-gradient(
+			48% 45% at 106% 38%,
+			rgba(46, 70, 200, 0.42),
+			transparent 70%
+		);
+}
+.portfolioPage-container:first-child .main-content,
+.portfolioPage-container:first-child .heading {
+	position: relative;
+	z-index: 1;
 }
 
 .portfolioPage-horizontal {

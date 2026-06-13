@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import rectcore1 from '../component/images/rectcore1.png'
 import AmazonServicesComponent from './Amazon-Services'
+import Testimonials from './testonomial'
 
 const HowItworks = () => {
 	const navigate = useNavigate()
@@ -106,6 +107,8 @@ const HowItworks = () => {
 
 				<AmazonServicesComponent />
 			</section>
+
+			<Testimonials />
 		</div>
 	)
 }

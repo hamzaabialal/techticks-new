@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {
 	AnimatePresence,
 	motion,
@@ -13,12 +13,29 @@ import arrow from '../component/images/arrow.png'
 import arrowdis from '../component/images/arrowdis.png'
 import { navItems, servicesData } from './amazonServicesData'
 
+// Each key-feature appears one-by-one when its service becomes active
+const staggerContainer = {
+	hidden: {},
+	show: {
+		transition: { staggerChildren: 0.12, delayChildren: 0.05 },
+	},
+}
+
+const revealItem = {
+	hidden: { opacity: 0, y: 26 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.45, ease: 'easeOut' },
+	},
+}
+
 const TOTAL = navItems.length
 
 const AmazonServicesComponent = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const [isLargeDevice, setIsLargeDevice] = useState(false)
-	const stickyOuterRef = useRef(null)
+	const scrollSectionRef = useRef(null)
 
 	useEffect(() => {
 		const checkDeviceSize = () => {
@@ -29,24 +46,96 @@ const AmazonServicesComponent = () => {
 		return () => window.removeEventListener('resize', checkDeviceSize)
 	}, [])
 
+	// Scroll drives which service is active (desktop only) → step through
+	// block 1 + its features, then block 2, then block 3 … as you scroll.
 	const { scrollYProgress } = useScroll({
-		target: stickyOuterRef,
+		target: scrollSectionRef,
 		offset: ['start start', 'end end'],
 	})
 
 	useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-		if (isLargeDevice) {
-			const index = Math.min(Math.floor(latest * TOTAL), TOTAL - 1)
-			setActiveIndex(index)
-		}
+		if (!isLargeDevice) return
+		// Map over TOTAL+1 segments so the final card is reached before the
+		// section unpins and then dwells (held) for the last segment.
+		const idx = Math.min(Math.floor(latest * (TOTAL + 1)), TOTAL - 1)
+		setActiveIndex((prev) => (prev === idx ? prev : idx))
 	})
 
 	const activeService = servicesData[activeIndex]
-	const outerHeight = `${TOTAL * 50}vh`
 
 	const handleNavClick = (index) => {
 		setActiveIndex(index)
 	}
+
+	// Render the four key-feature cards (re-staggers each time the service changes)
+	const renderFeatures = () => (
+		<motion.div
+			key={activeIndex}
+			className='corr-features-grid'
+			variants={staggerContainer}
+			initial='hidden'
+			animate='show'>
+			<motion.div
+				className='corr-feature'
+				variants={revealItem}
+				whileHover={{ scale: 1.03 }}>
+				<img
+					src={activeService.features[0].icon}
+					alt=''
+				/>
+				<h5>{activeService.features[0].title}</h5>
+				<p>{activeService.features[0].desc}</p>
+			</motion.div>
+			<img
+				src={line1}
+				className='corr-divider'
+				alt=''
+			/>
+			<motion.div
+				className='corr-feature'
+				variants={revealItem}
+				whileHover={{ scale: 1.03 }}>
+				<img
+					src={activeService.features[1].icon}
+					alt=''
+				/>
+				<h5>{activeService.features[1].title}</h5>
+				<p>{activeService.features[1].desc}</p>
+			</motion.div>
+			<img
+				src={line2}
+				className='corr-divider2'
+				alt=''
+			/>
+			<motion.div
+				className='corr-feature'
+				variants={revealItem}
+				whileHover={{ scale: 1.03 }}>
+				<img
+					src={activeService.features[2].icon}
+					alt=''
+				/>
+				<h5>{activeService.features[2].title}</h5>
+				<p>{activeService.features[2].desc}</p>
+			</motion.div>
+			<img
+				src={line1}
+				className='corr-divider3'
+				alt=''
+			/>
+			<motion.div
+				className='corr-feature'
+				variants={revealItem}
+				whileHover={{ scale: 1.03 }}>
+				<img
+					src={activeService.features[3].icon}
+					alt=''
+				/>
+				<h5>{activeService.features[3].title}</h5>
+				<p>{activeService.features[3].desc}</p>
+			</motion.div>
+		</motion.div>
+	)
 
 	// ── MOBILE / TABLET LAYOUT (< 1024px) ──────────────────────────
 	if (!isLargeDevice) {
@@ -72,56 +161,7 @@ const AmazonServicesComponent = () => {
 
 						<div className='corr-glass-card'>
 							<h4>{activeService.keyFeaturesTitle}</h4>
-							{/* No AnimatePresence / motion on mobile */}
-							<div className='corr-features-grid'>
-								<div className='corr-feature'>
-									<img
-										src={activeService.features[0].icon}
-										alt=''
-									/>
-									<h5>{activeService.features[0].title}</h5>
-									<p>{activeService.features[0].desc}</p>
-								</div>
-								<img
-									src={line1}
-									className='corr-divider'
-									alt=''
-								/>
-								<div className='corr-feature'>
-									<img
-										src={activeService.features[1].icon}
-										alt=''
-									/>
-									<h5>{activeService.features[1].title}</h5>
-									<p>{activeService.features[1].desc}</p>
-								</div>
-								<img
-									src={line2}
-									className='corr-divider2'
-									alt=''
-								/>
-								<div className='corr-feature'>
-									<img
-										src={activeService.features[2].icon}
-										alt=''
-									/>
-									<h5>{activeService.features[2].title}</h5>
-									<p>{activeService.features[2].desc}</p>
-								</div>
-								<img
-									src={line1}
-									className='corr-divider3'
-									alt=''
-								/>
-								<div className='corr-feature'>
-									<img
-										src={activeService.features[3].icon}
-										alt=''
-									/>
-									<h5>{activeService.features[3].title}</h5>
-									<p>{activeService.features[3].desc}</p>
-								</div>
-							</div>
+							{renderFeatures()}
 							<img
 								src={rectcore2}
 								alt='decorative'
@@ -175,164 +215,69 @@ const AmazonServicesComponent = () => {
 		)
 	}
 
-	// ── DESKTOP LAYOUT (≥ 1024px) — unchanged scroll-based logic ───
+	// ── DESKTOP LAYOUT (≥ 1024px) — scroll steps through each service ───
 	return (
 		<div className='corr-container'>
-			<header className='corr-main-header'>
-				<h2>Core Services</h2>
-				<p>
-					We're not a checkbox vendor, we're your tactical partner in
-					scaling on Amazon.
-				</p>
-			</header>
-
 			<div
-				ref={stickyOuterRef}
-				style={{ height: outerHeight, position: 'relative' }}>
-				<div
-					style={{
-						position: 'sticky',
-						top: 0,
-						height: '100vh',
-						overflow: 'hidden',
-					}}>
-					<div
-						className='corr-layout-grid'
-						style={{ height: '70%' }}>
+				ref={scrollSectionRef}
+				style={{ height: `${TOTAL * 60}vh`, position: 'relative' }}>
+				<div className='corr-sticky-frame'>
+					<header className='corr-main-header'>
+						<h2>Core Services</h2>
+						<p>
+							We're not a checkbox vendor, we're your tactical
+							partner in scaling on Amazon.
+						</p>
+					</header>
+
+					<div className='corr-layout-grid'>
 						<aside className='corr-sidebar'>
 							<nav className='corr-side-nav'>
 								{navItems.map((item, index) => {
 									const isActive = activeIndex === index
 									return (
-										<button
+										<motion.button
 											key={index}
+											animate={{
+												opacity: isActive ? 1 : 0.55,
+											}}
+											whileHover={{ scale: 1.025 }}
 											className={`corr-nav-btn ${isActive ? 'corr-active' : ''}`}
-											onClick={() =>
-												handleNavClick(index)
-											}>
+											onClick={() => handleNavClick(index)}>
 											<img
-												src={
-													isActive ? arrow : arrowdis
-												}
+												src={isActive ? arrow : arrowdis}
 												alt='icon'
 											/>
 											{item}
-										</button>
+										</motion.button>
 									)
 								})}
 							</nav>
 						</aside>
 
 						<main className='corr-content-area'>
-							<article className='corr-intro'>
-								<h3>{activeService.heading}</h3>
-								<p>{activeService.description1}</p>
-								<p>{activeService.description2}</p>
-							</article>
+							<AnimatePresence mode='wait'>
+								<motion.div
+									key={activeIndex}
+									initial={{ opacity: 0, y: 14 }}
+									animate={{ opacity: 1, y: 0 }}
+									exit={{ opacity: 0, y: -14 }}
+									transition={{
+										duration: 0.3,
+										ease: 'easeInOut',
+									}}>
+									<article className='corr-intro'>
+										<h3>{activeService.heading}</h3>
+										<p>{activeService.description1}</p>
+										<p>{activeService.description2}</p>
+									</article>
 
-							<div className='corr-glass-card'>
-								<h4>{activeService.keyFeaturesTitle}</h4>
-								<AnimatePresence mode='wait'>
-									<motion.div
-										key={activeIndex}
-										className='corr-features-grid'
-										initial={{ opacity: 0, y: 16 }}
-										animate={{ opacity: 1, y: 0 }}
-										exit={{ opacity: 0, y: -16 }}
-										transition={{
-											duration: 0.28,
-											ease: 'easeInOut',
-										}}>
-										<div className='corr-feature'>
-											<img
-												src={
-													activeService.features[0]
-														.icon
-												}
-												alt=''
-											/>
-											<h5>
-												{
-													activeService.features[0]
-														.title
-												}
-											</h5>
-											<p>
-												{activeService.features[0].desc}
-											</p>
-										</div>
-										<img
-											src={line1}
-											className='corr-divider'
-											alt=''
-										/>
-										<div className='corr-feature'>
-											<img
-												src={
-													activeService.features[1]
-														.icon
-												}
-												alt=''
-											/>
-											<h5>
-												{
-													activeService.features[1]
-														.title
-												}
-											</h5>
-											<p>
-												{activeService.features[1].desc}
-											</p>
-										</div>
-										<img
-											src={line2}
-											className='corr-divider2'
-											alt=''
-										/>
-										<div className='corr-feature'>
-											<img
-												src={
-													activeService.features[2]
-														.icon
-												}
-												alt=''
-											/>
-											<h5>
-												{
-													activeService.features[2]
-														.title
-												}
-											</h5>
-											<p>
-												{activeService.features[2].desc}
-											</p>
-										</div>
-										<img
-											src={line1}
-											className='corr-divider3'
-											alt=''
-										/>
-										<div className='corr-feature'>
-											<img
-												src={
-													activeService.features[3]
-														.icon
-												}
-												alt=''
-											/>
-											<h5>
-												{
-													activeService.features[3]
-														.title
-												}
-											</h5>
-											<p>
-												{activeService.features[3].desc}
-											</p>
-										</div>
-									</motion.div>
-								</AnimatePresence>
-							</div>
+									<div className='corr-glass-card'>
+										<h4>{activeService.keyFeaturesTitle}</h4>
+										{renderFeatures()}
+									</div>
+								</motion.div>
+							</AnimatePresence>
 						</main>
 					</div>
 				</div>
