@@ -4888,13 +4888,31 @@ body {
 /* CONTENT */
 .content {
 	display: flex;
-	width: 1264px;
+	max-width: 1264px;
 	height: 216px;
-	margin: 5rem 0 5rem 69px;
+	margin: 5rem auto;
+	padding: 0 40px;
 	opacity: 1;
 	position: relative;
 	background-color: #000;
+	overflow: visible;
 }
+
+.content::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 400px;
+	background: radial-gradient(ellipse at center, rgba(74, 53, 217, 0.35) 0%, rgba(100, 60, 200, 0.15) 40%, transparent 70%);
+	filter: blur(80px);
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 0;
+}
+
 .content .left {
 	display: flex;
 	gap: 20px;
@@ -4902,6 +4920,8 @@ body {
 	height: 100%;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
+	z-index: 1;
 }
 
 /* HEADING */
@@ -5061,9 +5081,10 @@ body {
 .why-choose .container {
 	display: grid;
 	grid-template-columns: 1fr 1.2fr;
-	width: 1349px;
+	max-width: 1349px;
 	height: 416px;
-	margin-left: 91px;
+	margin: 0 auto;
+	padding: 0 40px;
 	gap: 93px;
 	opacity: 1;
 	position: relative;
