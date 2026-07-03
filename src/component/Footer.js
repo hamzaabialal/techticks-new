@@ -82,10 +82,7 @@ const FooterSection = () => {
 								<NavLink to='/help-center'>Help Center</NavLink>
 							</li>
 							<li>
-								<NavLink to='/contactUs'>Ticket support</NavLink>
-							</li>
-							<li>
-								<NavLink to='/#FAQ'>FAQs</NavLink>
+								<NavLink to='/blog'>Blog</NavLink>
 							</li>
 						</ul>
 					</div>
@@ -96,7 +93,7 @@ const FooterSection = () => {
 								<NavLink to='/about'>About Us</NavLink>
 							</li>
 							<li>
-								<NavLink to='/team'>Team</NavLink>
+								<NavLink to='/privacy-policy'>Privacy Policy</NavLink>
 							</li>
 							<li>
 								<NavLink to='/contactUs'>Contact Us</NavLink>

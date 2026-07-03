@@ -15,6 +15,7 @@ import Team from './component/Team'
 import PrivacyPolicy from './component/PrivacyPolicy'
 import TermsConditions from './component/TermsConditions'
 import CookiePolicy from './component/CookiePolicy'
+import Blog from './component/Blog'
 
 function App() {
 	return (
@@ -65,6 +66,10 @@ function App() {
 					<Route
 						path='/cookie-policy'
 						element={<CookiePolicy />}
+					/>
+					<Route
+						path='/blog'
+						element={<Blog />}
 					/>
 				</Routes>
 				<FooterSection />
