@@ -8,7 +8,7 @@ import { MdCellTower } from 'react-icons/md'
 import { GiBullseye } from 'react-icons/gi'
 import { TbArrowsCross } from 'react-icons/tb'
 import Slider from '../slider'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, NavLink } from 'react-router-dom'
 
 function Services() {
 	const navigate = useNavigate()
@@ -147,8 +147,11 @@ function Services() {
 				</div>
 
 				<div class='swwd-item'>
-					<div class='swwd-title'>
-						<LuRadioTower /> Ecommerce Management
+					<div class='swwd-title-row'>
+						<div class='swwd-title'>
+							<LuRadioTower /> Ecommerce Management
+						</div>
+						<NavLink to='/services/ecommerce-management' className='swwd-view-link'>View Service →</NavLink>
 					</div>
 					<p class='swwd-desc'>
 						Amazon · TikTok Shop · Shopify · Walmart · eBay · Etsy.
@@ -192,9 +195,11 @@ function Services() {
 				</div>
 
 				<div class='swwd-item'>
-					<div class='swwd-title'>
-						{' '}
-						<GiBullseye /> Digital Marketing
+					<div class='swwd-title-row'>
+						<div class='swwd-title'>
+							<GiBullseye /> Digital Marketing
+						</div>
+						<NavLink to='/services/digital-marketing' className='swwd-view-link'>View Service →</NavLink>
 					</div>
 					<p class='swwd-desc'>
 						Meta Ads · Google Ads · SEO · Email Marketing · Social
@@ -235,8 +240,11 @@ function Services() {
 				</div>
 
 				<div class='swwd-item'>
-					<div class='swwd-title'>
-						<HiOutlineShare /> UX/UI & Graphic Design
+					<div class='swwd-title-row'>
+						<div class='swwd-title'>
+							<HiOutlineShare /> UX/UI & Graphic Design
+						</div>
+						<NavLink to='/services/design' className='swwd-view-link'>View Service →</NavLink>
 					</div>
 					<p class='swwd-desc'>
 						UX/UI Design · Brand Identity · Amazon Creatives · Ad
@@ -279,8 +287,11 @@ function Services() {
 				</div>
 
 				<div class='swwd-item'>
-					<div class='swwd-title'>
-						<FaCode /> Website Development
+					<div class='swwd-title-row'>
+						<div class='swwd-title'>
+							<FaCode /> Website Development
+						</div>
+						<NavLink to='/services/development' className='swwd-view-link'>View Service →</NavLink>
 					</div>
 					<p class='swwd-desc'>
 						Shopify · WordPress · Landing Pages · Funnels ·

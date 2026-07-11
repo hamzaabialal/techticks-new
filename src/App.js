@@ -16,6 +16,8 @@ import PrivacyPolicy from './component/PrivacyPolicy'
 import TermsConditions from './component/TermsConditions'
 import CookiePolicy from './component/CookiePolicy'
 import Blog from './component/Blog'
+import SubServicePage from './component/SubServicePage'
+import { subServicesData } from './component/subServicesData'
 
 function App() {
 	return (
@@ -71,6 +73,14 @@ function App() {
 						path='/blog'
 						element={<Blog />}
 					/>
+					<Route path='/services/ecommerce-management' element={<SubServicePage data={subServicesData['ecommerce-management']} />} />
+					<Route path='/services/digital-marketing' element={<SubServicePage data={subServicesData['digital-marketing']} />} />
+					<Route path='/services/digital-marketing/seo' element={<SubServicePage data={subServicesData['digital-marketing/seo']} />} />
+					<Route path='/services/digital-marketing/google-ads' element={<SubServicePage data={subServicesData['digital-marketing/google-ads']} />} />
+					<Route path='/services/digital-marketing/meta-ads' element={<SubServicePage data={subServicesData['digital-marketing/meta-ads']} />} />
+					<Route path='/services/digital-marketing/social-media' element={<SubServicePage data={subServicesData['digital-marketing/social-media']} />} />
+					<Route path='/services/design' element={<SubServicePage data={subServicesData['design']} />} />
+					<Route path='/services/development' element={<SubServicePage data={subServicesData['development']} />} />
 				</Routes>
 				<FooterSection />
 			</BrowserRouter>
