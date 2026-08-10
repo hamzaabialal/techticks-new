@@ -13502,3 +13502,92 @@ textarea,
 	.ssp-related       { padding: 60px 20px; }
 	.ssp-hero          { padding: 90px 20px 60px; }
 }
+
+
+/* ===== Testimonials mobile fix ===== */
+@media (max-width: 700px) {
+    .fig-testimonials {
+        padding: 72px 0 80px !important;
+    }
+
+    .fig-testi-heading {
+        width: calc(100% - 40px) !important;
+        margin-bottom: 40px !important;
+    }
+
+    .fig-testi-heading h2 {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+    }
+
+    .fig-testi-heading p {
+        font-size: 14px !important;
+        line-height: 150% !important;
+        text-align: center !important;
+    }
+
+    .fig-testi-viewport {
+        height: 410px !important;
+    }
+
+    .fig-testi-track {
+        height: 400px !important;
+    }
+
+    .fig-testi-slide {
+        width: min(330px, calc(100vw - 40px)) !important;
+        flex: 0 0 min(330px, calc(100vw - 40px)) !important;
+    }
+
+    .fig-testi-card {
+        width: 100% !important;
+        height: auto !important;
+        align-items: center !important;
+        gap: 14px !important;
+    }
+
+    .fig-testi-box-wrap {
+        width: 100% !important;
+        height: auto !important;
+        align-items: center !important;
+    }
+
+    .fig-testi-box {
+        width: 100% !important;
+        min-height: 250px !important;
+        height: auto !important;
+        padding: 28px 22px !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+    }
+
+    .fig-testi-icon {
+        flex-shrink: 0 !important;
+    }
+
+    .fig-testi-text {
+        width: 100% !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        line-height: 150% !important;
+    }
+
+    .fig-testi-tip {
+        margin-left: 0 !important;
+    }
+
+    .fig-testi-user {
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .fig-testi-user-copy {
+        text-align: left !important;
+    }
+}
