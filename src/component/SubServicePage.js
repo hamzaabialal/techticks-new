@@ -1,14 +1,18 @@
 import { useNavigate, NavLink } from 'react-router-dom'
+import Testimonials from './testonomial'
 
 function SubServicePage({ data }) {
 	const navigate = useNavigate()
 	const { breadcrumb, breadcrumbLinks, hero, stats, platforms, servicesTitle, services, process, relatedServices } = data
 
+	const heroCtaText = data.hero?.ctaText || 'Book a Free Strategy Call'
+	const heroCtaLink = data.hero?.ctaLink || '/contactUs'
+
 	return (
-		<div className='ssp-page'>
+		<div className={`ssp-page ${data.pageClass || ""}`}>
 
 			{/* ── HERO ─────────────────────────────────── */}
-			<section className='ssp-hero'>
+			<section className={`ssp-hero ${data.hero?.bgClass || ""}`}>
 				<div className='ssp-blob ssp-blob-left' />
 				<div className='ssp-blob ssp-blob-right' />
 
@@ -33,8 +37,8 @@ function SubServicePage({ data }) {
 						<span className='ssp-hero-highlight'>{hero.titleHighlight}</span>
 					</h1>
 					<p className='ssp-hero-sub'>{hero.subtitle}</p>
-					<button className='ssp-hero-cta' onClick={() => navigate('/contactUs')}>
-						Book a Free Strategy Call
+					<button className='ssp-hero-cta' onClick={() => navigate(heroCtaLink)}>
+						{heroCtaText}
 					</button>
 				</div>
 			</section>
@@ -70,18 +74,27 @@ function SubServicePage({ data }) {
 				</div>
 
 				<div className='ssp-services-grid'>
-					{services.map((s, i) => (
-						<div key={i} className='ssp-service-card'>
-							<span className='ssp-card-num'>{s.num}</span>
-							<h3>{s.title}</h3>
-							<p>{s.desc}</p>
-							{s.link && (
-								<NavLink to={s.link} className='ssp-card-link'>
-									View detail →
-								</NavLink>
-							)}
-						</div>
-					))}
+					{services.map((s, i) => {
+						const serviceLink = s.ctaLink || s.link
+						const serviceLabel = s.ctaText || 'View detail →'
+						return (
+							<div key={i} className='ssp-service-card'>
+								<span className='ssp-card-num'>{s.num}</span>
+								<h3>{s.title}</h3>
+								<p>{s.desc}</p>
+								{s.icon && (
+									<div className='ssp-card-icon'>
+										<img src={s.icon} alt='' />
+									</div>
+								)}
+								{serviceLink && (
+									<NavLink to={serviceLink} className='ssp-card-link'>
+										{serviceLabel}
+									</NavLink>
+								)}
+							</div>
+						)
+					})}
 				</div>
 			</section>
 
@@ -122,12 +135,23 @@ function SubServicePage({ data }) {
 				</div>
 			</section>
 
+			{/* ── TESTIMONIALS ────────────────────────── */}
+			{data.pageClass === 'ssp-page--digital-marketing' && <Testimonials />}
+
 			{/* ── FINAL CTA ────────────────────────────── */}
-			<section className='ssp-cta'>
-				<h2>Ready to get started?</h2>
-				<p>Book a free strategy call and we will build a plan around your specific goals.</p>
-				<button onClick={() => navigate('/contactUs')}>Book a Free Strategy Call</button>
-			</section>
+			{data.cta ? (
+				<section className='ssp-cta'>
+					<h2>{data.cta.title || 'Ready to get started?'}</h2>
+					<p>{data.cta.subtitle || 'Book a free strategy call and we will build a plan around your specific goals.'}</p>
+					<button onClick={() => navigate(data.cta.buttonLink || '/contactUs')}>{data.cta.buttonText || 'Book a Free Strategy Call'}</button>
+				</section>
+			) : (
+				<section className='ssp-cta'>
+					<h2>Ready to get started?</h2>
+					<p>Book a free strategy call and we will build a plan around your specific goals.</p>
+					<button onClick={() => navigate('/contactUs')}>Book a Free Strategy Call</button>
+				</section>
+			)}
 
 		</div>
 	)

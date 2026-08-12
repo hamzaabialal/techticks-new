@@ -66,14 +66,19 @@ export const subServicesData = {
 	},
 
 	'digital-marketing': {
+		pageClass: 'ssp-page--digital-marketing',
 		breadcrumb: ['Services', 'Digital Marketing'],
 		breadcrumbLinks: ['/services'],
 		hero: {
 			tag: 'Digital Marketing',
-			title: "We Don't Just Run Ads.",
-			titleHighlight: 'We Drive Revenue.',
+			title: 'Digital Marketing Services That Drive',
+			titleHighlight: 'Real Growth.',
 			subtitle:
 				'Meta Ads, Google Ads, SEO, Email, and Social — built as one integrated system around your real KPIs, not vanity metrics.',
+			// optional fields for page-specific hero CTA and background
+			ctaText: 'Get A Free Consultation',
+			ctaLink: '/contactUs',
+			bgClass: 'ssp-hero--bg-spot',
 		},
 		stats: [
 			{ value: '$2M+', label: 'Ad Spend Managed' },
@@ -88,36 +93,62 @@ export const subServicesData = {
 				title: 'SEO',
 				desc: 'Technical SEO, keyword strategy, and content built to rank and convert.',
 				link: '/services/digital-marketing/seo',
+				icon: '',
+				ctaText: 'Learn more',
+				ctaLink: '/services/digital-marketing/seo',
 			},
 			{
 				num: '02',
 				title: 'Google Ads',
 				desc: 'Search, Shopping, and Performance Max campaigns optimized for ROAS.',
 				link: '/services/digital-marketing/google-ads',
+				icon: '',
+				ctaText: 'Learn more',
+				ctaLink: '/services/digital-marketing/google-ads',
 			},
 			{
 				num: '03',
 				title: 'Meta Ads',
 				desc: 'Facebook and Instagram campaigns built around your customer acquisition cost.',
 				link: '/services/digital-marketing/meta-ads',
+				icon: '',
+				ctaText: 'Learn more',
+				ctaLink: '/services/digital-marketing/meta-ads',
 			},
 			{
 				num: '04',
 				title: 'Social Media Marketing',
 				desc: 'Organic content strategy, posting, and community management.',
 				link: '/services/digital-marketing/social-media',
+				icon: '',
+				ctaText: 'Learn more',
+				ctaLink: '/services/digital-marketing/social-media',
 			},
 			{
 				num: '05',
 				title: 'Email & SMS Marketing',
 				desc: 'Lifecycle flows and campaigns that retain customers and drive repeat revenue.',
+				icon: '',
+				ctaText: 'Learn more',
+				ctaLink: '',
 			},
 			{
 				num: '06',
 				title: 'Content Marketing',
 				desc: 'Blog, video, and UGC strategy that builds authority and drives organic traffic.',
+				icon: '',
+				ctaText: 'Learn more',
+				ctaLink: '',
 			},
 		],
+		// optional final CTA override for page
+		cta: {
+			title: "Let's Grow Your Store.",
+			subtitle: "Book a free 30-minute audit call. We'll review your current setup and show you exactly where to unlock more revenue.",
+			buttonText: 'Book A Free Call',
+			buttonLink: '/contactUs',
+			variantClass: '',
+		},
 		process: {
 			title: 'How we run your marketing',
 			steps: [

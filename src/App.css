@@ -179,6 +179,240 @@ body {
 	}
 }
 
+
+/* ===== Scoped: Digital Marketing page styles ===== */
+.ssp-page--digital-marketing .ssp-hero {
+	position: relative;
+	background:
+		radial-gradient(circle at 50% 24%, rgba(63,102,193,0.18), transparent 18%),
+		radial-gradient(circle at 50% 42%, rgba(124,58,237,0.10), transparent 25%),
+		linear-gradient(180deg, #030406 0%, #07090f 100%);
+	padding: clamp(52px, 8vw, 128px) 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+}
+.ssp-page--digital-marketing .ssp-hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at 50% 32%, rgba(89,106,255,0.18), transparent 24%),
+		radial-gradient(circle at 50% 40%, rgba(98,69,236,0.14), transparent 28%),
+		radial-gradient(circle at 25% 20%, rgba(93,89,255,0.08), transparent 22%),
+		radial-gradient(ellipse 540px 420px at 50% 34%, rgba(255,255,255,0.08), transparent 48%);
+	filter: blur(30px);
+	opacity: 0.82;
+	pointer-events: none;
+	z-index: 0;
+}
+.ssp-page--digital-marketing .ssp-hero-inner {
+	position: relative;
+	z-index: 2;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 42px 24px 12px;
+}
+.ssp-page--digital-marketing .ssp-hero-tag {
+	color: #9fb3ff;
+	display: block;
+	margin-bottom: 14px;
+	font-weight: 600;
+}
+.ssp-page--digital-marketing .ssp-hero-title {
+	font-family: 'Sora', sans-serif;
+	font-size: clamp(32px, 5vw, 56px);
+	line-height: 1.04;
+	margin: 0 auto 18px;
+	max-width: 760px;
+	color: #fff;
+}
+.ssp-page--digital-marketing .ssp-hero-highlight {
+	background: linear-gradient(90deg, #5f45d9, #1f51a0);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	display: inline-block;
+	padding: 0 6px;
+	border-radius: 6px;
+}
+.ssp-page--digital-marketing .ssp-hero-sub {
+	color: #cbd7ff;
+	max-width: 720px;
+	margin: 0 auto 24px;
+	opacity: 0.94;
+}
+.ssp-page--digital-marketing .ssp-hero-cta {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	padding: 16px 30px;
+	border-radius: 999px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	background: linear-gradient(90deg, #3b82f6, #7c3aed);
+	box-shadow: 0 16px 44px rgba(59,130,246,0.18), 0 6px 14px rgba(124,58,237,0.12);
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	z-index: 2;
+	transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.ssp-page--digital-marketing .ssp-hero-cta:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 20px 48px rgba(59,130,246,0.22), 0 8px 18px rgba(124,58,237,0.14);
+}
+
+/* Services grid */
+.ssp-page--digital-marketing .ssp-services-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+	align-items: stretch;
+	grid-auto-rows: 1fr;
+}
+.ssp-page--digital-marketing .ssp-service-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: rgba(17, 21, 39, 0.72);
+	border-radius: 22px;
+	padding: 28px 28px 24px;
+	border: 1px solid rgba(255,255,255,0.08);
+	box-shadow: 0 22px 60px rgba(2, 7, 20, 0.48);
+	height: 100%;
+	backdrop-filter: blur(16px);
+}
+.ssp-page--digital-marketing .ssp-card-icon {
+	width: 52px;
+	height: 52px;
+	border-radius: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(77, 84, 215, 0.14);
+	border: 1px solid rgba(109, 96, 236, 0.16);
+	margin-bottom: 16px;
+	flex: 0 0 auto;
+}
+.ssp-page--digital-marketing .ssp-card-icon img {
+	width: 28px;
+	height: 28px;
+	display: block;
+	object-fit: contain;
+}
+.ssp-page--digital-marketing .ssp-card-num {
+	color: #9eb5ff;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.ssp-page--digital-marketing .ssp-service-card h3 {
+	margin: 0 0 12px;
+	font-size: 20px;
+	line-height: 1.25;
+	color: #fff;
+}
+.ssp-page--digital-marketing .ssp-service-card p {
+	color: #cbd8ff;
+	margin: 0 0 20px;
+	flex: 0 0 auto;
+	line-height: 1.7;
+}
+.ssp-page--digital-marketing .ssp-card-link {
+	margin-top: auto;
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 14px;
+	font-size: 14px;
+	color: #d9e4ff;
+	text-decoration: none;
+	border-radius: 999px;
+	background: rgba(255,255,255,0.03);
+	border: 1px solid rgba(255,255,255,0.06);
+	transition: background .18s, transform .12s;
+}
+.ssp-page--digital-marketing .ssp-card-link:hover {
+	background: rgba(255,255,255,0.05);
+	transform: translateY(-1px);
+}
+
+/* Final CTA */
+.ssp-page--digital-marketing .ssp-cta {
+	position: relative;
+	max-width: 900px;
+	margin: 54px auto 0;
+	padding: 34px 32px 28px;
+	border-radius: 24px;
+	background: rgba(14, 18, 39, 0.68);
+	backdrop-filter: blur(16px);
+	text-align: center;
+	border: 1px solid rgba(255,255,255,0.08);
+	box-shadow: 0 30px 90px rgba(17, 26, 58, 0.35);
+	overflow: hidden;
+}
+.ssp-page--digital-marketing .ssp-cta::before {
+	content: '';
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 92%;
+	height: 100%;
+	border-radius: 30px;
+	background: radial-gradient(circle at 50% 20%, rgba(93, 83, 255, 0.16), transparent 45%);
+	pointer-events: none;
+	opacity: 0.55;
+	z-index: -1;
+}
+.ssp-page--digital-marketing .ssp-cta h2 {
+	margin: 0 0 14px;
+	font-size: 30px;
+	color: #fff;
+}
+.ssp-page--digital-marketing .ssp-cta p {
+	margin: 0 auto 22px;
+	color: #d7e2ff;
+	max-width: 700px;
+	line-height: 1.7;
+}
+.ssp-page--digital-marketing .ssp-cta button {
+	padding: 14px 34px;
+	border-radius: 999px;
+	border: none;
+	background: linear-gradient(90deg, #4f66ff, #8e4ff8);
+	color: #fff;
+	font-weight: 700;
+	box-shadow: 0 18px 48px rgba(79,102,255,0.24);
+	cursor: pointer;
+	transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.ssp-page--digital-marketing .ssp-cta button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 20px 50px rgba(79,102,255,0.28);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+	.ssp-page--digital-marketing .ssp-services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 768px) {
+	.ssp-page--digital-marketing .ssp-services-grid {
+		grid-template-columns: 1fr;
+	}
+	.ssp-page--digital-marketing .ssp-hero {
+		padding: 48px 18px;
+	}
+	.ssp-page--digital-marketing .ssp-hero-title {
+		font-size: clamp(22px, 6.5vw, 36px);
+	}
+}
+
+/* End scoped Digital Marketing styles */
 @media (max-width: 1024px) {
 	/* Tablet and mobile styles */
 	.corr-layout-grid {
