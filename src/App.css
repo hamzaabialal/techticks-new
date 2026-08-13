@@ -13737,6 +13737,620 @@ textarea,
 	.ssp-hero          { padding: 90px 20px 60px; }
 }
 
+/* ===== Scoped: UI/UX + Graphic Design page (.ssp-page--ui-ux-design) ===== */
+
+.ssp-page--ui-ux-design .ssp-hero {
+	position: relative;
+	background:
+		radial-gradient(circle at 50% 28%, rgba(99,102,241,0.16), transparent 20%),
+		radial-gradient(circle at 50% 45%, rgba(168,85,247,0.08), transparent 28%),
+		linear-gradient(180deg, #030406 0%, #07090f 100%);
+	padding: clamp(52px, 8vw, 128px) 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+}
+
+.ssp-page--ui-ux-design .ssp-hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at 50% 32%, rgba(139,92,246,0.15), transparent 26%),
+		radial-gradient(circle at 50% 42%, rgba(99,102,241,0.12), transparent 30%),
+		radial-gradient(circle at 25% 18%, rgba(168,85,247,0.06), transparent 24%),
+		radial-gradient(ellipse 540px 420px at 50% 35%, rgba(255,255,255,0.07), transparent 50%);
+	filter: blur(28px);
+	opacity: 0.80;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.ssp-page--ui-ux-design .ssp-hero-inner {
+	position: relative;
+	z-index: 2;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 42px 24px 12px;
+}
+
+.ssp-page--ui-ux-design .ssp-hero-tag {
+	color: #c4b5fd;
+	display: block;
+	margin-bottom: 14px;
+	font-weight: 600;
+}
+
+.ssp-page--ui-ux-design .ssp-hero-title {
+	font-family: 'Sora', sans-serif;
+	font-size: clamp(32px, 5vw, 56px);
+	line-height: 1.04;
+	margin: 0 auto 18px;
+	max-width: 760px;
+	color: #fff;
+}
+
+.ssp-page--ui-ux-design .ssp-hero-highlight {
+	background: linear-gradient(90deg, #a78bfa, #7c3aed);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	display: inline-block;
+	padding: 0 6px;
+	border-radius: 6px;
+}
+
+.ssp-page--ui-ux-design .ssp-hero-sub {
+	color: #e9d5ff;
+	max-width: 720px;
+	margin: 0 auto 24px;
+	opacity: 0.94;
+}
+
+.ssp-page--ui-ux-design .ssp-hero-cta {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	padding: 16px 30px;
+	border-radius: 999px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	background: linear-gradient(90deg, #a78bfa, #7c3aed);
+	box-shadow: 0 16px 44px rgba(167,139,250,0.18), 0 6px 14px rgba(124,58,237,0.12);
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	z-index: 2;
+	transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ssp-page--ui-ux-design .ssp-hero-cta:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 20px 48px rgba(167,139,250,0.22), 0 8px 18px rgba(124,58,237,0.14);
+}
+
+/* Service cards styling */
+.ssp-page--ui-ux-design .ssp-services-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+	align-items: stretch;
+	grid-auto-rows: 1fr;
+}
+
+.ssp-page--ui-ux-design .ssp-service-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: rgba(17, 21, 39, 0.72);
+	border-radius: 22px;
+	padding: 28px 28px 24px;
+	border: 1px solid rgba(255,255,255,0.08);
+	box-shadow: 0 22px 60px rgba(2, 7, 20, 0.48);
+	height: 100%;
+	backdrop-filter: blur(16px);
+	position: relative;
+}
+
+/* Service card ::before pseudo for repeating icon backgrounds (dollar, document, envelope cycle) */
+.ssp-page--ui-ux-design .ssp-service-card::before {
+	content: '';
+	position: absolute;
+	top: 28px;
+	right: 28px;
+	width: 52px;
+	height: 52px;
+	border-radius: 12px;
+	background: rgba(168, 85, 247, 0.12);
+	border: 1px solid rgba(196, 181, 253, 0.16);
+}
+
+.ssp-page--ui-ux-design .ssp-card-num {
+	color: #d8b4fe;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.ssp-page--ui-ux-design .ssp-service-card h3 {
+	margin: 0 0 12px;
+	font-size: 20px;
+	line-height: 1.25;
+	color: #fff;
+	padding-right: 60px;
+}
+
+.ssp-page--ui-ux-design .ssp-service-card p {
+	color: #e9d5ff;
+	margin: 0 0 20px;
+	flex: 0 0 auto;
+	line-height: 1.7;
+}
+
+.ssp-page--ui-ux-design .ssp-card-link {
+	margin-top: auto;
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 14px;
+	font-size: 14px;
+	color: #e9d5ff;
+	text-decoration: none;
+	border-radius: 999px;
+	background: rgba(255,255,255,0.03);
+	border: 1px solid rgba(255,255,255,0.06);
+	transition: background .18s, transform .12s;
+}
+
+.ssp-page--ui-ux-design .ssp-card-link:hover {
+	background: rgba(255,255,255,0.05);
+	transform: translateY(-1px);
+}
+
+/* Growth Partner section */
+.ssp-page--ui-ux-design .ssp-growth-partner {
+	max-width: 1200px;
+	margin: 48px auto;
+	padding: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 80px;
+	align-items: start;
+	background: transparent;
+	border: none;
+}
+
+.ssp-page--ui-ux-design .ssp-growth-partner-left {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.ssp-page--ui-ux-design .ssp-growth-partner-left h2 {
+	font-family: 'Sora', sans-serif;
+	font-size: 36px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: #fff;
+	margin: 0;
+}
+
+.ssp-page--ui-ux-design .ssp-growth-partner-left p {
+	color: #d8b4fe;
+	font-size: 16px;
+	line-height: 1.7;
+	margin: 0;
+}
+
+.ssp-page--ui-ux-design .ssp-growth-partner-right {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+}
+
+.ssp-page--ui-ux-design .ssp-growth-partner-row {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+}
+
+.ssp-page--ui-ux-design .ssp-gp-stat {
+	font-size: 32px;
+	font-weight: 700;
+	color: #a78bfa;
+	min-width: 80px;
+	text-align: center;
+	display: block;
+	font-family: 'Sora', sans-serif;
+}
+
+.ssp-page--ui-ux-design .ssp-gp-content h4 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin: 0 0 8px;
+}
+
+.ssp-page--ui-ux-design .ssp-gp-content p {
+	color: #d8b4fe;
+	font-size: 15px;
+	line-height: 1.7;
+	margin: 0;
+}
+
+/* Portfolio section */
+.ssp-page--ui-ux-design .ssp-portfolio {
+	max-width: 1200px;
+	margin: 80px auto;
+	padding: 60px 40px;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-header h2 {
+	font-family: 'Sora', sans-serif;
+	font-size: 36px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: #fff;
+	margin: 0;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-view-all {
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.2);
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 999px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	white-space: nowrap;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-view-all:hover {
+	border-color: rgba(255,255,255,0.4);
+	background: rgba(255,255,255,0.05);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-card {
+	border-radius: 20px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.4);
+	border: 1px solid rgba(255,255,255,0.08);
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 20px 50px rgba(167,139,250,0.15);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-image {
+	width: 100%;
+	height: 280px;
+	overflow: hidden;
+	background: #111;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:
+		radial-gradient(circle at 20% 20%, rgba(167, 139, 250, 0.25), transparent 34%),
+		linear-gradient(135deg, #151224 0%, #0b0a12 58%, #171126 100%);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder::before,
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder::after,
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder span {
+	content: '';
+	position: absolute;
+	border: 1px solid rgba(221, 214, 254, 0.24);
+	background: rgba(255, 255, 255, 0.06);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--social::before {
+	width: 48%;
+	height: 72%;
+	left: 13%;
+	top: 16%;
+	border-radius: 18px;
+	background: linear-gradient(155deg, rgba(236, 72, 153, 0.78), rgba(124, 58, 237, 0.3) 64%, rgba(255, 255, 255, 0.06));
+	transform: rotate(-7deg);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--social::after {
+	width: 38%;
+	height: 58%;
+	right: 11%;
+	bottom: 8%;
+	border-radius: 16px;
+	background: linear-gradient(155deg, rgba(34, 211, 238, 0.5), rgba(124, 58, 237, 0.32));
+	transform: rotate(9deg);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--social span:first-child {
+	width: 26%;
+	height: 7px;
+	left: 23%;
+	top: 36%;
+	border: 0;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.72);
+	z-index: 1;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--landing::before {
+	width: 72%;
+	height: 70%;
+	border-radius: 14px;
+	background: linear-gradient(160deg, rgba(32, 27, 51, 0.96), rgba(17, 14, 29, 0.94));
+	box-shadow: 0 22px 50px rgba(0, 0, 0, 0.4);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--landing::after {
+	width: 72%;
+	height: 10px;
+	left: 14%;
+	top: 20%;
+	border: 0;
+	border-radius: 14px 14px 0 0;
+	background: linear-gradient(90deg, #a78bfa 0 18%, rgba(255, 255, 255, 0.1) 18% 100%);
+	z-index: 1;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--landing span:first-child {
+	width: 42%;
+	height: 13px;
+	left: 25%;
+	top: 42%;
+	border: 0;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.82);
+	z-index: 1;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--landing span:nth-child(2) {
+	width: 30%;
+	height: 8px;
+	left: 35%;
+	top: 51%;
+	border: 0;
+	border-radius: 999px;
+	background: rgba(221, 214, 254, 0.44);
+	z-index: 1;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--landing span:nth-child(3) {
+	width: 28%;
+	height: 26px;
+	left: 36%;
+	top: 62%;
+	border: 0;
+	border-radius: 8px;
+	background: linear-gradient(90deg, #7c3aed, #a78bfa);
+	z-index: 1;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--packaging {
+	background:
+		radial-gradient(circle at 71% 27%, rgba(251, 191, 36, 0.25), transparent 26%),
+		linear-gradient(135deg, #17101d, #0a0a0e 68%);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--packaging::before {
+	width: 35%;
+	height: 60%;
+	left: 22%;
+	top: 20%;
+	border-radius: 5px;
+	background: linear-gradient(130deg, rgba(251, 191, 36, 0.88), rgba(180, 83, 9, 0.62));
+	transform: skewY(-8deg);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--packaging::after {
+	width: 29%;
+	height: 49%;
+	right: 21%;
+	bottom: 16%;
+	border-radius: 5px;
+	background: linear-gradient(130deg, rgba(196, 181, 253, 0.9), rgba(91, 33, 182, 0.52));
+	transform: skewY(9deg);
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-placeholder--packaging span:first-child {
+	width: 20%;
+	height: 5px;
+	left: 29%;
+	top: 43%;
+	border: 0;
+	background: rgba(36, 20, 5, 0.55);
+	z-index: 1;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-content {
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-content h3 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin: 0;
+}
+
+.ssp-page--ui-ux-design .ssp-portfolio-tag {
+	display: inline-block;
+	background: rgba(167,139,250,0.12);
+	border: 1px solid rgba(196,181,253,0.2);
+	color: #d8b4fe;
+	padding: 6px 12px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 600;
+	width: fit-content;
+}
+
+/* Final CTA styling */
+.ssp-page--ui-ux-design .ssp-cta {
+	position: relative;
+	max-width: 900px;
+	margin: 54px auto 0;
+	padding: 34px 32px 28px;
+	border-radius: 24px;
+	background: rgba(14, 18, 39, 0.68);
+	backdrop-filter: blur(16px);
+	text-align: center;
+	border: 1px solid rgba(255,255,255,0.08);
+	box-shadow: 0 30px 90px rgba(17, 26, 58, 0.35);
+	overflow: hidden;
+}
+
+.ssp-page--ui-ux-design .ssp-cta::before {
+	content: '';
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 92%;
+	height: 100%;
+	border-radius: 30px;
+	background: radial-gradient(circle at 50% 20%, rgba(168, 85, 247, 0.16), transparent 45%);
+	pointer-events: none;
+	opacity: 0.55;
+	z-index: -1;
+}
+
+.ssp-page--ui-ux-design .ssp-cta h2 {
+	margin: 0 0 14px;
+	font-size: 30px;
+	color: #fff;
+}
+
+.ssp-page--ui-ux-design .ssp-cta p {
+	margin: 0 auto 22px;
+	color: #d8b4fe;
+	max-width: 700px;
+	line-height: 1.7;
+}
+
+.ssp-page--ui-ux-design .ssp-cta button {
+	padding: 14px 34px;
+	border-radius: 999px;
+	border: none;
+	background: linear-gradient(90deg, #a78bfa, #8e4ff8);
+	color: #fff;
+	font-weight: 700;
+	box-shadow: 0 18px 48px rgba(167,139,250,0.24);
+	cursor: pointer;
+	transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ssp-page--ui-ux-design .ssp-cta button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 20px 50px rgba(167,139,250,0.28);
+}
+
+/* Responsive adjustments for UI/UX page */
+@media (max-width: 1024px) {
+	.ssp-page--ui-ux-design .ssp-services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.ssp-page--ui-ux-design .ssp-growth-partner {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.ssp-page--ui-ux-design .ssp-portfolio-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.ssp-page--ui-ux-design .ssp-services-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ssp-page--ui-ux-design .ssp-hero {
+		padding: 48px 18px;
+	}
+
+	.ssp-page--ui-ux-design .ssp-hero-title {
+		font-size: clamp(22px, 6.5vw, 36px);
+	}
+
+	.ssp-page--ui-ux-design .ssp-growth-partner {
+		padding: 40px 20px;
+		margin: 60px auto;
+	}
+
+	.ssp-page--ui-ux-design .ssp-growth-partner-left h2 {
+		font-size: 28px;
+	}
+
+	.ssp-page--ui-ux-design .ssp-growth-partner-row {
+		gap: 16px;
+	}
+
+	.ssp-page--ui-ux-design .ssp-gp-stat {
+		font-size: 24px;
+		min-width: 60px;
+	}
+
+	.ssp-page--ui-ux-design .ssp-gp-content h4 {
+		font-size: 16px;
+	}
+
+	.ssp-page--ui-ux-design .ssp-portfolio {
+		padding: 40px 20px;
+		margin: 60px auto;
+	}
+
+	.ssp-page--ui-ux-design .ssp-portfolio-header h2 {
+		font-size: 28px;
+	}
+
+	.ssp-page--ui-ux-design .ssp-portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ssp-page--ui-ux-design .ssp-portfolio-image {
+		height: 220px;
+	}
+}
+
+/* End scoped UI/UX Design page styles */
 
 /* ===== Testimonials mobile fix ===== */
 @media (max-width: 700px) {

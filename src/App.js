@@ -80,8 +80,10 @@ function App() {
 					<Route path='/services/digital-marketing/meta-ads' element={<SubServicePage data={subServicesData['digital-marketing/meta-ads']} />} />
 					<Route path='/services/digital-marketing/social-media' element={<SubServicePage data={subServicesData['digital-marketing/social-media']} />} />
 					<Route path='/services/design' element={<SubServicePage data={subServicesData['design']} />} />
-					<Route path='/services/development' element={<SubServicePage data={subServicesData['development']} />} />
-				</Routes>
+					<Route path='/services/ui-ux-design' element={<SubServicePage data={subServicesData['design']} />} />
+				<Route path='/services/development' element={<SubServicePage data={subServicesData['development']} />} />
+				<Route path='/services/web-development' element={<SubServicePage data={subServicesData['development']} />} />
+			</Routes>
 				<FooterSection />
 			</BrowserRouter>
 		</div>

@@ -3,7 +3,7 @@ import Testimonials from './testonomial'
 
 function SubServicePage({ data }) {
 	const navigate = useNavigate()
-	const { breadcrumb, breadcrumbLinks, hero, stats, platforms, servicesTitle, services, process, relatedServices } = data
+	const { breadcrumb, breadcrumbLinks, hero, stats, platforms, servicesTitle, servicesSubtitle, services, process, relatedServices } = data
 
 	const heroCtaText = data.hero?.ctaText || 'Book a Free Strategy Call'
 	const heroCtaLink = data.hero?.ctaLink || '/contactUs'
@@ -35,6 +35,7 @@ function SubServicePage({ data }) {
 					<h1 className='ssp-hero-title'>
 						{hero.title}{' '}
 						<span className='ssp-hero-highlight'>{hero.titleHighlight}</span>
+						{hero.titleSuffix && <><br />{hero.titleSuffix}</>}
 					</h1>
 					<p className='ssp-hero-sub'>{hero.subtitle}</p>
 					<button className='ssp-hero-cta' onClick={() => navigate(heroCtaLink)}>
@@ -70,7 +71,7 @@ function SubServicePage({ data }) {
 			<section className='ssp-services'>
 				<div className='ssp-section-header'>
 					<h2>{servicesTitle}</h2>
-					<p>Every deliverable is built for results — nothing included just to pad the scope.</p>
+					<p>{servicesSubtitle || 'Every deliverable is built for results — nothing included just to pad the scope.'}</p>
 				</div>
 
 				<div className='ssp-services-grid'>
@@ -99,6 +100,7 @@ function SubServicePage({ data }) {
 			</section>
 
 			{/* ── PROCESS ──────────────────────────────── */}
+			{process && (
 			<section className='ssp-process'>
 				<div className='ssp-blob ssp-blob-center' />
 				<h2 className='ssp-process-title'>{process.title}</h2>
@@ -113,8 +115,69 @@ function SubServicePage({ data }) {
 					))}
 				</div>
 			</section>
+			)}
+
+			{/* ── GROWTH PARTNER (optional) ────────────── */}
+			{data.growthPartner && (
+				<section className='ssp-growth-partner'>
+					<div className='ssp-growth-partner-left'>
+						<h2>{data.growthPartner.title}</h2>
+						<p>{data.growthPartner.subtitle}</p>
+					</div>
+					<div className='ssp-growth-partner-right'>
+						{data.growthPartner.stats.map((stat, i) => (
+							<div key={i} className='ssp-growth-partner-row'>
+								<span className='ssp-gp-stat'>{stat.stat}</span>
+								<div className='ssp-gp-content'>
+									<h4>{stat.title}</h4>
+									<p>{stat.desc}</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</section>
+			)}
+
+			{/* ── PORTFOLIO (optional) ─────────────────── */}
+			{data.portfolio && (
+				<section className='ssp-portfolio'>
+					<div className='ssp-portfolio-header'>
+						<h2>{data.portfolio.title}</h2>
+						{data.portfolio.viewAllLink && (
+							<button
+								className='ssp-portfolio-view-all'
+								onClick={() => navigate(data.portfolio.viewAllLink)}
+							>
+								{data.portfolio.viewAllText || 'VIEW ALL WORK →'}
+							</button>
+						)}
+					</div>
+					<div className='ssp-portfolio-grid'>
+						{data.portfolio.items.map((item, i) => (
+							<div key={i} className='ssp-portfolio-card'>
+								<div className='ssp-portfolio-image'>
+									{item.image ? (
+										<img src={item.image} alt={item.title} />
+									) : (
+										<div className={`ssp-portfolio-placeholder ${item.visual || ''}`} aria-hidden='true'>
+											<span />
+											<span />
+											<span />
+										</div>
+									)}
+								</div>
+								<div className='ssp-portfolio-content'>
+									<h3>{item.title}</h3>
+									<span className='ssp-portfolio-tag'>{item.category}</span>
+								</div>
+							</div>
+						))}
+					</div>
+				</section>
+			)}
 
 			{/* ── RELATED SERVICES ─────────────────────── */}
+			{relatedServices?.length > 0 && (
 			<section className='ssp-related'>
 				<h2>More ways TechTicks can help</h2>
 				<p className='ssp-related-sub'>
@@ -134,9 +197,10 @@ function SubServicePage({ data }) {
 					))}
 				</div>
 			</section>
+			)}
 
 			{/* ── TESTIMONIALS ────────────────────────── */}
-			{data.pageClass === 'ssp-page--digital-marketing' && <Testimonials />}
+			{(data.pageClass === 'ssp-page--digital-marketing' || data.pageClass === 'ssp-page--ui-ux-design') && <Testimonials />}
 
 			{/* ── FINAL CTA ────────────────────────────── */}
 			{data.cta ? (

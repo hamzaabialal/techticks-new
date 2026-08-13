@@ -1,3 +1,7 @@
+import portfolio1 from './images/portfolio-Picture/1.png'
+import portfolio2 from './images/portfolio-Picture/2.png'
+import brandIdentityLogo from './images/services-slider/slider7.png'
+
 export const subServicesData = {
 	'ecommerce-management': {
 		breadcrumb: ['Services', 'Ecommerce Management'],
@@ -330,14 +334,17 @@ export const subServicesData = {
 	},
 
 	'design': {
+		pageClass: 'ssp-page--ui-ux-design',
 		breadcrumb: ['Services', 'UX/UI & Graphic Design'],
 		breadcrumbLinks: ['/services'],
 		hero: {
 			tag: 'UX/UI & Graphic Design',
-			title: 'Design That Converts,',
-			titleHighlight: 'Not Just Impresses.',
-			subtitle:
-				'UX/UI, brand identity, Amazon creatives, and ad design — backed by user behaviour data and ecommerce best practices, not just taste.',
+			title: 'Design that',
+			titleHighlight: 'converts,',
+			titleSuffix: 'not just looks good.',
+			subtitle: 'UX, UI, and marketplace graphics engineered to lift conversion rates, not decorate your brand.',
+			ctaText: 'Get A Free Consultation',
+			ctaLink: '/contactUs',
 		},
 		stats: [
 			{ value: '200+', label: 'Projects Delivered' },
@@ -345,29 +352,119 @@ export const subServicesData = {
 			{ value: '5', label: 'Platforms Covered' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'What we design',
+		servicesTitle: 'Every design discipline. One Team.',
+		servicesSubtitle: 'No handoffs to freelancers. Every vertical is in-house and ecommerce-trained.',
 		services: [
-			{ num: '01', title: 'UX/UI & Web Design', desc: 'Conversion-focused interfaces for websites, landing pages, and ecommerce stores.' },
-			{ num: '02', title: 'Brand Identity', desc: 'Logo systems, typography, color, and guidelines built for long-term consistency.' },
-			{ num: '03', title: 'Ad Creative', desc: 'Scroll-stopping static and video creatives for Meta, Google, and TikTok Ads.' },
-			{ num: '04', title: 'Amazon Listing Design', desc: 'Main images, infographics, A+ Content, and storefronts that convert on Amazon.' },
-			{ num: '05', title: 'Packaging Design', desc: 'Product packaging designed to communicate value and stand out on the shelf.' },
-			{ num: '06', title: 'Social Media Graphics', desc: 'On-brand templates and custom graphics for all your social channels.' },
+			{
+				num: '01',
+				title: 'Website & App UI/UX',
+				desc: 'Conversion-first UX that moves visitors to buyers, built for Shopify, custom DTC, and app storefronts.',
+				ctaText: 'Learn more →',
+				ctaLink: '/contactUs',
+			},
+			{
+				num: '02',
+				title: 'Amazon & Marketplace Graphics',
+				desc: 'A+ Content, storefront banners, and listing imagery engineered to outperform on Amazon, Walmart, and eBay.',
+				ctaText: 'Learn more →',
+				ctaLink: '/contactUs',
+			},
+			{
+				num: '03',
+				title: 'Brand Identity & Logo',
+				desc: 'Visual systems that hold up on packaging, TikTok, and a 40-foot trade-show backdrop — all from one design sprint.',
+				ctaText: 'Learn more →',
+				ctaLink: '/contactUs',
+			},
+			{
+				num: '04',
+				title: 'Social Media Design',
+				desc: 'Thumb-stopping creatives for TikTok Shop, Meta, and Pinterest — designed to drive clicks, not just impressions.',
+				ctaText: 'Learn more →',
+				ctaLink: '/contactUs',
+			},
+			{
+				num: '05',
+				title: 'Landing Page Design',
+				desc: 'High-converting landing pages for paid traffic — every element positioned to reduce drop-off and lift CVR.',
+				ctaText: 'Learn more →',
+				ctaLink: '/contactUs',
+			},
+			{
+				num: '06',
+				title: 'Packaging & Print',
+				desc: 'Retail-ready packaging and insert cards that reinforce brand, drive repeat purchases, and stand out on shelf.',
+				ctaText: 'Learn more →',
+				ctaLink: '/contactUs',
+			},
 		],
-		process: {
-			title: 'Our design process',
-			steps: [
-				{ num: '01', title: 'Discovery', desc: 'We understand your brand, audience, and goals before touching a pixel.' },
-				{ num: '02', title: 'Concept', desc: 'Initial design directions presented with rationale — no guessing games.' },
-				{ num: '03', title: 'Refine', desc: 'Feedback-driven iterations until the design is exactly right.' },
-				{ num: '04', title: 'Deliver', desc: 'All files delivered in production-ready formats for every platform.' },
+		growthPartner: {
+			title: "WE'RE YOUR GROWTH PARTNER.",
+			subtitle: 'Design agencies care about awards. We care about your conversion rate, your ROAS, and your BSR.',
+			stats: [
+				{
+					stat: '72hr',
+					title: 'First Drafts in 72 Hours',
+					desc: 'Most agencies take two weeks to show you anything. We move at ecommerce speed because your ad spend doesn\'t pause.',
+				},
+				{
+					stat: '100%',
+					title: 'Ecommerce-Only Focus',
+					desc: 'We don\'t do restaurant menus or wedding invitations. Every designer on our team has worked inside an ecommerce P&L.',
+				},
+				{
+					stat: 'Data',
+					title: 'Design Decisions Backed by Data',
+					desc: 'We pull your conversion funnel before touching Figma. Every layout choice is a hypothesis tied to a business metric.',
+				},
 			],
 		},
-		relatedServices: [
-			{ title: 'Website Development', link: '/services/development', desc: 'We build what we design — no handoff friction.' },
-			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Creative that powers your paid and organic campaigns.' },
-			{ title: 'Ecommerce Management', link: '/services/ecommerce-management', desc: 'Amazon and marketplace listing design included.' },
-		],
+		portfolio: {
+			title: 'Let The Results Do The Talking',
+			viewAllText: 'VIEW ALL WORK →',
+			viewAllLink: '/portfolio',
+			items: [
+				{
+					image: portfolio1,
+					title: 'Shopify Storefront',
+					category: 'UI/UX',
+				},
+				{
+					image: portfolio2,
+					title: 'Amazon A+ Content',
+					category: 'Marketplace',
+				},
+				{
+					image: brandIdentityLogo,
+					title: 'Brand Identity System',
+					category: 'Branding',
+				},
+				{
+					image: null,
+					visual: 'ssp-portfolio-placeholder--social',
+					title: 'TikTok Shop Creative',
+					category: 'Social',
+				},
+				{
+					image: null,
+					visual: 'ssp-portfolio-placeholder--landing',
+					title: 'Landing Page',
+					category: 'Conversion',
+				},
+				{
+					image: null,
+					visual: 'ssp-portfolio-placeholder--packaging',
+					title: 'Packaging Design',
+					category: 'Print',
+				},
+			],
+		},
+		cta: {
+			title: 'Ready to turn your design into revenue?',
+			subtitle: 'Free audit. No pitch deck. Just an honest look at what\'s costing you conversions.',
+			buttonText: 'Book A Free Call',
+			buttonLink: '/contactUs',
+		},
 	},
 
 	'development': {
