@@ -18,7 +18,7 @@ function SubServicePage({ data }) {
 
 				<div className='ssp-hero-inner'>
 					{/* breadcrumb */}
-					<nav className='ssp-breadcrumb'>
+					{data.showBreadcrumb !== false && <nav className='ssp-breadcrumb'>
 						{breadcrumb.map((crumb, i) => (
 							<span key={i}>
 								{i < breadcrumbLinks.length ? (
@@ -29,7 +29,7 @@ function SubServicePage({ data }) {
 								{i < breadcrumb.length - 1 && <span className='ssp-bc-sep'> / </span>}
 							</span>
 						))}
-					</nav>
+					</nav>}
 
 					<span className='ssp-hero-tag'>{hero.tag}</span>
 					<h1 className='ssp-hero-title'>
@@ -45,7 +45,7 @@ function SubServicePage({ data }) {
 			</section>
 
 			{/* ── STATS BAR ────────────────────────────── */}
-			<div className='ssp-stats-bar'>
+			{data.showStats !== false && <div className='ssp-stats-bar'>
 				{stats.map((s, i) => (
 					<div key={i} className='ssp-stat-item'>
 						<span className='ssp-stat-value'>{s.value}</span>
@@ -53,7 +53,7 @@ function SubServicePage({ data }) {
 						{i < stats.length - 1 && <div className='ssp-stat-divider' />}
 					</div>
 				))}
-			</div>
+			</div>}
 
 			{/* ── PLATFORMS (optional) ─────────────────── */}
 			{platforms && (
@@ -100,6 +100,36 @@ function SubServicePage({ data }) {
 			</section>
 
 			{/* ── PROCESS ──────────────────────────────── */}
+			{data.platformLogos?.length > 0 && (
+				<section className='ssp-platform-logos' aria-label={data.platformLogosLabel || 'Platforms and technologies'}>
+					<p>{data.platformLogosLabel || 'Platforms & technologies we build on'}</p>
+					<div className='ssp-platform-logos-list'>
+						{data.platformLogos.map((platform, i) => (
+							<img key={i} src={platform.image} alt={platform.alt} />
+						))}
+					</div>
+				</section>
+			)}
+
+			{data.portfolioBeforeProcess && data.portfolio && (
+				<section className='ssp-portfolio'>
+					<div className='ssp-portfolio-header'>
+						<h2>{data.portfolio.title}</h2>
+						{data.portfolio.viewAllLink && <button className='ssp-portfolio-view-all' onClick={() => navigate(data.portfolio.viewAllLink)}>{data.portfolio.viewAllText || 'VIEW ALL WORK ->'}</button>}
+					</div>
+					<div className='ssp-portfolio-grid'>
+						{data.portfolio.items.map((item, i) => (
+							<div key={i} className='ssp-portfolio-card'>
+								<div className='ssp-portfolio-image'>
+									{item.image ? <img src={item.image} alt={item.title} className={item.imageClass || undefined} /> : <div className={`ssp-portfolio-placeholder ${item.visual || ''}`} aria-hidden='true'><span /><span /><span /></div>}
+								</div>
+								<div className='ssp-portfolio-content'><h3>{item.title}</h3><span className='ssp-portfolio-tag'>{item.category}</span></div>
+							</div>
+						))}
+					</div>
+				</section>
+			)}
+
 			{process && (
 			<section className='ssp-process'>
 				<div className='ssp-blob ssp-blob-center' />
@@ -139,7 +169,7 @@ function SubServicePage({ data }) {
 			)}
 
 			{/* ── PORTFOLIO (optional) ─────────────────── */}
-			{data.portfolio && (
+			{!data.portfolioBeforeProcess && data.portfolio && (
 				<section className='ssp-portfolio'>
 					<div className='ssp-portfolio-header'>
 						<h2>{data.portfolio.title}</h2>
@@ -157,7 +187,7 @@ function SubServicePage({ data }) {
 							<div key={i} className='ssp-portfolio-card'>
 								<div className='ssp-portfolio-image'>
 									{item.image ? (
-										<img src={item.image} alt={item.title} />
+										<img src={item.image} alt={item.title} className={item.imageClass || undefined} />
 									) : (
 										<div className={`ssp-portfolio-placeholder ${item.visual || ''}`} aria-hidden='true'>
 											<span />
@@ -200,7 +230,7 @@ function SubServicePage({ data }) {
 			)}
 
 			{/* ── TESTIMONIALS ────────────────────────── */}
-			{(data.pageClass === 'ssp-page--digital-marketing' || data.pageClass === 'ssp-page--ui-ux-design') && <Testimonials />}
+			{(data.showTestimonials || data.pageClass === 'ssp-page--digital-marketing' || data.pageClass === 'ssp-page--ui-ux-design') && <Testimonials />}
 
 			{/* ── FINAL CTA ────────────────────────────── */}
 			{data.cta ? (

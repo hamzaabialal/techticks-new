@@ -1,8 +1,16 @@
-import portfolio1 from './images/portfolio-Picture/1.png'
-import portfolio2 from './images/portfolio-Picture/2.png'
-import brandIdentityLogo from './images/services-slider/slider7.png'
+import portfolioShopify from './images/portfolio-stock/hands-on-keyboard.jpg'
+import portfolioAmazon from './images/portfolio-stock/hammer-nails-wood.jpg'
+import portfolioSocial from './images/portfolio-stock/pen-notebook-desk.jpg'
+import portfolioLanding from './images/portfolio-stock/laptop-analytics-dashboard.jpg'
+import techLogo1 from './images/services-slider/slider1.png'
+import techLogo2 from './images/services-slider/slider2.png'
+import techLogo3 from './images/services-slider/slider3.png'
+import techLogo4 from './images/services-slider/slider4.png'
+import techLogo5 from './images/services-slider/slider5.png'
+import techLogo6 from './images/services-slider/slider6.png'
+import { attachDetailContent, serviceById } from './servicesCatalog'
 
-export const subServicesData = {
+const detailPageContent = {
 	'ecommerce-management': {
 		breadcrumb: ['Services', 'Ecommerce Management'],
 		breadcrumbLinks: ['/services'],
@@ -425,29 +433,28 @@ export const subServicesData = {
 			viewAllLink: '/portfolio',
 			items: [
 				{
-					image: portfolio1,
+					image: portfolioShopify,
 					title: 'Shopify Storefront',
 					category: 'UI/UX',
 				},
 				{
-					image: portfolio2,
+					image: portfolioAmazon,
 					title: 'Amazon A+ Content',
 					category: 'Marketplace',
 				},
 				{
-					image: brandIdentityLogo,
+					image: null,
+					visual: 'ssp-portfolio-placeholder--branding',
 					title: 'Brand Identity System',
 					category: 'Branding',
 				},
 				{
-					image: null,
-					visual: 'ssp-portfolio-placeholder--social',
+					image: portfolioSocial,
 					title: 'TikTok Shop Creative',
 					category: 'Social',
 				},
 				{
-					image: null,
-					visual: 'ssp-portfolio-placeholder--landing',
+					image: portfolioLanding,
 					title: 'Landing Page',
 					category: 'Conversion',
 				},
@@ -507,4 +514,98 @@ export const subServicesData = {
 			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Drive traffic to the site we build for you.' },
 		],
 	},
+}
+
+detailPageContent.development = {
+	...detailPageContent.development,
+	pageClass: 'ssp-page--development',
+	showBreadcrumb: false,
+	showStats: false,
+	showTestimonials: true,
+	portfolioBeforeProcess: true,
+	hero: {
+		...detailPageContent.development.hero,
+		title: 'Websites',
+		titleHighlight: 'built to sell',
+		titleSuffix: 'not just exists.',
+		subtitle: 'Responsive, conversion-optimized, ecommerce-ready builds, designed and developed in-house so nothing gets lost in the handoff.',
+		ctaText: 'Get A Free Consultation',
+	},
+	platformLogosLabel: 'Platforms & technologies we build on',
+	platformLogos: [
+		{ image: techLogo1, alt: 'CodeBaiz' },
+		{ image: techLogo2, alt: 'Platform partner' },
+		{ image: techLogo3, alt: 'Skymppel' },
+		{ image: techLogo4, alt: 'Platform partner' },
+		{ image: techLogo5, alt: 'IATECH' },
+		{ image: techLogo6, alt: 'Nexatek' },
+	],
+	servicesTitle: 'Every build, every channel.',
+	servicesSubtitle: "From first commit to post-launch support - we handle the full development lifecycle so your team doesn't have to.",
+	services: [
+		{ num: '01', title: 'Shopify Store Development', desc: 'Custom themes, app integrations, and checkout optimization for Shopify merchants ready to scale.', ctaText: 'Learn more', ctaLink: '/contactUs' },
+		{ num: '02', title: 'Custom Website Design & Build', desc: 'Fully bespoke sites built on Next.js or headless stacks - no templates, no shortcuts.', ctaText: 'Learn more', ctaLink: '/contactUs' },
+		{ num: '03', title: 'Redesigns & Migrations', desc: 'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one.', ctaText: 'Learn more', ctaLink: '/contactUs' },
+		{ num: '04', title: 'Landing Pages', desc: 'High-converting campaign pages built for paid traffic - A/B-ready and launched in days, not weeks.', ctaText: 'Learn more', ctaLink: '/contactUs' },
+		{ num: '05', title: 'Speed & Performance Optimization', desc: 'Core Web Vitals audits and surgical fixes that cut load time and lift rankings.', ctaText: 'Learn more', ctaLink: '/contactUs' },
+		{ num: '06', title: 'Maintenance & Support', desc: 'Ongoing updates, security patches, and feature rollouts, so your site never stagnates.', ctaText: 'Learn more', ctaLink: '/contactUs' },
+	],
+	process: {
+		title: 'The unfair advantage.',
+		steps: [
+			{ num: '01', title: 'Launched in weeks, not months.', desc: "Our sprint-based process and in-house design-dev pipeline means you're live and generating revenue faster than agency timelines allow." },
+			{ num: '02', title: 'Deep ecommerce platform expertise.', desc: "Shopify, headless, custom stacks - we've built across every major platform and know which one wins for your category and volume." },
+			{ num: '03', title: 'Design to dev. No handoff gaps.', desc: "Our designers and developers share a single Figma file. What's approved is exactly what ships, no it looked different in the mockup surprises." },
+		],
+	},
+	portfolio: {
+		title: 'Sites That Drive Revenue.',
+		viewAllText: 'VIEW ALL WORK →',
+		viewAllLink: '/portfolio',
+		items: [
+			{ image: portfolioShopify, title: 'Shopify Storefront', category: 'UI/UX' },
+			{ image: portfolioAmazon, title: 'Amazon A+ Content', category: 'Marketplace' },
+			{ image: null, visual: 'ssp-portfolio-placeholder--branding', title: 'Brand Identity System', category: 'Branding' },
+			{ image: portfolioSocial, title: 'TikTok Shop Creative', category: 'Social' },
+			{ image: portfolioLanding, title: 'Landing Page', category: 'Conversion' },
+			{ image: null, visual: 'ssp-portfolio-placeholder--packaging', title: 'Packaging Design', category: 'Print' },
+		],
+	},
+	cta: {
+		title: 'Ready to build something that sells?',
+		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
+		buttonText: 'Book A Free Call',
+		buttonLink: '/contactUs',
+	},
+}
+
+const canonicalDetailPages = Object.fromEntries(
+	Object.entries(detailPageContent).map(([id, detail]) => {
+		const category = serviceById[id]
+
+		if (!category) {
+			return [id, detail]
+		}
+
+		return [
+			id,
+			{
+				...detail,
+				category,
+				breadcrumb: ['Services', category.title],
+				breadcrumbLinks: ['/services'],
+				hero: {
+					...detail.hero,
+					tag: category.title,
+				},
+			},
+		]
+	}),
+)
+
+attachDetailContent(canonicalDetailPages)
+
+export const subServicesData = {
+	...detailPageContent,
+	...canonicalDetailPages,
 }
