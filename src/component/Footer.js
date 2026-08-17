@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import { FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa'
+import { FaXTwitter, FaThreads } from 'react-icons/fa6'
 import { NavLink } from 'react-router-dom'
 import logo from '../component/images/logo.png'
 
@@ -42,14 +42,14 @@ const FooterSection = () => {
 							<FaInstagram />
 						</a>
 						<a
-							href='https://x.com/techticks2020?s=21&t=dUXp1ZW478y4kVDJKGGyGQ'
+							href='https://www.threads.net/@techticks2020'
 							className='social-icon mx-2'>
-							<FaTwitter />
+							<FaThreads />
 						</a>
 						<a
-							href='mailto:info@techticks.org'
+							href='https://x.com/techticks2020?s=21&t=dUXp1ZW478y4kVDJKGGyGQ'
 							className='social-icon mx-2'>
-							<MdEmail />
+							<FaXTwitter />
 						</a>
 					</div>
 				</div>
@@ -82,7 +82,10 @@ const FooterSection = () => {
 								<NavLink to='/help-center'>Help Center</NavLink>
 							</li>
 							<li>
-								<NavLink to='/blog'>Blog</NavLink>
+								<NavLink to='/help-center'>Ticket Support</NavLink>
+							</li>
+							<li>
+								<NavLink to='/help-center'>FAQs</NavLink>
 							</li>
 						</ul>
 					</div>
@@ -93,7 +96,7 @@ const FooterSection = () => {
 								<NavLink to='/about'>About Us</NavLink>
 							</li>
 							<li>
-								<NavLink to='/privacy-policy'>Privacy Policy</NavLink>
+								<NavLink to='/team'>Team</NavLink>
 							</li>
 							<li>
 								<NavLink to='/contactUs'>Contact Us</NavLink>
@@ -107,7 +110,7 @@ const FooterSection = () => {
 			<div className='container copyright py-3'>
 				<div className='d-flex justify-content-between align-items-center flex-wrap'>
 					<span className=''>
-						©2023 Digitax. All Rights Reserved.
+						@2026 TechTicks. All Rights Reserved.
 					</span>
 				</div>
 				<div className='links'>

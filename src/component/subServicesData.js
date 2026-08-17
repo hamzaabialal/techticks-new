@@ -2,7 +2,6 @@ import portfolioShopify from './images/portfolio-stock/hands-on-keyboard.jpg'
 import portfolioAmazon from './images/portfolio-stock/hammer-nails-wood.jpg'
 import portfolioSocial from './images/portfolio-stock/pen-notebook-desk.jpg'
 import portfolioLanding from './images/portfolio-stock/laptop-analytics-dashboard.jpg'
-import techLogo1 from './images/services-slider/slider1.png'
 import techLogo2 from './images/services-slider/slider2.png'
 import techLogo3 from './images/services-slider/slider3.png'
 import techLogo4 from './images/services-slider/slider4.png'
@@ -12,81 +11,125 @@ import { attachDetailContent, serviceById } from './servicesCatalog'
 
 const detailPageContent = {
 	'ecommerce-management': {
+		pageClass: 'ssp-page--ecommerce-management',
 		breadcrumb: ['Services', 'Ecommerce Management'],
 		breadcrumbLinks: ['/services'],
+		showBreadcrumb: false,
+		hideTag: true,
 		hero: {
-			tag: 'Ecommerce Management',
-			title: 'We Run Your Store.',
-			titleHighlight: 'You Focus on Growth.',
+			titleSegments: [
+				{ text: 'We Run Y' },
+				{ text: 'our Sto', gradient: true },
+				{ text: 're. You' },
+				{ break: true },
+				{ text: 'Focus ' },
+				{ text: 'on Gro', gradient: true },
+				{ text: 'wth.' },
+			],
 			subtitle:
-				'Full-service ecommerce operations across Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy — so you can focus on your product while we handle everything else.',
+				'TechTicks handles every layer of your ecommerce operation from listing optimization and inventory management to customer service and multi-channel reporting, so your brand scales without the overhead.',
+			ctaText: 'Start Now',
+			ctaLink: '/contactUs',
 		},
 		stats: [
-			{ value: '80+', label: 'Brands Managed' },
-			{ value: '$40M+', label: 'Revenue Driven' },
-			{ value: '6', label: 'Platforms' },
-			{ value: '96%', label: 'Client Retention' },
+			{ value: '80+', label: 'Brands Scaled' },
+			{ value: '$40M+', label: 'Revenue Managed' },
+			{ value: '6', label: 'Platforms Covered' },
+			{ value: '96%', label: 'Clients Retention' },
 		],
-		platforms: ['Amazon', 'TikTok Shop', 'Shopify', 'Walmart', 'eBay', 'Etsy'],
-		servicesTitle: 'What actually comes with this',
+		textBlock: {
+			title: 'End-to-end operations for every major platform',
+			paragraphs: [
+				"TechTicks' Ecommerce Management service covers the full operational stack, day-to-day store management, listing and catalog optimization, inventory replenishment, order fulfillment coordination, and customer service across Amazon, Shopify, TikTok Shop, Walmart, eBay, and Etsy.",
+				"Whether you're launching a new channel or inheriting a messy multi-SKU catalog, we bring a dedicated team with platform expertise, proven SOPs, and the tooling to run your operations at scale, without adding headcount to your payroll.",
+			],
+		},
+		servicesTitle: 'What actually there?',
+		servicesSubtitle: 'Everything your store needs to perform.',
 		services: [
 			{
 				num: '01',
 				title: 'Store Setup & Optimization',
-				desc: 'Complete storefront setup, branding, and listing optimization across all major platforms from day one.',
+				desc: 'Full storefront buildout and continuous CRO — listings, imagery, A+ content, and storefront architecture tuned for conversion.',
+				iconKey: 'badge',
 			},
 			{
 				num: '02',
 				title: 'Inventory & Order Management',
-				desc: 'Real-time inventory tracking, order routing, and fulfillment coordination across every channel.',
+				desc: 'Real-time stock monitoring, replenishment forecasting, FBA/FBM coordination, and fulfillment SLA management across every channel.',
+				iconKey: 'target',
 			},
 			{
 				num: '03',
-				title: 'Listings & Catalog Management',
-				desc: 'SEO-optimized titles, bullets, descriptions, and A+ Content that converts browsers into buyers.',
+				title: 'Listing & Catalog Management',
+				desc: 'Keyword-rich titles, bullet optimization, backend search terms, variant consolidation, and ongoing catalog hygiene.',
+				iconKey: 'shuffle',
 			},
 			{
 				num: '04',
-				title: 'Customer Service & Handling',
-				desc: 'Professional customer support, review management, and case handling to protect your seller rating.',
+				title: 'Customer Service Handling',
+				desc: 'Dedicated response management for reviews, Q&A, buyer messages, and returns — protecting your seller metrics 24/7.',
+				iconKey: 'badge',
 			},
 			{
 				num: '05',
 				title: 'Performance Tracking & Reporting',
-				desc: 'Weekly and monthly reporting with the metrics that actually matter to your business growth.',
+				desc: 'Custom dashboards surfacing revenue, ACOS, conversion rate, return rate, and channel-level KPIs weekly and monthly.',
+				iconKey: 'target',
 			},
 			{
 				num: '06',
 				title: 'Multi-Channel Account Management',
-				desc: 'Unified strategy across all platforms — same voice, same brand, optimized for each channel.',
+				desc: 'Unified operations across Amazon, Shopify, TikTok Shop, Walmart, eBay, and Etsy — one team, full coverage.',
+				iconKey: 'shuffle',
 			},
 		],
 		process: {
 			title: 'From day one to ongoing growth',
+			subtitle:
+				'We follow a proven, execution-driven process designed to remove guesswork, eliminate waste, and scale your Amazon business the right way.',
 			steps: [
-				{ num: '01', title: 'Store Audit', desc: 'We audit your setup and identify gaps, opportunities, and quick wins.' },
-				{ num: '02', title: 'Growth Strategy', desc: 'Custom roadmap built around your products, margins, and target platforms.' },
-				{ num: '03', title: 'Full Setup', desc: 'We implement everything — listings, ads, ops — in the first 30 days.' },
-				{ num: '04', title: 'Ongoing Management', desc: 'Monthly retainer with weekly reporting, optimizations, and scaling decisions.' },
+				{ num: '01', title: 'Store Audit', desc: 'We tear down your current setup — listings, health metrics, pricing, competitors — and find exactly where revenue is leaking.' },
+				{ num: '02', title: 'Growth Strategy', desc: 'A tailored 90-day roadmap built around your margins, channels, and goals. No templates, no guesswork.' },
+				{ num: '03', title: 'Full Setup', desc: "We handle the execution — catalog migration, listing builds, tool integrations, and team onboarding — so you don't have to." },
+				{ num: '04', title: 'Ongoing Management', desc: 'Your dedicated account team runs daily operations: listings, inventory, ads coordination, customer service, and platform compliance.' },
 			],
 		},
-		relatedServices: [
-			{ title: 'Amazon Growth', link: '/amazon', desc: 'Dedicated Amazon PPC, A+ Content, and full account management.' },
-			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Paid ads, SEO, and social to drive traffic to your stores.' },
-			{ title: 'Website Development', link: '/services/development', desc: 'Custom Shopify builds built to convert from day one.' },
-		],
+		crossSell: {
+			title: 'More ways TechTicks can help',
+			subtitle: 'Expand your reach and connect with customers online.',
+			items: [
+				{ title: 'Amazon Growth', desc: 'PPC management, ranking strategies, and full-funnel Amazon advertising to dominate your category.', link: '/amazon', linkText: 'Learn more' },
+				{ title: 'Shopify Development', desc: 'Custom Shopify storefronts built for speed, conversion, and brand experience, from scratch or migration.', link: '/services/development', linkText: 'Learn more' },
+				{ title: 'Digital Marketing', desc: 'Paid social, influencer seeding, and email flows that drive qualified traffic to your stores.', link: '/services/digital-marketing', linkText: 'Learn more' },
+			],
+		},
+		cta: {
+			title: "Let's Grow Your Store.",
+			subtitle: "Book a free 30-minute audit call. We'll review your current setup and show you exactly where to unlock more revenue.",
+			buttonText: 'Book A Free Call',
+			buttonLink: '/contactUs',
+		},
 	},
 
 	'digital-marketing': {
 		pageClass: 'ssp-page--digital-marketing',
 		breadcrumb: ['Services', 'Digital Marketing'],
 		breadcrumbLinks: ['/services'],
+		showStats: false,
 		hero: {
 			tag: 'Digital Marketing',
-			title: 'Digital Marketing Services That Drive',
-			titleHighlight: 'Real Growth.',
+			titleSegments: [
+				{ text: 'Digital Mark' },
+				{ text: 'eting S', gradient: true },
+				{ text: 'ervices' },
+				{ break: true },
+				{ text: 'That Drive ' },
+				{ text: 'Real', gradient: true },
+				{ text: ' Growth.' },
+			],
 			subtitle:
-				'Meta Ads, Google Ads, SEO, Email, and Social — built as one integrated system around your real KPIs, not vanity metrics.',
+				'We help ecommerce brands on Amazon, Shopify, TikTok Shop, Walmart, eBay and Etsy increase visibility, capture demand and grow sales with data-driven marketing built around your margins.',
 			// optional fields for page-specific hero CTA and background
 			ctaText: 'Get A Free Consultation',
 			ctaLink: '/contactUs',
@@ -98,59 +141,32 @@ const detailPageContent = {
 			{ value: '120+', label: 'Campaigns Launched' },
 			{ value: '93%', label: 'Client Retention' },
 		],
-		servicesTitle: 'Channels we cover',
+		servicesTitle: 'Digital marketing services',
+		servicesSubtitle: 'Pick a single channel or let us run the full stack as one connected growth engine.',
 		services: [
 			{
 				num: '01',
-				title: 'SEO',
-				desc: 'Technical SEO, keyword strategy, and content built to rank and convert.',
-				link: '/services/digital-marketing/seo',
-				icon: '',
+				title: 'Paid Advertising',
+				desc: 'Meta and Google campaigns structured around your numbers — ROAS, CAC, and LTV — not clicks and impressions. Every dollar of spend is tracked, tested, and optimised for measurable returns.',
+				iconKey: 'dollar',
 				ctaText: 'Learn more',
-				ctaLink: '/services/digital-marketing/seo',
+				ctaLink: '/contactUs',
 			},
 			{
 				num: '02',
-				title: 'Google Ads',
-				desc: 'Search, Shopping, and Performance Max campaigns optimized for ROAS.',
-				link: '/services/digital-marketing/google-ads',
-				icon: '',
+				title: 'SEO & Content',
+				desc: 'Technical strength, keyword strategy, and content structure built to rank and convert. We grow organic traffic and long-term discoverability without shortcuts that damage your site later.',
+				iconKey: 'doc',
 				ctaText: 'Learn more',
-				ctaLink: '/services/digital-marketing/google-ads',
+				ctaLink: '/contactUs',
 			},
 			{
 				num: '03',
-				title: 'Meta Ads',
-				desc: 'Facebook and Instagram campaigns built around your customer acquisition cost.',
-				link: '/services/digital-marketing/meta-ads',
-				icon: '',
+				title: 'Email, SMS & Social',
+				desc: 'Retention and community working alongside paid — lifecycle email and SMS flows plus platform-native social content that keeps customers coming back, not just clicking once.',
+				iconKey: 'mail',
 				ctaText: 'Learn more',
-				ctaLink: '/services/digital-marketing/meta-ads',
-			},
-			{
-				num: '04',
-				title: 'Social Media Marketing',
-				desc: 'Organic content strategy, posting, and community management.',
-				link: '/services/digital-marketing/social-media',
-				icon: '',
-				ctaText: 'Learn more',
-				ctaLink: '/services/digital-marketing/social-media',
-			},
-			{
-				num: '05',
-				title: 'Email & SMS Marketing',
-				desc: 'Lifecycle flows and campaigns that retain customers and drive repeat revenue.',
-				icon: '',
-				ctaText: 'Learn more',
-				ctaLink: '',
-			},
-			{
-				num: '06',
-				title: 'Content Marketing',
-				desc: 'Blog, video, and UGC strategy that builds authority and drives organic traffic.',
-				icon: '',
-				ctaText: 'Learn more',
-				ctaLink: '',
+				ctaLink: '/contactUs',
 			},
 		],
 		// optional final CTA override for page
@@ -162,19 +178,15 @@ const detailPageContent = {
 			variantClass: '',
 		},
 		process: {
-			title: 'How we run your marketing',
+			title: 'How it works',
+			subtitle: 'A process built for compounding.',
 			steps: [
-				{ num: '01', title: 'Audit & Strategy', desc: 'Full audit of existing channels and a custom growth roadmap.' },
-				{ num: '02', title: 'Campaign Build', desc: 'Ads, content, and flows built from scratch or rebuilt from the ground up.' },
-				{ num: '03', title: 'Launch & Test', desc: 'Structured testing against real KPIs — ROAS, CAC, and LTV.' },
-				{ num: '04', title: 'Scale & Report', desc: 'Weekly optimizations and monthly reports with what actually matters.' },
+				{ num: '01', title: 'Discovery', desc: 'We audit your storefront, ad accounts, analytics and competitors to find the real growth gaps.' },
+				{ num: '02', title: 'Strategy', desc: 'A channel mix, budget plan and creative direction mapped to your margins and revenue targets.' },
+				{ num: '03', title: 'Execution', desc: 'Campaigns, creative, flows and content go live — built, launched and managed by our specialists.' },
+				{ num: '04', title: 'Optimization & Reporting', desc: 'Weekly testing, budget reallocation and transparent reporting that compound results over time.' },
 			],
 		},
-		relatedServices: [
-			{ title: 'Ecommerce Management', link: '/services/ecommerce-management', desc: 'Full platform operations across Amazon, Shopify, and more.' },
-			{ title: 'UX/UI Design', link: '/services/design', desc: 'Conversion-focused design for your ads and landing pages.' },
-			{ title: 'Website Development', link: '/services/development', desc: 'Landing pages and funnels built to convert your traffic.' },
-		],
 	},
 
 	'digital-marketing/seo': {
@@ -347,9 +359,15 @@ const detailPageContent = {
 		breadcrumbLinks: ['/services'],
 		hero: {
 			tag: 'UX/UI & Graphic Design',
-			title: 'Design that',
-			titleHighlight: 'converts,',
-			titleSuffix: 'not just looks good.',
+			titleSegments: [
+				{ text: 'Design that ' },
+				{ text: 'conve', gradient: true },
+				{ text: 'rts,' },
+				{ break: true },
+				{ text: 'not just lo' },
+				{ text: 'oks g', gradient: true },
+				{ text: 'ood.' },
+			],
 			subtitle: 'UX, UI, and marketplace graphics engineered to lift conversion rates, not decorate your brand.',
 			ctaText: 'Get A Free Consultation',
 			ctaLink: '/contactUs',
@@ -369,6 +387,7 @@ const detailPageContent = {
 				desc: 'Conversion-first UX that moves visitors to buyers, built for Shopify, custom DTC, and app storefronts.',
 				ctaText: 'Learn more →',
 				ctaLink: '/contactUs',
+				iconKey: 'monitor',
 			},
 			{
 				num: '02',
@@ -376,6 +395,7 @@ const detailPageContent = {
 				desc: 'A+ Content, storefront banners, and listing imagery engineered to outperform on Amazon, Walmart, and eBay.',
 				ctaText: 'Learn more →',
 				ctaLink: '/contactUs',
+				iconKey: 'shopify',
 			},
 			{
 				num: '03',
@@ -383,6 +403,7 @@ const detailPageContent = {
 				desc: 'Visual systems that hold up on packaging, TikTok, and a 40-foot trade-show backdrop — all from one design sprint.',
 				ctaText: 'Learn more →',
 				ctaLink: '/contactUs',
+				iconKey: 'pen',
 			},
 			{
 				num: '04',
@@ -390,6 +411,7 @@ const detailPageContent = {
 				desc: 'Thumb-stopping creatives for TikTok Shop, Meta, and Pinterest — designed to drive clicks, not just impressions.',
 				ctaText: 'Learn more →',
 				ctaLink: '/contactUs',
+				iconKey: 'share',
 			},
 			{
 				num: '05',
@@ -397,6 +419,7 @@ const detailPageContent = {
 				desc: 'High-converting landing pages for paid traffic — every element positioned to reduce drop-off and lift CVR.',
 				ctaText: 'Learn more →',
 				ctaLink: '/contactUs',
+				iconKey: 'layout',
 			},
 			{
 				num: '06',
@@ -404,6 +427,7 @@ const detailPageContent = {
 				desc: 'Retail-ready packaging and insert cards that reinforce brand, drive repeat purchases, and stand out on shelf.',
 				ctaText: 'Learn more →',
 				ctaLink: '/contactUs',
+				iconKey: 'printer',
 			},
 		],
 		growthPartner: {
@@ -468,7 +492,7 @@ const detailPageContent = {
 		},
 		cta: {
 			title: 'Ready to turn your design into revenue?',
-			subtitle: 'Free audit. No pitch deck. Just an honest look at what\'s costing you conversions.',
+			subtitle: 'Free audit. No pitch deck. Jut an honest look at what\'s costing you conversions.',
 			buttonText: 'Book A Free Call',
 			buttonLink: '/contactUs',
 		},
@@ -525,30 +549,33 @@ detailPageContent.development = {
 	portfolioBeforeProcess: true,
 	hero: {
 		...detailPageContent.development.hero,
-		title: 'Websites',
-		titleHighlight: 'built to sell',
-		titleSuffix: 'not just exists.',
+		titleSegments: [
+			{ text: 'Websites ' },
+			{ text: 'built to', gradient: true },
+			{ text: ' sell not just ' },
+			{ text: 'exists', gradient: true },
+			{ text: '.' },
+		],
 		subtitle: 'Responsive, conversion-optimized, ecommerce-ready builds, designed and developed in-house so nothing gets lost in the handoff.',
 		ctaText: 'Get A Free Consultation',
 	},
 	platformLogosLabel: 'Platforms & technologies we build on',
 	platformLogos: [
-		{ image: techLogo1, alt: 'CodeBaiz' },
-		{ image: techLogo2, alt: 'Platform partner' },
-		{ image: techLogo3, alt: 'Skymppel' },
-		{ image: techLogo4, alt: 'Platform partner' },
-		{ image: techLogo5, alt: 'IATECH' },
-		{ image: techLogo6, alt: 'Nexatek' },
+		{ image: techLogo2, alt: 'PopDarts' },
+		{ image: techLogo3, alt: 'Syndicate' },
+		{ image: techLogo4, alt: 'Monk Cables' },
+		{ image: techLogo5, alt: 'Oaks Craft' },
+		{ image: techLogo6, alt: 'Crazy Cups' },
 	],
 	servicesTitle: 'Every build, every channel.',
 	servicesSubtitle: "From first commit to post-launch support - we handle the full development lifecycle so your team doesn't have to.",
 	services: [
-		{ num: '01', title: 'Shopify Store Development', desc: 'Custom themes, app integrations, and checkout optimization for Shopify merchants ready to scale.', ctaText: 'Learn more', ctaLink: '/contactUs' },
-		{ num: '02', title: 'Custom Website Design & Build', desc: 'Fully bespoke sites built on Next.js or headless stacks - no templates, no shortcuts.', ctaText: 'Learn more', ctaLink: '/contactUs' },
-		{ num: '03', title: 'Redesigns & Migrations', desc: 'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one.', ctaText: 'Learn more', ctaLink: '/contactUs' },
-		{ num: '04', title: 'Landing Pages', desc: 'High-converting campaign pages built for paid traffic - A/B-ready and launched in days, not weeks.', ctaText: 'Learn more', ctaLink: '/contactUs' },
-		{ num: '05', title: 'Speed & Performance Optimization', desc: 'Core Web Vitals audits and surgical fixes that cut load time and lift rankings.', ctaText: 'Learn more', ctaLink: '/contactUs' },
-		{ num: '06', title: 'Maintenance & Support', desc: 'Ongoing updates, security patches, and feature rollouts, so your site never stagnates.', ctaText: 'Learn more', ctaLink: '/contactUs' },
+		{ num: '01', title: 'Shopify Store Development', desc: 'Custom themes, app integrations, and checkout optimization for Shopify merchants ready to scale.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'shopify' },
+		{ num: '02', title: 'Custom Website Design & Build', desc: 'Fully bespoke sites built on Next.js or headless stacks - no templates, no shortcuts.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'code' },
+		{ num: '03', title: 'Redesigns & Migrations', desc: 'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'refresh' },
+		{ num: '04', title: 'Landing Pages', desc: 'High-converting campaign pages built for paid traffic - A/B-ready and launched in days, not weeks.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'layout' },
+		{ num: '05', title: 'Speed & Performance Optimization', desc: 'Core Web Vitals audits and surgical fixes that cut load time and lift rankings.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'speed' },
+		{ num: '06', title: 'Maintenance & Support', desc: 'Ongoing updates, security patches, and feature rollouts, so your site never stagnates.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'support' },
 	],
 	process: {
 		title: 'The unfair advantage.',
@@ -596,7 +623,7 @@ const canonicalDetailPages = Object.fromEntries(
 				breadcrumbLinks: ['/services'],
 				hero: {
 					...detail.hero,
-					tag: category.title,
+					tag: detail.hideTag ? undefined : category.title,
 				},
 			},
 		]

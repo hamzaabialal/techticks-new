@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import logo from '../component/images/logo.png'
-import { FaWhatsapp, FaEnvelope, FaBars } from 'react-icons/fa'
+import { FaPhoneAlt, FaGlobe, FaBars } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
 import SideTinyStarsBg from './sidesTinyStarsBg'
 
@@ -19,14 +19,14 @@ function Header() {
 			<SideTinyStarsBg />
 			<div className='Navbar'>
 				<div className='upper-content'>
+					<a href='tel:+923191496506'>
+						<FaPhoneAlt /> +92319 1496506
+					</a>
 					<a
-						href='https://wa.me/+13205440303'
+						href='https://techticks.org/'
 						target='_blank'
 						rel='noopener noreferrer'>
-						<FaWhatsapp /> +1 (320) 544-0303
-					</a>
-					<a href='mailto:https://techticks.org/'>
-						<FaEnvelope /> https://techticks.org/
+						<FaGlobe /> techticks.org
 					</a>
 				</div>
 
@@ -55,15 +55,15 @@ function Header() {
 							</NavLink>
 
 							<NavLink
-								to='/amazon'
-								className='nav-link'>
-								Amazon
-							</NavLink>
-
-							<NavLink
 								to='/portfolio'
 								className='nav-link'>
 								Portfolio
+							</NavLink>
+
+							<NavLink
+								to='/amazon'
+								className='nav-link'>
+								Amazon
 							</NavLink>
 
 							<NavLink
@@ -107,17 +107,17 @@ function Header() {
 							</NavLink>
 
 							<NavLink
-								to='/amazon'
-								className='nav-link'
-								onClick={() => setIsMobileMenuOpen(false)}>
-								Amazon
-							</NavLink>
-
-							<NavLink
 								to='/portfolio'
 								className='nav-link'
 								onClick={() => setIsMobileMenuOpen(false)}>
 								Portfolio
+							</NavLink>
+
+							<NavLink
+								to='/amazon'
+								className='nav-link'
+								onClick={() => setIsMobileMenuOpen(false)}>
+								Amazon
 							</NavLink>
 
 							<NavLink

@@ -1,5 +1,25 @@
 import { useNavigate, NavLink } from 'react-router-dom'
+import { FiShoppingBag, FiCode, FiRefreshCw, FiLayout, FiZap, FiTool, FiMonitor, FiPenTool, FiShare2, FiPrinter, FiDollarSign, FiFileText, FiMail, FiShield, FiTarget, FiShuffle } from 'react-icons/fi'
 import Testimonials from './testonomial'
+
+const SERVICE_ICONS = {
+	shopify: <FiShoppingBag />,
+	code: <FiCode />,
+	refresh: <FiRefreshCw />,
+	layout: <FiLayout />,
+	speed: <FiZap />,
+	support: <FiTool />,
+	monitor: <FiMonitor />,
+	pen: <FiPenTool />,
+	share: <FiShare2 />,
+	printer: <FiPrinter />,
+	dollar: <FiDollarSign />,
+	doc: <FiFileText />,
+	mail: <FiMail />,
+	badge: <FiShield />,
+	target: <FiTarget />,
+	shuffle: <FiShuffle />,
+}
 
 function SubServicePage({ data }) {
 	const navigate = useNavigate()
@@ -31,11 +51,25 @@ function SubServicePage({ data }) {
 						))}
 					</nav>}
 
-					<span className='ssp-hero-tag'>{hero.tag}</span>
+					{hero.tag && <span className='ssp-hero-tag'>{hero.tag}</span>}
 					<h1 className='ssp-hero-title'>
-						{hero.title}{' '}
-						<span className='ssp-hero-highlight'>{hero.titleHighlight}</span>
-						{hero.titleSuffix && <><br />{hero.titleSuffix}</>}
+						{hero.titleSegments ? (
+							hero.titleSegments.map((seg, i) =>
+								seg.break ? (
+									<br key={i} />
+								) : seg.gradient ? (
+									<span key={i} className='ssp-hero-highlight'>{seg.text}</span>
+								) : (
+									<span key={i}>{seg.text}</span>
+								)
+							)
+						) : (
+							<>
+								{hero.title}{' '}
+								<span className='ssp-hero-highlight'>{hero.titleHighlight}</span>
+								{hero.titleSuffix && <><br />{hero.titleSuffix}</>}
+							</>
+						)}
 					</h1>
 					<p className='ssp-hero-sub'>{hero.subtitle}</p>
 					<button className='ssp-hero-cta' onClick={() => navigate(heroCtaLink)}>
@@ -67,6 +101,20 @@ function SubServicePage({ data }) {
 				</div>
 			)}
 
+			{/* ── TEXT BLOCK (optional, generic 2-col text section) ── */}
+			{data.textBlock && (
+				<section className='ssp-text-block'>
+					<div className='ssp-text-block-left'>
+						<h2>{data.textBlock.title}</h2>
+					</div>
+					<div className='ssp-text-block-right'>
+						{data.textBlock.paragraphs.map((p, i) => (
+							<p key={i}>{p}</p>
+						))}
+					</div>
+				</section>
+			)}
+
 			{/* ── SERVICES GRID ────────────────────────── */}
 			<section className='ssp-services'>
 				<div className='ssp-section-header'>
@@ -83,10 +131,14 @@ function SubServicePage({ data }) {
 								<span className='ssp-card-num'>{s.num}</span>
 								<h3>{s.title}</h3>
 								<p>{s.desc}</p>
-								{s.icon && (
-									<div className='ssp-card-icon'>
-										<img src={s.icon} alt='' />
-									</div>
+								{s.iconKey && SERVICE_ICONS[s.iconKey] ? (
+									<div className='ssp-card-icon' aria-hidden='true'>{SERVICE_ICONS[s.iconKey]}</div>
+								) : (
+									s.icon && (
+										<div className='ssp-card-icon'>
+											<img src={s.icon} alt='' />
+										</div>
+									)
 								)}
 								{serviceLink && (
 									<NavLink to={serviceLink} className='ssp-card-link'>
@@ -134,6 +186,7 @@ function SubServicePage({ data }) {
 			<section className='ssp-process'>
 				<div className='ssp-blob ssp-blob-center' />
 				<h2 className='ssp-process-title'>{process.title}</h2>
+				{process.subtitle && <p className='ssp-process-subtitle'>{process.subtitle}</p>}
 				<div className='ssp-process-steps'>
 					{process.steps.map((step, i) => (
 						<div key={i} className='ssp-process-step'>
@@ -145,6 +198,27 @@ function SubServicePage({ data }) {
 					))}
 				</div>
 			</section>
+			)}
+
+			{/* ── CROSS-SELL (optional, generic 2-col text + stacked cards) ── */}
+			{data.crossSell && (
+				<section className='ssp-cross-sell'>
+					<div className='ssp-cross-sell-left'>
+						<h2>{data.crossSell.title}</h2>
+						<p>{data.crossSell.subtitle}</p>
+					</div>
+					<div className='ssp-cross-sell-right'>
+						{data.crossSell.items.map((item, i) => (
+							<div key={i} className='ssp-cross-sell-card'>
+								<h3>{item.title}</h3>
+								<p>{item.desc}</p>
+								<NavLink to={item.link} className='ssp-cross-sell-link'>
+									{item.linkText || 'Learn more'}
+								</NavLink>
+							</div>
+						))}
+					</div>
+				</section>
 			)}
 
 			{/* ── GROWTH PARTNER (optional) ────────────── */}
