@@ -13105,13 +13105,12 @@ textarea,
 .ssp-cta {
 	position: relative;
 	max-width: 1200px;
-	margin: 60px auto 0;
+	margin: 60px auto 160px;
 	padding: 56px 40px;
 	text-align: center;
-	border: 1px solid rgba(255,255,255,0.16);
+	border: 1px solid rgba(255,255,255,0.06);
 	border-radius: 20px;
 	overflow: hidden;
-	box-shadow: 0 0 0 1px rgba(255,255,255,0.04);
 	background:
 		radial-gradient(ellipse 380px 280px at 8% 6%, rgba(46,89,198,0.32) 0%, transparent 60%),
 		linear-gradient(rgba(2,2,3,.88), rgba(2,2,3,.88)),
