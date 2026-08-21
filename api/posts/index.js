@@ -47,6 +47,7 @@ export default defineHandler({
 			content: fields.content || '',
 			featuredImage: fields.featuredImage || null,
 			categoryIds: fields.categoryIds || [],
+			tags: fields.tags || [],
 			status: 'DRAFT',
 			authorId: actingUser.id,
 			authorName: actingUser.name,

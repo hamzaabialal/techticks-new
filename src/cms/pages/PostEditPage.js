@@ -17,6 +17,7 @@ const EMPTY_POST = {
 	content: '',
 	featuredImage: null,
 	categoryIds: [],
+	tags: [],
 }
 
 // Thin route wrapper for both /cms/posts/new and /cms/posts/:id/edit — owns

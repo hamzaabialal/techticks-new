@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import * as postService from '../services/postService'
-import { categoryById } from '../constants/categories'
 
 // Same fade-up + stagger pattern contactUs.js uses — one shared animation
 // language across the site, not a one-off invented here.
@@ -54,6 +53,12 @@ function Blog() {
 
 	const visiblePosts =
 		activeCategory === 'all' ? posts : posts.filter((post) => post.categoryIds.includes(activeCategory))
+
+	// Categories are managed live from the CMS now (see PostEditor.js), not a
+	// hardcoded constant — this list is already fetched above for the filter
+	// buttons, so the id->name lookup for each card's tag pill is built from
+	// the same data instead of a second, separately-sourced copy.
+	const categoryById = useMemo(() => Object.fromEntries(categories.map((c) => [c.id, c])), [categories])
 
 	return (
 		<div className='blog-page'>

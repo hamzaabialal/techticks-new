@@ -42,6 +42,16 @@ export async function listCategories() {
 	return apiFetch('/categories')
 }
 
+// ---- Category writes ----
+
+export async function createCategory(name) {
+	return apiFetch('/categories', { method: 'POST', body: { name } })
+}
+
+export async function deleteCategory(id) {
+	await apiFetch(`/categories?id=${encodeURIComponent(id)}`, { method: 'DELETE' })
+}
+
 // ---- Writes ----
 
 export async function createPost(fields) {

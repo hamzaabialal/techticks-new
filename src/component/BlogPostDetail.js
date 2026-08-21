@@ -1,7 +1,6 @@
-import { useEffect, useState, lazy, Suspense } from 'react'
+import { useEffect, useMemo, useState, lazy, Suspense } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import * as postService from '../services/postService'
-import { categoryById } from '../constants/categories'
 
 // Lazy-loaded so TipTap's bundle is only fetched by visitors who open an
 // individual post — never by the /blog listing or any other public page.
@@ -11,14 +10,22 @@ function BlogPostDetail() {
 	const { slug } = useParams()
 	const [status, setStatus] = useState('loading')
 	const [post, setPost] = useState(null)
+	// Categories are managed live from the CMS (see PostEditor.js), not a
+	// hardcoded constant — fetched here the same way Blog.js does, since this
+	// page can be reached directly without ever having rendered the listing.
+	const [categories, setCategories] = useState([])
 
 	useEffect(() => {
 		let cancelled = false
 		setStatus('loading')
 		;(async () => {
 			try {
-				const found = await postService.getPublishedPostBySlug(slug)
+				const [found, categoryList] = await Promise.all([
+					postService.getPublishedPostBySlug(slug),
+					postService.listCategories(),
+				])
 				if (cancelled) return
+				setCategories(categoryList)
 				if (found) {
 					setPost(found)
 					setStatus('found')
@@ -36,6 +43,8 @@ function BlogPostDetail() {
 			cancelled = true
 		}
 	}, [slug])
+
+	const categoryById = useMemo(() => Object.fromEntries(categories.map((c) => [c.id, c])), [categories])
 
 	if (status === 'loading') {
 		return (
@@ -100,6 +109,16 @@ function BlogPostDetail() {
 				<Suspense fallback={<p className='blog-detail-status'>Loading content…</p>}>
 					<BlogPostContent postId={post.id} content={post.content} />
 				</Suspense>
+
+				{post.tags?.length > 0 && (
+					<div className='blog-detail-tags'>
+						{post.tags.map((tag) => (
+							<span key={tag} className='blog-detail-tag'>
+								{tag}
+							</span>
+						))}
+					</div>
+				)}
 			</section>
 		</div>
 	)

@@ -100,11 +100,126 @@
 	gap: var(--cms-space-2);
 }
 
+.categoryRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--cms-space-2);
+}
+
 .categoryOption {
 	display: flex;
 	align-items: center;
 	gap: var(--cms-space-2);
 	font-size: var(--cms-font-size-sm);
+}
+
+.categoryDeleteButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	border: none;
+	border-radius: var(--cms-radius-sm);
+	background: transparent;
+	color: var(--cms-color-text-muted);
+	cursor: pointer;
+}
+
+.categoryDeleteButton:hover {
+	background: var(--cms-color-surface-hover);
+	color: var(--cms-color-danger);
+}
+
+.categoryDeleteButton:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.addCategoryRow {
+	display: flex;
+	gap: var(--cms-space-2);
+	margin-top: var(--cms-space-1);
+}
+
+.addCategoryRow .input {
+	flex: 1;
+	font-size: var(--cms-font-size-sm);
+	padding: var(--cms-space-1) var(--cms-space-2);
+}
+
+.addCategoryButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	flex-shrink: 0;
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	background: transparent;
+	color: var(--cms-color-text);
+	cursor: pointer;
+}
+
+.addCategoryButton:hover:not(:disabled) {
+	background: var(--cms-color-surface-hover);
+	border-color: var(--cms-color-primary);
+}
+
+.addCategoryButton:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.tagInputWrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--cms-space-1);
+	padding: var(--cms-space-1) var(--cms-space-2);
+	background: var(--cms-color-bg);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+}
+
+.tagChip {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 3px 6px;
+	border-radius: 999px;
+	background: var(--cms-color-surface-hover);
+	font-size: 12px;
+	color: var(--cms-color-text);
+}
+
+.tagChip button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: transparent;
+	color: var(--cms-color-text-muted);
+	cursor: pointer;
+	padding: 0;
+}
+
+.tagChip button:hover {
+	color: var(--cms-color-danger);
+}
+
+.tagInput {
+	flex: 1;
+	min-width: 80px;
+	border: none;
+	background: transparent;
+	color: var(--cms-color-text);
+	font-size: var(--cms-font-size-sm);
+	font-family: inherit;
+	padding: var(--cms-space-1) 0;
+	outline: none;
 }
 
 /* Slim persistent bar: an Insert (slash-menu) trigger, an upload-in-progress

@@ -3,6 +3,19 @@
 // request.
 let schemaEnsured = false
 
+// SQLite has no "ADD COLUMN IF NOT EXISTS" — this is what makes adding
+// `tags` to a table that already has rows in production idempotent instead
+// of erroring every warm start after the first.
+async function ensureTagsColumn(db) {
+	const info = await db.execute('PRAGMA table_info(posts)')
+	const hasTags = info.rows.some((row) => row.name === 'tags')
+	if (!hasTags) {
+		// NOT NULL DEFAULT backfills existing rows with '[]' automatically —
+		// no separate UPDATE needed.
+		await db.execute("ALTER TABLE posts ADD COLUMN tags TEXT NOT NULL DEFAULT '[]'")
+	}
+}
+
 export async function ensureSchema(db) {
 	if (schemaEnsured) return
 	await db.batch(
@@ -35,6 +48,7 @@ export async function ensureSchema(db) {
 		],
 		'write',
 	)
+	await ensureTagsColumn(db)
 	schemaEnsured = true
 }
 
@@ -51,6 +65,7 @@ export function rowToPost(row) {
 		content: JSON.parse(row.content),
 		featuredImage: row.featured_image ?? null,
 		categoryIds: JSON.parse(row.category_ids),
+		tags: JSON.parse(row.tags || '[]'),
 		status: row.status,
 		authorId: row.author_id,
 		authorName: row.author_name,
@@ -69,6 +84,7 @@ const COLUMN_BY_FIELD = {
 	content: 'content',
 	featuredImage: 'featured_image',
 	categoryIds: 'category_ids',
+	tags: 'tags',
 	status: 'status',
 	authorId: 'author_id',
 	authorName: 'author_name',
@@ -80,7 +96,7 @@ const COLUMN_BY_FIELD = {
 }
 
 function fieldToColumnValue(field, value) {
-	if (field === 'content' || field === 'categoryIds') return JSON.stringify(value)
+	if (field === 'content' || field === 'categoryIds' || field === 'tags') return JSON.stringify(value)
 	if (field === 'isDeleted') return value ? 1 : 0
 	return value
 }
@@ -159,4 +175,25 @@ export async function deletePostRow(db, id) {
 export async function listCategoryRows(db) {
 	const result = await db.execute('SELECT id, name, slug FROM categories ORDER BY name')
 	return result.rows.map((row) => ({ id: row.id, name: row.name, slug: row.slug }))
+}
+
+export async function categorySlugExists(db, slug) {
+	const result = await db.execute({ sql: 'SELECT 1 FROM categories WHERE slug = ? LIMIT 1', args: [slug] })
+	return result.rows.length > 0
+}
+
+export async function insertCategoryRow(db, category) {
+	await db.execute({
+		sql: 'INSERT INTO categories (id, name, slug) VALUES (?, ?, ?)',
+		args: [category.id, category.name, category.slug],
+	})
+}
+
+// Categories aren't a foreign key on posts — category_ids is a JSON
+// snapshot array, same as the mock. Deleting one here doesn't cascade into
+// existing posts; a post that referenced it just stops resolving that one
+// id to a name (categoryById[id] comes back undefined), the same graceful
+// degradation an already-unknown id would produce.
+export async function deleteCategoryRow(db, id) {
+	await db.execute({ sql: 'DELETE FROM categories WHERE id = ?', args: [id] })
 }
