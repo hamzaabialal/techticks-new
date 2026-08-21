@@ -1,8 +1,67 @@
 .editor {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 300px;
+	align-items: start;
+	gap: var(--cms-space-5);
+	max-width: 1100px;
+}
+
+.mainColumn {
 	display: flex;
 	flex-direction: column;
 	gap: var(--cms-space-4);
-	max-width: 720px;
+	min-width: 0;
+}
+
+.titleInput {
+	font-family: inherit;
+	font-size: 28px;
+	font-weight: 600;
+	color: var(--cms-color-text);
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid transparent;
+	padding: var(--cms-space-2) 0;
+	outline: none;
+}
+
+.titleInput::placeholder {
+	color: var(--cms-color-text-muted);
+}
+
+.titleInput:focus {
+	border-bottom-color: var(--cms-color-border);
+}
+
+.contentField {
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-4);
+	min-width: 0;
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-2);
+	background: var(--cms-color-surface);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-md);
+	padding: var(--cms-space-3);
+	margin: 0;
+}
+
+.panelTitle {
+	font-size: var(--cms-font-size-sm);
+	font-weight: 600;
+	color: var(--cms-color-text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
 }
 
 .field {
@@ -14,10 +73,14 @@
 	margin: 0;
 }
 
-.label {
-	font-size: var(--cms-font-size-sm);
-	font-weight: 600;
+.hint {
+	font-size: 12px;
 	color: var(--cms-color-text-muted);
+}
+
+.fieldError {
+	font-size: 12px;
+	color: var(--cms-color-danger);
 }
 
 .input,
@@ -25,7 +88,7 @@
 	font-family: inherit;
 	font-size: var(--cms-font-size-md);
 	color: var(--cms-color-text);
-	background: var(--cms-color-surface);
+	background: var(--cms-color-bg);
 	border: 1px solid var(--cms-color-border);
 	border-radius: var(--cms-radius-sm);
 	padding: var(--cms-space-2) var(--cms-space-3);
@@ -33,32 +96,81 @@
 
 .categoryList {
 	display: flex;
-	flex-wrap: wrap;
-	gap: var(--cms-space-3);
+	flex-direction: column;
+	gap: var(--cms-space-2);
 }
 
 .categoryOption {
 	display: flex;
 	align-items: center;
-	gap: var(--cms-space-1);
+	gap: var(--cms-space-2);
 	font-size: var(--cms-font-size-sm);
 }
 
-.toolbar {
+/* Slim persistent bar: an Insert (slash-menu) trigger, an upload-in-progress
+   hint, and Undo/Redo. Everything else — bold/italic/link/etc — only
+   appears contextually in .bubbleMenu below, on an actual text selection. */
+.miniToolbar {
 	display: flex;
-	flex-wrap: wrap;
-	gap: var(--cms-space-1);
-	padding: var(--cms-space-2);
-	background: var(--cms-color-bg);
+	align-items: center;
+	gap: var(--cms-space-2);
+	padding: var(--cms-space-2) var(--cms-space-3);
+	background: var(--cms-color-surface);
 	border: 1px solid var(--cms-color-border);
 	border-bottom: none;
-	border-radius: var(--cms-radius-sm) var(--cms-radius-sm) 0 0;
+	border-radius: var(--cms-radius-md) var(--cms-radius-md) 0 0;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
-.toolbarButton,
-.toolbarButtonActive {
-	font-size: var(--cms-font-size-sm);
+.insertButton {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
 	padding: var(--cms-space-1) var(--cms-space-2);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	background: transparent;
+	color: var(--cms-color-text);
+	font-size: var(--cms-font-size-sm);
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.insertButton:hover {
+	background: var(--cms-color-surface-hover);
+	border-color: var(--cms-color-primary);
+}
+
+.insertButton:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.miniToolbarHint {
+	font-size: 12px;
+	color: var(--cms-color-text-muted);
+}
+
+.toolbarSpacer {
+	flex: 1;
+}
+
+.uploadingHint {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 12px;
+	color: var(--cms-color-text-muted);
+}
+
+.toolbarButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
 	border: 1px solid transparent;
 	border-radius: var(--cms-radius-sm);
 	background: transparent;
@@ -71,23 +183,59 @@
 	border-color: var(--cms-color-border);
 }
 
-.toolbarButtonActive {
-	background: var(--cms-color-primary);
-	color: #fff;
-}
-
-.toolbarButton:disabled,
-.toolbarButtonActive:disabled {
+.toolbarButton:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
 
+/* Floating format toolbar shown over a text selection (Tiptap's BubbleMenu). */
+.bubbleMenu {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	padding: 4px;
+	background: var(--cms-color-surface);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.bubbleButton,
+.bubbleButtonActive {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border: none;
+	border-radius: var(--cms-radius-sm);
+	background: transparent;
+	color: var(--cms-color-text);
+	cursor: pointer;
+}
+
+.bubbleButton:hover {
+	background: var(--cms-color-surface-hover);
+}
+
+.bubbleButtonActive {
+	background: var(--cms-color-primary);
+	color: #fff;
+}
+
+.bubbleDivider {
+	width: 1px;
+	align-self: stretch;
+	background: var(--cms-color-border);
+	margin: 0 2px;
+}
+
 .editorContent {
 	border: 1px solid var(--cms-color-border);
-	border-radius: 0 0 var(--cms-radius-sm) var(--cms-radius-sm);
+	border-radius: 0 0 var(--cms-radius-md) var(--cms-radius-md);
 	background: var(--cms-color-surface);
-	padding: var(--cms-space-3);
-	min-height: 220px;
+	padding: var(--cms-space-4);
+	min-height: 400px;
 }
 
 .editorContent :global(.ProseMirror) {
@@ -119,12 +267,179 @@
 	color: var(--cms-color-text-muted);
 }
 
-.actions {
+.editorContent :global(.ProseMirror p.is-editor-empty:first-child::before) {
+	content: attr(data-placeholder);
+	float: left;
+	height: 0;
+	color: var(--cms-color-text-muted);
+	pointer-events: none;
+}
+
+.editorContent :global(.ProseMirror a) {
+	color: var(--cms-color-primary-text);
+	text-decoration: underline;
+}
+
+.editorContent :global(.ProseMirror code) {
+	background: var(--cms-color-bg);
+	border: 1px solid var(--cms-color-border);
+	border-radius: 3px;
+	padding: 1px 5px;
+	font-size: 0.9em;
+}
+
+.editorContent :global(.ProseMirror pre) {
+	background: var(--cms-color-bg);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	padding: var(--cms-space-3);
+	margin: 0 0 var(--cms-space-3);
+	overflow-x: auto;
+}
+
+.editorContent :global(.ProseMirror pre code) {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.editorContent :global(.ProseMirror hr) {
+	border: none;
+	border-top: 1px solid var(--cms-color-border);
+	margin: var(--cms-space-4) 0;
+}
+
+.editorContent :global(.ProseMirror img) {
+	max-width: 100%;
+	border-radius: var(--cms-radius-sm);
+	margin: var(--cms-space-2) 0 var(--cms-space-3);
+}
+
+.editorContent :global(.ProseMirror img.ProseMirror-selectednode) {
+	outline: 2px solid var(--cms-color-primary);
+	outline-offset: 2px;
+}
+
+.editorContent :global(.ProseMirror ul[data-type='taskList']) {
+	list-style: none;
+	padding-left: 0;
+	margin: 0 0 var(--cms-space-3);
+}
+
+.editorContent :global(.ProseMirror ul[data-type='taskList'] li) {
 	display: flex;
-	gap: var(--cms-space-3);
+	align-items: flex-start;
+	gap: var(--cms-space-2);
+	margin-bottom: var(--cms-space-1);
+}
+
+.editorContent :global(.ProseMirror ul[data-type='taskList'] li > label) {
+	margin-top: 3px;
+	user-select: none;
+}
+
+.editorContent :global(.ProseMirror ul[data-type='taskList'] li > div) {
+	flex: 1;
+}
+
+.editorContent :global(.ProseMirror ul[data-type='taskList'] li[data-checked='true'] > div) {
+	color: var(--cms-color-text-muted);
+	text-decoration: line-through;
+}
+
+.hiddenFileInput {
+	display: none;
+}
+
+.imageDropzone {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--cms-space-2);
+	width: 100%;
+	min-height: 120px;
+	border: 1px dashed var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	background: var(--cms-color-bg);
+	color: var(--cms-color-text-muted);
+	font-size: var(--cms-font-size-sm);
+	cursor: pointer;
+}
+
+.imageDropzone:hover {
+	border-color: var(--cms-color-primary);
+	color: var(--cms-color-text);
+}
+
+.imageDropzone:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.imagePreviewWrap {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-2);
+}
+
+.imagePreview {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: var(--cms-radius-sm);
+	border: 1px solid var(--cms-color-border);
+	background: var(--cms-color-bg);
+}
+
+.imageActions {
+	display: flex;
+	gap: var(--cms-space-2);
+}
+
+.imageActionButton,
+.imageActionButtonDanger {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	flex: 1;
+	font-size: var(--cms-font-size-sm);
+	padding: var(--cms-space-1) var(--cms-space-2);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	background: transparent;
+	color: var(--cms-color-text);
+	cursor: pointer;
+}
+
+.imageActionButton:hover {
+	background: var(--cms-color-surface-hover);
+}
+
+.imageActionButtonDanger:hover {
+	border-color: var(--cms-color-danger);
+	color: var(--cms-color-danger);
+}
+
+.imageActionButton:disabled,
+.imageActionButtonDanger:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.spin {
+	animation: pe-spin 0.8s linear infinite;
+}
+
+@keyframes pe-spin {
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 .saveButton {
+	width: 100%;
 	padding: var(--cms-space-2) var(--cms-space-4);
 	border: none;
 	border-radius: var(--cms-radius-sm);
@@ -138,8 +453,27 @@
 	background: var(--cms-color-primary-hover);
 }
 
+.saveButton:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+	.editor {
+		grid-template-columns: 1fr;
+	}
+}
+
 @media (max-width: 640px) {
 	.editor {
 		gap: var(--cms-space-3);
+	}
+
+	.titleInput {
+		font-size: 22px;
+	}
+
+	.editorContent {
+		min-height: 260px;
 	}
 }

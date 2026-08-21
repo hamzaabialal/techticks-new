@@ -77,11 +77,11 @@ function PostEditPage({ mode }) {
 	const handleSave = () => {
 		runAction(async () => {
 			if (mode === 'new') {
-				const created = await postService.createPost(post)
-				navigate(`/cms/posts/${created.id}/edit`)
+				await postService.createPost(post)
 			} else {
 				await postService.updatePost(id, post)
 			}
+			navigate('/cms')
 		})
 	}
 

@@ -70,6 +70,12 @@ function Header() {
 							</NavLink>
 
 							<NavLink
+								to='/blog'
+								className='nav-link'>
+								Blog
+							</NavLink>
+
+							<NavLink
 								to='/about'
 								className='nav-link'>
 								About Us
@@ -121,6 +127,13 @@ function Header() {
 								className='nav-link'
 								onClick={() => setIsMobileMenuOpen(false)}>
 								Amazon
+							</NavLink>
+
+							<NavLink
+								to='/blog'
+								className='nav-link'
+								onClick={() => setIsMobileMenuOpen(false)}>
+								Blog
 							</NavLink>
 
 							<NavLink

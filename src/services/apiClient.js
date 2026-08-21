@@ -4,7 +4,7 @@
 // cross-port local dev topology — without it, the API would never see the
 // cookie and every protected route would 401.
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || ''
+export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || ''
 
 export async function apiFetch(path, { method = 'GET', body } = {}) {
 	const res = await fetch(`${API_BASE_URL}${path}`, {

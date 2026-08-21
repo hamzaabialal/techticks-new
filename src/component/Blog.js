@@ -1,7 +1,25 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import * as postService from '../services/postService'
 import { categoryById } from '../constants/categories'
+
+// Same fade-up + stagger pattern contactUs.js uses — one shared animation
+// language across the site, not a one-off invented here.
+const heroReveal = {
+	hidden: { opacity: 0, y: 24 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+}
+
+const gridContainer = {
+	hidden: {},
+	show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
+}
+
+const cardReveal = {
+	hidden: { opacity: 0, y: 28 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+}
 
 function Blog() {
 	const navigate = useNavigate()
@@ -39,10 +57,16 @@ function Blog() {
 
 	return (
 		<div className='blog-page'>
-			<section className='blog-hero'>
-				<h1>Insights & Strategies</h1>
-				<p>Real tactics from scaling 380+ ecommerce brands across Amazon, TikTok Shop, and Shopify.</p>
-			</section>
+			<motion.section
+				className='blog-hero'
+				initial='hidden'
+				animate='show'
+				variants={gridContainer}>
+				<motion.h1 variants={heroReveal}>Insights & Strategies</motion.h1>
+				<motion.p variants={heroReveal}>
+					Real tactics from scaling 380+ ecommerce brands across Amazon, TikTok Shop, and Shopify.
+				</motion.p>
+			</motion.section>
 
 			<section className='blog-grid-section'>
 				{status === 'ready' && categories.length > 0 && (
@@ -70,18 +94,30 @@ function Blog() {
 				)}
 
 				{status === 'ready' && visiblePosts.length > 0 && (
-					<div className='blog-grid'>
+					<motion.div
+						className='blog-grid'
+						variants={gridContainer}
+						initial='hidden'
+						whileInView='show'
+						viewport={{ once: true, amount: 0.1 }}>
 						{visiblePosts.map((post) => (
-							<Link key={post.id} to={`/blog/${post.slug}`} className='blog-card'>
-								<span className='blog-tag'>{categoryById[post.categoryIds[0]]?.name || ''}</span>
-								<h2>{post.title}</h2>
-								<p>{post.excerpt}</p>
-								<div className='blog-meta'>
-									<span>{post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ''}</span>
-								</div>
-							</Link>
+							<motion.div key={post.id} variants={cardReveal}>
+								<Link to={`/blog/${post.slug}`} className='blog-card'>
+									{post.featuredImage && (
+										<div className='blog-card-image-wrap'>
+											<img src={post.featuredImage} alt='' className='blog-card-image' loading='lazy' />
+										</div>
+									)}
+									<span className='blog-tag'>{categoryById[post.categoryIds[0]]?.name || ''}</span>
+									<h2>{post.title}</h2>
+									<p>{post.excerpt}</p>
+									<div className='blog-meta'>
+										<span>{post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ''}</span>
+									</div>
+								</Link>
+							</motion.div>
 						))}
-					</div>
+					</motion.div>
 				)}
 			</section>
 
