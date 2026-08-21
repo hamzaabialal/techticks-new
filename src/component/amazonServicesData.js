@@ -2,6 +2,18 @@ import frame1 from '../component/images/frame1.png'
 import frame2 from '../component/images/frame2.png'
 import frame3 from '../component/images/frame3.png'
 import frame4 from '../component/images/frame4.png'
+import fullAccountMgmt1 from '../component/images/amazon-results/full-account-mgmt-1.jpg'
+import fullAccountMgmt2 from '../component/images/amazon-results/full-account-mgmt-2.jpg'
+import seoVisibility1 from '../component/images/amazon-results/seo-visibility-1.jpg'
+import seoVisibility2 from '../component/images/amazon-results/seo-visibility-2.jpg'
+import ppcAds1 from '../component/images/amazon-results/ppc-ads-1.jpg'
+import ppcAds2 from '../component/images/amazon-results/ppc-ads-2.jpg'
+import dedicatedExpert1 from '../component/images/amazon-results/dedicated-expert-1.jpg'
+import dedicatedExpert2 from '../component/images/amazon-results/dedicated-expert-2.jpg'
+import buyWithPrime1 from '../component/images/amazon-results/buy-with-prime-1.jpg'
+import buyWithPrime2 from '../component/images/amazon-results/buy-with-prime-2.jpg'
+import sellerVendor1 from '../component/images/amazon-results/seller-vendor-1.jpg'
+import sellerVendor2 from '../component/images/amazon-results/seller-vendor-2.jpg'
 
 export const navItems = [
     'Full Account Management',
@@ -46,6 +58,8 @@ export const servicesData = [
         ],
         resultsTitle: 'Account Management Results',
         resultsSub: 'Check out some of our most recent Web Design projects',
+        resultsImage1: fullAccountMgmt1,
+        resultsImage2: fullAccountMgmt2,
     },
     {
         id: 1,
@@ -80,6 +94,8 @@ export const servicesData = [
         ],
         resultsTitle: 'SEO & Visibility Results',
         resultsSub: 'Check out some of our most recent SEO projects',
+        resultsImage1: seoVisibility1,
+        resultsImage2: seoVisibility2,
     },
     {
         id: 2,
@@ -114,6 +130,8 @@ export const servicesData = [
         ],
         resultsTitle: 'PPC & Ads Results',
         resultsSub: 'Check out some of our most recent Ads campaigns',
+        resultsImage1: ppcAds1,
+        resultsImage2: ppcAds2,
     },
     {
         id: 3,
@@ -147,6 +165,8 @@ export const servicesData = [
         ],
         resultsTitle: 'Dedicated Expert Results',
         resultsSub: 'Check out some of our most recent success stories',
+        resultsImage1: dedicatedExpert1,
+        resultsImage2: dedicatedExpert2,
     },
     {
         id: 4,
@@ -180,6 +200,8 @@ export const servicesData = [
         ],
         resultsTitle: 'Buy with Prime Results',
         resultsSub: 'Check out some of our most recent integration projects',
+        resultsImage1: buyWithPrime1,
+        resultsImage2: buyWithPrime2,
     },
     {
         id: 5,
@@ -214,5 +236,7 @@ export const servicesData = [
         ],
         resultsTitle: 'Seller & Vendor Central Results',
         resultsSub: 'Check out some of our most recent management projects',
+        resultsImage1: sellerVendor1,
+        resultsImage2: sellerVendor2,
     },
 ]

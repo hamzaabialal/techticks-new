@@ -1,7 +1,18 @@
-import portfolioShopify from './images/portfolio-stock/hands-on-keyboard.jpg'
-import portfolioAmazon from './images/portfolio-stock/hammer-nails-wood.jpg'
-import portfolioSocial from './images/portfolio-stock/pen-notebook-desk.jpg'
+// Landing Page (design) and Performance Optimization (development) share this
+// dashboard photo deliberately - it's a genuine analytics-dashboard shot,
+// still a good fit relabeled either way, not a mismatch like the images it
+// replaced elsewhere in this file.
 import portfolioLanding from './images/portfolio-stock/laptop-analytics-dashboard.jpg'
+import designPortfolioShopify from './images/portfolio-stock/design-shopify-storefront.jpg'
+import designPortfolioAmazon from './images/portfolio-stock/design-amazon-a-plus.jpg'
+import designPortfolioBrand from './images/portfolio-stock/design-brand-identity.jpg'
+import designPortfolioTiktok from './images/portfolio-stock/design-tiktok-creative.jpg'
+import designPortfolioPackaging from './images/portfolio-stock/design-packaging.jpg'
+import devPortfolioShopify from './images/portfolio-stock/dev-shopify-storefront.jpg'
+import devPortfolioRedesign from './images/portfolio-stock/dev-site-redesign.jpg'
+import devPortfolioCustomBuild from './images/portfolio-stock/dev-custom-build.jpg'
+import devPortfolioLandingPage from './images/portfolio-stock/dev-landing-page.jpg'
+import devPortfolioSupport from './images/portfolio-stock/dev-ongoing-support.jpg'
 import techLogo2 from './images/services-slider/slider2.png'
 import techLogo3 from './images/services-slider/slider3.png'
 import techLogo4 from './images/services-slider/slider4.png'
@@ -16,6 +27,8 @@ const detailPageContent = {
 		breadcrumbLinks: ['/services'],
 		showBreadcrumb: false,
 		hideTag: true,
+		showTestimonials: true,
+		testimonialCategories: ['E-commerce', 'Migration'],
 		hero: {
 			titleSegments: [
 				{ text: 'We Run Y' },
@@ -114,6 +127,7 @@ const detailPageContent = {
 
 	'digital-marketing': {
 		pageClass: 'ssp-page--digital-marketing',
+		testimonialCategories: ['SEO', 'Advertising', 'Social Media'],
 		breadcrumb: ['Services', 'Digital Marketing'],
 		breadcrumbLinks: ['/services'],
 		showStats: false,
@@ -355,6 +369,7 @@ const detailPageContent = {
 
 	'design': {
 		pageClass: 'ssp-page--ui-ux-design',
+		testimonialCategories: ['Design'],
 		breadcrumb: ['Services', 'UX/UI & Graphic Design'],
 		breadcrumbLinks: ['/services'],
 		hero: {
@@ -453,39 +468,36 @@ const detailPageContent = {
 		},
 		portfolio: {
 			title: 'Let The Results Do The Talking',
-			viewAllText: 'VIEW ALL WORK →',
-			viewAllLink: '/portfolio',
+			subtitle: 'A look at the type of design work we deliver — not specific client case studies.',
 			items: [
 				{
-					image: portfolioShopify,
-					title: 'Shopify Storefront',
+					image: designPortfolioShopify,
+					title: 'Shopify Storefront Example',
 					category: 'UI/UX',
 				},
 				{
-					image: portfolioAmazon,
-					title: 'Amazon A+ Content',
+					image: designPortfolioAmazon,
+					title: 'Amazon A+ Content Example',
 					category: 'Marketplace',
 				},
 				{
-					image: null,
-					visual: 'ssp-portfolio-placeholder--branding',
-					title: 'Brand Identity System',
+					image: designPortfolioBrand,
+					title: 'Brand Identity System Example',
 					category: 'Branding',
 				},
 				{
-					image: portfolioSocial,
-					title: 'TikTok Shop Creative',
+					image: designPortfolioTiktok,
+					title: 'TikTok Shop Creative Example',
 					category: 'Social',
 				},
 				{
 					image: portfolioLanding,
-					title: 'Landing Page',
+					title: 'Landing Page Example',
 					category: 'Conversion',
 				},
 				{
-					image: null,
-					visual: 'ssp-portfolio-placeholder--packaging',
-					title: 'Packaging Design',
+					image: designPortfolioPackaging,
+					title: 'Packaging Design Example',
 					category: 'Print',
 				},
 			],
@@ -546,6 +558,7 @@ detailPageContent.development = {
 	showBreadcrumb: false,
 	showStats: false,
 	showTestimonials: true,
+	testimonialCategories: ['Development'],
 	portfolioBeforeProcess: true,
 	hero: {
 		...detailPageContent.development.hero,
@@ -586,16 +599,15 @@ detailPageContent.development = {
 		],
 	},
 	portfolio: {
-		title: 'Sites That Drive Revenue.',
-		viewAllText: 'VIEW ALL WORK →',
-		viewAllLink: '/portfolio',
+		title: 'What a TechTicks Build Looks Like',
+		subtitle: 'A look at the type of builds we deliver — not specific client case studies.',
 		items: [
-			{ image: portfolioShopify, title: 'Shopify Storefront', category: 'UI/UX' },
-			{ image: portfolioAmazon, title: 'Amazon A+ Content', category: 'Marketplace' },
-			{ image: null, visual: 'ssp-portfolio-placeholder--branding', title: 'Brand Identity System', category: 'Branding' },
-			{ image: portfolioSocial, title: 'TikTok Shop Creative', category: 'Social' },
-			{ image: portfolioLanding, title: 'Landing Page', category: 'Conversion' },
-			{ image: null, visual: 'ssp-portfolio-placeholder--packaging', title: 'Packaging Design', category: 'Print' },
+			{ image: devPortfolioShopify, title: 'Shopify Storefront Example', category: 'Shopify Development' },
+			{ image: devPortfolioRedesign, title: 'Site Redesign Example', category: 'Redesigns & Migrations' },
+			{ image: devPortfolioCustomBuild, title: 'Custom Build Example', category: 'Custom Website Design & Build' },
+			{ image: devPortfolioLandingPage, title: 'Landing Page Example', category: 'Landing Pages' },
+			{ image: portfolioLanding, title: 'Performance Optimization Example', category: 'Speed & Performance Optimization' },
+			{ image: devPortfolioSupport, title: 'Ongoing Support Example', category: 'Maintenance & Support' },
 		],
 	},
 	cta: {

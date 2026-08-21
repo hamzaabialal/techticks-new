@@ -5131,21 +5131,13 @@ body {
 	gap: 20px;
 }
 
-.corr-result-img1 {
-	height: 300px;
-	background-image: url('./component/images/workthree.jpg');
-	border-radius: 34px;
-	background-size: cover;
-	background-position: center;
-	border: 1px solid var(--border-color);
-}
-
+.corr-result-img1,
 .corr-result-img2 {
 	height: 300px;
-	background-image: url('./component/images/worktwo.jpg');
+	width: 100%;
+	object-fit: cover;
+	display: block;
 	border-radius: 34px;
-	background-size: cover;
-	background-position: center;
 	border: 1px solid var(--border-color);
 }
 
@@ -13717,8 +13709,9 @@ textarea,
 .ssp-page--development .ssp-card-link:hover { color: #fff; border-color: #757580; }
 
 .ssp-page--development .ssp-portfolio { max-width: 1260px; margin: 0 auto; padding: 62px 32px; }
-.ssp-page--development .ssp-portfolio-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.ssp-page--development .ssp-portfolio-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
 .ssp-page--development .ssp-portfolio-header h2 { margin: 0; max-width: 440px; font-size: clamp(32px, 3vw, 47px); line-height: 1.14; font-weight: 500; }
+.ssp-page--development .ssp-portfolio-subtitle { flex-basis: 100%; margin: 8px 0 0; color: #a8a8b0; font-size: 14px; }
 .ssp-page--development .ssp-portfolio-view-all { flex: 0 0 auto; padding: 11px 17px; border: 1px solid #56565f; border-radius: 999px; color: #fff; background: transparent; font-size: 12px; transition: border-color .2s, box-shadow .2s; }
 .ssp-page--development .ssp-portfolio-view-all:hover { border-color: #7c5cbf; box-shadow: 0 0 16px rgba(124, 92, 191, .25); }
 .ssp-page--development .ssp-portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }

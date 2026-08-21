@@ -248,6 +248,7 @@ function SubServicePage({ data }) {
 				<section className='ssp-portfolio'>
 					<div className='ssp-portfolio-header'>
 						<h2>{data.portfolio.title}</h2>
+						{data.portfolio.subtitle && <p className='ssp-portfolio-subtitle'>{data.portfolio.subtitle}</p>}
 						{data.portfolio.viewAllLink && (
 							<button
 								className='ssp-portfolio-view-all'

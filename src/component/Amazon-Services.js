@@ -175,8 +175,8 @@ const AmazonServicesComponent = () => {
 								{activeService.resultsSub}
 							</p>
 							<div className='corr-results-grid'>
-								<div className='corr-result-img1'></div>
-								<div className='corr-result-img2'></div>
+								<img src={activeService.resultsImage1} alt='' className='corr-result-img1' />
+								<img src={activeService.resultsImage2} alt='' className='corr-result-img2' />
 							</div>
 							<div className='corr-action-footer'>
 								<button className='corr-view-btn'>
