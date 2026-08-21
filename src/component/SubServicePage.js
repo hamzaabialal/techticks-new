@@ -167,6 +167,7 @@ function SubServicePage({ data }) {
 				<section className='ssp-portfolio'>
 					<div className='ssp-portfolio-header'>
 						<h2>{data.portfolio.title}</h2>
+						{data.portfolio.subtitle && <p className='ssp-portfolio-subtitle'>{data.portfolio.subtitle}</p>}
 						{data.portfolio.viewAllLink && <button className='ssp-portfolio-view-all' onClick={() => navigate(data.portfolio.viewAllLink)}>{data.portfolio.viewAllText || 'VIEW ALL WORK ->'}</button>}
 					</div>
 					<div className='ssp-portfolio-grid'>
@@ -304,7 +305,7 @@ function SubServicePage({ data }) {
 			)}
 
 			{/* ── TESTIMONIALS ────────────────────────── */}
-			{(data.showTestimonials || data.pageClass === 'ssp-page--digital-marketing' || data.pageClass === 'ssp-page--ui-ux-design') && <Testimonials />}
+			{(data.showTestimonials || data.pageClass === 'ssp-page--digital-marketing' || data.pageClass === 'ssp-page--ui-ux-design') && <Testimonials categories={data.testimonialCategories} />}
 
 			{/* ── FINAL CTA ────────────────────────────── */}
 			{data.cta ? (

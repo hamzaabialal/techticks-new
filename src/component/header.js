@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import logo from '../component/images/logo.png'
-import { FaPhoneAlt, FaGlobe, FaBars } from 'react-icons/fa'
-import { NavLink } from 'react-router-dom'
+import { FaPhoneAlt, FaGlobe, FaLock, FaBars } from 'react-icons/fa'
+import { NavLink, Link } from 'react-router-dom'
 import SideTinyStarsBg from './sidesTinyStarsBg'
 
 function Header() {
@@ -28,6 +28,9 @@ function Header() {
 						rel='noopener noreferrer'>
 						<FaGlobe /> techticks.org
 					</a>
+					<Link to='/cms/login'>
+						<FaLock /> Staff Login
+					</Link>
 				</div>
 
 				<hr style={{ color: 'white' }} />
@@ -134,6 +137,13 @@ function Header() {
 								}}>
 								Contact us
 							</button>
+
+							<NavLink
+								to='/cms/login'
+								className='nav-link'
+								onClick={() => setIsMobileMenuOpen(false)}>
+								<FaLock /> Staff Login
+							</NavLink>
 						</nav>
 					</div>
 				)}

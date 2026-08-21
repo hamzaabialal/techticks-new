@@ -13,7 +13,7 @@ import avatarMichaelBrown from './images/testimonial-avatars/michael-brown.jpg'
 import avatarDanielCarter from './images/testimonial-avatars/daniel-carter.jpg'
 import avatarZainAli from './images/testimonial-avatars/zain-ali.jpg'
 
-function Testimonials() {
+function Testimonials({ categories }) {
 	const testimonials = [
 		{
 			img: avatarSamLui,
@@ -21,6 +21,7 @@ function Testimonials() {
 			title: 'Design - Sam Lui, GlowSkin Co.',
 			subtitle: 'Founder of GreenEarth Eco Store',
 			text: 'TechTicks transformed our website and app with stunning, user-friendly designs. Our customers love the new look, and our engagement has skyrocketed!',
+			category: 'Design',
 		},
 		{
 			img: avatarAhmedRaza,
@@ -28,6 +29,7 @@ function Testimonials() {
 			title: 'SEO - Ahmed Raza, BuildPro Solutions',
 			subtitle: 'Head of Product at HealthTech',
 			text: 'Our search rankings improved dramatically after working with TechTicks. Their SEO strategy brought us consistent, high-quality traffic and leads.',
+			category: 'SEO',
 		},
 		{
 			img: avatarBilalHussain,
@@ -35,6 +37,7 @@ function Testimonials() {
 			title: 'Development - Bilal Hussain, FinTrack',
 			subtitle: 'Marketing Director',
 			text: 'They developed a fast, secure, and reliable platform for our services. The performance and scalability of the website exceeded our expectations.',
+			category: 'Development',
 		},
 		{
 			img: avatarEmilyRodriguez,
@@ -42,6 +45,7 @@ function Testimonials() {
 			title: 'Advertising - Emily Rodriguez, NovaEdge',
 			subtitle: 'Marketing Director',
 			text: "TechTicks crafted targeted campaigns across social media and search engines. We've seen measurable growth and ROI that truly stands out.",
+			category: 'Advertising',
 		},
 		{
 			img: avatarFrancTin,
@@ -49,6 +53,7 @@ function Testimonials() {
 			title: 'Maintenance - Franc Tin, HealthBridge Clinic',
 			subtitle: 'Marketing Director',
 			text: 'Their maintenance team keeps our systems running smoothly 24/7. Updates, monitoring, and support are handled professionally without any downtime.',
+			category: 'Maintenance',
 		},
 		{
 			img: avatarAliMalik,
@@ -56,6 +61,7 @@ function Testimonials() {
 			title: 'Social Media - Ali Malik, TrendWear',
 			subtitle: 'Marketing Director',
 			text: 'Our social media presence has grown consistently thanks to TechTicks. They manage our profiles, boost engagement, and align with our brand perfectly.',
+			category: 'Social Media',
 		},
 		{
 			img: avatarJasonLee,
@@ -63,6 +69,7 @@ function Testimonials() {
 			title: 'Migration - Jason Lee, BrightTech',
 			subtitle: 'Marketing Director',
 			text: 'We migrated our website and e-commerce platform seamlessly. TechTicks ensured zero downtime, preserved performance, and maintained SEO value.',
+			category: 'Migration',
 		},
 		{
 			img: avatarMichaelBrown,
@@ -70,6 +77,7 @@ function Testimonials() {
 			title: 'E-commerce - Michael Brown, StartSpark',
 			subtitle: 'Marketing Director',
 			text: 'The custom e-commerce solution provided by TechTicks perfectly matches our industry needs. It improved customer experience and sales.',
+			category: 'E-commerce',
 		},
 		{
 			img: avatarDanielCarter,
@@ -77,6 +85,7 @@ function Testimonials() {
 			title: 'Multi-Service - Daniel Carter, LearnHub',
 			subtitle: 'Marketing Director',
 			text: 'From design to development and marketing, TechTicks handled everything with precision. Their expertise across multiple areas made our project a success.',
+			category: 'Multi-Service',
 		},
 		{
 			img: avatarZainAli,
@@ -84,8 +93,24 @@ function Testimonials() {
 			title: 'Ongoing Support - Zain Ali, UrbanSpace',
 			subtitle: 'Marketing Director',
 			text: 'Even after launch, TechTicks provides reliable support. Their team is always responsive, helping us resolve issues quickly and efficiently.',
+			category: 'Ongoing Support',
 		},
 	]
+
+	const filtered = categories?.length
+		? testimonials.filter((t) => categories.includes(t.category))
+		: testimonials
+
+	// Embla's loop:true + AutoScroll need the duplicated track to be comfortably
+	// wider than any real viewport, or the loop has no room to scroll and freezes/glitches.
+	// Scale the repeat count down as the filtered set shrinks so this always holds,
+	// while leaving the original (10-item) case at its existing 2x duplication.
+	const SLIDE_UNIT_WIDTH = 430
+	const MIN_TRACK_WIDTH = 6000
+	const repeatCount = filtered.length
+		? Math.max(2, Math.ceil(MIN_TRACK_WIDTH / (filtered.length * SLIDE_UNIT_WIDTH)))
+		: 0
+	const loopSlides = Array.from({ length: repeatCount }, () => filtered).flat()
 
 	const [emblaRef] = useEmblaCarousel(
 		{ loop: true, dragFree: true, align: 'start' },
@@ -155,7 +180,7 @@ function Testimonials() {
 				className='fig-testi-viewport'
 				ref={emblaRef}>
 				<div className='fig-testi-track'>
-					{[...testimonials, ...testimonials].map((item, i) => (
+					{loopSlides.map((item, i) => (
 						<div
 							className='fig-testi-slide'
 							key={i}>
