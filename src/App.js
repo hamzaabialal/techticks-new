@@ -19,6 +19,7 @@ import Blog from './component/Blog'
 import SubServicePage from './component/SubServicePage'
 import { subServicesData } from './component/subServicesData'
 import { servicesCatalog } from './component/servicesCatalog'
+import BlogPostDetail from './component/BlogPostDetail'
 
 function App() {
 	return (
@@ -73,6 +74,10 @@ function App() {
 					<Route
 						path='/blog'
 						element={<Blog />}
+					/>
+					<Route
+						path='/blog/:slug'
+						element={<BlogPostDetail />}
 					/>
 					{servicesCatalog.map((service) => (
 						<Route key={service.id} path={service.route} element={<SubServicePage data={service.detail} />} />
