@@ -1,0 +1,202 @@
+.page {
+	min-height: 100vh;
+	display: flex;
+	font-family: var(--cms-font-family);
+	background: var(--cms-color-bg);
+}
+
+.leftPanel {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--cms-space-6) var(--cms-space-4);
+}
+
+.leftContent {
+	width: 100%;
+	max-width: 360px;
+}
+
+.wordmark {
+	height: 28px;
+	width: auto;
+	display: block;
+	margin-bottom: var(--cms-space-5);
+}
+
+.devBadge {
+	display: inline-block;
+	margin-bottom: var(--cms-space-4);
+	padding: var(--cms-space-1) var(--cms-space-2);
+	border-radius: var(--cms-radius-sm);
+	background: rgba(229, 72, 77, 0.16);
+	color: var(--cms-color-danger);
+	font-size: var(--cms-font-size-sm);
+	font-weight: 600;
+}
+
+.title {
+	margin: 0 0 var(--cms-space-1);
+	font-size: 28px;
+	font-weight: 600;
+	color: var(--cms-color-text);
+}
+
+.subtitle {
+	margin: 0 0 var(--cms-space-5);
+	color: var(--cms-color-text-muted);
+	font-size: var(--cms-font-size-sm);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-4);
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-1);
+}
+
+.label {
+	font-size: var(--cms-font-size-sm);
+	font-weight: 600;
+	color: var(--cms-color-text-muted);
+}
+
+/* Underline-style, not boxed — a bottom rule only, no fill, no side/top
+   borders. Matches the reference's clean-field look rather than the CMS's
+   usual boxed inputs (this is a one-off login treatment, not a new default
+   for the rest of the CMS). */
+.underlineInput {
+	font-family: inherit;
+	font-size: var(--cms-font-size-md);
+	color: var(--cms-color-text);
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid var(--cms-color-border);
+	border-radius: 0;
+	padding: var(--cms-space-2) 0;
+}
+
+.underlineInput::placeholder {
+	color: var(--cms-color-text-muted);
+}
+
+.underlineInput:focus {
+	outline: none;
+	border-bottom-color: var(--cms-color-primary-text);
+}
+
+.error {
+	margin: 0;
+	color: var(--cms-color-danger);
+	font-size: var(--cms-font-size-sm);
+}
+
+/* Pill radius (84px) matches App.css's .header-btn exactly — the site's own
+   rounded-pill CTA treatment, not an invented value. */
+.submitButton {
+	margin-top: var(--cms-space-2);
+	padding: 13px 24px;
+	border: none;
+	border-radius: 84px;
+	background: linear-gradient(95.49deg, #4a35d9 10.01%, #0c84af 96.93%);
+	color: #fff;
+	font-size: var(--cms-font-size-md);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.submitButton:hover {
+	background: linear-gradient(95.49deg, #533eda 10.01%, #1085b0 96.93%);
+}
+
+.devHint {
+	margin-top: var(--cms-space-5);
+	padding-top: var(--cms-space-4);
+	border-top: 1px solid var(--cms-color-border);
+}
+
+.devHintLabel {
+	display: block;
+	font-size: var(--cms-font-size-sm);
+	color: var(--cms-color-text-muted);
+	margin-bottom: var(--cms-space-1);
+}
+
+.devHintList {
+	margin: 0;
+	padding-left: var(--cms-space-4);
+	font-size: var(--cms-font-size-sm);
+	color: var(--cms-color-text-muted);
+}
+
+.devHintList li {
+	margin-bottom: 2px;
+}
+
+/* Right panel: TechTicks' real hero/button gradient (App.css .header-btn),
+   at panel scale — deepened at the edges rather than left as a flat
+   saturated fill, the same way the public site layers its own glows over
+   dark rather than using solid gradient fills alone. */
+.rightPanel {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--cms-space-6);
+	background:
+		linear-gradient(rgba(6, 7, 10, 0.35), rgba(6, 7, 10, 0.55)),
+		linear-gradient(95.49deg, #4a35d9 10.01%, #0c84af 96.93%);
+}
+
+.rightContent {
+	max-width: 380px;
+	color: #fff;
+}
+
+.rightHeading {
+	margin: 0 0 var(--cms-space-3);
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.rightText {
+	margin: 0 0 var(--cms-space-5);
+	font-size: var(--cms-font-size-md);
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.rightCta {
+	display: inline-block;
+	padding: 13px 24px;
+	border-radius: 84px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: #fff;
+	text-decoration: none;
+	font-size: var(--cms-font-size-md);
+	font-weight: 600;
+}
+
+.rightCta:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+/* Below tablet width, the right panel is purely decorative brand messaging
+   — hide it rather than stacking it, so the actual login form (the only
+   functionally essential content) isn't pushed below the fold. Matches the
+   tablet+mobile collapse convention already used for the CMS sidebar. */
+@media (max-width: 1024px) {
+	.rightPanel {
+		display: none;
+	}
+
+	.leftPanel {
+		padding: var(--cms-space-5) var(--cms-space-4);
+	}
+}

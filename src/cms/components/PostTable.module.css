@@ -1,0 +1,60 @@
+.tableWrapper {
+	overflow-x: auto;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: var(--cms-font-size-sm);
+	background: var(--cms-color-surface);
+}
+
+.table th,
+.table td {
+	text-align: left;
+	padding: var(--cms-space-2) var(--cms-space-3);
+	border-bottom: 1px solid var(--cms-color-border);
+	white-space: nowrap;
+}
+
+.table tbody tr:hover {
+	background: var(--cms-color-surface-hover);
+}
+
+.actions {
+	display: flex;
+	gap: var(--cms-space-3);
+}
+
+.actionLink,
+.actionButton,
+.actionButtonDanger {
+	font-size: var(--cms-font-size-sm);
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	padding: 0;
+}
+
+.actionLink,
+.actionButton {
+	/* primary-text, not primary — the flat brand indigo is too dark to read
+	   as bare text against these dark surfaces (see tokens.css). */
+	color: var(--cms-color-primary-text);
+}
+
+.actionButtonDanger {
+	color: var(--cms-color-danger);
+}
+
+.empty {
+	color: var(--cms-color-text-muted);
+	font-size: var(--cms-font-size-md);
+}
+
+.error {
+	margin: 0 0 var(--cms-space-2);
+	color: var(--cms-color-danger);
+	font-size: var(--cms-font-size-sm);
+}

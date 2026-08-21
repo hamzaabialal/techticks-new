@@ -1,0 +1,62 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-4);
+}
+
+.heading {
+	margin: 0;
+	font-size: var(--cms-font-size-lg);
+	font-weight: 600;
+}
+
+.error {
+	color: var(--cms-color-danger);
+	font-size: var(--cms-font-size-sm);
+}
+
+.reviewerNote {
+	background: rgba(161, 93, 10, 0.16);
+	border: 1px solid var(--cms-color-status-review);
+	border-radius: var(--cms-radius-sm);
+	padding: var(--cms-space-2) var(--cms-space-3);
+	font-size: var(--cms-font-size-sm);
+}
+
+.reviewActions {
+	display: flex;
+	gap: var(--cms-space-3);
+}
+
+.workflowButton,
+.publishButton {
+	padding: var(--cms-space-2) var(--cms-space-4);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	background: var(--cms-color-surface);
+	color: var(--cms-color-text);
+	font-size: var(--cms-font-size-md);
+	cursor: pointer;
+	max-width: fit-content;
+}
+
+.workflowButton:hover {
+	background: var(--cms-color-surface-hover);
+}
+
+.publishButton {
+	background: var(--cms-color-status-published);
+	border-color: var(--cms-color-status-published);
+	color: #fff;
+}
+
+@media (max-width: 640px) {
+	.reviewActions {
+		flex-direction: column;
+	}
+
+	.workflowButton,
+	.publishButton {
+		max-width: none;
+	}
+}

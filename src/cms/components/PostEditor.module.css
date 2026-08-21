@@ -1,0 +1,145 @@
+.editor {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-4);
+	max-width: 720px;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cms-space-1);
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.label {
+	font-size: var(--cms-font-size-sm);
+	font-weight: 600;
+	color: var(--cms-color-text-muted);
+}
+
+.input,
+.textarea {
+	font-family: inherit;
+	font-size: var(--cms-font-size-md);
+	color: var(--cms-color-text);
+	background: var(--cms-color-surface);
+	border: 1px solid var(--cms-color-border);
+	border-radius: var(--cms-radius-sm);
+	padding: var(--cms-space-2) var(--cms-space-3);
+}
+
+.categoryList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--cms-space-3);
+}
+
+.categoryOption {
+	display: flex;
+	align-items: center;
+	gap: var(--cms-space-1);
+	font-size: var(--cms-font-size-sm);
+}
+
+.toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--cms-space-1);
+	padding: var(--cms-space-2);
+	background: var(--cms-color-bg);
+	border: 1px solid var(--cms-color-border);
+	border-bottom: none;
+	border-radius: var(--cms-radius-sm) var(--cms-radius-sm) 0 0;
+}
+
+.toolbarButton,
+.toolbarButtonActive {
+	font-size: var(--cms-font-size-sm);
+	padding: var(--cms-space-1) var(--cms-space-2);
+	border: 1px solid transparent;
+	border-radius: var(--cms-radius-sm);
+	background: transparent;
+	color: var(--cms-color-text);
+	cursor: pointer;
+}
+
+.toolbarButton:hover {
+	background: var(--cms-color-surface-hover);
+	border-color: var(--cms-color-border);
+}
+
+.toolbarButtonActive {
+	background: var(--cms-color-primary);
+	color: #fff;
+}
+
+.toolbarButton:disabled,
+.toolbarButtonActive:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.editorContent {
+	border: 1px solid var(--cms-color-border);
+	border-radius: 0 0 var(--cms-radius-sm) var(--cms-radius-sm);
+	background: var(--cms-color-surface);
+	padding: var(--cms-space-3);
+	min-height: 220px;
+}
+
+.editorContent :global(.ProseMirror) {
+	outline: none;
+	font-size: var(--cms-font-size-md);
+	color: var(--cms-color-text);
+	line-height: 1.6;
+}
+
+.editorContent :global(.ProseMirror p) {
+	margin: 0 0 var(--cms-space-3);
+}
+
+.editorContent :global(.ProseMirror h2),
+.editorContent :global(.ProseMirror h3) {
+	margin: var(--cms-space-4) 0 var(--cms-space-2);
+}
+
+.editorContent :global(.ProseMirror ul),
+.editorContent :global(.ProseMirror ol) {
+	padding-left: var(--cms-space-5);
+	margin: 0 0 var(--cms-space-3);
+}
+
+.editorContent :global(.ProseMirror blockquote) {
+	border-left: 3px solid var(--cms-color-border);
+	padding-left: var(--cms-space-3);
+	margin: 0 0 var(--cms-space-3);
+	color: var(--cms-color-text-muted);
+}
+
+.actions {
+	display: flex;
+	gap: var(--cms-space-3);
+}
+
+.saveButton {
+	padding: var(--cms-space-2) var(--cms-space-4);
+	border: none;
+	border-radius: var(--cms-radius-sm);
+	background: var(--cms-color-primary);
+	color: #fff;
+	font-size: var(--cms-font-size-md);
+	cursor: pointer;
+}
+
+.saveButton:hover {
+	background: var(--cms-color-primary-hover);
+}
+
+@media (max-width: 640px) {
+	.editor {
+		gap: var(--cms-space-3);
+	}
+}

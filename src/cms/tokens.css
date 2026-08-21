@@ -1,0 +1,54 @@
+:root {
+	/* Three tonal steps, restrained: page background, a raised surface for
+	   cards/panels/inputs/table, and one hover/active step above that.
+	   Values echo the public site's own near-black (App.css uses
+	   linear-gradient(180deg, #030406, #07090f) for its darkest sections)
+	   rather than an unrelated invented gray scale. */
+	--cms-color-bg: #0b0c0f;
+	--cms-color-surface: #16171c;
+	--cms-color-surface-hover: #1e2028;
+	--cms-color-border: #2a2b33;
+
+	--cms-color-text: #ececf1;
+	--cms-color-text-muted: #9496a1;
+
+	/* #4A35D9 is TechTicks' actual brand accent (verified against App.css —
+	   the site's header CTA gradient and every hero/section glow use this
+	   exact hue). Used flat, never as a gradient, and sparingly. It's too
+	   dark itself to serve as text/border color against these near-black
+	   surfaces (computed ~2.4:1, fails WCAG), so primary-text is a lighter
+	   tint of the same hue for that specific use — not a second accent. */
+	--cms-color-primary: #4a35d9;
+	--cms-color-primary-hover: #5c46e8;
+	--cms-color-primary-text: #9f8fff;
+	--cms-color-danger: #e5484d;
+
+	/* Darkened from the original light-theme values — those failed WCAG AA
+	   with white badge text (2.4-3.4:1 measured); these pass at 5-6.4:1
+	   while staying clearly gray/amber/green at a glance. */
+	--cms-color-status-draft: #5b5f6b;
+	--cms-color-status-review: #a15d0a;
+	--cms-color-status-published: #1a7f4b;
+
+	--cms-space-1: 4px;
+	--cms-space-2: 8px;
+	--cms-space-3: 12px;
+	--cms-space-4: 16px;
+	--cms-space-5: 24px;
+	--cms-space-6: 32px;
+
+	--cms-radius-sm: 4px;
+	--cms-radius-md: 8px;
+
+	--cms-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--cms-font-size-sm: 13px;
+	--cms-font-size-md: 15px;
+	--cms-font-size-lg: 20px;
+
+	/* Documented breakpoints. CSS custom properties can't be interpolated
+	   inside @media conditions, so every CMS *.module.css file that needs
+	   these hardcodes the same literal pixel values and references this
+	   comment as the source of truth. */
+	--cms-breakpoint-tablet: 1024px;
+	--cms-breakpoint-mobile: 640px;
+}
