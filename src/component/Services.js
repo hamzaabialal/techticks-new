@@ -51,7 +51,7 @@ function Services() {
 				<p className='why-choose-subtitle'>Because execution without strategy is expensive failure.</p>
 				<div className='why-choose-cards'>
 					<div className='why-choose-card'><div className='icon'><MdCellTower /></div><h3>Ecommerce-Focused Experience</h3><p>From storefronts to Amazon listings, we understand how online selling works and design accordingly.</p></div>
-					<div className='why-choose-card'><div className='icon'><GiBullseye /></div><h3>Clear Communication</h3><p>You get realistic timelines, transparent updates, and a dedicated point of contact — no confusion, no guessing.</p></div>
+					<div className='why-choose-card'><div className='icon'><GiBullseye /></div><h3>Clear Communication</h3><p>You get realistic timelines, transparent updates, and a dedicated point of contact - no confusion, no guessing.</p></div>
 					<div className='why-choose-card'><div className='icon'><TbArrowsCross /></div><h3>Cross-Functional Expertise</h3><p>Design, development, marketing, and ecommerce all handled under one roof for better alignment and faster execution.</p></div>
 				</div>
 			</section>

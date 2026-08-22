@@ -21,7 +21,7 @@ function WhyChoose() {
 					<h3>Clear Communication</h3>
 					<p>
 						You get realistic timelines, transparent updates, and a
-						dedicated point of contact — no confusion, no guessing.
+						dedicated point of contact - no confusion, no guessing.
 					</p>
 				</div>
 

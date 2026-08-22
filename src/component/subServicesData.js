@@ -57,7 +57,7 @@ const detailPageContent = {
 			title: 'Why brands that sell on multiple platforms win long-term',
 			paragraphs: [
 				'A brand that sells only on Amazon is one algorithm change away from a bad month. TikTok Shop brands that ignore owned channels are building on rented land. Shopify-only DTC brands pay forever for every customer.',
-				"Multi-channel isn't just a growth strategy — it's a risk management strategy. TechTicks builds and manages your presence across platforms so you're not dependent on any single one.",
+				"Multi-channel isn't just a growth strategy - it's a risk management strategy. TechTicks builds and manages your presence across platforms so you're not dependent on any single one.",
 			],
 		},
 		servicesTitle: 'Six platforms. Each one linked below.',
@@ -82,7 +82,7 @@ const detailPageContent = {
 			{
 				num: '03',
 				title: 'Shopify',
-				desc: 'Your owned DTC channel — build it right and it pays dividends forever. Custom development, CRO, app integration, migrations.',
+				desc: 'Your owned DTC channel - build it right and it pays dividends forever. Custom development, CRO, app integration, migrations.',
 				iconKey: 'shopify',
 				ctaText: 'Learn More →',
 				ctaLink: '/shopify',
@@ -117,9 +117,9 @@ const detailPageContent = {
 			subtitle:
 				'We follow a proven, execution-driven process designed to remove guesswork, eliminate waste, and scale your Amazon business the right way.',
 			steps: [
-				{ num: '01', title: 'Store Audit', desc: 'We tear down your current setup — listings, health metrics, pricing, competitors — and find exactly where revenue is leaking.' },
+				{ num: '01', title: 'Store Audit', desc: 'We tear down your current setup - listings, health metrics, pricing, competitors - and find exactly where revenue is leaking.' },
 				{ num: '02', title: 'Growth Strategy', desc: 'A tailored 90-day roadmap built around your margins, channels, and goals. No templates, no guesswork.' },
-				{ num: '03', title: 'Full Setup', desc: "We handle the execution — catalog migration, listing builds, tool integrations, and team onboarding — so you don't have to." },
+				{ num: '03', title: 'Full Setup', desc: "We handle the execution - catalog migration, listing builds, tool integrations, and team onboarding - so you don't have to." },
 				{ num: '04', title: 'Ongoing Management', desc: 'Your dedicated account team runs daily operations: listings, inventory, ads coordination, customer service, and platform compliance.' },
 			],
 		},
@@ -179,7 +179,7 @@ const detailPageContent = {
 			{
 				num: '01',
 				title: 'Meta Ads',
-				desc: 'Facebook and Instagram campaigns structured around your CAC — creative testing, audience strategy, and full-funnel builds that actually scale.',
+				desc: 'Facebook and Instagram campaigns structured around your CAC - creative testing, audience strategy, and full-funnel builds that actually scale.',
 				iconKey: 'dollar',
 				ctaText: 'Learn more',
 				ctaLink: '/services/digital-marketing/meta-ads',
@@ -187,7 +187,7 @@ const detailPageContent = {
 			{
 				num: '02',
 				title: 'Google Ads',
-				desc: 'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets — not click volume or impression share.',
+				desc: 'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets - not click volume or impression share.',
 				iconKey: 'target',
 				ctaText: 'Learn more',
 				ctaLink: '/services/digital-marketing/google-ads',
@@ -203,7 +203,7 @@ const detailPageContent = {
 			{
 				num: '04',
 				title: 'Email & SMS Marketing',
-				desc: 'Lifecycle flows and campaign sends built on Klaviyo, Omnisend, or Postscript — welcome series, abandoned cart, and win-back, tuned to your revenue.',
+				desc: 'Lifecycle flows and campaign sends built on Klaviyo, Omnisend, or Postscript - welcome series, abandoned cart, and win-back, tuned to your revenue.',
 				iconKey: 'mail',
 				ctaText: 'Learn more',
 				ctaLink: '/services/digital-marketing/email-marketing',
@@ -211,7 +211,7 @@ const detailPageContent = {
 			{
 				num: '05',
 				title: 'Social Media Marketing',
-				desc: 'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X — built to grow and convert.',
+				desc: 'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X - built to grow and convert.',
 				iconKey: 'share',
 				ctaText: 'Learn more',
 				ctaLink: '/services/digital-marketing/social-media',
@@ -219,7 +219,7 @@ const detailPageContent = {
 			{
 				num: '06',
 				title: 'Content Creation & Copywriting',
-				desc: 'Ad copy, blog content, email copy, and product descriptions — written to rank, convert, and sound like the same brand everywhere.',
+				desc: 'Ad copy, blog content, email copy, and product descriptions - written to rank, convert, and sound like the same brand everywhere.',
 				iconKey: 'badge',
 				ctaText: 'Learn more',
 				ctaLink: '/services/digital-marketing/content-creation',
@@ -239,7 +239,7 @@ const detailPageContent = {
 			steps: [
 				{ num: '01', title: 'Discovery', desc: 'We audit your storefront, ad accounts, analytics and competitors to find the real growth gaps.' },
 				{ num: '02', title: 'Strategy', desc: 'A channel mix, budget plan and creative direction mapped to your margins and revenue targets.' },
-				{ num: '03', title: 'Execution', desc: 'Campaigns, creative, flows and content go live — built, launched and managed by our specialists.' },
+				{ num: '03', title: 'Execution', desc: 'Campaigns, creative, flows and content go live - built, launched and managed by our specialists.' },
 				{ num: '04', title: 'Optimization & Reporting', desc: 'Weekly testing, budget reallocation and transparent reporting that compound results over time.' },
 			],
 		},
@@ -265,7 +265,7 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What our SEO covers',
 		services: [
-			{ num: '01', title: 'Technical SEO Audit', desc: 'Complete site health check — crawlability, indexation, Core Web Vitals, and site speed.' },
+			{ num: '01', title: 'Technical SEO Audit', desc: 'Complete site health check - crawlability, indexation, Core Web Vitals, and site speed.' },
 			{ num: '02', title: 'Keyword Research', desc: 'In-depth keyword mapping aligned to buyer intent, not just search volume.' },
 			{ num: '03', title: 'On-Page Optimization', desc: 'Title tags, meta descriptions, headers, internal linking, and content structure.' },
 			{ num: '04', title: 'Content Strategy', desc: 'Topic clusters and editorial calendars built to rank and convert your target audience.' },
@@ -290,7 +290,7 @@ const detailPageContent = {
 
 	'digital-marketing/google-ads': {
 		seoTitle: 'Google Ads Management for Ecommerce | TechTicks',
-		seoDescription: 'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets — not click volume or impression share.',
+		seoDescription: 'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets - not click volume or impression share.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Google Ads'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -298,7 +298,7 @@ const detailPageContent = {
 			title: 'Capture Every',
 			titleHighlight: 'High-Intent Search.',
 			subtitle:
-				'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets — not click volume or impression share.',
+				'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets - not click volume or impression share.',
 		},
 		stats: [
 			{ value: '5.2x', label: 'Avg ROAS' },
@@ -321,7 +321,7 @@ const detailPageContent = {
 				{ num: '01', title: 'Account Audit', desc: 'We diagnose wasted spend and structural issues in your existing account.' },
 				{ num: '02', title: 'Campaign Build', desc: 'Clean account architecture built around your products and margins.' },
 				{ num: '03', title: 'Test & Optimize', desc: 'Continuous bid, creative, and audience testing against your target ROAS.' },
-				{ num: '04', title: 'Scale', desc: 'We scale what works and cut what does not — every week, not every quarter.' },
+				{ num: '04', title: 'Scale', desc: 'We scale what works and cut what does not - every week, not every quarter.' },
 			],
 		},
 		relatedServices: [
@@ -333,7 +333,7 @@ const detailPageContent = {
 
 	'digital-marketing/meta-ads': {
 		seoTitle: 'Meta Ads Management: Facebook & Instagram Advertising | TechTicks',
-		seoDescription: 'Facebook and Instagram campaigns structured around your CAC — creative testing, audience strategy, and full-funnel builds that actually scale.',
+		seoDescription: 'Facebook and Instagram campaigns structured around your CAC - creative testing, audience strategy, and full-funnel builds that actually scale.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Meta Ads'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -341,7 +341,7 @@ const detailPageContent = {
 			title: 'Stop Boosting.',
 			titleHighlight: 'Start Converting.',
 			subtitle:
-				'Facebook and Instagram campaigns structured around your CAC — creative testing, audience strategy, and full-funnel builds that actually scale.',
+				'Facebook and Instagram campaigns structured around your CAC - creative testing, audience strategy, and full-funnel builds that actually scale.',
 		},
 		stats: [
 			{ value: '4.6x', label: 'Avg ROAS' },
@@ -352,7 +352,7 @@ const detailPageContent = {
 		servicesTitle: 'What we manage',
 		services: [
 			{ num: '01', title: 'Campaign Strategy', desc: 'Full-funnel architecture from awareness to conversion, built around your CAC targets.' },
-			{ num: '02', title: 'Creative Testing', desc: 'Systematic creative testing — static, video, and UGC — to find your winning angles.' },
+			{ num: '02', title: 'Creative Testing', desc: 'Systematic creative testing - static, video, and UGC - to find your winning angles.' },
 			{ num: '03', title: 'Audience Building', desc: 'Custom and lookalike audience development based on your real customer data.' },
 			{ num: '04', title: 'Retargeting', desc: 'Smart retargeting sequences that bring high-intent visitors back to convert.' },
 			{ num: '05', title: 'Pixel & Tracking Setup', desc: "Accurate Conversions API and pixel setup so Meta's algorithm optimizes correctly." },
@@ -376,7 +376,7 @@ const detailPageContent = {
 
 	'digital-marketing/social-media': {
 		seoTitle: 'Social Media Marketing for Ecommerce Brands | TechTicks',
-		seoDescription: 'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X — built to grow and convert.',
+		seoDescription: 'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X - built to grow and convert.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Social Media Marketing'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -384,7 +384,7 @@ const detailPageContent = {
 			title: 'Build a Brand',
 			titleHighlight: 'People Actually Follow.',
 			subtitle:
-				'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X — built to grow and convert.',
+				'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X - built to grow and convert.',
 		},
 		stats: [
 			{ value: '2M+', label: 'Followers Grown' },
@@ -395,10 +395,10 @@ const detailPageContent = {
 		servicesTitle: 'What we manage',
 		services: [
 			{ num: '01', title: 'Content Strategy', desc: 'Platform-specific content calendars built around your brand voice and audience goals.' },
-			{ num: '02', title: 'Content Creation', desc: 'Graphics, short-form video, and copy produced in-house — consistently, every week.' },
+			{ num: '02', title: 'Content Creation', desc: 'Graphics, short-form video, and copy produced in-house - consistently, every week.' },
 			{ num: '03', title: 'Community Management', desc: 'Daily comment and DM management to build real relationships with your audience.' },
 			{ num: '04', title: 'Influencer & UGC', desc: 'Creator outreach and UGC programs that generate authentic content at scale.' },
-			{ num: '05', title: 'TikTok & Reels', desc: 'Short-form video strategy built for the algorithm — scripted, shot, and edited.' },
+			{ num: '05', title: 'TikTok & Reels', desc: 'Short-form video strategy built for the algorithm - scripted, shot, and edited.' },
 			{ num: '06', title: 'Analytics & Reporting', desc: 'Monthly reports on reach, engagement, follower growth, and content performance.' },
 		],
 		process: {
@@ -419,7 +419,7 @@ const detailPageContent = {
 
 	'digital-marketing/email-marketing': {
 		seoTitle: 'Email & SMS Marketing for Ecommerce Brands | TechTicks',
-		seoDescription: 'Lifecycle email and SMS flows built on Klaviyo, Omnisend, or Postscript — welcome series, abandoned cart, and win-back, tuned to your revenue.',
+		seoDescription: 'Lifecycle email and SMS flows built on Klaviyo, Omnisend, or Postscript - welcome series, abandoned cart, and win-back, tuned to your revenue.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Email & SMS Marketing'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -427,7 +427,7 @@ const detailPageContent = {
 			title: 'Your Best Customers Are',
 			titleHighlight: 'Already on Your List.',
 			subtitle:
-				'Email and SMS are the highest-margin channels most brands underinvest in — no ad spend, and you already have the relationship. We build the flows and campaigns that turn that list into recurring revenue.',
+				'Email and SMS are the highest-margin channels most brands underinvest in - no ad spend, and you already have the relationship. We build the flows and campaigns that turn that list into recurring revenue.',
 		},
 		stats: [
 			{ value: '30%+', label: 'Avg Revenue from Flows' },
@@ -437,11 +437,11 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What we manage',
 		services: [
-			{ num: '01', title: 'Platform Setup & Migration', desc: 'Klaviyo, Omnisend, or Mailchimp — set up correctly or migrated cleanly from your current tool.' },
+			{ num: '01', title: 'Platform Setup & Migration', desc: 'Klaviyo, Omnisend, or Mailchimp - set up correctly or migrated cleanly from your current tool.' },
 			{ num: '02', title: 'Core Automated Flows', desc: 'Welcome series, abandoned cart, browse abandonment, post-purchase, and win-back.' },
 			{ num: '03', title: 'Campaign Calendar', desc: 'Promotional sends built around your actual sales calendar, not a generic template.' },
 			{ num: '04', title: 'List Segmentation & Deliverability', desc: 'Hygiene and segmentation so your emails land in the inbox, not the spam folder.' },
-			{ num: '05', title: 'SMS Campaigns', desc: 'Postscript, Klaviyo SMS, or Attentive — a second high-converting channel alongside email.' },
+			{ num: '05', title: 'SMS Campaigns', desc: 'Postscript, Klaviyo SMS, or Attentive - a second high-converting channel alongside email.' },
 			{ num: '06', title: 'A/B Testing', desc: 'Subject lines, preview text, send times, and CTA copy, tested continuously.' },
 		],
 		process: {
@@ -462,7 +462,7 @@ const detailPageContent = {
 
 	'digital-marketing/content-creation': {
 		seoTitle: 'Content Creation & Copywriting for Ecommerce Brands | TechTicks',
-		seoDescription: 'Ad copy, blog content, email copy, and product descriptions for ecommerce brands — written to rank, convert, and sound like the same brand everywhere.',
+		seoDescription: 'Ad copy, blog content, email copy, and product descriptions for ecommerce brands - written to rank, convert, and sound like the same brand everywhere.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Content Creation & Copywriting'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -470,7 +470,7 @@ const detailPageContent = {
 			title: 'Every Channel Needs Words.',
 			titleHighlight: 'Most Brands Reuse the Same Weak Ones.',
 			subtitle:
-				"Ad copy, product descriptions, blog posts, and email — written by people who understand ecommerce, not generic freelance copywriters. Every piece is built for the specific channel it runs on.",
+				"Ad copy, product descriptions, blog posts, and email - written by people who understand ecommerce, not generic freelance copywriters. Every piece is built for the specific channel it runs on.",
 		},
 		stats: [
 			{ value: '500+', label: 'Pieces of Content Delivered' },
@@ -480,10 +480,10 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What we write',
 		services: [
-			{ num: '01', title: 'Ad Copy', desc: 'For Meta, Google, TikTok, and Amazon Sponsored Brands — matched to the platform and the audience.' },
+			{ num: '01', title: 'Ad Copy', desc: 'For Meta, Google, TikTok, and Amazon Sponsored Brands - matched to the platform and the audience.' },
 			{ num: '02', title: 'Blog & SEO Content', desc: 'Articles built for ranking, not just filler to hit a word count.' },
 			{ num: '03', title: 'Email Copy', desc: 'Subject lines, preview text, and body copy that actually gets opened and clicked.' },
-			{ num: '04', title: 'Product Descriptions', desc: 'For Shopify, Amazon, and other platforms — written to answer real buyer questions.' },
+			{ num: '04', title: 'Product Descriptions', desc: 'For Shopify, Amazon, and other platforms - written to answer real buyer questions.' },
 			{ num: '05', title: 'Brand Voice Guidelines', desc: 'So every piece of content sounds like the same company, regardless of who wrote it.' },
 		],
 		process: {
@@ -532,12 +532,12 @@ const detailPageContent = {
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
 		servicesTitle: 'Two disciplines. One in-house team.',
-		servicesSubtitle: 'No handoffs to freelancers — every vertical below is ecommerce-trained and in-house.',
+		servicesSubtitle: 'No handoffs to freelancers - every vertical below is ecommerce-trained and in-house.',
 		services: [
 			{
 				num: '01',
 				title: 'UX/UI Design',
-				desc: 'Conversion-first interfaces for Shopify, custom DTC, and apps — user research, wireframes, prototypes, and CRO-focused handoffs.',
+				desc: 'Conversion-first interfaces for Shopify, custom DTC, and apps - user research, wireframes, prototypes, and CRO-focused handoffs.',
 				ctaText: 'View UX/UI Design →',
 				ctaLink: '/services/ui-ux-design',
 				iconKey: 'monitor',
@@ -574,7 +574,7 @@ const detailPageContent = {
 		},
 		portfolio: {
 			title: 'Let The Results Do The Talking',
-			subtitle: 'A look at the type of design work we deliver — not specific client case studies.',
+			subtitle: 'A look at the type of design work we deliver - not specific client case studies.',
 			items: [
 				{
 					image: designPortfolioShopify,
@@ -627,7 +627,7 @@ const detailPageContent = {
 			title: 'Good Design Doesn’t Just Look Right.',
 			titleHighlight: 'It Makes People Buy.',
 			subtitle:
-				"Every UX decision we make is tied to a specific behaviour we're trying to change — reducing abandonment, increasing add-to-cart, shortening time-to-purchase. The aesthetics follow the function.",
+				"Every UX decision we make is tied to a specific behaviour we're trying to change - reducing abandonment, increasing add-to-cart, shortening time-to-purchase. The aesthetics follow the function.",
 			ctaText: 'Book a Free UX Audit',
 			ctaLink: '/contactUs',
 		},
@@ -684,14 +684,14 @@ const detailPageContent = {
 			title: 'Our design process',
 			steps: [
 				{ num: '01', title: 'Discovery', desc: 'We audit what exists, review analytics, and understand your users.' },
-				{ num: '02', title: 'Wireframes', desc: 'Structure before styling — we get this right before anything looks like design.' },
+				{ num: '02', title: 'Wireframes', desc: 'Structure before styling - we get this right before anything looks like design.' },
 				{ num: '03', title: 'High-Fidelity Design', desc: 'Full Figma mockups aligned to your brand system.' },
 				{ num: '04', title: 'Handoff', desc: 'Developer-ready Figma files with full annotation, specs, and assets.' },
 			],
 		},
 		relatedServices: [
 			{ title: 'Graphic Design', link: '/services/graphic-design', desc: 'Brand identity and marketplace creative to match your new UX.' },
-			{ title: 'Website Development', link: '/services/web-development', desc: 'We build what we design — no handoff friction.' },
+			{ title: 'Website Development', link: '/services/web-development', desc: 'We build what we design - no handoff friction.' },
 			{ title: 'Shopify', link: '/shopify', desc: 'See the platform this UX work most often lives on.' },
 		],
 		cta: {
@@ -710,7 +710,7 @@ const detailPageContent = {
 			title: 'Design Decisions Backed by',
 			titleHighlight: 'Real User Behaviour.',
 			subtitle:
-				'We pull your funnel data and watch real sessions before touching Figma — every layout choice that follows is a hypothesis tied to a business metric, not a guess.',
+				'We pull your funnel data and watch real sessions before touching Figma - every layout choice that follows is a hypothesis tied to a business metric, not a guess.',
 		},
 		stats: [
 			{ value: '100+', label: 'UX Audits Delivered' },
@@ -755,7 +755,7 @@ const detailPageContent = {
 			title: 'Structure Before',
 			titleHighlight: 'Styling.',
 			subtitle:
-				"We get the layout, hierarchy, and flow right before anything looks like design — so revisions happen on a wireframe in an hour, not on finished visuals in a week.",
+				"We get the layout, hierarchy, and flow right before anything looks like design - so revisions happen on a wireframe in an hour, not on finished visuals in a week.",
 		},
 		stats: [
 			{ value: '150+', label: 'Prototypes Built' },
@@ -767,7 +767,7 @@ const detailPageContent = {
 		services: [
 			{ num: '01', title: 'Low-Fidelity Wireframes', desc: 'Fast structure iteration before any visual design decisions are made.' },
 			{ num: '02', title: 'High-Fidelity Prototypes', desc: 'Interactive, clickable Figma prototypes for stakeholder sign-off and user testing.' },
-			{ num: '03', title: 'Mobile-First by Default', desc: 'Desktop layout comes second — most ecommerce traffic is on a phone.' },
+			{ num: '03', title: 'Mobile-First by Default', desc: 'Desktop layout comes second - most ecommerce traffic is on a phone.' },
 			{ num: '04', title: 'Design System & Components', desc: 'A component library for consistency at scale as your site grows.' },
 		],
 		process: {
@@ -800,7 +800,7 @@ const detailPageContent = {
 			title: 'Your Shopify Store Should',
 			titleHighlight: 'Sell While You Sleep.',
 			subtitle:
-				'Homepage, collection page, product page, and checkout — redesigned around how buyers actually browse and decide, not how the theme happened to ship.',
+				'Homepage, collection page, product page, and checkout - redesigned around how buyers actually browse and decide, not how the theme happened to ship.',
 		},
 		stats: [
 			{ value: '90+', label: 'Shopify Stores Redesigned' },
@@ -812,7 +812,7 @@ const detailPageContent = {
 		services: [
 			{ num: '01', title: 'Homepage & Collection UX', desc: 'A homepage that answers "why you" fast, and collection pages that make browsing easy.' },
 			{ num: '02', title: 'Product Page UX', desc: 'Imagery order, copy gaps, trust signals, and social proof placed where buyers look first.' },
-			{ num: '03', title: 'Checkout Flow Optimisation', desc: 'Every unnecessary field or step removed — checkout friction is pure lost revenue.' },
+			{ num: '03', title: 'Checkout Flow Optimisation', desc: 'Every unnecessary field or step removed - checkout friction is pure lost revenue.' },
 			{ num: '04', title: 'Mobile UX Audit & Redesign', desc: 'A dedicated pass on mobile, not an afterthought of the desktop design.' },
 		],
 		process: {
@@ -845,7 +845,7 @@ const detailPageContent = {
 			title: 'First Impressions That',
 			titleHighlight: 'Drive Activation, Not Confusion.',
 			subtitle:
-				'iOS and Android interfaces built on real platform conventions — Apple HIG and Material Design — so your app feels native, not like a website squeezed into a frame.',
+				'iOS and Android interfaces built on real platform conventions - Apple HIG and Material Design - so your app feels native, not like a website squeezed into a frame.',
 		},
 		stats: [
 			{ value: '40+', label: 'App Interfaces Designed' },
@@ -890,7 +890,7 @@ const detailPageContent = {
 			title: 'Every Element Positioned',
 			titleHighlight: 'to Reduce Drop-Off.',
 			subtitle:
-				'Marketing website UI and landing pages built to match ad intent exactly — a visitor arriving from a specific ad should never have to guess if they landed in the right place.',
+				'Marketing website UI and landing pages built to match ad intent exactly - a visitor arriving from a specific ad should never have to guess if they landed in the right place.',
 		},
 		stats: [
 			{ value: '200+', label: 'Pages Designed' },
@@ -900,7 +900,7 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What this covers',
 		services: [
-			{ num: '01', title: 'Marketing Website UI', desc: 'For ecommerce brands, agencies, and SaaS — built to convert, not just look premium.' },
+			{ num: '01', title: 'Marketing Website UI', desc: 'For ecommerce brands, agencies, and SaaS - built to convert, not just look premium.' },
 			{ num: '02', title: 'Landing Page Design', desc: 'High-converting pages for paid traffic, matched to what the ad promised.' },
 			{ num: '03', title: 'Sales Funnel Sequences', desc: 'Multi-step page sequences designed to reduce friction at every step.' },
 			{ num: '04', title: 'UI Component Library', desc: 'A reusable component set aligned to your brand guidelines.' },
@@ -915,7 +915,7 @@ const detailPageContent = {
 			],
 		},
 		relatedServices: [
-			{ title: 'Website Development', link: '/services/web-development', desc: 'We build what we design — no handoff friction.' },
+			{ title: 'Website Development', link: '/services/web-development', desc: 'We build what we design - no handoff friction.' },
 			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Drive paid traffic to the pages we design.' },
 			{ title: 'UX/UI Design Hub', link: '/services/ui-ux-design', desc: 'See every UX/UI service we offer.' },
 		],
@@ -938,7 +938,7 @@ const detailPageContent = {
 			title: 'Websites Built to',
 			titleHighlight: 'Perform, Not Just Launch.',
 			subtitle:
-				'Shopify, WordPress, landing pages, and funnels — built for speed, clarity, and conversion from day one.',
+				'Shopify, WordPress, landing pages, and funnels - built for speed, clarity, and conversion from day one.',
 		},
 		stats: [
 			{ value: '150+', label: 'Sites Built' },
@@ -948,7 +948,7 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What we build',
 		services: [
-			{ num: '01', title: 'Shopify Development', desc: 'Custom Shopify 2.0 builds — mobile-first, fast-loading, and built to convert.' },
+			{ num: '01', title: 'Shopify Development', desc: 'Custom Shopify 2.0 builds - mobile-first, fast-loading, and built to convert.' },
 			{ num: '02', title: 'WordPress Development', desc: 'Custom WordPress sites with clean code, fast loading, and easy content management.' },
 			{ num: '03', title: 'Landing Pages & Funnels', desc: 'Conversion-ready pages engineered around how online shoppers actually behave.' },
 			{ num: '04', title: 'Performance Optimization', desc: 'Speed audits, Core Web Vitals fixes, and CRO improvements for existing sites.' },
@@ -960,12 +960,12 @@ const detailPageContent = {
 			steps: [
 				{ num: '01', title: 'Discovery & Scope', desc: 'We define requirements, timeline, and success metrics before writing a line of code.' },
 				{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
-				{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage — no surprises at launch.' },
+				{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage - no surprises at launch.' },
 				{ num: '04', title: 'Launch & Support', desc: 'Smooth go-live and ongoing support to keep everything running.' },
 			],
 		},
 		relatedServices: [
-			{ title: 'UX/UI Design', link: '/services/design', desc: 'We design before we build — no handoff friction.' },
+			{ title: 'UX/UI Design', link: '/services/design', desc: 'We design before we build - no handoff friction.' },
 			{ title: 'Ecommerce Management', link: '/services/ecommerce-management', desc: 'Once built, we manage your store operations too.' },
 			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Drive traffic to the site we build for you.' },
 		],
@@ -982,7 +982,7 @@ const detailPageContent = {
 			title: 'TikTok Shop Is Where',
 			titleHighlight: 'Your Next 10,000 Customers Are.',
 			subtitle:
-				"The brands growing fastest on TikTok Shop aren't the ones spending the most on ads — they're the ones who figured out the creator affiliate model. One creator with the right audience can outsell a $10,000 paid campaign in a weekend. TechTicks builds and runs the whole system: your store, your creator network, your content strategy, and your ads.",
+				"The brands growing fastest on TikTok Shop aren't the ones spending the most on ads - they're the ones who figured out the creator affiliate model. One creator with the right audience can outsell a $10,000 paid campaign in a weekend. TechTicks builds and runs the whole system: your store, your creator network, your content strategy, and your ads.",
 			ctaText: 'Book a Free TikTok Shop Strategy Call',
 			ctaLink: '/contactUs',
 		},
@@ -994,10 +994,10 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What we manage',
 		services: [
-			{ num: '01', title: 'TikTok Shop Setup & Optimisation', desc: 'Account registration, business verification, product catalog setup, and listing optimisation for TikTok’s shopping and discovery algorithm — plus shop health monitoring and policy compliance.', iconKey: 'shopify' },
+			{ num: '01', title: 'TikTok Shop Setup & Optimisation', desc: 'Account registration, business verification, product catalog setup, and listing optimisation for TikTok’s shopping and discovery algorithm - plus shop health monitoring and policy compliance.', iconKey: 'shopify' },
 			{ num: '02', title: 'Creator Affiliate Program Management', desc: 'Research and outreach to relevant creators from nano to macro, onboarding, commission structure design, and product seeding to maximise organic content volume.', iconKey: 'share' },
-			{ num: '03', title: 'UGC & Content Strategy', desc: 'Content briefs, hook strategy for the first 2–3 seconds, and formats that work — product demos, transformations, testimonials, POV unboxing.', iconKey: 'pen' },
-			{ num: '04', title: 'TikTok Ads Management', desc: 'Spark Ads built from your best-performing organic content, In-Feed Ads, Video Shopping Ads, and Collection Ads — with ROAS-focused optimisation.', iconKey: 'target' },
+			{ num: '03', title: 'UGC & Content Strategy', desc: 'Content briefs, hook strategy for the first 2–3 seconds, and formats that work - product demos, transformations, testimonials, POV unboxing.', iconKey: 'pen' },
+			{ num: '04', title: 'TikTok Ads Management', desc: 'Spark Ads built from your best-performing organic content, In-Feed Ads, Video Shopping Ads, and Collection Ads - with ROAS-focused optimisation.', iconKey: 'target' },
 			{ num: '05', title: 'TikTok LIVE Commerce', desc: 'LIVE shopping event planning, host selection and briefing, pre-LIVE promotional strategy, and post-LIVE analysis for the next session.', iconKey: 'monitor' },
 		],
 		process: {
@@ -1019,7 +1019,7 @@ const detailPageContent = {
 			{
 				question: 'How many creators do I need before I see sales?',
 				answer:
-					"We've seen brands generate real traction with as few as 10 well-matched creators. The number matters less than the fit — a creator in your exact niche with 30k followers will outperform a generic lifestyle creator with 500k every time. We focus on fit first.",
+					"We've seen brands generate real traction with as few as 10 well-matched creators. The number matters less than the fit - a creator in your exact niche with 30k followers will outperform a generic lifestyle creator with 500k every time. We focus on fit first.",
 			},
 			{
 				question: 'What types of products do well on TikTok Shop?',
@@ -1038,7 +1038,7 @@ const detailPageContent = {
 			{ title: 'Ecommerce Management Hub', link: '/services/ecommerce-management', desc: 'See every platform we manage.' },
 		],
 		cta: {
-			title: "Let's Build Your TikTok Shop from the Ground Up — or Fix What Isn't Working.",
+			title: "Let's Build Your TikTok Shop from the Ground Up - or Fix What Isn't Working.",
 			subtitle: "Book a free strategy call. We'll review your catalog, your current TikTok presence (if any), and tell you exactly where to start.",
 			buttonText: 'Book a Free TikTok Shop Strategy Call →',
 			buttonLink: '/contactUs',
@@ -1069,9 +1069,9 @@ const detailPageContent = {
 		servicesTitle: 'What we manage',
 		services: [
 			{ num: '01', title: 'Custom Shopify Store Development', desc: 'Full builds on Shopify 2.0, custom themes or heavily modified bases, mobile-first by default, with 90+ Lighthouse performance targets baked into the build.', iconKey: 'shopify' },
-			{ num: '02', title: 'Shopify App Stack & Integrations', desc: 'Reviews, email & SMS, upsell/cross-sell, loyalty, and subscriptions — we evaluate and recommend based on your catalog, we don’t upsell apps you don’t need.', iconKey: 'code' },
+			{ num: '02', title: 'Shopify App Stack & Integrations', desc: 'Reviews, email & SMS, upsell/cross-sell, loyalty, and subscriptions - we evaluate and recommend based on your catalog, we don’t upsell apps you don’t need.', iconKey: 'code' },
 			{ num: '03', title: 'Conversion Rate Optimisation', desc: 'Heatmap and session recording analysis, full-funnel audits, product page and checkout improvements, and an A/B testing roadmap prioritised by revenue impact.', iconKey: 'target' },
-			{ num: '04', title: 'Shopify Migrations', desc: 'Full migrations from WooCommerce, BigCommerce, Magento, Wix, or a custom-built store — with a 301 redirect strategy built before launch to protect SEO.', iconKey: 'refresh' },
+			{ num: '04', title: 'Shopify Migrations', desc: 'Full migrations from WooCommerce, BigCommerce, Magento, Wix, or a custom-built store - with a 301 redirect strategy built before launch to protect SEO.', iconKey: 'refresh' },
 			{ num: '05', title: 'Ongoing Shopify Management', desc: 'Monthly performance reviews and CRO iteration, theme and app maintenance, and Shopify Plus advisory when it makes financial sense to upgrade.', iconKey: 'support' },
 			{ num: '06', title: 'Shopify + Amazon Integration', desc: 'Inventory sync across platforms to prevent oversells, and a strategy for using your Shopify customer base to reduce Amazon dependency over time.', iconKey: 'shuffle' },
 		],
@@ -1080,7 +1080,7 @@ const detailPageContent = {
 			steps: [
 				{ num: '01', title: 'Discovery & Scope', desc: 'We define requirements, timeline, and success metrics before writing a line of code.' },
 				{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
-				{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage — no surprises at launch.' },
+				{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage - no surprises at launch.' },
 				{ num: '04', title: 'Launch & Iterate', desc: 'Smooth go-live, then ongoing CRO so the store keeps improving after day one.' },
 			],
 		},
@@ -1131,7 +1131,7 @@ const detailPageContent = {
 			title: '120 Million Monthly Shoppers.',
 			titleHighlight: 'Most Sellers Aren’t Optimised for Any of Them.',
 			subtitle:
-				"Walmart Marketplace is genuinely underused. Categories that are brutally competitive on Amazon often have breathing room on Walmart — lower CPCs, less listing competition, and a customer base that's actively looking to buy. We set you up to capture profitable sales while everyone else fights for scraps on Amazon.",
+				"Walmart Marketplace is genuinely underused. Categories that are brutally competitive on Amazon often have breathing room on Walmart - lower CPCs, less listing competition, and a customer base that's actively looking to buy. We set you up to capture profitable sales while everyone else fights for scraps on Amazon.",
 			ctaText: 'Book a Free Walmart Strategy Call',
 			ctaLink: '/contactUs',
 		},
@@ -1143,10 +1143,10 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What we manage',
 		services: [
-			{ num: '01', title: 'Seller Center Setup & Management', desc: 'Seller application support, full account configuration — payments, tax, shipping, returns — plus account health and policy compliance management.', iconKey: 'badge' },
-			{ num: '02', title: 'Listing Optimisation', desc: 'Keyword research with Walmart-specific tooling, title/description/attribute optimisation, and correct category mapping — miscategorisation kills visibility.', iconKey: 'doc' },
+			{ num: '01', title: 'Seller Center Setup & Management', desc: 'Seller application support, full account configuration - payments, tax, shipping, returns - plus account health and policy compliance management.', iconKey: 'badge' },
+			{ num: '02', title: 'Listing Optimisation', desc: 'Keyword research with Walmart-specific tooling, title/description/attribute optimisation, and correct category mapping - miscategorisation kills visibility.', iconKey: 'doc' },
 			{ num: '03', title: 'Walmart Connect Ads', desc: 'Sponsored Products setup and management, keyword and auto campaign strategy, bid management against your margin targets, and Walmart DSP for scale.', iconKey: 'dollar' },
-			{ num: '04', title: 'Walmart Fulfillment Services (WFS)', desc: 'WFS onboarding and eligibility assessment, inventory and reorder planning, and 2-day delivery badge strategy — it meaningfully improves conversion.', iconKey: 'shuffle' },
+			{ num: '04', title: 'Walmart Fulfillment Services (WFS)', desc: 'WFS onboarding and eligibility assessment, inventory and reorder planning, and 2-day delivery badge strategy - it meaningfully improves conversion.', iconKey: 'shuffle' },
 			{ num: '05', title: 'Walmart + Amazon Cross-Channel Strategy', desc: 'Price parity monitoring, channel-specific inventory allocation, and unified reporting so you see the full picture across both platforms.', iconKey: 'target' },
 		],
 		process: {
@@ -1182,7 +1182,7 @@ const detailPageContent = {
 			title: '135 Million eBay Buyers.',
 			titleHighlight: 'Most Sellers Are Leaving Money on the Table.',
 			subtitle:
-				"eBay gets written off by brands who assume it's only for used goods and bargain hunters. For refurbished products, collectibles, auto parts, electronics, and plenty more, eBay is one of the most profitable channels available. The sellers doing well treat the platform seriously — optimised listings, clean account health, and a repricing strategy that actually works. That's what we set up.",
+				"eBay gets written off by brands who assume it's only for used goods and bargain hunters. For refurbished products, collectibles, auto parts, electronics, and plenty more, eBay is one of the most profitable channels available. The sellers doing well treat the platform seriously - optimised listings, clean account health, and a repricing strategy that actually works. That's what we set up.",
 			ctaText: 'Book a Free eBay Strategy Call',
 			ctaLink: '/contactUs',
 		},
@@ -1245,9 +1245,9 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What we manage',
 		services: [
-			{ num: '01', title: 'Shop Setup & Optimisation', desc: 'Shop name, banner, logo, and about page — everything buyers see before they click a listing — plus Star Seller criteria management and shop section structure.', iconKey: 'badge' },
+			{ num: '01', title: 'Shop Setup & Optimisation', desc: 'Shop name, banner, logo, and about page - everything buyers see before they click a listing - plus Star Seller criteria management and shop section structure.', iconKey: 'badge' },
 			{ num: '02', title: 'Listing SEO & Creation', desc: 'Keyword research using EverBee, eRank, and Etsy’s own search data, titles and tags that match how buyers actually search, and pricing strategy based on competitive analysis.', iconKey: 'doc' },
-			{ num: '03', title: 'Etsy Ads Management', desc: 'Daily budget management and listing selection — not everything should be advertised — plus ROAS tracking and the Offsite Ads opt-in/out decision.', iconKey: 'dollar' },
+			{ num: '03', title: 'Etsy Ads Management', desc: 'Daily budget management and listing selection - not everything should be advertised - plus ROAS tracking and the Offsite Ads opt-in/out decision.', iconKey: 'dollar' },
 			{ num: '04', title: 'Growth & Review Strategy', desc: 'Seasonal planning around holiday peaks, a new-listing cadence to catch the algorithmic boost, and a repeat-customer strategy with follow-ups and offers.', iconKey: 'target' },
 		],
 		process: {
@@ -1283,7 +1283,7 @@ const detailPageContent = {
 			title: 'Buyers Judge Your Brand',
 			titleHighlight: 'in Half a Second. What Are They Deciding?',
 			subtitle:
-				"On Amazon, your main image is the first thing a buyer sees — and if it doesn't stop the scroll, nothing else matters. On TikTok, your thumbnail determines whether anyone watches. On Shopify, your homepage visuals are doing the job of a retail window display. Our design team creates visuals built to perform in the commercial environments where your brand actually lives.",
+				"On Amazon, your main image is the first thing a buyer sees - and if it doesn't stop the scroll, nothing else matters. On TikTok, your thumbnail determines whether anyone watches. On Shopify, your homepage visuals are doing the job of a retail window display. Our design team creates visuals built to perform in the commercial environments where your brand actually lives.",
 			ctaText: 'Book a Free Design Consultation',
 			ctaLink: '/contactUs',
 		},
@@ -1296,7 +1296,7 @@ const detailPageContent = {
 		servicesTitle: 'What we design',
 		services: [
 			{ num: '01', title: 'Brand Identity & Logo Design', desc: 'Logo design and variants, colour and typography systems, a full brand style guide, and brand application across packaging, social, ads, and web.', iconKey: 'pen', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/brand-identity-logo-design' },
-			{ num: '02', title: 'Amazon Creative Design', desc: 'Main image optimisation — the single biggest lever for Amazon click-through rate — plus lifestyle imagery, A+ Content design, and Storefront banners.', iconKey: 'shopify', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/amazon-creative-design' },
+			{ num: '02', title: 'Amazon Creative Design', desc: 'Main image optimisation - the single biggest lever for Amazon click-through rate - plus lifestyle imagery, A+ Content design, and Storefront banners.', iconKey: 'shopify', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/amazon-creative-design' },
 			{ num: '03', title: 'Social Media Graphics', desc: 'Instagram and Facebook templates, TikTok thumbnails and text overlays, Pinterest pin design, and content calendar graphic packages.', iconKey: 'share', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/social-media-graphics' },
 			{ num: '04', title: 'Ad Creative Design', desc: 'Static creatives for Meta in every required size, Google Display sets, TikTok ad overlays and end cards, and email header and banner design.', iconKey: 'layout', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/ad-creative-design' },
 			{ num: '05', title: 'Product & Packaging Design', desc: 'Boxes, bags, labels, and custom formats, insert and thank-you card design, and print-ready files with bleed and safe zones handled correctly.', iconKey: 'printer', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/product-packaging-design' },
@@ -1332,7 +1332,7 @@ const detailPageContent = {
 			title: 'A Brand Isn’t a Logo.',
 			titleHighlight: 'It’s Every Touchpoint Working Together.',
 			subtitle:
-				'A logo file with no rules around it falls apart the moment two different platforms need it. We build the whole system — colour, type, usage rules — once, so everything you publish looks like the same company.',
+				'A logo file with no rules around it falls apart the moment two different platforms need it. We build the whole system - colour, type, usage rules - once, so everything you publish looks like the same company.',
 		},
 		stats: [
 			{ value: '80+', label: 'Brand Systems Built' },
@@ -1377,7 +1377,7 @@ const detailPageContent = {
 			title: 'Your Main Image Is the Single',
 			titleHighlight: 'Biggest Lever for Click-Through Rate.',
 			subtitle:
-				"If your main image doesn't stop the scroll, nothing else on the listing matters — the best copy in the world doesn't get read if nobody clicks. We design every image on your listing to earn the next one.",
+				"If your main image doesn't stop the scroll, nothing else on the listing matters - the best copy in the world doesn't get read if nobody clicks. We design every image on your listing to earn the next one.",
 		},
 		stats: [
 			{ value: '300+', label: 'Amazon Listings Designed' },
@@ -1643,7 +1643,7 @@ detailPageContent.development = {
 	},
 	portfolio: {
 		title: 'What a TechTicks Build Looks Like',
-		subtitle: 'A look at the type of builds we deliver — not specific client case studies.',
+		subtitle: 'A look at the type of builds we deliver - not specific client case studies.',
 		items: [
 			{ image: devPortfolioShopify, title: 'Shopify Storefront Example', category: 'Shopify Development' },
 			{ image: devPortfolioRedesign, title: 'Site Redesign Example', category: 'Redesigns & Migrations' },
@@ -1669,7 +1669,7 @@ detailPageContent['web-development/shopify-store-development'] = {
 		title: 'Custom Shopify Builds,',
 		titleHighlight: 'Not Modified Templates.',
 		subtitle:
-			'Custom themes, app integrations, and checkout optimization built on Shopify 2.0 — mobile-first, fast-loading, and built to convert from launch day, not patched up after.',
+			'Custom themes, app integrations, and checkout optimization built on Shopify 2.0 - mobile-first, fast-loading, and built to convert from launch day, not patched up after.',
 	},
 	stats: [
 		{ value: '90+', label: 'Shopify Stores Built' },
@@ -1679,9 +1679,9 @@ detailPageContent['web-development/shopify-store-development'] = {
 	],
 	servicesTitle: 'What this covers',
 	services: [
-		{ num: '01', title: 'Custom Theme Development', desc: 'Shopify 2.0 builds — custom themes or heavily modified bases, section-everywhere.' },
+		{ num: '01', title: 'Custom Theme Development', desc: 'Shopify 2.0 builds - custom themes or heavily modified bases, section-everywhere.' },
 		{ num: '02', title: 'App Integrations', desc: 'Reviews, email/SMS, upsell, loyalty, and subscription apps wired up correctly.' },
-		{ num: '03', title: 'Checkout Optimization', desc: 'Every unnecessary step removed — checkout friction is pure lost revenue.' },
+		{ num: '03', title: 'Checkout Optimization', desc: 'Every unnecessary step removed - checkout friction is pure lost revenue.' },
 		{ num: '04', title: 'Shopify Plus Advisory', desc: 'Flow automations, checkout extensibility, and B2B wholesale configuration.' },
 	],
 	process: {
@@ -1689,7 +1689,7 @@ detailPageContent['web-development/shopify-store-development'] = {
 		steps: [
 			{ num: '01', title: 'Discovery & Scope', desc: 'Requirements, timeline, and success metrics defined before any code.' },
 			{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
-			{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage — no surprises at launch.' },
+			{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage - no surprises at launch.' },
 			{ num: '04', title: 'Launch & Support', desc: 'Smooth go-live and ongoing support to keep everything running.' },
 		],
 	},
@@ -1714,7 +1714,7 @@ detailPageContent['web-development/custom-website-design-build'] = {
 		title: 'Fully Bespoke Sites,',
 		titleHighlight: 'No Templates, No Shortcuts.',
 		subtitle:
-			'Built on Next.js or a headless stack when a theme-based platform can\'t do what your business needs — full control over structure, speed, and functionality from the ground up.',
+			'Built on Next.js or a headless stack when a theme-based platform can\'t do what your business needs - full control over structure, speed, and functionality from the ground up.',
 	},
 	stats: [
 		{ value: '50+', label: 'Custom Builds Delivered' },
@@ -1734,12 +1734,12 @@ detailPageContent['web-development/custom-website-design-build'] = {
 		steps: [
 			{ num: '01', title: 'Discovery & Scope', desc: 'Requirements, timeline, and success metrics defined before any code.' },
 			{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
-			{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage — no surprises at launch.' },
+			{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage - no surprises at launch.' },
 			{ num: '04', title: 'Launch & Support', desc: 'Smooth go-live and ongoing support to keep everything running.' },
 		],
 	},
 	relatedServices: [
-		{ title: 'UX/UI Design', link: '/services/ui-ux-design', desc: 'We design before we build — no handoff friction.' },
+		{ title: 'UX/UI Design', link: '/services/ui-ux-design', desc: 'We design before we build - no handoff friction.' },
 		{ title: 'Speed & Performance Optimization', link: '/services/web-development/speed-performance-optimization', desc: 'Keeping a custom build fast as it grows.' },
 		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
 	],
@@ -1759,7 +1759,7 @@ detailPageContent['web-development/redesigns-migrations'] = {
 		title: 'Move Platforms Without',
 		titleHighlight: 'Losing Your Rankings.',
 		subtitle:
-			'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one — the two things that go wrong most often on a migration, handled deliberately.',
+			'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one - the two things that go wrong most often on a migration, handled deliberately.',
 	},
 	stats: [
 		{ value: '40+', label: 'Migrations Completed' },
@@ -1804,7 +1804,7 @@ detailPageContent['web-development/landing-pages'] = {
 		title: 'Built for Paid Traffic,',
 		titleHighlight: 'Launched in Days, Not Weeks.',
 		subtitle:
-			"High-converting campaign pages that match what your ad promised — A/B-ready from the first build, so testing doesn't mean waiting on a second development cycle.",
+			"High-converting campaign pages that match what your ad promised - A/B-ready from the first build, so testing doesn't mean waiting on a second development cycle.",
 	},
 	stats: [
 		{ value: '200+', label: 'Landing Pages Built' },
@@ -1849,7 +1849,7 @@ detailPageContent['web-development/speed-performance-optimization'] = {
 		title: 'Every Second of Load Time',
 		titleHighlight: 'Is Lost Revenue.',
 		subtitle:
-			'Core Web Vitals audits and surgical fixes that cut load time and lift rankings — for sites we built and sites we didn\'t, diagnosed before anything gets changed.',
+			'Core Web Vitals audits and surgical fixes that cut load time and lift rankings - for sites we built and sites we didn\'t, diagnosed before anything gets changed.',
 	},
 	stats: [
 		{ value: '100+', label: 'Sites Optimized' },
@@ -1894,7 +1894,7 @@ detailPageContent['web-development/maintenance-support'] = {
 		title: 'A Website Is Never',
 		titleHighlight: 'Actually "Done."',
 		subtitle:
-			'Ongoing updates, security patches, and feature rollouts so your site never stagnates — the same team that built it stays on it, instead of handing you off to a support queue.',
+			'Ongoing updates, security patches, and feature rollouts so your site never stagnates - the same team that built it stays on it, instead of handing you off to a support queue.',
 	},
 	stats: [
 		{ value: '60+', label: 'Sites on Retainer' },

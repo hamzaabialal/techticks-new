@@ -60,7 +60,7 @@ function Team() {
 			title: 'Support',
 			count: 2,
 			description:
-				'Post-launch maintenance, monitoring, and customer help — always on.',
+				'Post-launch maintenance, monitoring, and customer help - always on.',
 		},
 	]
 

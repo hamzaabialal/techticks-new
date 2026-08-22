@@ -12729,12 +12729,17 @@ textarea,
 	background: #050505;
 }
 
-.blog-card-image {
+.blog-card-image,
+.blog-card-image-placeholder {
 	width: 100%;
 	aspect-ratio: 16 / 10;
 	object-fit: cover;
 	display: block;
 	transition: transform 0.4s ease;
+}
+
+.blog-card-image-placeholder {
+	background: linear-gradient(135deg, #16123a 0%, #0d0d0d 60%);
 }
 
 .blog-card:hover .blog-card-image {
@@ -12746,6 +12751,7 @@ textarea,
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
+	min-height: 16px;
 }
 
 .blog-card h2 {
@@ -12754,14 +12760,29 @@ textarea,
 	line-height: 1.35;
 	color: #fff;
 	margin: 0;
+	/* Fixed to exactly 2 lines regardless of title length, so every card in
+	   the grid takes up the same vertical space. */
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	min-height: calc(20px * 1.35 * 2);
 }
 
 .blog-card p {
 	font-size: 15px;
 	color: #888;
 	line-height: 1.65;
-	flex: 1;
 	margin: 0;
+	/* Fixed to exactly 3 lines regardless of excerpt length — same reasoning
+	   as the title clamp above. flex: 1 alone only fills leftover space, it
+	   doesn't cap an overly long excerpt from growing the card. */
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	flex: 1;
+	min-height: calc(15px * 1.65 * 3);
 }
 
 .blog-meta {

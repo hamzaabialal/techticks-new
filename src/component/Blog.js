@@ -64,7 +64,7 @@ function Blog() {
 	return (
 		<div className='blog-page'>
 			<Seo
-				title='Blog | Ecommerce Insights & Strategies — TechTicks'
+				title='Blog | Ecommerce Insights & Strategies - TechTicks'
 				description='Real tactics from scaling 80+ ecommerce brands across Amazon, TikTok Shop, and Shopify. Insights on PPC, SEO, creator marketing, and more.'
 			/>
 			<motion.section
@@ -100,7 +100,7 @@ function Blog() {
 				{status === 'loading' && <p className='blog-detail-status'>Loading articles…</p>}
 				{status === 'error' && <p className='blog-detail-status'>Something went wrong loading articles.</p>}
 				{status === 'ready' && visiblePosts.length === 0 && (
-					<p className='blog-detail-status'>No articles published yet — check back soon.</p>
+					<p className='blog-detail-status'>No articles published yet - check back soon.</p>
 				)}
 
 				{status === 'ready' && visiblePosts.length > 0 && (
@@ -113,11 +113,13 @@ function Blog() {
 						{visiblePosts.map((post) => (
 							<motion.div key={post.id} variants={cardReveal}>
 								<Link to={`/blog/${post.slug}`} className='blog-card'>
-									{post.featuredImage && (
-										<div className='blog-card-image-wrap'>
+									<div className='blog-card-image-wrap'>
+										{post.featuredImage ? (
 											<img src={post.featuredImage} alt='' className='blog-card-image' loading='lazy' />
-										</div>
-									)}
+										) : (
+											<div className='blog-card-image-placeholder' aria-hidden='true' />
+										)}
+									</div>
 									<span className='blog-tag'>{categoryById[post.categoryIds[0]]?.name || ''}</span>
 									<h2>{post.title}</h2>
 									<p>{post.excerpt}</p>

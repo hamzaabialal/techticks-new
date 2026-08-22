@@ -87,7 +87,7 @@ function LoginPage() {
 				<div className={styles.rightContent}>
 					<h2 className={styles.rightHeading}>TechTicks CMS</h2>
 					<p className={styles.rightText}>
-						The internal platform for managing the TechTicks blog — drafting, reviewing, and publishing
+						The internal platform for managing the TechTicks blog - drafting, reviewing, and publishing
 						in one place.
 					</p>
 					<a

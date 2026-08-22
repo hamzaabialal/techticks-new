@@ -102,7 +102,7 @@ function HelpCenter() {
 						<h3>Talk to a Human</h3>
 						<p>
 							Prefer a conversation? Reach our team on WhatsApp
-							or email — we&apos;re happy to help.
+							or email - we&apos;re happy to help.
 						</p>
 					</div>
 				</div>
