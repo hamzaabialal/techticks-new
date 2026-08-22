@@ -1005,13 +1005,54 @@ const detailPageContent = {
 			{ value: '3x', label: 'Avg GMV Growth in 90 Days' },
 			{ value: '92%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'What we manage',
+		servicesTitle: 'Services — TikTok Shop',
 		services: [
-			{ num: '01', title: 'TikTok Shop Setup & Optimisation', desc: 'Account registration, business verification, product catalog setup, and listing optimisation for TikTok’s shopping and discovery algorithm - plus shop health monitoring and policy compliance.', iconKey: 'shopify' },
-			{ num: '02', title: 'Creator Affiliate Program Management', desc: 'Research and outreach to relevant creators from nano to macro, onboarding, commission structure design, and product seeding to maximise organic content volume.', iconKey: 'share' },
-			{ num: '03', title: 'UGC & Content Strategy', desc: 'Content briefs, hook strategy for the first 2–3 seconds, and formats that work - product demos, transformations, testimonials, POV unboxing.', iconKey: 'pen' },
-			{ num: '04', title: 'TikTok Ads Management', desc: 'Spark Ads built from your best-performing organic content, In-Feed Ads, Video Shopping Ads, and Collection Ads - with ROAS-focused optimisation.', iconKey: 'target' },
-			{ num: '05', title: 'TikTok LIVE Commerce', desc: 'LIVE shopping event planning, host selection and briefing, pre-LIVE promotional strategy, and post-LIVE analysis for the next session.', iconKey: 'monitor' },
+			{
+				num: '01', title: 'TikTok Shop Setup & Optimisation', iconKey: 'shopify',
+				bullets: [
+					'Account registration, business verification, and product catalog setup',
+					"Listing optimisation for TikTok's shopping and discovery algorithm",
+					'Pricing, shipping, and promotional campaign configuration',
+					"Shop health monitoring and policy compliance — TikTok moves fast on violations",
+				],
+			},
+			{
+				num: '02', title: 'Creator Affiliate Program Management', iconKey: 'share',
+				bullets: [
+					'Research and outreach to relevant creators from nano to macro, in your actual category',
+					'Onboarding, commission structure design, and creator briefing',
+					'Ongoing relationship management and performance tracking',
+					'Product seeding strategy to maximise organic content volume',
+					"Weekly reporting: who's posting, who's converting, who's not worth keeping",
+				],
+			},
+			{
+				num: '03', title: 'UGC & Content Strategy', iconKey: 'pen',
+				bullets: [
+					"Content briefs that give creators a direction without killing their authenticity",
+					'Hook strategy — the first 2-3 seconds of a TikTok video decide everything',
+					'Formats that work: product demos, transformations, testimonials, POV unboxing',
+					'Identifying your best organic content and turning it into Spark Ads',
+				],
+			},
+			{
+				num: '04', title: 'TikTok Ads Management', iconKey: 'target',
+				bullets: [
+					"Spark Ads built from your best-performing organic creator content",
+					'In-Feed Ads, Video Shopping Ads (VSA), Collection Ads, and LIVE Shopping Ads',
+					'Audience building, lookalikes, and retargeting sequences',
+					'ROAS-focused optimisation with clear weekly performance summaries',
+				],
+			},
+			{
+				num: '05', title: 'TikTok LIVE Commerce', iconKey: 'monitor',
+				bullets: [
+					'LIVE shopping event planning, scripting, and scheduling',
+					'Host selection and briefing — brand team or external creator',
+					'Pre-LIVE promotional strategy to build the audience before you go live',
+					'Post-LIVE analysis and optimisation for the next session',
+				],
+			},
 		],
 		process: {
 			title: 'How we build your TikTok Shop',
@@ -1079,14 +1120,64 @@ const detailPageContent = {
 			{ value: '2x', label: 'Avg Conversion Lift After CRO' },
 			{ value: '96%', label: 'Client Retention' },
 		],
-		servicesTitle: 'What we manage',
+		servicesTitle: 'Services — Shopify',
 		services: [
-			{ num: '01', title: 'Custom Shopify Store Development', desc: 'Full builds on Shopify 2.0, custom themes or heavily modified bases, mobile-first by default, with 90+ Lighthouse performance targets baked into the build.', iconKey: 'shopify' },
-			{ num: '02', title: 'Shopify App Stack & Integrations', desc: 'Reviews, email & SMS, upsell/cross-sell, loyalty, and subscriptions - we evaluate and recommend based on your catalog, we don’t upsell apps you don’t need.', iconKey: 'code' },
-			{ num: '03', title: 'Conversion Rate Optimisation', desc: 'Heatmap and session recording analysis, full-funnel audits, product page and checkout improvements, and an A/B testing roadmap prioritised by revenue impact.', iconKey: 'target' },
-			{ num: '04', title: 'Shopify Migrations', desc: 'Full migrations from WooCommerce, BigCommerce, Magento, Wix, or a custom-built store - with a 301 redirect strategy built before launch to protect SEO.', iconKey: 'refresh' },
-			{ num: '05', title: 'Ongoing Shopify Management', desc: 'Monthly performance reviews and CRO iteration, theme and app maintenance, and Shopify Plus advisory when it makes financial sense to upgrade.', iconKey: 'support' },
-			{ num: '06', title: 'Shopify + Amazon Integration', desc: 'Inventory sync across platforms to prevent oversells, and a strategy for using your Shopify customer base to reduce Amazon dependency over time.', iconKey: 'shuffle' },
+			{
+				num: '01', title: 'Custom Shopify Store Development', iconKey: 'shopify',
+				bullets: [
+					'Full builds on Shopify 2.0, custom themes or heavily modified Dawn/Debut bases',
+					"Mobile-first by default: 70%+ of DTC traffic lands on a phone",
+					'90+ Lighthouse performance targets baked into the build, not patched in after',
+					'Custom sections, metafields, dynamic content, and Shopify Functions where needed',
+				],
+			},
+			{
+				num: '02', title: 'Shopify App Stack & Integrations', iconKey: 'code',
+				bullets: [
+					"Reviews: Judge.me, Yotpo, Okendo — we'll recommend based on your catalog and review volume",
+					'Email & SMS: Klaviyo, Postscript, Omnisend — setup, flows, and ongoing management',
+					'Upsell & cross-sell: ReConvert, Rebuy, Frequently Bought Together',
+					'Loyalty: Smile.io, LoyaltyLion, for brands with repeat purchase potential',
+					'Subscriptions: Recharge, Skio, for consumables or subscription-model products',
+					"We evaluate and recommend. We don't upsell apps you don't need.",
+				],
+			},
+			{
+				num: '03', title: 'Conversion Rate Optimisation (CRO)', iconKey: 'target',
+				bullets: [
+					'Heatmap and session recording analysis — we watch where users get confused or leave',
+					'Funnel audit: homepage to PDP to cart to checkout, finding the drop-off points',
+					'Product page improvements: imagery order, copy gaps, trust signals, social proof placement',
+					'Checkout simplification: every extra field costs conversions',
+					"A/B testing roadmap, prioritised by potential revenue impact, not just what's easy",
+				],
+			},
+			{
+				num: '04', title: 'Shopify Migrations', iconKey: 'refresh',
+				bullets: [
+					'Full migrations from WooCommerce, BigCommerce, Magento, Wix, and custom-built stores',
+					'Product data, customer records, and order history all transferred cleanly',
+					'301 redirect strategy built before launch day to protect SEO rankings',
+					'Pre-launch QA checklist — nothing goes live until every link, form, and payment works',
+				],
+			},
+			{
+				num: '05', title: 'Ongoing Shopify Management', iconKey: 'support',
+				bullets: [
+					'Monthly performance reviews and CRO iteration — one launch is never the end',
+					'Theme updates, app management, and bug fixes',
+					'Shopify Plus advisory: when it makes financial sense to upgrade',
+					'New collection launches, seasonal campaign builds, and sale event setups',
+				],
+			},
+			{
+				num: '06', title: 'Shopify + Amazon Integration', iconKey: 'shuffle',
+				bullets: [
+					'Connect your Shopify store to your Amazon listings via native or third-party channels',
+					'Inventory sync to prevent oversells across both platforms',
+					'Strategy for using your Shopify customer base to reduce Amazon dependency over time',
+				],
+			},
 		],
 		process: {
 			title: 'How we build',
@@ -1154,13 +1245,52 @@ const detailPageContent = {
 			{ value: '2 Day', label: 'Delivery Badge Strategy' },
 			{ value: '90%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'What we manage',
+		servicesTitle: 'Services — Walmart',
 		services: [
-			{ num: '01', title: 'Seller Center Setup & Management', desc: 'Seller application support, full account configuration - payments, tax, shipping, returns - plus account health and policy compliance management.', iconKey: 'badge' },
-			{ num: '02', title: 'Listing Optimisation', desc: 'Keyword research with Walmart-specific tooling, title/description/attribute optimisation, and correct category mapping - miscategorisation kills visibility.', iconKey: 'doc' },
-			{ num: '03', title: 'Walmart Connect Ads', desc: 'Sponsored Products setup and management, keyword and auto campaign strategy, bid management against your margin targets, and Walmart DSP for scale.', iconKey: 'dollar' },
-			{ num: '04', title: 'Walmart Fulfillment Services (WFS)', desc: 'WFS onboarding and eligibility assessment, inventory and reorder planning, and 2-day delivery badge strategy - it meaningfully improves conversion.', iconKey: 'shuffle' },
-			{ num: '05', title: 'Walmart + Amazon Cross-Channel Strategy', desc: 'Price parity monitoring, channel-specific inventory allocation, and unified reporting so you see the full picture across both platforms.', iconKey: 'target' },
+			{
+				num: '01', title: 'Walmart Seller Center Setup & Management', iconKey: 'badge',
+				bullets: [
+					"Seller application support — getting approved is step one, and it's not always straightforward",
+					'Full account configuration: payments, tax setup, shipping settings, return policies',
+					'Account health and performance scorecard monitoring',
+					'Policy compliance, case filing, and seller support management',
+				],
+			},
+			{
+				num: '02', title: 'Listing Optimisation', iconKey: 'doc',
+				bullets: [
+					'Keyword research using Walmart-specific tooling alongside Helium 10 data',
+					"Title, description, and product attribute optimisation for Walmart's search algorithm",
+					'Category mapping and taxonomy setup done correctly — miscategorisation kills visibility',
+					"Rich media content where eligible: Walmart's equivalent of Amazon's A+ Content",
+				],
+			},
+			{
+				num: '03', title: 'Walmart Connect Ads', iconKey: 'dollar',
+				bullets: [
+					'Sponsored Products campaign setup and ongoing management',
+					'Keyword and auto campaign strategy for maximum catalogue coverage',
+					'Bid management and ROAS tracking against your margin targets',
+					'Walmart DSP for brands ready to scale beyond Sponsored Products',
+				],
+			},
+			{
+				num: '04', title: 'Walmart Fulfillment Services (WFS)', iconKey: 'shuffle',
+				bullets: [
+					'WFS onboarding, eligibility assessment, and first inbound shipment planning',
+					'Inventory management and reorder planning to avoid stockouts',
+					'2-day delivery badge strategy — it meaningfully improves conversion rates',
+				],
+			},
+			{
+				num: '05', title: 'Walmart + Amazon Cross-Channel Strategy', iconKey: 'target',
+				bullets: [
+					'Price parity monitoring and management to stay compliant on both platforms',
+					'Channel-specific inventory allocation based on sell-through velocity',
+					'Unified reporting across Walmart and Amazon so you see the full picture',
+					'Avoiding Walmart buybox suppression triggered by Amazon price violations',
+				],
+			},
 		],
 		process: {
 			title: 'How we get you set up',
@@ -1205,13 +1335,53 @@ const detailPageContent = {
 			{ value: 'Top Rated', label: 'Seller Status Strategy' },
 			{ value: '88%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'What we manage',
+		servicesTitle: 'Services — eBay',
 		services: [
-			{ num: '01', title: 'Store Setup & Branding', desc: 'Store subscription setup, store design and category structure, shipping and return policies configured for buyer trust, and a Top Rated Seller strategy from day one.', iconKey: 'badge' },
-			{ num: '02', title: 'Listing Creation & SEO', desc: 'Keyword research built around how eBay’s Cassini algorithm ranks listings, title and item-specifics optimisation, and bulk listing creation for large catalogs.', iconKey: 'doc' },
-			{ num: '03', title: 'eBay Promoted Listings', desc: 'Standard and Advanced Promoted Listings, ad rate strategy that improves visibility without shredding margin, and ongoing campaign optimisation.', iconKey: 'dollar' },
-			{ num: '04', title: 'Repricing & Inventory Management', desc: 'Competitive repricing strategy, repricing tool setup, and inventory sync across eBay, Amazon, and Shopify to prevent oversells.', iconKey: 'shuffle' },
-			{ num: '05', title: 'Account Health & Growth', desc: 'Defect rate and feedback monitoring, case management and dispute resolution, and a selling-limits increase strategy.', iconKey: 'target' },
+			{
+				num: '01', title: 'eBay Store Setup & Branding', iconKey: 'badge',
+				bullets: [
+					'Store subscription setup — Basic, Premium, or Anchor based on your catalog size',
+					'Store design: banners, logo placement, category structure, and store branding',
+					'Shipping policies, return policies, and payment options configured for buyer trust',
+					'Top Rated Seller status strategy from day one',
+				],
+			},
+			{
+				num: '02', title: 'Listing Creation & SEO', iconKey: 'doc',
+				bullets: [
+					"Keyword research built around how eBay's Cassini algorithm ranks listings",
+					'Title optimisation, item specifics and description copy that rank and convert',
+					'Bulk listing creation for large catalogs with consistent formatting',
+					'Variation setup, image compliance, and category-specific best practices',
+				],
+			},
+			{
+				num: '03', title: 'eBay Promoted Listings', iconKey: 'dollar',
+				bullets: [
+					'Promoted Listings Standard and Advanced — understanding which to use and when',
+					'Ad rate strategy that improves visibility without shredding your margin',
+					'Campaign tracking and regular optimisation',
+					'Promoted Listings Express for time-sensitive or clearance inventory',
+				],
+			},
+			{
+				num: '04', title: 'Repricing & Inventory Management', iconKey: 'shuffle',
+				bullets: [
+					'Competitive repricing strategy — winning the sale without racing to the bottom',
+					'Repricing tool setup and management (ChannelAdvisor, Sellbrite, or others)',
+					'Inventory sync across eBay, Amazon, and Shopify to prevent oversells',
+					'Multi-location inventory management for high-volume sellers',
+				],
+			},
+			{
+				num: '05', title: 'Account Health & Growth', iconKey: 'target',
+				bullets: [
+					'Defect rate, late shipment, and buyer feedback monitoring',
+					'Case management and dispute resolution',
+					'Selling limits increase strategy — getting your limits raised faster',
+					"Regular growth reviews: what's selling, what's not, what to list next",
+				],
+			},
 		],
 		process: {
 			title: 'How we grow your eBay store',
@@ -1256,12 +1426,46 @@ const detailPageContent = {
 			{ value: 'Star Seller', label: 'Status Strategy' },
 			{ value: '93%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'What we manage',
+		servicesTitle: 'Services — Etsy',
 		services: [
-			{ num: '01', title: 'Shop Setup & Optimisation', desc: 'Shop name, banner, logo, and about page - everything buyers see before they click a listing - plus Star Seller criteria management and shop section structure.', iconKey: 'badge' },
-			{ num: '02', title: 'Listing SEO & Creation', desc: 'Keyword research using EverBee, eRank, and Etsy’s own search data, titles and tags that match how buyers actually search, and pricing strategy based on competitive analysis.', iconKey: 'doc' },
-			{ num: '03', title: 'Etsy Ads Management', desc: 'Daily budget management and listing selection - not everything should be advertised - plus ROAS tracking and the Offsite Ads opt-in/out decision.', iconKey: 'dollar' },
-			{ num: '04', title: 'Growth & Review Strategy', desc: 'Seasonal planning around holiday peaks, a new-listing cadence to catch the algorithmic boost, and a repeat-customer strategy with follow-ups and offers.', iconKey: 'target' },
+			{
+				num: '01', title: 'Etsy Shop Setup & Optimisation', iconKey: 'badge',
+				bullets: [
+					'Shop name, banner, logo, bio, and about page — everything buyers see before they click a listing',
+					'Announcement and policy setup: shipping timelines, returns, FAQs, written to convert, not just to comply',
+					'Star Seller criteria management: response rate, dispatch time, 5-star reviews',
+					'Shop section structure for discoverability and cross-selling',
+				],
+			},
+			{
+				num: '02', title: 'Listing SEO & Creation', iconKey: 'doc',
+				bullets: [
+					"Keyword research using EverBee, eRank, and Etsy's own search data",
+					'Titles and tags that match how buyers actually search, not just what sounds good',
+					'Descriptions written for conversion and long-tail keyword coverage',
+					'Product photography guidance: what makes a strong cover image, lifestyle vs. plain background',
+					'Pricing strategy based on competitive analysis and perceived value positioning',
+				],
+			},
+			{
+				num: '03', title: 'Etsy Ads Management', iconKey: 'dollar',
+				bullets: [
+					'Daily budget management and listing selection — not everything should be advertised',
+					'ROAS tracking and optimisation to ensure ads are paying for themselves',
+					'Offsite Ads decision: opt-in or out based on your margins and category',
+					'Regular campaign reviews and spend reallocation',
+				],
+			},
+			{
+				num: '04', title: 'Growth & Review Strategy', iconKey: 'target',
+				bullets: [
+					"Seasonal planning: holiday peaks, Valentine's, Mother's Day, where Etsy earns big",
+					'New listing cadence — fresh listings get an algorithmic boost, and we use it',
+					"Review acquisition using Etsy's built-in tools (ToS-compliant)",
+					'Repeat customer strategy: message follow-ups, coupon codes, loyalty offers',
+					'Full SEO audit for existing shops — ranking gap identification and fix plan',
+				],
+			},
 		],
 		process: {
 			title: 'How we grow your Etsy shop',

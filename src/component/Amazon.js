@@ -87,6 +87,79 @@ const HowItworks = () => {
 				</div>
 			</section>
 
+			<section className='ssp-services'>
+				<div className='ssp-section-header'>
+					<h2>Services — Amazon</h2>
+				</div>
+				<div className='ssp-services-grid ssp-services-grid--bullets'>
+					<div className='ssp-service-card'>
+						<span className='ssp-card-num'>01</span>
+						<h3>Amazon PPC & Advertising</h3>
+						<ul className='ssp-card-bullets'>
+							<li>Sponsored Products, Sponsored Brands, Sponsored Display, and DSP</li>
+							<li>Campaign architecture from the ground up, not just tweaking what's already there</li>
+							<li>ACOS and TACOS targets built around your actual margins, not industry averages</li>
+							<li>Dayparting, bid automation, placement modifiers, and search term isolation</li>
+							<li>Weekly reporting in plain English: what changed, why, what's next</li>
+						</ul>
+					</div>
+					<div className='ssp-service-card'>
+						<span className='ssp-card-num'>02</span>
+						<h3>Listing Optimisation</h3>
+						<ul className='ssp-card-bullets'>
+							<li>Keyword research using Helium 10, Brand Analytics, and competitor reverse-engineering</li>
+							<li>Titles, bullets, and descriptions that rank in search and convert on the page</li>
+							<li>Backend search term optimisation and subject matter field strategy</li>
+							<li>Main image split-test planning (your main image is your single biggest conversion lever)</li>
+							<li>Mobile-first review — over 60% of Amazon traffic comes from a phone</li>
+						</ul>
+					</div>
+					<div className='ssp-service-card'>
+						<span className='ssp-card-num'>03</span>
+						<h3>A+ Content & Brand Storefront</h3>
+						<ul className='ssp-card-bullets'>
+							<li>A+ Content modules: lifestyle imagery, feature callouts, comparison charts, brand story</li>
+							<li>Premium A+ (where eligible) for maximum visual real estate</li>
+							<li>Multi-page Storefront with cross-sell architecture</li>
+							<li>Sponsored Brand video and custom ad creative strategy</li>
+						</ul>
+					</div>
+					<div className='ssp-service-card'>
+						<span className='ssp-card-num'>04</span>
+						<h3>Full Seller Central Account Management</h3>
+						<ul className='ssp-card-bullets'>
+							<li>Account health monitoring, case management, and Amazon seller support escalation</li>
+							<li>ASIN suppression recovery — we've brought back a lot of dead listings</li>
+							<li>FBA shipment planning and IPI score management</li>
+							<li>Review strategy that actually works within Amazon's Terms of Service</li>
+							<li>Variation restructuring, parent-child setup, and catalog organisation</li>
+							<li>Returns management, customer message handling, performance notification responses</li>
+						</ul>
+					</div>
+					<div className='ssp-service-card'>
+						<span className='ssp-card-num'>05</span>
+						<h3>Brand Registry & IP Protection</h3>
+						<ul className='ssp-card-bullets'>
+							<li>Brand Registry application support and troubleshooting</li>
+							<li>IP Accelerator guidance for faster trademark registration</li>
+							<li>Counterfeit seller and listing hijacker monitoring and reporting</li>
+							<li>Amazon Brand Analytics — turning data into decisions</li>
+						</ul>
+					</div>
+					<div className='ssp-service-card'>
+						<span className='ssp-card-num'>06</span>
+						<h3>New Product Launch Strategy</h3>
+						<ul className='ssp-card-bullets'>
+							<li>Category and competitor research before you spend a penny on inventory</li>
+							<li>Pre-launch keyword targeting and inventory planning</li>
+							<li>Honeymoon period PPC strategy designed for fast rank acquisition</li>
+							<li>Review generation plan (ToS-compliant)</li>
+							<li>90-day post-launch roadmap with clear milestones</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
 			<section className='itworks-section itworks-process-section'>
 				<div className='itworks-container'>
 					<div className='itworks-header'>
