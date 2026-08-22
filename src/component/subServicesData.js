@@ -8,9 +8,9 @@ import designPortfolioAmazon from './images/portfolio-stock/design-amazon-a-plus
 import designPortfolioBrand from './images/portfolio-stock/design-brand-identity.jpg'
 import designPortfolioTiktok from './images/portfolio-stock/design-tiktok-creative.jpg'
 import designPortfolioPackaging from './images/portfolio-stock/design-packaging.jpg'
-import devPortfolioShopify from './images/portfolio-stock/dev-amazon-listing-design.jpg'
-import devPortfolioRedesign from './images/portfolio-stock/dev-saas-platform.png'
-import devPortfolioCustomBuild from './images/portfolio-stock/dev-automotive-website.png'
+import ecomPortfolioAmazon from './images/portfolio-stock/dev-amazon-listing-design.jpg'
+import ecomPortfolioSaas from './images/portfolio-stock/dev-saas-platform.png'
+import ecomPortfolioAutomotive from './images/portfolio-stock/dev-automotive-website.png'
 import devPortfolioLandingPage from './images/portfolio-stock/dev-landing-page.jpg'
 import devPortfolioSupport from './images/portfolio-stock/dev-ongoing-support.jpg'
 import techLogo2 from './images/services-slider/slider2.png'
@@ -130,6 +130,15 @@ const detailPageContent = {
 				{ title: 'Amazon Growth', desc: 'PPC management, ranking strategies, and full-funnel Amazon advertising to dominate your category.', link: '/amazon', linkText: 'Learn more' },
 				{ title: 'Shopify Development', desc: 'Custom Shopify storefronts built for speed, conversion, and brand experience, from scratch or migration.', link: '/services/development', linkText: 'Learn more' },
 				{ title: 'Digital Marketing', desc: 'Paid social, influencer seeding, and email flows that drive qualified traffic to your stores.', link: '/services/digital-marketing', linkText: 'Learn more' },
+			],
+		},
+		portfolio: {
+			title: 'Let The Results Do The Talking',
+			subtitle: 'A look at the type of ecommerce work we deliver — not specific client case studies.',
+			items: [
+				{ image: ecomPortfolioAmazon, title: 'Amazon Listing Design', category: 'Amazon A+ Content & Listings' },
+				{ image: ecomPortfolioSaas, title: 'SaaS Platform Store', category: 'Shopify & Custom Development' },
+				{ image: ecomPortfolioAutomotive, title: 'Automotive E-commerce Build', category: 'Custom E-commerce' },
 			],
 		},
 		cta: {
@@ -1645,12 +1654,12 @@ detailPageContent.development = {
 		title: 'What a TechTicks Build Looks Like',
 		subtitle: 'A look at the type of builds we deliver - not specific client case studies.',
 		items: [
-			{ image: devPortfolioShopify, title: 'Shopify Storefront Example', category: 'Shopify Development' },
-			{ image: devPortfolioRedesign, title: 'Site Redesign Example', category: 'Redesigns & Migrations' },
-			{ image: devPortfolioCustomBuild, title: 'Custom Build Example', category: 'Custom Website Design & Build' },
-			{ image: devPortfolioLandingPage, title: 'Landing Page Example', category: 'Landing Pages' },
-			{ image: portfolioLanding, title: 'Performance Optimization Example', category: 'Speed & Performance Optimization' },
-			{ image: devPortfolioSupport, title: 'Ongoing Support Example', category: 'Maintenance & Support' },
+			{ image: devPortfolioLandingPage, title: 'Shopify Storefront Example', category: 'Shopify Development' },
+			{ image: devPortfolioSupport, title: 'Site Redesign Example', category: 'Redesigns & Migrations' },
+			{ image: portfolioLanding, title: 'Custom Build Example', category: 'Custom Website Design & Build' },
+			{ visual: 'vis-code', title: 'Landing Page Example', category: 'Landing Pages' },
+			{ visual: 'vis-dash', title: 'Performance Optimization Example', category: 'Speed & Performance Optimization' },
+			{ visual: 'vis-mobile', title: 'Ongoing Support Example', category: 'Maintenance & Support' },
 		],
 	},
 	cta: {
