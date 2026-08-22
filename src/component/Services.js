@@ -10,6 +10,7 @@ import { useNavigate, NavLink } from 'react-router-dom'
 import Slider from '../slider'
 import Testimonials from './testonomial'
 import { servicesCatalog } from './servicesCatalog'
+import Seo from './Seo'
 
 const faqData = [
 	{ question: 'What services does TechTicks offer?', answer: 'We provide end-to-end digital solutions, including Design, SEO, Web & App Development, Advertising, Social Media Management, Maintenance, Migration, and industry-specific ecommerce solutions. Our goal is to help your business grow online with tailored strategies.' },
@@ -27,6 +28,10 @@ function Services() {
 
 	return (
 		<div className='services-page'>
+			<Seo
+				title='Ecommerce Services, Amazon, TikTok Shop, Shopify, Digital Marketing, Design & Web Dev'
+				description='TechTicks offers full-service e-commerce management across Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy, plus digital marketing, SEO, UX/UI design, graphic design and website development.'
+			/>
 			<img src='/contactrectleft.png' alt='' className='leftrect-amazon' />
 			<img src='/contactrectright.png' alt='' className='rightrect-amazon' />
 			<section className='about-page'>

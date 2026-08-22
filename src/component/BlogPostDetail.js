@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, lazy, Suspense } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import * as postService from '../services/postService'
+import Seo from './Seo'
 
 // Lazy-loaded so TipTap's bundle is only fetched by visitors who open an
 // individual post — never by the /blog listing or any other public page.
@@ -76,6 +77,7 @@ function BlogPostDetail() {
 
 	return (
 		<div className='blog-page'>
+			<Seo title={`${post.title} — TechTicks Blog`} description={post.excerpt} />
 			<section className='blog-detail-hero'>
 				<Link to='/blog' className='blog-detail-back'>
 					← Back to Insights & Strategies

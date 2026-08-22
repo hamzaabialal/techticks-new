@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import * as postService from '../services/postService'
+import Seo from './Seo'
 
 // Same fade-up + stagger pattern contactUs.js uses — one shared animation
 // language across the site, not a one-off invented here.
@@ -62,6 +63,10 @@ function Blog() {
 
 	return (
 		<div className='blog-page'>
+			<Seo
+				title='Blog | Ecommerce Insights & Strategies — TechTicks'
+				description='Real tactics from scaling 80+ ecommerce brands across Amazon, TikTok Shop, and Shopify. Insights on PPC, SEO, creator marketing, and more.'
+			/>
 			<motion.section
 				className='blog-hero'
 				initial='hidden'

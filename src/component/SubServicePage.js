@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import { useNavigate, NavLink } from 'react-router-dom'
 import { FiShoppingBag, FiCode, FiRefreshCw, FiLayout, FiZap, FiTool, FiMonitor, FiPenTool, FiShare2, FiPrinter, FiDollarSign, FiFileText, FiMail, FiShield, FiTarget, FiShuffle } from 'react-icons/fi'
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import Testimonials from './testonomial'
+import Seo from './Seo'
 
 const SERVICE_ICONS = {
 	shopify: <FiShoppingBag />,
@@ -23,6 +26,7 @@ const SERVICE_ICONS = {
 
 function SubServicePage({ data }) {
 	const navigate = useNavigate()
+	const [openFaqIndex, setOpenFaqIndex] = useState(null)
 	const { breadcrumb, breadcrumbLinks, hero, stats, platforms, servicesTitle, servicesSubtitle, services, process, relatedServices } = data
 
 	const heroCtaText = data.hero?.ctaText || 'Book a Free Strategy Call'
@@ -30,6 +34,7 @@ function SubServicePage({ data }) {
 
 	return (
 		<div className={`ssp-page ${data.pageClass || ""}`}>
+			<Seo title={data.seoTitle} description={data.seoDescription} />
 
 			{/* ── HERO ─────────────────────────────────── */}
 			<section className={`ssp-hero ${data.hero?.bgClass || ""}`}>
@@ -303,6 +308,34 @@ function SubServicePage({ data }) {
 					))}
 				</div>
 			</section>
+			)}
+
+			{/* ── FAQ (optional) ───────────────────────── */}
+			{data.faq?.length > 0 && (
+				<div className='faq-section'>
+					<h2>Frequently Asked Questions</h2>
+					{data.faqSubtitle && <p className='subtitle'>{data.faqSubtitle}</p>}
+					<div className='faq-list'>
+						{data.faq.map((item, index) => (
+							<div
+								key={item.question}
+								className={`faq-item ${openFaqIndex === index ? 'active' : ''}`}>
+								<button
+									className='faq-question'
+									onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+									aria-expanded={openFaqIndex === index}>
+									<span>{item.question}</span>
+									<span className='arrow'>
+										{openFaqIndex === index ? <FaChevronUp /> : <FaChevronDown />}
+									</span>
+								</button>
+								<div className='faq-answer-wrapper'>
+									<div className='faq-answer'>{item.answer}</div>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
 			)}
 
 			{/* ── TESTIMONIALS ────────────────────────── */}

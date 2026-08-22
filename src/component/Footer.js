@@ -59,33 +59,45 @@ const FooterSection = () => {
 			<div className='container-3 navigation footer-nav py-4'>
 				<div className='rows row justify-content-between col-md-12'>
 					<div className='col-md-2'>
-						<h5>Quick Links</h5>
+						<h5>Ecommerce</h5>
 						<ul className='list-unstyled footer-links'>
 							<li>
-								<NavLink to='/'>Home</NavLink>
-							</li>
-							<li>
-								<NavLink to='/services'>Services</NavLink>
-							</li>
-							<li>
-								<NavLink to='/portfolio'>Portfolio</NavLink>
-							</li>
-							<li>
 								<NavLink to='/amazon'>Amazon</NavLink>
+							</li>
+							<li>
+								<NavLink to='/tiktok-shop'>TikTok Shop</NavLink>
+							</li>
+							<li>
+								<NavLink to='/shopify'>Shopify</NavLink>
+							</li>
+							<li>
+								<NavLink to='/walmart'>Walmart</NavLink>
+							</li>
+							<li>
+								<NavLink to='/ebay'>eBay</NavLink>
+							</li>
+							<li>
+								<NavLink to='/etsy'>Etsy</NavLink>
 							</li>
 						</ul>
 					</div>
 					<div className='col-md-2'>
-						<h5>Support</h5>
+						<h5>Services</h5>
 						<ul className='list-unstyled footer-links'>
 							<li>
-								<NavLink to='/help-center'>Help Center</NavLink>
+								<NavLink to='/services/digital-marketing'>Digital Marketing</NavLink>
 							</li>
 							<li>
-								<NavLink to='/help-center'>Ticket Support</NavLink>
+								<NavLink to='/services/digital-marketing/seo'>SEO</NavLink>
 							</li>
 							<li>
-								<NavLink to='/help-center'>FAQs</NavLink>
+								<NavLink to='/services/ui-ux-design'>UX/UI Design</NavLink>
+							</li>
+							<li>
+								<NavLink to='/services/graphic-design'>Graphic Design</NavLink>
+							</li>
+							<li>
+								<NavLink to='/services/web-development'>Website Development</NavLink>
 							</li>
 						</ul>
 					</div>
@@ -96,10 +108,24 @@ const FooterSection = () => {
 								<NavLink to='/about'>About Us</NavLink>
 							</li>
 							<li>
-								<NavLink to='/team'>Team</NavLink>
+								<NavLink to='/portfolio'>Case Studies</NavLink>
+							</li>
+							<li>
+								<NavLink to='/blog'>Blog</NavLink>
 							</li>
 							<li>
 								<NavLink to='/contactUs'>Contact Us</NavLink>
+							</li>
+						</ul>
+					</div>
+					<div className='col-md-2'>
+						<h5>Contact</h5>
+						<ul className='list-unstyled footer-links'>
+							<li>
+								<a href='mailto:info@techticks.org'>info@techticks.org</a>
+							</li>
+							<li>
+								<a href='https://techticks.org/' target='_blank' rel='noopener noreferrer'>techticks.org</a>
 							</li>
 						</ul>
 					</div>

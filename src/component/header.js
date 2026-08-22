@@ -51,22 +51,36 @@ function Header() {
 								Home
 							</NavLink>
 
-							<NavLink
-								to='/services'
-								className='nav-link'>
-								Services
-							</NavLink>
+							<div className='nav-dropdown'>
+								<NavLink
+									to='/services'
+									className='nav-link'>
+									Services
+								</NavLink>
+								<div className='nav-dropdown-menu'>
+									<div>
+										<p className='nav-dropdown-col-title'>Ecommerce</p>
+										<NavLink to='/amazon' className='nav-dropdown-link'>Amazon</NavLink>
+										<NavLink to='/tiktok-shop' className='nav-dropdown-link'>TikTok Shop</NavLink>
+										<NavLink to='/shopify' className='nav-dropdown-link'>Shopify</NavLink>
+										<NavLink to='/walmart' className='nav-dropdown-link'>Walmart</NavLink>
+										<NavLink to='/ebay' className='nav-dropdown-link'>eBay</NavLink>
+										<NavLink to='/etsy' className='nav-dropdown-link'>Etsy</NavLink>
+									</div>
+									<div>
+										<p className='nav-dropdown-col-title'>Services</p>
+										<NavLink to='/services/digital-marketing' className='nav-dropdown-link'>Digital Marketing</NavLink>
+										<NavLink to='/services/ui-ux-design' className='nav-dropdown-link'>UX/UI Design</NavLink>
+										<NavLink to='/services/graphic-design' className='nav-dropdown-link'>Graphic Design</NavLink>
+										<NavLink to='/services/web-development' className='nav-dropdown-link'>Website Development</NavLink>
+									</div>
+								</div>
+							</div>
 
 							<NavLink
 								to='/portfolio'
 								className='nav-link'>
 								Portfolio
-							</NavLink>
-
-							<NavLink
-								to='/amazon'
-								className='nav-link'>
-								Amazon
 							</NavLink>
 
 							<NavLink
@@ -115,18 +129,25 @@ function Header() {
 								Services
 							</NavLink>
 
+							<p className='mobile-nav-group-title'>Ecommerce</p>
+							<NavLink to='/amazon' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>Amazon</NavLink>
+							<NavLink to='/tiktok-shop' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>TikTok Shop</NavLink>
+							<NavLink to='/shopify' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>Shopify</NavLink>
+							<NavLink to='/walmart' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>Walmart</NavLink>
+							<NavLink to='/ebay' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>eBay</NavLink>
+							<NavLink to='/etsy' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>Etsy</NavLink>
+
+							<p className='mobile-nav-group-title'>Services</p>
+							<NavLink to='/services/digital-marketing' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>Digital Marketing</NavLink>
+							<NavLink to='/services/ui-ux-design' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>UX/UI Design</NavLink>
+							<NavLink to='/services/graphic-design' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>Graphic Design</NavLink>
+							<NavLink to='/services/web-development' className='nav-link mobile-nav-sublink' onClick={() => setIsMobileMenuOpen(false)}>Website Development</NavLink>
+
 							<NavLink
 								to='/portfolio'
 								className='nav-link'
 								onClick={() => setIsMobileMenuOpen(false)}>
 								Portfolio
-							</NavLink>
-
-							<NavLink
-								to='/amazon'
-								className='nav-link'
-								onClick={() => setIsMobileMenuOpen(false)}>
-								Amazon
 							</NavLink>
 
 							<NavLink

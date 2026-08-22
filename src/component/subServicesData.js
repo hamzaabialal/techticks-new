@@ -22,6 +22,9 @@ import { attachDetailContent, serviceById } from './servicesCatalog'
 
 const detailPageContent = {
 	'ecommerce-management': {
+		seoTitle: 'Ecommerce Management | Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy',
+		seoDescription:
+			'TechTicks manages ecommerce growth across six major platforms, from Amazon PPC and TikTok Shop creator programs to Shopify stores and Walmart Marketplace. US-market specialists.',
 		pageClass: 'ssp-page--ecommerce-management',
 		breadcrumb: ['Services', 'Ecommerce Management'],
 		breadcrumbLinks: ['/services'],
@@ -31,17 +34,17 @@ const detailPageContent = {
 		testimonialCategories: ['E-commerce', 'Migration'],
 		hero: {
 			titleSegments: [
-				{ text: 'We Run Y' },
-				{ text: 'our Sto', gradient: true },
-				{ text: 're. You' },
+				{ text: 'Six Platfor' },
+				{ text: 'ms. One T', gradient: true },
+				{ text: 'eam That' },
 				{ break: true },
-				{ text: 'Focus ' },
-				{ text: 'on Gro', gradient: true },
-				{ text: 'wth.' },
+				{ text: 'Actually ' },
+				{ text: 'Knows T', gradient: true },
+				{ text: 'hem.' },
 			],
 			subtitle:
-				'TechTicks handles every layer of your ecommerce operation from listing optimization and inventory management to customer service and multi-channel reporting, so your brand scales without the overhead.',
-			ctaText: 'Start Now',
+				"Most agencies pick one or two channels and learn the others on your dime. We've operated on all six of these platforms with real accounts, real products, and real money. Whether you want to launch on a new marketplace or finally fix what's not working on an existing one, we can hit the ground running.",
+			ctaText: 'Book a Free Strategy Call',
 			ctaLink: '/contactUs',
 		},
 		stats: [
@@ -51,50 +54,62 @@ const detailPageContent = {
 			{ value: '96%', label: 'Clients Retention' },
 		],
 		textBlock: {
-			title: 'End-to-end operations for every major platform',
+			title: 'Why brands that sell on multiple platforms win long-term',
 			paragraphs: [
-				"TechTicks' Ecommerce Management service covers the full operational stack, day-to-day store management, listing and catalog optimization, inventory replenishment, order fulfillment coordination, and customer service across Amazon, Shopify, TikTok Shop, Walmart, eBay, and Etsy.",
-				"Whether you're launching a new channel or inheriting a messy multi-SKU catalog, we bring a dedicated team with platform expertise, proven SOPs, and the tooling to run your operations at scale, without adding headcount to your payroll.",
+				'A brand that sells only on Amazon is one algorithm change away from a bad month. TikTok Shop brands that ignore owned channels are building on rented land. Shopify-only DTC brands pay forever for every customer.',
+				"Multi-channel isn't just a growth strategy — it's a risk management strategy. TechTicks builds and manages your presence across platforms so you're not dependent on any single one.",
 			],
 		},
-		servicesTitle: 'What actually there?',
-		servicesSubtitle: 'Everything your store needs to perform.',
+		servicesTitle: 'Six platforms. Each one linked below.',
+		servicesSubtitle: "Every card links to that platform's dedicated service page.",
 		services: [
 			{
 				num: '01',
-				title: 'Store Setup & Optimization',
-				desc: 'Full storefront buildout and continuous CRO — listings, imagery, A+ content, and storefront architecture tuned for conversion.',
+				title: 'Amazon',
+				desc: "The world's largest ecommerce platform, and the most competitive. Listings, PPC, A+ Content, Brand Registry, account health.",
 				iconKey: 'badge',
+				ctaText: 'Learn More →',
+				ctaLink: '/amazon',
 			},
 			{
 				num: '02',
-				title: 'Inventory & Order Management',
-				desc: 'Real-time stock monitoring, replenishment forecasting, FBA/FBM coordination, and fulfillment SLA management across every channel.',
-				iconKey: 'target',
+				title: 'TikTok Shop',
+				desc: 'The fastest-growing sales channel in ecommerce right now. Store setup, creator affiliate programs, UGC strategy, TikTok Ads.',
+				iconKey: 'share',
+				ctaText: 'Learn More →',
+				ctaLink: '/tiktok-shop',
 			},
 			{
 				num: '03',
-				title: 'Listing & Catalog Management',
-				desc: 'Keyword-rich titles, bullet optimization, backend search terms, variant consolidation, and ongoing catalog hygiene.',
-				iconKey: 'shuffle',
+				title: 'Shopify',
+				desc: 'Your owned DTC channel — build it right and it pays dividends forever. Custom development, CRO, app integration, migrations.',
+				iconKey: 'shopify',
+				ctaText: 'Learn More →',
+				ctaLink: '/shopify',
 			},
 			{
 				num: '04',
-				title: 'Customer Service Handling',
-				desc: 'Dedicated response management for reviews, Q&A, buyer messages, and returns — protecting your seller metrics 24/7.',
-				iconKey: 'badge',
+				title: 'Walmart',
+				desc: '120M+ monthly shoppers, less competition than Amazon, and growing fast. Seller setup, listing optimisation, Walmart Connect Ads, WFS.',
+				iconKey: 'target',
+				ctaText: 'Learn More →',
+				ctaLink: '/walmart',
 			},
 			{
 				num: '05',
-				title: 'Performance Tracking & Reporting',
-				desc: 'Custom dashboards surfacing revenue, ACOS, conversion rate, return rate, and channel-level KPIs weekly and monthly.',
-				iconKey: 'target',
+				title: 'eBay',
+				desc: 'Still one of the most profitable channels for the right product categories. Store setup, Cassini SEO, Promoted Listings, repricing.',
+				iconKey: 'shuffle',
+				ctaText: 'Learn More →',
+				ctaLink: '/ebay',
 			},
 			{
 				num: '06',
-				title: 'Multi-Channel Account Management',
-				desc: 'Unified operations across Amazon, Shopify, TikTok Shop, Walmart, eBay, and Etsy — one team, full coverage.',
-				iconKey: 'shuffle',
+				title: 'Etsy',
+				desc: '90M+ buyers actively looking for what you sell. Shop optimisation, listing SEO, Etsy Ads, Star Seller strategy.',
+				iconKey: 'doc',
+				ctaText: 'Learn More →',
+				ctaLink: '/etsy',
 			},
 		],
 		process: {
@@ -126,6 +141,9 @@ const detailPageContent = {
 	},
 
 	'digital-marketing': {
+		seoTitle: 'Digital Marketing Services: Meta Ads, Google Ads, SEO, Email Marketing & Social Media',
+		seoDescription:
+			'TechTicks delivers integrated digital marketing for US ecommerce brands: Meta Ads, Google Ads, SEO, email & SMS marketing, social media management, and content creation.',
 		pageClass: 'ssp-page--digital-marketing',
 		testimonialCategories: ['SEO', 'Advertising', 'Social Media'],
 		breadcrumb: ['Services', 'Digital Marketing'],
@@ -204,6 +222,8 @@ const detailPageContent = {
 	},
 
 	'digital-marketing/seo': {
+		seoTitle: 'SEO Services for Ecommerce Brands | TechTicks',
+		seoDescription: 'Technical SEO, keyword strategy, and content architecture that drives organic traffic and turns visitors into customers.',
 		breadcrumb: ['Services', 'Digital Marketing', 'SEO'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -245,6 +265,8 @@ const detailPageContent = {
 	},
 
 	'digital-marketing/google-ads': {
+		seoTitle: 'Google Ads Management for Ecommerce | TechTicks',
+		seoDescription: 'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets — not click volume or impression share.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Google Ads'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -286,6 +308,8 @@ const detailPageContent = {
 	},
 
 	'digital-marketing/meta-ads': {
+		seoTitle: 'Meta Ads Management: Facebook & Instagram Advertising | TechTicks',
+		seoDescription: 'Facebook and Instagram campaigns structured around your CAC — creative testing, audience strategy, and full-funnel builds that actually scale.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Meta Ads'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -327,6 +351,8 @@ const detailPageContent = {
 	},
 
 	'digital-marketing/social-media': {
+		seoTitle: 'Social Media Marketing for Ecommerce Brands | TechTicks',
+		seoDescription: 'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X — built to grow and convert.',
 		breadcrumb: ['Services', 'Digital Marketing', 'Social Media Marketing'],
 		breadcrumbLinks: ['/services', '/services/digital-marketing'],
 		hero: {
@@ -368,6 +394,9 @@ const detailPageContent = {
 	},
 
 	'design': {
+		seoTitle: 'UX/UI Design Services, Shopify UX, App Design, Wireframes & Conversion-Focused Design',
+		seoDescription:
+			'TechTicks delivers UX/UI design for ecommerce brands: user research, Shopify UX optimisation, app UI design, wireframes, prototypes, and CRO-focused design handoffs.',
 		pageClass: 'ssp-page--ui-ux-design',
 		testimonialCategories: ['Design'],
 		breadcrumb: ['Services', 'UX/UI & Graphic Design'],
@@ -511,6 +540,9 @@ const detailPageContent = {
 	},
 
 	'development': {
+		seoTitle: 'Website Development Services: Shopify, WordPress, Landing Pages & Custom Web Builds',
+		seoDescription:
+			'TechTicks builds high-performance websites for ecommerce and service brands: custom Shopify stores, WordPress sites, landing pages, sales funnels, speed optimisation, and ongoing maintenance.',
 		breadcrumb: ['Services', 'Website Development'],
 		breadcrumbLinks: ['/services'],
 		hero: {
@@ -549,6 +581,359 @@ const detailPageContent = {
 			{ title: 'Ecommerce Management', link: '/services/ecommerce-management', desc: 'Once built, we manage your store operations too.' },
 			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Drive traffic to the site we build for you.' },
 		],
+	},
+
+	'tiktok-shop': {
+		seoTitle: 'TikTok Shop Agency, Creator Affiliate Marketing, Store Setup & TikTok Ads for US Brands',
+		seoDescription:
+			'TechTicks helps US brands launch TikTok Shops, build creator affiliate programs, develop UGC content strategies, and run profitable TikTok Ads. Real results, not just impressions.',
+		breadcrumb: ['Services', 'Ecommerce Management', 'TikTok Shop'],
+		breadcrumbLinks: ['/services', '/services/ecommerce-management'],
+		hero: {
+			tag: 'TikTok Shop',
+			title: 'TikTok Shop Is Where',
+			titleHighlight: 'Your Next 10,000 Customers Are.',
+			subtitle:
+				"The brands growing fastest on TikTok Shop aren't the ones spending the most on ads — they're the ones who figured out the creator affiliate model. One creator with the right audience can outsell a $10,000 paid campaign in a weekend. TechTicks builds and runs the whole system: your store, your creator network, your content strategy, and your ads.",
+			ctaText: 'Book a Free TikTok Shop Strategy Call',
+			ctaLink: '/contactUs',
+		},
+		stats: [
+			{ value: '80+', label: 'Active Creator Affiliates' },
+			{ value: '60+', label: 'Brands Launched on TikTok Shop' },
+			{ value: '3x', label: 'Avg GMV Growth in 90 Days' },
+			{ value: '92%', label: 'Retention Rate' },
+		],
+		servicesTitle: 'What we manage',
+		services: [
+			{ num: '01', title: 'TikTok Shop Setup & Optimisation', desc: 'Account registration, business verification, product catalog setup, and listing optimisation for TikTok’s shopping and discovery algorithm — plus shop health monitoring and policy compliance.', iconKey: 'shopify' },
+			{ num: '02', title: 'Creator Affiliate Program Management', desc: 'Research and outreach to relevant creators from nano to macro, onboarding, commission structure design, and product seeding to maximise organic content volume.', iconKey: 'share' },
+			{ num: '03', title: 'UGC & Content Strategy', desc: 'Content briefs, hook strategy for the first 2–3 seconds, and formats that work — product demos, transformations, testimonials, POV unboxing.', iconKey: 'pen' },
+			{ num: '04', title: 'TikTok Ads Management', desc: 'Spark Ads built from your best-performing organic content, In-Feed Ads, Video Shopping Ads, and Collection Ads — with ROAS-focused optimisation.', iconKey: 'target' },
+			{ num: '05', title: 'TikTok LIVE Commerce', desc: 'LIVE shopping event planning, host selection and briefing, pre-LIVE promotional strategy, and post-LIVE analysis for the next session.', iconKey: 'monitor' },
+		],
+		process: {
+			title: 'How we build your TikTok Shop',
+			steps: [
+				{ num: '01', title: 'Audit & Strategy', desc: 'We review your catalog, category fit, and current creator relationships (if any).' },
+				{ num: '02', title: 'Shop & Creator Build', desc: 'Store setup, listing optimisation, and the first wave of creator outreach.' },
+				{ num: '03', title: 'Content & Ads', desc: 'Seeding product, briefing creators, and turning winning UGC into Spark Ads.' },
+				{ num: '04', title: 'Scale', desc: 'Expanding the creator network and reinvesting in what is already converting.' },
+			],
+		},
+		faqSubtitle: 'Straight answers about launching and growing on TikTok Shop.',
+		faq: [
+			{
+				question: 'Do I need a US business entity to sell on TikTok Shop?',
+				answer:
+					"Yes, TikTok Shop US currently requires a US business entity or US individual with valid tax documentation. We'll walk you through the requirements and point you to the right resources if you need to set something up.",
+			},
+			{
+				question: 'How many creators do I need before I see sales?',
+				answer:
+					"We've seen brands generate real traction with as few as 10 well-matched creators. The number matters less than the fit — a creator in your exact niche with 30k followers will outperform a generic lifestyle creator with 500k every time. We focus on fit first.",
+			},
+			{
+				question: 'What types of products do well on TikTok Shop?',
+				answer:
+					"Products that have a visible before-and-after, a satisfying demo, or a strong emotional hook tend to travel well. Beauty, wellness, kitchen gadgets, fitness, and home products are strong categories. We'll review your catalog and tell you honestly which SKUs have TikTok potential before we start.",
+			},
+			{
+				question: 'Can TikTok Shop and Amazon work together?',
+				answer:
+					'They can and they should. Creator content from TikTok can drive external traffic to your Amazon listing, which improves organic rank and sales velocity. We run both channels for several clients, and the cross-channel lift is real.',
+			},
+		],
+		relatedServices: [
+			{ title: 'Amazon', link: '/amazon', desc: 'Send TikTok-driven traffic into a listing built to convert it.' },
+			{ title: 'Shopify', link: '/shopify', desc: 'Your owned channel to reduce reliance on any one marketplace.' },
+			{ title: 'Ecommerce Management Hub', link: '/services/ecommerce-management', desc: 'See every platform we manage.' },
+		],
+		cta: {
+			title: "Let's Build Your TikTok Shop from the Ground Up — or Fix What Isn't Working.",
+			subtitle: "Book a free strategy call. We'll review your catalog, your current TikTok presence (if any), and tell you exactly where to start.",
+			buttonText: 'Book a Free TikTok Shop Strategy Call →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'shopify': {
+		seoTitle: 'Shopify Agency, Custom Store Development, CRO & Full Shopify Management for DTC Brands',
+		seoDescription:
+			'TechTicks builds and optimises Shopify stores for US DTC brands: custom theme development, Shopify 2.0, app integration, CRO, speed optimisation, migrations, and ongoing management.',
+		breadcrumb: ['Services', 'Ecommerce Management', 'Shopify'],
+		breadcrumbLinks: ['/services', '/services/ecommerce-management'],
+		hero: {
+			tag: 'Shopify',
+			title: 'Your Shopify Store Should Be',
+			titleHighlight: 'Your Best Salesperson.',
+			subtitle:
+				"Slow load times. A homepage that doesn't answer 'why you' in the first five seconds. Product pages missing the information buyers actually want. A checkout with three more steps than it needs. These things bleed revenue quietly, every day. TechTicks builds Shopify stores engineered to convert, and audits existing ones to find exactly where the money is leaking.",
+			ctaText: 'Book a Free Shopify Audit',
+			ctaLink: '/contactUs',
+		},
+		stats: [
+			{ value: '150+', label: 'Shopify Stores Built or Optimised' },
+			{ value: '90+', label: 'Avg Lighthouse Performance Score' },
+			{ value: '2x', label: 'Avg Conversion Lift After CRO' },
+			{ value: '96%', label: 'Client Retention' },
+		],
+		servicesTitle: 'What we manage',
+		services: [
+			{ num: '01', title: 'Custom Shopify Store Development', desc: 'Full builds on Shopify 2.0, custom themes or heavily modified bases, mobile-first by default, with 90+ Lighthouse performance targets baked into the build.', iconKey: 'shopify' },
+			{ num: '02', title: 'Shopify App Stack & Integrations', desc: 'Reviews, email & SMS, upsell/cross-sell, loyalty, and subscriptions — we evaluate and recommend based on your catalog, we don’t upsell apps you don’t need.', iconKey: 'code' },
+			{ num: '03', title: 'Conversion Rate Optimisation', desc: 'Heatmap and session recording analysis, full-funnel audits, product page and checkout improvements, and an A/B testing roadmap prioritised by revenue impact.', iconKey: 'target' },
+			{ num: '04', title: 'Shopify Migrations', desc: 'Full migrations from WooCommerce, BigCommerce, Magento, Wix, or a custom-built store — with a 301 redirect strategy built before launch to protect SEO.', iconKey: 'refresh' },
+			{ num: '05', title: 'Ongoing Shopify Management', desc: 'Monthly performance reviews and CRO iteration, theme and app maintenance, and Shopify Plus advisory when it makes financial sense to upgrade.', iconKey: 'support' },
+			{ num: '06', title: 'Shopify + Amazon Integration', desc: 'Inventory sync across platforms to prevent oversells, and a strategy for using your Shopify customer base to reduce Amazon dependency over time.', iconKey: 'shuffle' },
+		],
+		process: {
+			title: 'How we build',
+			steps: [
+				{ num: '01', title: 'Discovery & Scope', desc: 'We define requirements, timeline, and success metrics before writing a line of code.' },
+				{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
+				{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage — no surprises at launch.' },
+				{ num: '04', title: 'Launch & Iterate', desc: 'Smooth go-live, then ongoing CRO so the store keeps improving after day one.' },
+			],
+		},
+		faqSubtitle: 'Straight answers about building or improving your Shopify store.',
+		faq: [
+			{
+				question: 'Do you build on Shopify 2.0?',
+				answer:
+					'Yes, all new builds use Shopify 2.0 architecture. It gives us far more customisation flexibility, better page speed, and section-everywhere functionality that makes the store easier for you to manage after handoff.',
+			},
+			{
+				question: 'How long does a Shopify build take?',
+				answer:
+					'A standard custom build is 3–6 weeks. More complex stores with custom functionality can take 6–10 weeks. We give you a precise timeline in the proposal before we start.',
+			},
+			{
+				question: 'Can you improve my existing store rather than rebuild it?',
+				answer:
+					"Often, yes, and it's faster ROI. We'll audit your current store first and give you an honest recommendation on whether to optimise or rebuild, based on actual performance data.",
+			},
+			{
+				question: 'Do you work with Shopify Plus?',
+				answer:
+					'Yes. We handle standard Shopify and Shopify Plus, including Shopify Flow automations, checkout extensibility, custom scripts, and B2B wholesale configuration.',
+			},
+		],
+		relatedServices: [
+			{ title: 'Website Development', link: '/services/development', desc: 'Landing pages, funnels, and non-Shopify builds too.' },
+			{ title: 'UX/UI Design', link: '/services/design', desc: 'Store design grounded in buyer psychology and conversion data.' },
+			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Drive traffic to the store we build and optimise.' },
+		],
+		cta: {
+			title: 'A Better Shopify Store Pays for Itself. Let’s Show You Where the Money Is.',
+			subtitle: "Book a free audit. We'll review your store and tell you exactly what's costing you conversions.",
+			buttonText: 'Book a Free Shopify Audit →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'walmart': {
+		seoTitle: 'Walmart Marketplace Agency, Seller Setup, Listing Optimisation & Walmart Connect Ads',
+		seoDescription:
+			'TechTicks manages Walmart Marketplace for US brands: Seller Center setup, listing optimisation, Walmart Connect PPC, WFS fulfillment, and cross-channel strategy with Amazon.',
+		breadcrumb: ['Services', 'Ecommerce Management', 'Walmart'],
+		breadcrumbLinks: ['/services', '/services/ecommerce-management'],
+		hero: {
+			tag: 'Walmart',
+			title: '120 Million Monthly Shoppers.',
+			titleHighlight: 'Most Sellers Aren’t Optimised for Any of Them.',
+			subtitle:
+				"Walmart Marketplace is genuinely underused. Categories that are brutally competitive on Amazon often have breathing room on Walmart — lower CPCs, less listing competition, and a customer base that's actively looking to buy. We set you up to capture profitable sales while everyone else fights for scraps on Amazon.",
+			ctaText: 'Book a Free Walmart Strategy Call',
+			ctaLink: '/contactUs',
+		},
+		stats: [
+			{ value: '120M+', label: 'Monthly Walmart Shoppers' },
+			{ value: '40+', label: 'Walmart Sellers Managed' },
+			{ value: '2 Day', label: 'Delivery Badge Strategy' },
+			{ value: '90%', label: 'Retention Rate' },
+		],
+		servicesTitle: 'What we manage',
+		services: [
+			{ num: '01', title: 'Seller Center Setup & Management', desc: 'Seller application support, full account configuration — payments, tax, shipping, returns — plus account health and policy compliance management.', iconKey: 'badge' },
+			{ num: '02', title: 'Listing Optimisation', desc: 'Keyword research with Walmart-specific tooling, title/description/attribute optimisation, and correct category mapping — miscategorisation kills visibility.', iconKey: 'doc' },
+			{ num: '03', title: 'Walmart Connect Ads', desc: 'Sponsored Products setup and management, keyword and auto campaign strategy, bid management against your margin targets, and Walmart DSP for scale.', iconKey: 'dollar' },
+			{ num: '04', title: 'Walmart Fulfillment Services (WFS)', desc: 'WFS onboarding and eligibility assessment, inventory and reorder planning, and 2-day delivery badge strategy — it meaningfully improves conversion.', iconKey: 'shuffle' },
+			{ num: '05', title: 'Walmart + Amazon Cross-Channel Strategy', desc: 'Price parity monitoring, channel-specific inventory allocation, and unified reporting so you see the full picture across both platforms.', iconKey: 'target' },
+		],
+		process: {
+			title: 'How we get you set up',
+			steps: [
+				{ num: '01', title: 'Eligibility & Application', desc: 'We assess category fit and manage the Seller Center application.' },
+				{ num: '02', title: 'Listing Build', desc: 'Catalog setup, keyword-optimised listings, and correct categorisation.' },
+				{ num: '03', title: 'Ads & Fulfillment', desc: 'Walmart Connect campaigns and a WFS plan if it fits your logistics.' },
+				{ num: '04', title: 'Scale', desc: 'Ongoing optimisation as sell-through data comes in.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Amazon', link: '/amazon', desc: 'Run both marketplaces without price or inventory conflicts.' },
+			{ title: 'eBay', link: '/ebay', desc: 'Another marketplace with real profit margin for the right category.' },
+			{ title: 'Ecommerce Management Hub', link: '/services/ecommerce-management', desc: 'See every platform we manage.' },
+		],
+		cta: {
+			title: 'Walmart Revenue Doesn’t Have to Come With Amazon-Level Complexity',
+			subtitle: "Book a free strategy call and we'll show you whether your catalog has real Walmart potential.",
+			buttonText: 'Book a Free Walmart Strategy Call →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'ebay': {
+		seoTitle: 'eBay Management Agency, Store Setup, Listing SEO, eBay Ads & Account Growth',
+		seoDescription:
+			'TechTicks manages eBay stores for US brands: store setup, Cassini-optimised listings, Promoted Listings management, repricing strategy, and full account health management.',
+		breadcrumb: ['Services', 'Ecommerce Management', 'eBay'],
+		breadcrumbLinks: ['/services', '/services/ecommerce-management'],
+		hero: {
+			tag: 'eBay',
+			title: '135 Million eBay Buyers.',
+			titleHighlight: 'Most Sellers Are Leaving Money on the Table.',
+			subtitle:
+				"eBay gets written off by brands who assume it's only for used goods and bargain hunters. For refurbished products, collectibles, auto parts, electronics, and plenty more, eBay is one of the most profitable channels available. The sellers doing well treat the platform seriously — optimised listings, clean account health, and a repricing strategy that actually works. That's what we set up.",
+			ctaText: 'Book a Free eBay Strategy Call',
+			ctaLink: '/contactUs',
+		},
+		stats: [
+			{ value: '135M+', label: 'Active eBay Buyers' },
+			{ value: '30+', label: 'eBay Stores Managed' },
+			{ value: 'Top Rated', label: 'Seller Status Strategy' },
+			{ value: '88%', label: 'Retention Rate' },
+		],
+		servicesTitle: 'What we manage',
+		services: [
+			{ num: '01', title: 'Store Setup & Branding', desc: 'Store subscription setup, store design and category structure, shipping and return policies configured for buyer trust, and a Top Rated Seller strategy from day one.', iconKey: 'badge' },
+			{ num: '02', title: 'Listing Creation & SEO', desc: 'Keyword research built around how eBay’s Cassini algorithm ranks listings, title and item-specifics optimisation, and bulk listing creation for large catalogs.', iconKey: 'doc' },
+			{ num: '03', title: 'eBay Promoted Listings', desc: 'Standard and Advanced Promoted Listings, ad rate strategy that improves visibility without shredding margin, and ongoing campaign optimisation.', iconKey: 'dollar' },
+			{ num: '04', title: 'Repricing & Inventory Management', desc: 'Competitive repricing strategy, repricing tool setup, and inventory sync across eBay, Amazon, and Shopify to prevent oversells.', iconKey: 'shuffle' },
+			{ num: '05', title: 'Account Health & Growth', desc: 'Defect rate and feedback monitoring, case management and dispute resolution, and a selling-limits increase strategy.', iconKey: 'target' },
+		],
+		process: {
+			title: 'How we grow your eBay store',
+			steps: [
+				{ num: '01', title: 'Store Audit', desc: 'We review your current listings, account health, and category fit.' },
+				{ num: '02', title: 'Listing & SEO Build', desc: 'Cassini-optimised titles, item specifics, and category mapping.' },
+				{ num: '03', title: 'Promoted Listings', desc: 'Ad rate strategy that grows visibility without hurting margin.' },
+				{ num: '04', title: 'Scale', desc: 'Repricing, inventory sync, and account health management as you grow.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Walmart', link: '/walmart', desc: 'Another underused marketplace with real margin.' },
+			{ title: 'Etsy', link: '/etsy', desc: 'For handmade, vintage, and niche product categories.' },
+			{ title: 'Ecommerce Management Hub', link: '/services/ecommerce-management', desc: 'See every platform we manage.' },
+		],
+		cta: {
+			title: 'Ready to Take eBay Seriously as a Revenue Channel?',
+			subtitle: "Book a free strategy call and we'll show you what your category is actually capable of on eBay.",
+			buttonText: 'Book a Free eBay Strategy Call →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'etsy': {
+		seoTitle: 'Etsy Management Agency, Shop Optimisation, Listing SEO & Etsy Ads for US Sellers',
+		seoDescription:
+			'TechTicks manages Etsy shops for handmade, vintage, and niche product sellers. Shop setup, Etsy SEO, Etsy Ads management, Star Seller strategy, and ongoing growth management.',
+		breadcrumb: ['Services', 'Ecommerce Management', 'Etsy'],
+		breadcrumbLinks: ['/services', '/services/ecommerce-management'],
+		hero: {
+			tag: 'Etsy',
+			title: '90 Million Buyers Are Searching Etsy',
+			titleHighlight: 'Right Now. Is Your Shop Showing Up?',
+			subtitle:
+				"Etsy has a reputation as a casual side-hustle platform. The sellers making serious money on it know it's anything but. Etsy's search algorithm is real, its advertising system works when used correctly, and its buyers have purchase intent that's hard to find on most other platforms. TechTicks runs your Etsy shop with the same rigour we apply to Amazon.",
+			ctaText: 'Book a Free Etsy Strategy Call',
+			ctaLink: '/contactUs',
+		},
+		stats: [
+			{ value: '90M+', label: 'Active Etsy Buyers' },
+			{ value: '25+', label: 'Etsy Shops Managed' },
+			{ value: 'Star Seller', label: 'Status Strategy' },
+			{ value: '93%', label: 'Retention Rate' },
+		],
+		servicesTitle: 'What we manage',
+		services: [
+			{ num: '01', title: 'Shop Setup & Optimisation', desc: 'Shop name, banner, logo, and about page — everything buyers see before they click a listing — plus Star Seller criteria management and shop section structure.', iconKey: 'badge' },
+			{ num: '02', title: 'Listing SEO & Creation', desc: 'Keyword research using EverBee, eRank, and Etsy’s own search data, titles and tags that match how buyers actually search, and pricing strategy based on competitive analysis.', iconKey: 'doc' },
+			{ num: '03', title: 'Etsy Ads Management', desc: 'Daily budget management and listing selection — not everything should be advertised — plus ROAS tracking and the Offsite Ads opt-in/out decision.', iconKey: 'dollar' },
+			{ num: '04', title: 'Growth & Review Strategy', desc: 'Seasonal planning around holiday peaks, a new-listing cadence to catch the algorithmic boost, and a repeat-customer strategy with follow-ups and offers.', iconKey: 'target' },
+		],
+		process: {
+			title: 'How we grow your Etsy shop',
+			steps: [
+				{ num: '01', title: 'Shop Audit', desc: 'We review your listings, keywords, and shop setup for ranking gaps.' },
+				{ num: '02', title: 'Listing SEO Build', desc: 'Titles, tags, and descriptions rebuilt around real buyer search behaviour.' },
+				{ num: '03', title: 'Ads & Seasonal Planning', desc: 'Etsy Ads set up alongside a calendar built around Etsy’s biggest buying seasons.' },
+				{ num: '04', title: 'Scale', desc: 'New listing cadence and review strategy compounding growth over time.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'eBay', link: '/ebay', desc: 'Another channel with strong margin for the right category.' },
+			{ title: 'UX/UI Design', link: '/services/design', desc: 'Product photography and shop branding that converts.' },
+			{ title: 'Ecommerce Management Hub', link: '/services/ecommerce-management', desc: 'See every platform we manage.' },
+		],
+		cta: {
+			title: 'Your Etsy Shop Can Be a Real Business. Let’s Treat It Like One.',
+			subtitle: "Book a free strategy call and we'll show you exactly where your shop is losing ranking and sales.",
+			buttonText: 'Book a Free Etsy Strategy Call →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'graphic-design': {
+		seoTitle: 'Graphic Design Services: Brand Identity, Amazon Creatives, Ad Design & Packaging',
+		seoDescription:
+			'TechTicks delivers ecommerce-focused graphic design: brand identity, Amazon A+ Content design, social media graphics, Meta ad creatives, product packaging, and pitch decks.',
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'Graphic Design'],
+		breadcrumbLinks: ['/services', '/services/design'],
+		hero: {
+			tag: 'Graphic Design',
+			title: 'Buyers Judge Your Brand',
+			titleHighlight: 'in Half a Second. What Are They Deciding?',
+			subtitle:
+				"On Amazon, your main image is the first thing a buyer sees — and if it doesn't stop the scroll, nothing else matters. On TikTok, your thumbnail determines whether anyone watches. On Shopify, your homepage visuals are doing the job of a retail window display. Our design team creates visuals built to perform in the commercial environments where your brand actually lives.",
+			ctaText: 'Book a Free Design Consultation',
+			ctaLink: '/contactUs',
+		},
+		stats: [
+			{ value: '200+', label: 'Design Projects Delivered' },
+			{ value: '5', label: 'Platforms Designed For' },
+			{ value: '72hr', label: 'First Drafts Turnaround' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What we design',
+		services: [
+			{ num: '01', title: 'Brand Identity & Logo Design', desc: 'Logo design and variants, colour and typography systems, a full brand style guide, and brand application across packaging, social, ads, and web.', iconKey: 'pen' },
+			{ num: '02', title: 'Amazon Creative Design', desc: 'Main image optimisation — the single biggest lever for Amazon click-through rate — plus lifestyle imagery, A+ Content design, and Storefront banners.', iconKey: 'shopify' },
+			{ num: '03', title: 'Social Media Graphics', desc: 'Instagram and Facebook templates, TikTok thumbnails and text overlays, Pinterest pin design, and content calendar graphic packages.', iconKey: 'share' },
+			{ num: '04', title: 'Ad Creative Design', desc: 'Static creatives for Meta in every required size, Google Display sets, TikTok ad overlays and end cards, and email header and banner design.', iconKey: 'layout' },
+			{ num: '05', title: 'Product & Packaging Design', desc: 'Boxes, bags, labels, and custom formats, insert and thank-you card design, and print-ready files with bleed and safe zones handled correctly.', iconKey: 'printer' },
+			{ num: '06', title: 'Pitch Decks & Presentations', desc: 'Investor and client pitch decks, brand presentation templates, and infographic and data visualisation design.', iconKey: 'monitor' },
+		],
+		process: {
+			title: 'Our design process',
+			steps: [
+				{ num: '01', title: 'Discovery', desc: 'We audit what exists and understand your brand and your buyers.' },
+				{ num: '02', title: 'Concepts', desc: 'Initial directions grounded in the platform the design has to perform on.' },
+				{ num: '03', title: 'Refinement', desc: 'Feedback and iteration until it is both on-brand and commercially sharp.' },
+				{ num: '04', title: 'Delivery', desc: 'Final files in every format and size you need, ready to publish.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'UX/UI Design', link: '/services/design', desc: 'Interfaces and store design, the other half of design that converts.' },
+			{ title: 'Amazon', link: '/amazon', desc: 'Put your new creative to work on listings and A+ Content.' },
+			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Put your new ad creative into paid campaigns.' },
+		],
+		cta: {
+			title: 'Your Brand Deserves to Look as Good as the Product Itself',
+			subtitle: "Book a free design consultation and we'll show you where your current visuals are costing you attention.",
+			buttonText: 'Book a Free Design Consultation →',
+			buttonLink: '/contactUs',
+		},
 	},
 }
 

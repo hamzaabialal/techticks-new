@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import founderimage1 from '../component/images/about-card1.png'
 import founderimage2 from '../component/images/about-card2.png'
 import { useNavigate } from 'react-router-dom'
+import CtaCard from './Cta-card'
+import Seo from './Seo'
 
 function About() {
 	const navigate = useNavigate()
@@ -74,6 +76,10 @@ function About() {
 	const foundersRef = useFadeInOnScroll()
 	return (
 		<div>
+			<Seo
+				title='About TechTicks, Ecommerce Agency Built by Operators, Not Marketers'
+				description='TechTicks is a US-market e-commerce agency founded by Muhammad Athar with 6+ years operating brands on Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy. 80+ brands served.'
+			/>
 			<section
 				id='about'
 				className='about-page '>
@@ -95,29 +101,38 @@ function About() {
 						<div className='heading'>
 							<h1>
 								<span>We</span>
-								<span>build</span>
-								<span>tech</span>
-								<span>that</span>
-								<span>moves</span>
-								<span>businesses</span>
-								<span>forward.</span>
+								<span>Built</span>
+								<span>the</span>
+								<span>Agency</span>
+								<span>We</span>
+								<span>Wished</span>
+								<span>Existed</span>
+								<span>When</span>
+								<span>We</span>
+								<span>Were</span>
+								<span>Operators</span>
 							</h1>
 						</div>
 						<div className='sub-heading'>
 							<p>
-								Just smart, scalable solutions that solve real
-								problems. Since 2020, Techticks has helped
-								startups and growing brands turn raw ideas into
-								products that perform in the real world. We
-								design, build, and ship digital products apps,
-								platforms, and intelligent systems with one
-								rule: every line of code must earn its place.
+								Muhammad Athar started TechTicks after years of running Amazon accounts,
+								managing ad spend with his own money on the line, and building Shopify
+								stores that had to convert or fail. The agency came from a simple
+								frustration: most of the agencies available to ecommerce brands had never
+								actually run one. They knew the theory. They didn't know why a 3-cent bid
+								adjustment on a long-tail keyword at 2 AM changes everything during a
+								product launch.
+								<br />
+								<br />
+								TechTicks was built to be different. Operator-first. Straight-talking.
+								Focused on results that show up in your revenue dashboard, not our
+								reporting deck.
 							</p>
 						</div>
 					</div>
 					<div>
 						<button onClick={() => navigate('/contactUs')}>
-							Start Now
+							Book a Free Strategy Call
 						</button>
 					</div>
 				</div>
@@ -128,23 +143,21 @@ function About() {
 				class='stats fade-in'>
 				<div class='stat'>
 					<h2>
-						<StatsCounter end={380} />
+						<StatsCounter end={80} />
 					</h2>
-					<p>Projects Delivered Successfully</p>
+					<p>Brands Scaled Across 6 Platforms</p>
 				</div>
 				<span class='divider'></span>
 				<div class='stat'>
 					<h2>
-						<StatsCounter end={5} />
+						<StatsCounter end={6} />
 					</h2>
-					<p>Years of Experience</p>
+					<p>Years of Hands-On Ecommerce Experience</p>
 				</div>
 				<span class='divider'></span>
 				<div class='stat'>
-					<h2>
-						<StatsCounter end={230} />
-					</h2>
-					<p>Businesses Trusted Worldwide</p>
+					<h2>$2M+</h2>
+					<p>In Managed Ad Spend</p>
 				</div>
 			</div>
 
@@ -155,29 +168,27 @@ function About() {
 					<div className='left-heading'>
 						{' '}
 						<h1>
-							We Shape Ideas.We
+							From Bahawalpur to
 							<br />
-							Set the Standard.
+							80+ US Brands
 						</h1>
 					</div>
 					<div className='about-card'>
 						<div class='top-right'>
 							<div class='text-card'>
 								<p>
-									TechTicks is a full-service digital agency
-									built for ambition. We turn complex
-									challenges into clean, high-performing
-									products — from custom web and mobile
-									applications to AI-powered solutions and
-									full product development.
+									TechTicks started as a small Amazon PPC consultancy, serving US brands
+									who needed expert operators without US agency prices. Over six years
+									and 80+ brand partnerships, we expanded into TikTok Shop, Shopify, Meta
+									Ads, Google Ads, SEO, UX/UI design, graphic design, and web
+									development.
 									<br />
 									<br />
-									Everything we build is designed for speed,
-									scalability, and longevity. No unnecessary
-									features. No over-engineering. Just
-									technology aligned with real business goals
-									— because execution beats promises, every
-									time.
+									Today we serve solo sellers doing $50K a month and established brands
+									doing seven figures. Our clients range from private label Amazon
+									sellers to Shopify DTC brands and multi-channel retailers. What they
+									have in common is that they needed a team that treats their business
+									seriously, and that's what we show up to do every day.
 								</p>
 							</div>
 						</div>
@@ -185,47 +196,58 @@ function About() {
 				</div>
 			</div>
 
-			{/** chosee */}
+			{/** values */}
 			<section
 				ref={chooseRef}
 				className='why-choose fade-in'>
 				<div className='container'>
 					<div className='left'>
 						<h2>
-							Why Teams Choose
+							A Few Things We
 							<br />
-							Techticks
+							Genuinely Believe
 						</h2>
 						<span>
-							Because execution beats promises, every time.
+							Before every decision, we ask, "Would we do this with our own brand and
+							our own budget?"
 						</span>
 					</div>
 
 					<div className='right'>
 						<div className='cards'>
 							<span>01</span>
-							<h3>Business-first thinking</h3>
+							<h3>Operator mindset</h3>
 							<span>
-								Technology built around outcomes, not trends.
+								If the answer to "would we do this with our own brand and our own
+								budget" is no, we don't recommend it.
 							</span>
 						</div>
 
 						<div class='cards'>
 							<span>02</span>
-							<h3>Scalable engineering</h3>
-							<span>Products that hold up as you grow.</span>
+							<h3>Honest numbers</h3>
+							<span>
+								Vanity metrics don't pay bills. We report on revenue impact, and tell
+								you when something isn't working.
+							</span>
 						</div>
 
 						<div class='cards'>
 							<span>03</span>
-							<h3>Radical transparency</h3>
-							<span>Clear communication at every stage.</span>
+							<h3>Move, then refine</h3>
+							<span>
+								Waiting for perfect conditions is how brands stay stuck. We launch,
+								measure, and improve — in that order.
+							</span>
 						</div>
 
 						<div class='cards'>
 							<span>04</span>
-							<h3>Long-term partnership</h3>
-							<span>Support that doesn’t stop at launch.</span>
+							<h3>Your win is ours</h3>
+							<span>
+								We don't have a "good enough" threshold on someone else's account. If
+								your numbers aren't moving, neither are we.
+							</span>
 						</div>
 					</div>
 				</div>
@@ -265,6 +287,13 @@ function About() {
 					</div>
 				</div>
 			</section>
+
+			<CtaCard
+				title="Want to Work With People Who've Already Done What You're Trying to Do?"
+				subtitle=''
+				unlockText=''
+				buttonText='Book a Free Strategy Call →'
+			/>
 		</div>
 	)
 }

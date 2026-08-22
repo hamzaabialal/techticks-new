@@ -48,6 +48,7 @@ import { BsLaptop, BsPhone } from 'react-icons/bs'
 import Testimonials from './testonomial'
 import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
+import Seo from './Seo'
 
 function Home() {
 	const navigate = useNavigate()
@@ -332,6 +333,10 @@ function Home() {
 	}
 	return (
 		<div className='home-layout'>
+			<Seo
+				title='TechTicks | Amazon, TikTok Shop & Shopify Growth Agency for US Brands'
+				description='TechTicks helps US e-commerce brands grow on Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy, plus digital marketing, design & web development. 80+ brands scaled.'
+			/>
 			<section
 				id='Home'
 				className='home-page'>
@@ -389,6 +394,26 @@ function Home() {
 					</div>
 				</div>
 			</section>
+
+			{/** stats bar */}
+			<div className='home-stats-bar'>
+				<div className='home-stat-item'>
+					<span className='home-stat-value'>80+</span>
+					<span className='home-stat-label'>Brands scaled across Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy</span>
+				</div>
+				<div className='home-stat-item'>
+					<span className='home-stat-value'>$2M+</span>
+					<span className='home-stat-label'>In managed ad spend — Amazon PPC, Meta & Google Ads</span>
+				</div>
+				<div className='home-stat-item'>
+					<span className='home-stat-value'>6+</span>
+					<span className='home-stat-label'>Years of hands-on ecommerce experience</span>
+				</div>
+				<div className='home-stat-item'>
+					<span className='home-stat-value'>6</span>
+					<span className='home-stat-label'>Platforms, one focused team</span>
+				</div>
+			</div>
 
 			{/**slider */}
 			<section>
