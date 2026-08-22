@@ -237,7 +237,7 @@ function About() {
 							<h3>Move, then refine</h3>
 							<span>
 								Waiting for perfect conditions is how brands stay stuck. We launch,
-								measure, and improve — in that order.
+								measure, and improve - in that order.
 							</span>
 						</div>
 

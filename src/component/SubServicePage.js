@@ -124,7 +124,7 @@ function SubServicePage({ data }) {
 			<section className='ssp-services'>
 				<div className='ssp-section-header'>
 					<h2>{servicesTitle}</h2>
-					<p>{servicesSubtitle || 'Every deliverable is built for results — nothing included just to pad the scope.'}</p>
+					<p>{servicesSubtitle || 'Every deliverable is built for results - nothing included just to pad the scope.'}</p>
 				</div>
 
 				<div className='ssp-services-grid'>
@@ -292,7 +292,7 @@ function SubServicePage({ data }) {
 			<section className='ssp-related'>
 				<h2>More ways TechTicks can help</h2>
 				<p className='ssp-related-sub'>
-					Every service is designed to work together — pick one or let us run the full stack.
+					Every service is designed to work together - pick one or let us run the full stack.
 				</p>
 				<div className='ssp-related-grid'>
 					{relatedServices.map((r, i) => (

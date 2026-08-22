@@ -70,7 +70,7 @@ function TermsConditions() {
 			<section className='legal-section legal-content-section'>
 				<div className='legal-content'>
 					<p className='legal-intro'>
-						We keep these terms readable on purpose — we want both
+						We keep these terms readable on purpose - we want both
 						sides to know what they&apos;re agreeing to. If
 						anything is unclear, ask before signing.
 					</p>

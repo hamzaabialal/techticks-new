@@ -55,7 +55,7 @@ function Home() {
 	const faqData = [
 		{
 			question: 'What types of brands do you work with?',
-			answer: 'We work with US ecommerce brands — from solo Amazon sellers doing $50K a month to seven-figure Shopify DTC brands and multi-channel retailers across Amazon, TikTok Shop, Shopify, Walmart, eBay and Etsy.',
+			answer: 'We work with US ecommerce brands - from solo Amazon sellers doing $50K a month to seven-figure Shopify DTC brands and multi-channel retailers across Amazon, TikTok Shop, Shopify, Walmart, eBay and Etsy.',
 		},
 		{
 			question: 'Can I hire TechTicks for a single platform or service?',
@@ -63,7 +63,7 @@ function Home() {
 		},
 		{
 			question: 'Do you offer ongoing account and website management?',
-			answer: 'Yes. We provide ongoing management across all six marketplaces and your owned channels — handling listings, ads, updates, performance monitoring, security, and continuous optimisation so everything keeps running and growing.',
+			answer: 'Yes. We provide ongoing management across all six marketplaces and your owned channels - handling listings, ads, updates, performance monitoring, security, and continuous optimisation so everything keeps running and growing.',
 		},
 
 		// You can add more items
@@ -96,7 +96,7 @@ function Home() {
 		{
 			icon: <Hourglass />,
 			title: 'WALMART',
-			text: 'Seller Center setup, listing optimisation, Walmart Connect Ads, and WFS — less competition, profitable sales.',
+			text: 'Seller Center setup, listing optimisation, Walmart Connect Ads, and WFS - less competition, profitable sales.',
 		},
 		{
 			icon: <BsLaptop />,
@@ -111,12 +111,12 @@ function Home() {
 		{
 			icon: <GoFileDirectory />,
 			title: 'DIGITAL MARKETING',
-			text: 'Meta Ads, Google Ads, SEO, email & SMS, and social media — built as one integrated system, not separate campaigns.',
+			text: 'Meta Ads, Google Ads, SEO, email & SMS, and social media - built as one integrated system, not separate campaigns.',
 		},
 		{
 			icon: <LuRadioTower />,
 			title: 'WEBSITE DEVELOPMENT',
-			text: 'Fast, secure, conversion-ready Shopify, WordPress, and custom builds — no bloat, no checkout that leaks revenue.',
+			text: 'Fast, secure, conversion-ready Shopify, WordPress, and custom builds - no bloat, no checkout that leaks revenue.',
 		},
 	]
 
@@ -381,7 +381,7 @@ function Home() {
 							TechTicks is a full-service ecommerce agency that
 							handles everything from Amazon PPC and TikTok creator
 							affiliate programs
-							<br></br> to Shopify builds and paid social — so you
+							<br></br> to Shopify builds and paid social - so you
 							can focus on your product while we focus on your
 							growth.
 						</p>
@@ -403,7 +403,7 @@ function Home() {
 				</div>
 				<div className='home-stat-item'>
 					<span className='home-stat-value'>$2M+</span>
-					<span className='home-stat-label'>In managed ad spend — Amazon PPC, Meta & Google Ads</span>
+					<span className='home-stat-label'>In managed ad spend - Amazon PPC, Meta & Google Ads</span>
 				</div>
 				<div className='home-stat-item'>
 					<span className='home-stat-value'>6+</span>
@@ -946,7 +946,7 @@ function Home() {
 						<div className='why-choose-copy'>
 								<h1 className='title-main'>Why TechTicks?</h1>
 								<p className='subtitle-main'>
-									Operators, not just marketers — here's what
+									Operators, not just marketers - here's what
 									makes us different.
 								</p>
 							</div>
@@ -992,7 +992,7 @@ function Home() {
 										</h3>
 										<p className='card-text'>
 											Real numbers, not dashboards built to
-											look good — what's working, what
+											look good - what's working, what
 											isn't, and what we're doing about it.
 										</p>
 									</div>

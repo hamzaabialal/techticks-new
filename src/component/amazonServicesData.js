@@ -66,7 +66,7 @@ export const servicesData = [
         navLabel: 'SEO & Organic Visibility',
         heading: "We Get Your Products Found, Without Paying for Every Click",
         description1:
-            "Ranking on Amazon isn't luck, it's a science. We optimize every element of your listings — titles, bullets, backend keywords, and A+ content — to maximize organic reach and drive consistent traffic that converts.",
+ "Ranking on Amazon isn't luck, it's a science. We optimize every element of your listings - titles, bullets, backend keywords, and A+ content - to maximize organic reach and drive consistent traffic that converts.",
         description2:
             'You don\'t just get visibility. You get the right eyes on the right products, at the right time.',
         keyFeaturesTitle: 'Key Features',
@@ -102,7 +102,7 @@ export const servicesData = [
         navLabel: 'PPC & Ads Management',
         heading: 'We Turn Ad Spend Into Measurable Revenue',
         description1:
-            'Running Amazon ads without a strategy is just burning money. We build, manage, and optimize your full PPC funnel — Sponsored Products, Brands, and Display — with a focus on profitability, not just clicks.',
+ 'Running Amazon ads without a strategy is just burning money. We build, manage, and optimize your full PPC funnel - Sponsored Products, Brands, and Display - with a focus on profitability, not just clicks.',
         description2:
             'Every dollar you spend is tracked, tested, and optimized for maximum return.',
         keyFeaturesTitle: 'Key Features',
@@ -136,7 +136,7 @@ export const servicesData = [
     {
         id: 3,
         navLabel: 'Dedicated Advertising Expert',
-        heading: 'Your Own Amazon Ads Specialist — Always In Your Corner',
+ heading: 'Your Own Amazon Ads Specialist - Always In Your Corner',
         description1:
             'No account managers juggling 50 clients. You get a single dedicated expert who knows your brand, your goals, and your market inside out. Fast responses, proactive strategy, and someone who genuinely owns your growth.',
         description2: 'Less back-and-forth. More results.',
@@ -173,7 +173,7 @@ export const servicesData = [
         navLabel: 'Buy with Prime Integration',
         heading: 'Bring Prime Power to Your Own Channel',
         description1:
-            "Buy with Prime lets you offer Amazon's trusted checkout, fast delivery, and Prime badge — right on your own website. We handle the full setup and integration so you can convert more customers with the trust they already have in Prime.",
+ "Buy with Prime lets you offer Amazon's trusted checkout, fast delivery, and Prime badge - right on your own website. We handle the full setup and integration so you can convert more customers with the trust they already have in Prime.",
         description2: 'More conversions. Less friction. Zero hassle.',
         keyFeaturesTitle: 'Key Features',
         features: [
@@ -208,7 +208,7 @@ export const servicesData = [
         navLabel: 'Seller & Vendor Central Management',
         heading: 'We Handle the Backend So You Can Focus on Growth',
         description1:
-            'Seller Central and Vendor Central are powerful — but complex. From inventory management and case handling to compliance and catalog maintenance, we take full operational control so nothing slips through the cracks.',
+ 'Seller Central and Vendor Central are powerful - but complex. From inventory management and case handling to compliance and catalog maintenance, we take full operational control so nothing slips through the cracks.',
         description2:
             'You focus on the big picture. We handle everything behind the scenes.',
         keyFeaturesTitle: 'Key Features',

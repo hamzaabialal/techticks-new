@@ -259,7 +259,7 @@ function Portfolio() {
 					{/* Bottom Content */}
 					<div className='portfolioPage-content'>
 						<div className='portfolioPage-left'>
-							<h3>Sales Snapshot — 12 Days, Real Numbers</h3>
+							<h3>Sales Snapshot - 12 Days, Real Numbers</h3>
 							<p>
 								In just 12 days (June 1–12, 2025), the store
 								generated $319,423.80 in ordered product sales

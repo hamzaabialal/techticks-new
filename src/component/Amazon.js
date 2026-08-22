@@ -21,7 +21,7 @@ const faqData = [
 	{
 		question: 'Is there a minimum ad spend you require?',
 		answer:
-			"We generally work best with accounts spending $3,000/month or more on Amazon ads. Below that, it takes longer to generate statistically useful data. If you're below that threshold, book a call — we'll be straight with you about whether the timing makes sense.",
+			"We generally work best with accounts spending $3,000/month or more on Amazon ads. Below that, it takes longer to generate statistically useful data. If you're below that threshold, book a call - we'll be straight with you about whether the timing makes sense.",
 	},
 	{
 		question: 'Can you recover a suppressed or suspended listing?',
@@ -72,7 +72,7 @@ const HowItworks = () => {
 						<div className='sub-heading'>
 							<p>
 								Amazon is the most competitive retail environment on earth. The brands
-								winning there aren't just the ones with the best products — they're the
+								winning there aren't just the ones with the best products - they're the
 								ones whose listings rank, whose ads are profitable, whose A+ Content
 								converts browsers into buyers, and whose accounts stay healthy.
 								TechTicks manages all of it.

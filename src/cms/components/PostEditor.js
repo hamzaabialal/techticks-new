@@ -468,7 +468,7 @@ function PostEditor({ value, onChange, onSave, disabled = false }) {
 								</button>
 							</div>
 						))}
-						{categories.length === 0 && <span className={styles.hint}>No categories yet — add one below.</span>}
+						{categories.length === 0 && <span className={styles.hint}>No categories yet - add one below.</span>}
 					</div>
 					<div className={styles.addCategoryRow}>
 						<input

@@ -77,7 +77,7 @@ function BlogPostDetail() {
 
 	return (
 		<div className='blog-page'>
-			<Seo title={`${post.title} — TechTicks Blog`} description={post.excerpt} />
+			<Seo title={`${post.title} - TechTicks Blog`} description={post.excerpt} />
 			<section className='blog-detail-hero'>
 				<Link to='/blog' className='blog-detail-back'>
 					← Back to Insights & Strategies

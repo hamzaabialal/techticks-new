@@ -2,7 +2,7 @@ function CookiePolicy() {
 	const cookieTypes = [
 		{
 			name: 'Essential cookies',
-			purpose: 'Keep the site functional — page navigation, form submissions, security.',
+			purpose: 'Keep the site functional - page navigation, form submissions, security.',
 			canDisable: 'No (the site cannot work without them).',
 		},
 		{
@@ -65,7 +65,7 @@ function CookiePolicy() {
 			<section className='legal-section legal-content-section'>
 				<div className='legal-content'>
 					<p className='legal-intro'>
-						We use cookies the same way most websites do — to keep
+						We use cookies the same way most websites do - to keep
 						things working and to understand how the site is used.
 						You stay in control of your settings.
 					</p>
