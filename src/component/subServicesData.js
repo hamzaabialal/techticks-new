@@ -13,6 +13,12 @@ import ecomPortfolioSaas from './images/portfolio-stock/dev-saas-platform.png'
 import ecomPortfolioAutomotive from './images/portfolio-stock/dev-automotive-website.png'
 import devPortfolioLandingPage from './images/portfolio-stock/dev-landing-page.jpg'
 import devPortfolioSupport from './images/portfolio-stock/dev-ongoing-support.jpg'
+import devGuardxflow from './images/portfolio-stock/dev-guardxflow.png'
+import devSparkFitness from './images/portfolio-stock/dev-spark-fitness.png'
+import devHostyoHome from './images/portfolio-stock/dev-hostyo-home.png'
+import devHostyoCrm from './images/portfolio-stock/dev-hostyo-crm.jpeg'
+import devHostyoProperties from './images/portfolio-stock/dev-hostyo-properties.png'
+import devRetellAi from './images/portfolio-stock/dev-retell-ai.jpeg'
 import techLogo2 from './images/services-slider/slider2.png'
 import techLogo3 from './images/services-slider/slider3.png'
 import techLogo4 from './images/services-slider/slider4.png'
@@ -1654,12 +1660,12 @@ detailPageContent.development = {
 		title: 'What a TechTicks Build Looks Like',
 		subtitle: 'A look at the type of builds we deliver - not specific client case studies.',
 		items: [
-			{ image: devPortfolioLandingPage, title: 'Shopify Storefront Example', category: 'Shopify Development' },
-			{ image: devPortfolioSupport, title: 'Site Redesign Example', category: 'Redesigns & Migrations' },
-			{ image: portfolioLanding, title: 'Custom Build Example', category: 'Custom Website Design & Build' },
-			{ visual: 'vis-code', title: 'Landing Page Example', category: 'Landing Pages' },
-			{ visual: 'vis-dash', title: 'Performance Optimization Example', category: 'Speed & Performance Optimization' },
-			{ visual: 'vis-mobile', title: 'Ongoing Support Example', category: 'Maintenance & Support' },
+			{ image: devGuardxflow, title: 'GuardXFlow', category: 'SaaS Web Application' },
+			{ image: devSparkFitness, title: 'Spark Fitness', category: 'Gym Management App' },
+			{ image: devHostyoHome, title: 'Hostyo', category: 'Property Management Platform' },
+			{ image: devHostyoCrm, title: 'Hostyo CRM', category: 'Custom CRM Dashboard' },
+			{ image: devHostyoProperties, title: 'Hostyo Properties', category: 'Multi-Property Management' },
+			{ image: devRetellAi, title: 'RetellAI Agent Builder', category: 'AI Voice Agent Platform' },
 		],
 	},
 	cta: {
