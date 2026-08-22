@@ -88,7 +88,13 @@ const FooterSection = () => {
 								<NavLink to='/services/digital-marketing'>Digital Marketing</NavLink>
 							</li>
 							<li>
+								<NavLink to='/services/digital-marketing/meta-ads'>Meta & Google Ads</NavLink>
+							</li>
+							<li>
 								<NavLink to='/services/digital-marketing/seo'>SEO</NavLink>
+							</li>
+							<li>
+								<NavLink to='/services/digital-marketing/email-marketing'>Email Marketing</NavLink>
 							</li>
 							<li>
 								<NavLink to='/services/ui-ux-design'>UX/UI Design</NavLink>

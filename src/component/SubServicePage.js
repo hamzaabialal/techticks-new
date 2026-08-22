@@ -127,7 +127,7 @@ function SubServicePage({ data }) {
 					<p>{servicesSubtitle || 'Every deliverable is built for results - nothing included just to pad the scope.'}</p>
 				</div>
 
-				<div className='ssp-services-grid'>
+				<div className={`ssp-services-grid${services.some((s) => s.bullets?.length > 0) ? ' ssp-services-grid--bullets' : ''}`}>
 					{services.map((s, i) => {
 						const serviceLink = s.ctaLink || s.link
 						const serviceLabel = s.ctaText || 'View detail →'
@@ -135,7 +135,14 @@ function SubServicePage({ data }) {
 							<div key={i} className='ssp-service-card'>
 								<span className='ssp-card-num'>{s.num}</span>
 								<h3>{s.title}</h3>
-								<p>{s.desc}</p>
+								{s.desc && <p>{s.desc}</p>}
+								{s.bullets?.length > 0 && (
+									<ul className='ssp-card-bullets'>
+										{s.bullets.map((bullet, bi) => (
+											<li key={bi}>{bullet}</li>
+										))}
+									</ul>
+								)}
 								{s.iconKey && SERVICE_ICONS[s.iconKey] ? (
 									<div className='ssp-card-icon' aria-hidden='true'>{SERVICE_ICONS[s.iconKey]}</div>
 								) : (

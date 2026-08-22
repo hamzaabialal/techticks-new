@@ -2855,6 +2855,39 @@ body,
 	font-size: 18px;
 }
 
+.home-hero-eyebrow {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #7c5cbf;
+	border: 1px solid rgba(124, 92, 191, 0.4);
+	border-radius: 50px;
+	padding: 4px 14px;
+	margin-bottom: 20px;
+}
+
+.home-hero-ctas {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+}
+
+.home-hero-ctas .home-hero-cta-secondary {
+	background: transparent;
+	background-image: none;
+	border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.home-hero-ctas .home-hero-cta-secondary:hover {
+	background: rgba(255, 255, 255, 0.06);
+	background-image: none;
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
 .main-content button:hover {
 	background-image:
 		linear-gradient(#333338, #3c3c51),
@@ -3275,6 +3308,39 @@ body {
 	position: relative;
 	overflow: hidden;
 	background: #000;
+}
+
+.announcement-bar {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 8px 20px;
+	background: linear-gradient(95.49deg, #4a35d9 10.01%, #0c84af 96.93%);
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+}
+
+.announcement-bar-cta {
+	color: #fff;
+	font-weight: 600;
+	text-decoration: underline;
+	white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+	.announcement-bar {
+		font-size: 12px;
+		padding: 8px 12px;
+	}
+
+	.announcement-bar span {
+		display: none;
+	}
 }
 
 .techticks-header > canvas {
@@ -5395,6 +5461,43 @@ body {
 .why-choose-section p.why-choose-subtitle {
 	color: #bdbdbd;
 	margin-bottom: 50px;
+}
+
+.services-pricing-section {
+	padding: 80px 20px;
+	max-width: 720px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.services-pricing-section h2 {
+	font-size: 36px;
+	font-weight: 600;
+	color: #fff;
+	margin: 0 0 20px;
+}
+
+.services-pricing-body {
+	color: #999;
+	font-size: 16px;
+	line-height: 1.7;
+	margin: 0 0 32px;
+}
+
+.services-pricing-btn {
+	background: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	padding: 14px 36px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+}
+
+.services-pricing-btn:hover {
+	background: #fff;
+	color: #000;
 }
 
 /* CARDS GRID */
@@ -9098,6 +9201,21 @@ body,
 	margin-left: var(--left-pad) !important;
 }
 
+.service-figma-label {
+	display: inline-block !important;
+	font-size: 12px !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.1em !important;
+	text-transform: uppercase !important;
+	color: #7c5cbf !important;
+	margin-bottom: 14px !important;
+}
+
+.service-figma-item-eyebrow {
+	color: rgba(255, 255, 255, 0.85) !important;
+	font-weight: 600 !important;
+}
+
 .service-figma-copy h1 {
 	margin: 0 !important;
 	max-width: var(--copy-w) !important;
@@ -9646,7 +9764,9 @@ body,
 	position: relative !important;
 	z-index: 2 !important;
 	width: 1237px !important;
-	height: 543px !important;
+	/* auto, not a fixed 543px — same reasoning as .why-choose-us .cards-wrapper:
+	   that value was hand-tuned for exactly 3 cards, and a 4th needs room to grow. */
+	height: auto !important;
 	max-width: calc(100% - 80px) !important;
 	margin: 0 auto !important;
 	display: flex !important;
@@ -9700,7 +9820,9 @@ body,
 
 .why-choose-us .cards-wrapper {
 	width: 586px !important;
-	height: 543px !important;
+	/* auto, not a fixed 543px (that value was hand-tuned for exactly 3 cards
+	   at 169px + 18px gap each — a 4th card needs the container to grow). */
+	height: auto !important;
 	max-width: 586px !important;
 	margin: 0 !important;
 	padding: 0 !important;
@@ -13420,6 +13542,16 @@ textarea,
 	border-radius: 16px;
 	overflow: hidden;
 }
+
+.ssp-services-grid--bullets {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+	.ssp-services-grid--bullets {
+		grid-template-columns: 1fr;
+	}
+}
 .ssp-service-card {
 	background: #080808;
 	padding: 36px 32px;
@@ -13450,6 +13582,31 @@ textarea,
 	line-height: 1.65;
 	flex: 1;
 	margin: 0;
+}
+
+.ssp-card-bullets {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	flex: 1;
+}
+
+.ssp-card-bullets li {
+	position: relative;
+	padding-left: 14px;
+	font-size: 14px;
+	color: #999;
+	line-height: 1.55;
+}
+
+.ssp-card-bullets li::before {
+	content: '-';
+	position: absolute;
+	left: 0;
+	color: #7c5cbf;
 }
 .ssp-card-link {
 	font-size: 13px;

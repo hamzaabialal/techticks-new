@@ -358,6 +358,8 @@ function Home() {
 				<hr style={{ color: 'white' }} />
 
 				<div className='main-content'>
+					<span className='home-hero-eyebrow'>Ecommerce Growth Agency: US Market Specialists</span>
+
 					<div className='heading'>
 						<h1>
 							<span>Grow</span>
@@ -387,9 +389,12 @@ function Home() {
 						</p>
 					</div>
 
-					<div>
+					<div className='home-hero-ctas'>
 						<button onClick={() => navigate('/contactUs')}>
 							Book a Free Strategy Call
+						</button>
+						<button className='home-hero-cta-secondary' onClick={() => navigate('/portfolio')}>
+							See Our Work
 						</button>
 					</div>
 				</div>
@@ -859,8 +864,14 @@ function Home() {
 					id='Service'
 					className='service-figma'>
 					<div className='service-figma-copy'>
+						<span className='service-figma-label'>What We Do</span>
 						<h1>One Agency for Every Channel Your Brand Sells On</h1>
-						<p>Most brands run ecommerce, paid ads, design, and their website through four vendors that never talk to each other. At TechTicks, it all runs under one roof.</p>
+						<p>
+							Most brands manage e-commerce, paid ads, design, and their website through four
+							different vendors, and none of them talk to each other. At TechTicks, everything
+							runs under one roof. Your Amazon data informs your Meta creative. Your Shopify CRO
+							feeds your Google Shopping strategy. It all connects.
+						</p>
 					</div>
 
 					<div className='service-figma-grid'>
@@ -871,19 +882,28 @@ function Home() {
 
 						<div className='service-figma-item'>
 							<h3>Ecommerce Management</h3>
-							<p>Amazon, TikTok Shop, Shopify, Walmart, eBay & Etsy.</p>
+							<p className='service-figma-item-eyebrow'>Amazon · TikTok Shop · Shopify · Walmart · eBay · Etsy</p>
+							<p>Account setup, listing optimisation, platform-specific advertising, and ongoing growth management</p>
+							<p>We handle the daily operations, so you stop firefighting and start scaling</p>
 						</div>
 						<div className='service-figma-item'>
 							<h3>Digital Marketing</h3>
-							<p>Meta Ads, Google Ads, SEO, email & social.</p>
+							<p>
+								Meta Ads, Google Ads, SEO, email, SMS, and social media content. The marketing team
+								checks traffic, clicks, ad spend, sales, and campaign tasks so your brand stays
+								active in the places customers spend time.
+							</p>
 						</div>
 						<div className='service-figma-item'>
 							<h3>UX/UI & Graphic Design</h3>
-							<p>Brand identity, ad creatives & A+ Content.</p>
+							<p className='service-figma-item-eyebrow'>Shopify UX · Brand Identity · Ad Creatives · Amazon A+ Content · Packaging</p>
+							<p>Design decisions grounded in buyer psychology and conversion data</p>
+							<p>Your brand should look like a brand, not a template</p>
 						</div>
 						<div className='service-figma-item'>
 							<h3>Website Development</h3>
-							<p>Fast, conversion-ready Shopify & custom builds.</p>
+							<p className='service-figma-item-eyebrow'>Shopify · WordPress · Landing Pages · Custom Builds</p>
+							<p>The web team works on speed, mobile view, page structure, forms, product pages, and checkout flow.</p>
 						</div>
 					</div>
 				</div>
@@ -996,6 +1016,21 @@ function Home() {
 											isn't, and what we're doing about it.
 										</p>
 									</div>
+
+									{/* Card 4 */}
+									<div
+										className='glass-card'
+										style={{ '--card-index': 3 }}>
+										<h3 className='card-title text-white'>
+											Full Capability In-House
+										</h3>
+										<p className='card-text'>
+											Ecommerce ops, paid media, design, and
+											development, all in one team. No
+											handoff gaps, no vendor
+											finger-pointing.
+										</p>
+									</div>
 								</div>
 					</div>
 				</section>
@@ -1009,9 +1044,9 @@ function Home() {
 				id='Work'
 				className='workSection'>
 				<div className='workHeading'>
-					<h1>Our Works</h1>
+					<h1>A Few Things We're Proud Of</h1>
 					<p>
-						A few things we're proud of. Real brands, real numbers
+						Real brands, real numbers
 						{' '}
 						<br className='d-none d-md-block' />
 						across Amazon, TikTok Shop, and the channels that move

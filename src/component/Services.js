@@ -38,10 +38,10 @@ function Services() {
 				<hr style={{ color: 'white' }} />
 				<div className='main-content'>
 					<div className='about'>
-						<div className='heading'><h1><span>We</span><span>don’t</span><span>just</span><span>check</span><span>boxes</span></h1></div>
-						<div className='sub-heading'><p className='s-subheading'>We solve problems your competitors are still ignoring. Every service below is engineered to grow your customers, simplify your operations, and make your brand impossible to ignore.</p></div>
+						<div className='heading'><h1><span>Every</span><span>Growth</span><span>Lever.</span><span>One</span><span>Team.</span></h1></div>
+						<div className='sub-heading'><p className='s-subheading'>Brands plateau when they manage channels in silos. Amazon is doing its thing, Meta Ads are doing their thing, and the Shopify store is doing its thing, and none of it is talking to the rest. TechTicks connects your e-commerce operations, paid media, design, and development so the whole machine moves in one direction.</p></div>
 					</div>
-					<button onClick={() => navigate('/contactUs')}>Start Now</button>
+					<button onClick={() => navigate('/contactUs')}>Book a Free Strategy Call</button>
 				</div>
 			</section>
 
@@ -68,6 +68,19 @@ function Services() {
 						</div>
 					</article>
 				})}
+			</section>
+
+			<section className='services-pricing-section'>
+				<h2>Pricing That Fits What You Actually Need</h2>
+				<p className='services-pricing-body'>
+					We don't sell fixed packages, because a $50K/month Amazon seller and a $500K/month
+					Shopify brand have different problems that need different solutions. Tell us where you
+					are and what you're trying to do, we'll put together a straightforward proposal within
+					48 hours. No fluff, no upsell tiers.
+				</p>
+				<button className='services-pricing-btn' onClick={() => navigate('/contactUs')}>
+					Get a Custom Proposal →
+				</button>
 			</section>
 
 			<section className='faq-section'>

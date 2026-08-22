@@ -16,6 +16,14 @@ function Header() {
 
 	return (
 		<div className='techticks-header'>
+			<div className='announcement-bar'>
+				<span>
+					Ecommerce Growth Agency for US Brands: Amazon · TikTok Shop · Shopify · Paid Ads · Design · Web Dev
+				</span>
+				<Link to='/contactUs' className='announcement-bar-cta'>
+					Book a Free Strategy Call →
+				</Link>
+			</div>
 			<SideTinyStarsBg />
 			<div className='Navbar'>
 				<div className='upper-content'>
@@ -80,7 +88,7 @@ function Header() {
 							<NavLink
 								to='/portfolio'
 								className='nav-link'>
-								Portfolio
+								Case Studies
 							</NavLink>
 
 							<NavLink
@@ -98,7 +106,7 @@ function Header() {
 							<button
 								onClick={() => navigate('/contactUs')}
 								className='header-btn'>
-								Contact Us
+								Book a Free Call
 							</button>
 						</nav>
 					</div>
@@ -147,7 +155,7 @@ function Header() {
 								to='/portfolio'
 								className='nav-link'
 								onClick={() => setIsMobileMenuOpen(false)}>
-								Portfolio
+								Case Studies
 							</NavLink>
 
 							<NavLink
@@ -169,7 +177,7 @@ function Header() {
 									setIsMobileMenuOpen(false)
 									navigate('/contactUs')
 								}}>
-								Contact us
+								Book a Free Call
 							</button>
 
 							<NavLink
