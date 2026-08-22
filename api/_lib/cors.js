@@ -21,7 +21,11 @@ export function withCors(handler) {
 			res.setHeader('Access-Control-Allow-Credentials', 'true')
 		}
 		res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE,OPTIONS')
-		res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+		// X-Filename: mediaService.js's raw-binary upload (api/media/upload.js)
+		// sends this alongside Content-Type — same-origin requests never hit
+		// this check, which is why the gap only showed up cross-origin
+		// (techticks.org calling the techticks-new.vercel.app API).
+		res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Filename')
 		res.setHeader('Vary', 'Origin')
 
 		if (req.method === 'OPTIONS') {
