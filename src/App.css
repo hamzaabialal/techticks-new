@@ -14131,6 +14131,23 @@ textarea,
 .ssp-page--development .ssp-process-step h4 { margin: 0 0 9px; font-size: 17px; font-weight: 500; }
 .ssp-page--development .ssp-process-step p { margin: 0; color: #92929a; font-size: 13px; line-height: 1.4; }
 
+/* ── Ecommerce Management portfolio ─────────────────────────────── */
+.ssp-page--ecommerce-management .ssp-portfolio { max-width: 1260px; margin: 0 auto; padding: 62px 32px; }
+.ssp-page--ecommerce-management .ssp-portfolio-header { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 36px; }
+.ssp-page--ecommerce-management .ssp-portfolio-header h2 { margin: 0; max-width: 440px; font-size: clamp(28px, 3vw, 42px); line-height: 1.14; font-weight: 500; color: #fff; }
+.ssp-page--ecommerce-management .ssp-portfolio-subtitle { flex-basis: 100%; margin: 8px 0 0; color: #a8a8b0; font-size: 14px; }
+.ssp-page--ecommerce-management .ssp-portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.ssp-page--ecommerce-management .ssp-portfolio-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border-radius: 12px; background: #0a0a0a; border: 1px solid rgba(255,255,255,.07); }
+.ssp-page--ecommerce-management .ssp-portfolio-image { position: relative; width: 100%; height: 220px; flex: 0 0 auto; overflow: hidden; background: #111; }
+.ssp-page--ecommerce-management .ssp-portfolio-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.ssp-page--ecommerce-management .ssp-portfolio-content { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 18px; background: #0a0a0a; }
+.ssp-page--ecommerce-management .ssp-portfolio-content h3 { margin: 0; color: #fff; font-size: 16px; font-weight: 500; }
+.ssp-page--ecommerce-management .ssp-portfolio-tag { flex: 0 0 auto; padding: 5px 12px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; color: #f2f2f2; background: transparent; font-size: 11px; font-weight: 500; white-space: nowrap; }
+@media (max-width: 768px) {
+  .ssp-page--ecommerce-management .ssp-portfolio-grid { grid-template-columns: 1fr; }
+  .ssp-page--ecommerce-management .ssp-portfolio { padding: 40px 20px; }
+}
+
 /* CTA band intentionally has no page-scoped override — .ssp-cta (App.css, "FINAL CTA" section) is the single shared treatment used by every service page. */
 
 @media (max-width: 768px) {
