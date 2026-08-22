@@ -54,49 +54,19 @@ export function verifySession(token) {
 	return jwt.verify(token, JWT_SECRET)
 }
 
-const COOKIE_NAME = 'cms_session'
-
-function isProd() {
-	return process.env.VERCEL_ENV === 'production'
-}
-
-// SameSite=Lax cookies are never attached to a cross-site fetch/XHR — only
-// to a top-level navigation. The frontend (techticks.org) and this API
-// (techticks-new.vercel.app) are different registrable domains, so every
-// credentialed request after login was silently losing the cookie under
-// Lax. SameSite=None is required to make a cookie cross-site-sendable at
-// all, and browsers reject None outright unless Secure is also present —
-// which only works over HTTPS, hence still falling back to Lax (no Secure)
-// for local http dev.
-function cookieAttributes() {
-	if (isProd()) return ['SameSite=None', 'Secure']
-	return ['SameSite=Lax']
-}
-
-export function setSessionCookie(res, token) {
-	const parts = [
-		`${COOKIE_NAME}=${token}`,
-		'HttpOnly',
-		'Path=/',
-		...cookieAttributes(),
-		`Max-Age=${SESSION_DURATION_SECONDS}`,
-	]
-	res.setHeader('Set-Cookie', parts.join('; '))
-}
-
-export function clearSessionCookie(res) {
-	const parts = [`${COOKIE_NAME}=`, 'HttpOnly', 'Path=/', ...cookieAttributes(), 'Max-Age=0']
-	res.setHeader('Set-Cookie', parts.join('; '))
-}
-
-// Vercel's Node.js request object pre-parses req.cookies, matching how this
-// codebase already relies on req.query/req.body being pre-parsed — but the
-// manual req.headers.cookie fallback costs a few lines and removes doubt.
+// Header-based, not cookie-based: the frontend (techticks.org) and this API
+// (techticks-new.vercel.app) are different registrable domains, and modern
+// browsers — Chrome Incognito by default already, regular Chrome rolling
+// out the same policy — block third-party cookies outright regardless of
+// SameSite/Secure attributes. No cookie attribute combination fixes that;
+// the only reliable cross-site option (short of putting the API behind a
+// same-site subdomain) is sending the token as an Authorization header,
+// which isn't subject to cookie policy at all. The token itself is stored
+// client-side (see src/services/apiClient.js) and attached manually.
 export function getSessionToken(req) {
-	if (req.cookies && req.cookies[COOKIE_NAME]) return req.cookies[COOKIE_NAME]
-	const header = req.headers.cookie || ''
-	const match = header.match(new RegExp(`(?:^|;\\s*)${COOKIE_NAME}=([^;]+)`))
-	return match ? decodeURIComponent(match[1]) : null
+	const header = req.headers.authorization || ''
+	const match = header.match(/^Bearer (.+)$/)
+	return match ? match[1] : null
 }
 
 export function getClientIp(req) {

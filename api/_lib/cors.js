@@ -1,8 +1,6 @@
-// ALLOWED_ORIGIN is an explicit allow-list, not "*" — the session cookie
-// travels on every credentialed request now (see api/_lib/auth.js), and
-// Access-Control-Allow-Credentials: true is never valid paired with a
-// wildcard origin anyway. Restricting the origin also closes the "any
-// page's visitor browser scripts a credentialed request" vector for free.
+// ALLOWED_ORIGIN is an explicit allow-list, not "*" — closes off "any page's
+// visitor browser scripts a request carrying the session token" even though
+// auth is header-based now (see api/_lib/auth.js), not a cookie.
 function getAllowedOrigins() {
 	return (process.env.ALLOWED_ORIGIN || '')
 		.split(',')
@@ -18,14 +16,14 @@ export function withCors(handler) {
 		const allowed = getAllowedOrigins()
 		if (origin && allowed.includes(origin)) {
 			res.setHeader('Access-Control-Allow-Origin', origin)
-			res.setHeader('Access-Control-Allow-Credentials', 'true')
 		}
 		res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE,OPTIONS')
 		// X-Filename: mediaService.js's raw-binary upload (api/media/upload.js)
-		// sends this alongside Content-Type — same-origin requests never hit
-		// this check, which is why the gap only showed up cross-origin
-		// (techticks.org calling the techticks-new.vercel.app API).
-		res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Filename')
+		// sends this alongside Content-Type. Authorization: the session token
+		// (see api/_lib/auth.js — header-based, not a cookie, precisely so
+		// cross-origin calls like techticks.org -> this API aren't at the
+		// mercy of third-party cookie blocking).
+		res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Filename, Authorization')
 		res.setHeader('Vary', 'Origin')
 
 		if (req.method === 'OPTIONS') {

@@ -1,16 +1,35 @@
 // Low-level fetch helpers shared by postService.js and authService.js.
-// credentials: 'include' on every request so the httpOnly session cookie
-// (set by /api/auth/login) travels on both same-origin and the documented
-// cross-port local dev topology — without it, the API would never see the
-// cookie and every protected route would 401.
+// Auth is a bearer token attached manually via the Authorization header, not
+// a cookie — the frontend (techticks.org) and this API
+// (techticks-new.vercel.app) are different registrable domains, and modern
+// browsers block third-party cookies on exactly that kind of cross-site
+// request regardless of cookie attributes. A header sidesteps cookie policy
+// entirely. See api/_lib/auth.js for the server side of this.
 
 export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || ''
 
+const TOKEN_STORAGE_KEY = 'techticks_cms_token'
+
+export function getToken() {
+	return localStorage.getItem(TOKEN_STORAGE_KEY)
+}
+
+export function setToken(token) {
+	localStorage.setItem(TOKEN_STORAGE_KEY, token)
+}
+
+export function clearToken() {
+	localStorage.removeItem(TOKEN_STORAGE_KEY)
+}
+
 export async function apiFetch(path, { method = 'GET', body } = {}) {
+	const token = getToken()
+	const headers = { 'Content-Type': 'application/json' }
+	if (token) headers.Authorization = `Bearer ${token}`
+
 	const res = await fetch(`${API_BASE_URL}${path}`, {
 		method,
-		credentials: 'include',
-		headers: { 'Content-Type': 'application/json' },
+		headers,
 		body: body !== undefined ? JSON.stringify(body) : undefined,
 	})
 

@@ -1,6 +1,6 @@
 import { getDb } from '../_lib/db.js'
 import { ensureAuthSchema, findUserByEmail, checkThrottle, recordLoginFailure, clearThrottle } from '../_lib/users-repo.js'
-import { verifyPassword, signSession, setSessionCookie, getClientIp } from '../_lib/auth.js'
+import { verifyPassword, signSession, getClientIp } from '../_lib/auth.js'
 import { defineHandler, rateLimited } from '../_lib/handler.js'
 
 function invalidCredentials() {
@@ -9,9 +9,10 @@ function invalidCredentials() {
 	throw err
 }
 
-// POST /api/auth/login — verifies credentials, issues the session cookie.
-// Throttle is checked (and can short-circuit with a 429) before the users
-// table is even queried or any password comparison runs.
+// POST /api/auth/login — verifies credentials, returns the session token in
+// the response body (see api/_lib/auth.js for why this is header-based auth,
+// not a cookie). Throttle is checked (and can short-circuit with a 429)
+// before the users table is even queried or any password comparison runs.
 export default defineHandler({
 	POST: async (req, res) => {
 		const db = getDb()
@@ -44,7 +45,6 @@ export default defineHandler({
 		await clearThrottle(db, 'ip', ip)
 
 		const token = signSession(user)
-		setSessionCookie(res, token)
-		res.status(200).json({ id: user.id, name: user.name, email: user.email, role: user.role })
+		res.status(200).json({ id: user.id, name: user.name, email: user.email, role: user.role, token })
 	},
 })
