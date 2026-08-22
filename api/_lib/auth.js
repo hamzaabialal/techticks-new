@@ -60,21 +60,32 @@ function isProd() {
 	return process.env.VERCEL_ENV === 'production'
 }
 
+// SameSite=Lax cookies are never attached to a cross-site fetch/XHR — only
+// to a top-level navigation. The frontend (techticks.org) and this API
+// (techticks-new.vercel.app) are different registrable domains, so every
+// credentialed request after login was silently losing the cookie under
+// Lax. SameSite=None is required to make a cookie cross-site-sendable at
+// all, and browsers reject None outright unless Secure is also present —
+// which only works over HTTPS, hence still falling back to Lax (no Secure)
+// for local http dev.
+function cookieAttributes() {
+	if (isProd()) return ['SameSite=None', 'Secure']
+	return ['SameSite=Lax']
+}
+
 export function setSessionCookie(res, token) {
 	const parts = [
 		`${COOKIE_NAME}=${token}`,
 		'HttpOnly',
 		'Path=/',
-		'SameSite=Lax',
+		...cookieAttributes(),
 		`Max-Age=${SESSION_DURATION_SECONDS}`,
 	]
-	if (isProd()) parts.push('Secure')
 	res.setHeader('Set-Cookie', parts.join('; '))
 }
 
 export function clearSessionCookie(res) {
-	const parts = [`${COOKIE_NAME}=`, 'HttpOnly', 'Path=/', 'SameSite=Lax', 'Max-Age=0']
-	if (isProd()) parts.push('Secure')
+	const parts = [`${COOKIE_NAME}=`, 'HttpOnly', 'Path=/', ...cookieAttributes(), 'Max-Age=0']
 	res.setHeader('Set-Cookie', parts.join('; '))
 }
 
