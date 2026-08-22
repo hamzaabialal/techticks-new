@@ -11,8 +11,6 @@ import designPortfolioPackaging from './images/portfolio-stock/design-packaging.
 import ecomPortfolioAmazon from './images/portfolio-stock/dev-amazon-listing-design.jpg'
 import ecomPortfolioSaas from './images/portfolio-stock/dev-saas-platform.png'
 import ecomPortfolioAutomotive from './images/portfolio-stock/dev-automotive-website.png'
-import devPortfolioLandingPage from './images/portfolio-stock/dev-landing-page.jpg'
-import devPortfolioSupport from './images/portfolio-stock/dev-ongoing-support.jpg'
 import devGuardxflow from './images/portfolio-stock/dev-guardxflow.png'
 import devSparkFitness from './images/portfolio-stock/dev-spark-fitness.png'
 import devHostyoHome from './images/portfolio-stock/dev-hostyo-home.png'
