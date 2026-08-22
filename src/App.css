@@ -13559,6 +13559,14 @@ textarea,
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.ssp-services-grid--single {
+	grid-template-columns: 1fr;
+}
+
+.ssp-services-grid--single .ssp-card-bullets {
+	max-width: 640px;
+}
+
 @media (max-width: 900px) {
 	.ssp-services-grid--bullets {
 		grid-template-columns: 1fr;

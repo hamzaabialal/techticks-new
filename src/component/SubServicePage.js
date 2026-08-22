@@ -127,7 +127,7 @@ function SubServicePage({ data }) {
 					<p>{servicesSubtitle || 'Every deliverable is built for results - nothing included just to pad the scope.'}</p>
 				</div>
 
-				<div className={`ssp-services-grid${services.some((s) => s.bullets?.length > 0) ? ' ssp-services-grid--bullets' : ''}`}>
+				<div className={`ssp-services-grid${services.some((s) => s.bullets?.length > 0) ? ' ssp-services-grid--bullets' : ''}${services.length === 1 ? ' ssp-services-grid--single' : ''}`}>
 					{services.map((s, i) => {
 						const serviceLink = s.ctaLink || s.link
 						const serviceLabel = s.ctaText || 'View detail →'
