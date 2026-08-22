@@ -8,11 +8,15 @@ import designPortfolioAmazon from './images/portfolio-stock/design-amazon-a-plus
 import designPortfolioBrand from './images/portfolio-stock/design-brand-identity.jpg'
 import designPortfolioTiktok from './images/portfolio-stock/design-tiktok-creative.jpg'
 import designPortfolioPackaging from './images/portfolio-stock/design-packaging.jpg'
-import devPortfolioShopify from './images/portfolio-stock/dev-shopify-storefront.jpg'
-import devPortfolioRedesign from './images/portfolio-stock/dev-site-redesign.jpg'
-import devPortfolioCustomBuild from './images/portfolio-stock/dev-custom-build.jpg'
-import devPortfolioLandingPage from './images/portfolio-stock/dev-landing-page.jpg'
-import devPortfolioSupport from './images/portfolio-stock/dev-ongoing-support.jpg'
+import ecomPortfolioAmazon from './images/portfolio-stock/dev-amazon-listing-design.jpg'
+import ecomPortfolioSaas from './images/portfolio-stock/dev-saas-platform.png'
+import ecomPortfolioAutomotive from './images/portfolio-stock/dev-automotive-website.png'
+import devGuardxflow from './images/portfolio-stock/dev-guardxflow.png'
+import devSparkFitness from './images/portfolio-stock/dev-spark-fitness.png'
+import devHostyoHome from './images/portfolio-stock/dev-hostyo-home.png'
+import devHostyoCrm from './images/portfolio-stock/dev-hostyo-crm.jpeg'
+import devHostyoProperties from './images/portfolio-stock/dev-hostyo-properties.png'
+import devRetellAi from './images/portfolio-stock/dev-retell-ai.jpeg'
 import techLogo2 from './images/services-slider/slider2.png'
 import techLogo3 from './images/services-slider/slider3.png'
 import techLogo4 from './images/services-slider/slider4.png'
@@ -130,6 +134,15 @@ const detailPageContent = {
 				{ title: 'Amazon Growth', desc: 'PPC management, ranking strategies, and full-funnel Amazon advertising to dominate your category.', link: '/amazon', linkText: 'Learn more' },
 				{ title: 'Shopify Development', desc: 'Custom Shopify storefronts built for speed, conversion, and brand experience, from scratch or migration.', link: '/services/development', linkText: 'Learn more' },
 				{ title: 'Digital Marketing', desc: 'Paid social, influencer seeding, and email flows that drive qualified traffic to your stores.', link: '/services/digital-marketing', linkText: 'Learn more' },
+			],
+		},
+		portfolio: {
+			title: 'Let The Results Do The Talking',
+			subtitle: 'A look at the type of ecommerce work we deliver — not specific client case studies.',
+			items: [
+				{ image: ecomPortfolioAmazon, title: 'Amazon Listing Design', category: 'Amazon A+ Content & Listings' },
+				{ image: ecomPortfolioSaas, title: 'SaaS Platform Store', category: 'Shopify & Custom Development' },
+				{ image: ecomPortfolioAutomotive, title: 'Automotive E-commerce Build', category: 'Custom E-commerce' },
 			],
 		},
 		cta: {
@@ -1645,12 +1658,12 @@ detailPageContent.development = {
 		title: 'What a TechTicks Build Looks Like',
 		subtitle: 'A look at the type of builds we deliver - not specific client case studies.',
 		items: [
-			{ image: devPortfolioShopify, title: 'Shopify Storefront Example', category: 'Shopify Development' },
-			{ image: devPortfolioRedesign, title: 'Site Redesign Example', category: 'Redesigns & Migrations' },
-			{ image: devPortfolioCustomBuild, title: 'Custom Build Example', category: 'Custom Website Design & Build' },
-			{ image: devPortfolioLandingPage, title: 'Landing Page Example', category: 'Landing Pages' },
-			{ image: portfolioLanding, title: 'Performance Optimization Example', category: 'Speed & Performance Optimization' },
-			{ image: devPortfolioSupport, title: 'Ongoing Support Example', category: 'Maintenance & Support' },
+			{ image: devGuardxflow, title: 'GuardXFlow', category: 'SaaS Web Application' },
+			{ image: devSparkFitness, title: 'Spark Fitness', category: 'Gym Management App' },
+			{ image: devHostyoHome, title: 'Hostyo', category: 'Property Management Platform' },
+			{ image: devHostyoCrm, title: 'Hostyo CRM', category: 'Custom CRM Dashboard' },
+			{ image: devHostyoProperties, title: 'Hostyo Properties', category: 'Multi-Property Management' },
+			{ image: devRetellAi, title: 'RetellAI Agent Builder', category: 'AI Voice Agent Platform' },
 		],
 	},
 	cta: {

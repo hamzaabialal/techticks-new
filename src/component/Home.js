@@ -24,7 +24,6 @@ import picture19 from '../component/images/slideriImages/Group 320.png'
 import picture20 from '../component/images/slideriImages/Group 321.png'
 import picture21 from '../component/images/slideriImages/Group 322.png'
 import Slider from '../slider'
-import frameIcon from '../component/images/Frame.png'
 import CtaCard from './Cta-card'
 
 import {
@@ -38,13 +37,14 @@ import {
 	FaWhatsapp,
 	FaChevronDown,
 	FaChevronUp,
+	FaSearch,
+	FaBullhorn,
+	FaUsers,
 } from 'react-icons/fa'
 
-import { Chrome, Code2, Hourglass } from 'lucide-react'
+import { Code2, Palette, TrendingUp, Rocket, Shield, Clock } from 'lucide-react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { GoFileDirectory } from 'react-icons/go'
 import { LuRadioTower } from 'react-icons/lu'
-import { BsLaptop, BsPhone } from 'react-icons/bs'
 import Testimonials from './testonomial'
 import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
@@ -54,69 +54,65 @@ function Home() {
 	const navigate = useNavigate()
 	const faqData = [
 		{
-			question: 'What types of brands do you work with?',
-			answer: 'We work with US ecommerce brands - from solo Amazon sellers doing $50K a month to seven-figure Shopify DTC brands and multi-channel retailers across Amazon, TikTok Shop, Shopify, Walmart, eBay and Etsy.',
+			question: 'What types of businesses do you work with?',
+			answer: 'We work with startups, growing brands, and established businesses across ecommerce, SaaS, real estate, and service-based industries — from solo founders to seven-figure operations that need a reliable tech and marketing partner.',
 		},
 		{
-			question: 'Can I hire TechTicks for a single platform or service?',
-			answer: 'Yes. Whether you need only Amazon PPC, a Shopify build, TikTok Shop management, or a single design or marketing service, you can choose exactly what you need without committing to a full package.',
+			question: 'Can I hire TechTicks for a single service?',
+			answer: 'Yes. Whether you need only a website, SEO, a design project, or a single ad campaign, you can engage us for exactly what you need without committing to a full package.',
 		},
 		{
 			question: 'Do you offer ongoing account and website management?',
-			answer: 'Yes. We provide ongoing management across all six marketplaces and your owned channels - handling listings, ads, updates, performance monitoring, security, and continuous optimisation so everything keeps running and growing.',
+			answer: 'Yes. We provide ongoing management across your digital presence — handling updates, performance monitoring, ad optimisation, and continuous improvements so everything keeps running and growing.',
 		},
-
-		// You can add more items
+		{
+			question: 'How long does it take to see results?',
+			answer: 'It depends on the service. Paid advertising can show results within the first week, SEO typically takes 3–6 months to build momentum, and a website build usually takes 2–6 weeks depending on scope.',
+		},
 	]
 
 	const [openIndex, setOpenIndex] = useState(0)
 
 	const servicesData = [
 		{
-			icon: (
-				<img
-					src={frameIcon}
-					alt='design icon'
-					style={{ width: '32px', height: '32px' }}
-				/>
-			),
-			title: 'AMAZON',
-			text: 'Listings, PPC, A+ Content, Brand Registry, and full Seller Central account management built around your actual margins.',
+			icon: <Palette />,
+			title: 'DESIGN',
+			text: 'We create conversion-focused designs, including UI/UX, branding, social media creatives, and Amazon listing visuals that perform across all platforms.',
 		},
 		{
-			icon: <Chrome />,
-			title: 'TIKTOK SHOP',
-			text: 'Store setup, creator affiliate programs, UGC content strategy, and TikTok Ads that turn views into sales.',
+			icon: <FaSearch />,
+			title: 'SEO',
+			text: 'We improve your search visibility through technical optimization, keyword strategy, and content structure built for long-term organic growth.',
 		},
 		{
 			icon: <Code2 />,
-			title: 'SHOPIFY',
-			text: 'Custom store development, CRO, app integration, and clean migrations engineered to convert for DTC brands.',
+			title: 'DEVELOPMENT',
+			text: 'We build fast, secure, and scalable websites and digital products designed for performance, reliability, and future expansion.',
 		},
 		{
-			icon: <Hourglass />,
-			title: 'WALMART',
-			text: 'Seller Center setup, listing optimisation, Walmart Connect Ads, and WFS - less competition, profitable sales.',
-		},
-		{
-			icon: <BsLaptop />,
-			title: 'EBAY',
-			text: 'Store setup, Cassini-optimised listings, Promoted Listings, and repricing strategy that protects your margin.',
-		},
-		{
-			icon: <BsPhone />,
-			title: 'ETSY',
-			text: 'Shop optimisation, listing SEO, Etsy Ads, and Star Seller strategy to reach buyers with real purchase intent.',
-		},
-		{
-			icon: <GoFileDirectory />,
-			title: 'DIGITAL MARKETING',
-			text: 'Meta Ads, Google Ads, SEO, email & SMS, and social media - built as one integrated system, not separate campaigns.',
+			icon: <FaBullhorn />,
+			title: 'ADVERTISING',
+			text: 'We run high-ROI campaigns across Meta, Google, and TikTok — data-driven strategies built to maximize every dollar of ad spend.',
 		},
 		{
 			icon: <LuRadioTower />,
-			title: 'WEBSITE DEVELOPMENT',
-			text: 'Fast, secure, conversion-ready Shopify, WordPress, and custom builds - no bloat, no checkout that leaks revenue.',
+			title: 'ECOMMERCE',
+			text: 'Amazon, TikTok Shop, Shopify, Walmart — we manage your entire multi-channel ecommerce operation under one roof.',
+		},
+		{
+			icon: <FaUsers />,
+			title: 'SOCIAL MEDIA',
+			text: 'Content strategy, creation, and community management that grows your audience and drives real engagement across every platform.',
+		},
+		{
+			icon: <TrendingUp />,
+			title: 'GROWTH STRATEGY',
+			text: 'Data-driven growth plans built around your business goals — combining paid, organic, and retention into one clear roadmap.',
+		},
+		{
+			icon: <Shield />,
+			title: 'MAINTENANCE',
+			text: 'Ongoing support, updates, security monitoring, and performance optimization to keep your digital presence running at full speed.',
 		},
 	]
 
@@ -362,36 +358,28 @@ function Home() {
 
 					<div className='heading'>
 						<h1>
-							<span>Grow</span>
-							<span>Your</span>
-							<span>Brand</span>
-							<span>on</span>
-							<span>Amazon,</span>
-							<span>TikTok</span>
-							<span>Shop,</span>
-							<span>Shopify</span>
-							<span>&</span>
-							<span>Every</span>
-							<span>Channel</span>
-							<span>That</span>
-							<span>Matters</span>
+							<span>Give</span>
+							<span className='hero-highlight'>Your</span>
+							<span className='hero-highlight'>Business</span>
+							<span>the</span>
+							<span>Digital</span>
+							<span className='hero-highlight'>Edge</span>
+							<span className='hero-highlight'>It</span>
+							<span>Deserves</span>
 						</h1>
 					</div>
 
 					<div className='sub-heading'>
 						<p>
-							TechTicks is a full-service ecommerce agency that
-							handles everything from Amazon PPC and TikTok creator
-							affiliate programs
-							<br></br> to Shopify builds and paid social - so you
-							can focus on your product while we focus on your
-							growth.
+							Transform your brand's presence with cutting-edge
+							design, marketing, and eCommerce solutions built
+							for growth.
 						</p>
 					</div>
 
 					<div className='home-hero-ctas'>
 						<button onClick={() => navigate('/contactUs')}>
-							Book a Free Strategy Call
+							Start Now
 						</button>
 						<button className='home-hero-cta-secondary' onClick={() => navigate('/portfolio')}>
 							See Our Work
@@ -857,6 +845,38 @@ function Home() {
 					</div>
 				</div>
 			</section>
+
+			{/** value props section */}
+			<section className='value-props-section'>
+				<div className='value-props-inner'>
+					<div className='value-props-header'>
+						<h2>We're here to simplify technology for every business.</h2>
+					</div>
+					<div className='value-props-grid'>
+						<div className='value-prop-card'>
+							<div className='value-prop-icon'><Rocket /></div>
+							<h3>Built to Scale</h3>
+							<p>Our solutions grow with your business — from startup to enterprise without rebuilding from scratch.</p>
+						</div>
+						<div className='value-prop-card'>
+							<div className='value-prop-icon'><Shield /></div>
+							<h3>Quality Every Time</h3>
+							<p>No cutting corners. Every deliverable is reviewed against real performance benchmarks before it ships.</p>
+						</div>
+						<div className='value-prop-card'>
+							<div className='value-prop-icon'><Clock /></div>
+							<h3>Support That Stays</h3>
+							<p>We don't disappear after launch. Ongoing support, monitoring, and optimisation are built into how we work.</p>
+						</div>
+						<div className='value-prop-card'>
+							<div className='value-prop-icon'><TrendingUp /></div>
+							<h3>Efficiency Obsessed</h3>
+							<p>Faster execution, leaner processes, and strategies that compound — so every dollar works harder over time.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/**services */}
 			<section>
 				{' '}

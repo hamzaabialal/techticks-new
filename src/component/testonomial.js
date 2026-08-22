@@ -19,7 +19,7 @@ function Testimonials({ categories }) {
 			img: avatarSamLui,
 			name: 'Sam Lui',
 			title: 'Design - Sam Lui, GlowSkin Co.',
-			subtitle: 'Founder of GreenEarth Eco Store',
+			subtitle: 'Founder, GlowSkin Co.',
 			text: 'TechTicks transformed our website and app with stunning, user-friendly designs. Our customers love the new look, and our engagement has skyrocketed!',
 			category: 'Design',
 		},
@@ -27,7 +27,7 @@ function Testimonials({ categories }) {
 			img: avatarAhmedRaza,
 			name: 'Ryan Bennett',
 			title: 'SEO - Ryan Bennett, BuildPro Solutions',
-			subtitle: 'Head of Product at HealthTech',
+			subtitle: 'CEO, BuildPro Solutions',
 			text: 'Our search rankings improved dramatically after working with TechTicks. Their SEO strategy brought us consistent, high-quality traffic and leads.',
 			category: 'SEO',
 		},
@@ -35,7 +35,7 @@ function Testimonials({ categories }) {
 			img: avatarBilalHussain,
 			name: 'Brandon Cole',
 			title: 'Development - Brandon Cole, FinTrack',
-			subtitle: 'Marketing Director',
+			subtitle: 'CTO, FinTrack',
 			text: 'They developed a fast, secure, and reliable platform for our services. The performance and scalability of the website exceeded our expectations.',
 			category: 'Development',
 		},
@@ -43,7 +43,7 @@ function Testimonials({ categories }) {
 			img: avatarEmilyRodriguez,
 			name: 'Emily Rodriguez',
 			title: 'Advertising - Emily Rodriguez, NovaEdge',
-			subtitle: 'Marketing Director',
+			subtitle: 'Head of Growth, NovaEdge',
 			text: "TechTicks crafted targeted campaigns across social media and search engines. We've seen measurable growth and ROI that truly stands out.",
 			category: 'Advertising',
 		},
@@ -51,7 +51,7 @@ function Testimonials({ categories }) {
 			img: avatarFrancTin,
 			name: 'Franc Tin',
 			title: 'Maintenance - Franc Tin, HealthBridge Clinic',
-			subtitle: 'Marketing Director',
+			subtitle: 'Operations Manager, HealthBridge',
 			text: 'Their maintenance team keeps our systems running smoothly 24/7. Updates, monitoring, and support are handled professionally without any downtime.',
 			category: 'Maintenance',
 		},
@@ -59,7 +59,7 @@ function Testimonials({ categories }) {
 			img: avatarAliMalik,
 			name: 'Austin Reed',
 			title: 'Social Media - Austin Reed, TrendWear',
-			subtitle: 'Marketing Director',
+			subtitle: 'Founder, TrendWear',
 			text: 'Our social media presence has grown consistently thanks to TechTicks. They manage our profiles, boost engagement, and align with our brand perfectly.',
 			category: 'Social Media',
 		},
@@ -67,7 +67,7 @@ function Testimonials({ categories }) {
 			img: avatarJasonLee,
 			name: 'Jason Lee',
 			title: 'Migration - Jason Lee, BrightTech',
-			subtitle: 'Marketing Director',
+			subtitle: 'Co-founder, BrightTech',
 			text: 'We migrated our website and e-commerce platform seamlessly. TechTicks ensured zero downtime, preserved performance, and maintained SEO value.',
 			category: 'Migration',
 		},
@@ -75,7 +75,7 @@ function Testimonials({ categories }) {
 			img: avatarMichaelBrown,
 			name: 'Michael Brown',
 			title: 'E-commerce - Michael Brown, StartSpark',
-			subtitle: 'Marketing Director',
+			subtitle: 'Director of E-commerce, StartSpark',
 			text: 'The custom e-commerce solution provided by TechTicks perfectly matches our industry needs. It improved customer experience and sales.',
 			category: 'E-commerce',
 		},
@@ -83,7 +83,7 @@ function Testimonials({ categories }) {
 			img: avatarDanielCarter,
 			name: 'Daniel Carter',
 			title: 'Multi-Service - Daniel Carter, LearnHub',
-			subtitle: 'Marketing Director',
+			subtitle: 'Product Lead, LearnHub',
 			text: 'From design to development and marketing, TechTicks handled everything with precision. Their expertise across multiple areas made our project a success.',
 			category: 'Multi-Service',
 		},
@@ -91,15 +91,16 @@ function Testimonials({ categories }) {
 			img: avatarZainAli,
 			name: 'Ethan Brooks',
 			title: 'Ongoing Support - Ethan Brooks, UrbanSpace',
-			subtitle: 'Marketing Director',
+			subtitle: 'Co-founder, UrbanSpace',
 			text: 'Even after launch, TechTicks provides reliable support. Their team is always responsive, helping us resolve issues quickly and efficiently.',
 			category: 'Ongoing Support',
 		},
 	]
 
-	const filtered = categories?.length
+	const categoryFiltered = categories?.length
 		? testimonials.filter((t) => categories.includes(t.category))
 		: testimonials
+	const filtered = categoryFiltered.length >= 4 ? categoryFiltered : testimonials
 
 	// Embla's loop:true + AutoScroll need the duplicated track to be comfortably
 	// wider than any real viewport, or the loop has no room to scroll and freezes/glitches.
