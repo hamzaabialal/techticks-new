@@ -123,11 +123,11 @@ function AppShell() {
 					<Route path='/services/ui-ux-design/website-landing-page-ui' element={<SubServicePage data={subServicesData['ui-ux-design/website-landing-page-ui']} />} />
 					<Route path='/services/web-development' element={<SubServicePage data={subServicesData['development']} />} />
 					<Route path='/services/web-development/shopify-store-development' element={<SubServicePage data={subServicesData['web-development/shopify-store-development']} />} />
-					<Route path='/services/web-development/custom-website-design-build' element={<SubServicePage data={subServicesData['web-development/custom-website-design-build']} />} />
-					<Route path='/services/web-development/redesigns-migrations' element={<SubServicePage data={subServicesData['web-development/redesigns-migrations']} />} />
+					<Route path='/services/web-development/wordpress-woocommerce' element={<SubServicePage data={subServicesData['web-development/wordpress-woocommerce']} />} />
 					<Route path='/services/web-development/landing-pages' element={<SubServicePage data={subServicesData['web-development/landing-pages']} />} />
 					<Route path='/services/web-development/speed-performance-optimization' element={<SubServicePage data={subServicesData['web-development/speed-performance-optimization']} />} />
 					<Route path='/services/web-development/maintenance-support' element={<SubServicePage data={subServicesData['web-development/maintenance-support']} />} />
+					<Route path='/services/web-development/custom-web-application-development' element={<SubServicePage data={subServicesData['web-development/custom-web-application-development']} />} />
 					<Route path='/services/graphic-design' element={<SubServicePage data={subServicesData['graphic-design']} />} />
 					<Route path='/services/graphic-design/brand-identity-logo-design' element={<SubServicePage data={subServicesData['graphic-design/brand-identity-logo-design']} />} />
 					<Route path='/services/graphic-design/amazon-creative-design' element={<SubServicePage data={subServicesData['graphic-design/amazon-creative-design']} />} />

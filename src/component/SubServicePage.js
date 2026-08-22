@@ -175,6 +175,21 @@ function SubServicePage({ data }) {
 				</section>
 			)}
 
+			{/* ── TECH STACK (optional) ────────────────── */}
+			{data.techStack && (
+				<section className='ssp-tech-stack'>
+					<p className='ssp-tech-stack-label'>{data.techStack.label || 'What we build with'}</p>
+					<div className='ssp-tech-stack-grid'>
+						{data.techStack.groups.map((group) => (
+							<div key={group.title} className='ssp-tech-stack-group'>
+								<h4>{group.title}</h4>
+								<p>{group.items}</p>
+							</div>
+						))}
+					</div>
+				</section>
+			)}
+
 			{data.portfolioBeforeProcess && data.portfolio && (
 				<section className='ssp-portfolio'>
 					<div className='ssp-portfolio-header'>

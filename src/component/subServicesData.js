@@ -1917,14 +1917,13 @@ detailPageContent.development = {
 	hero: {
 		...detailPageContent.development.hero,
 		titleSegments: [
-			{ text: 'Websites ' },
-			{ text: 'built to', gradient: true },
-			{ text: ' sell not just ' },
-			{ text: 'exists', gradient: true },
-			{ text: '.' },
+			{ text: 'A Slow or Confusing Website Is ' },
+			{ text: 'Costing You Sa', gradient: true },
+			{ text: 'les Every Single Day' },
 		],
-		subtitle: 'Responsive, conversion-optimized, ecommerce-ready builds, designed and developed in-house so nothing gets lost in the handoff.',
-		ctaText: 'Get A Free Consultation',
+		subtitle:
+			"You can have great products, a healthy ad budget, and a strong brand and still have a website that loses buyers before they buy. Load time, navigation, product page layout, checkout friction — any one of these can be the reason your conversion rate is lower than it should be. TechTicks builds websites that are fast, clear, and commercially effective. And for existing sites, we find the exact problems before recommending anything.",
+		ctaText: 'Book a Free Website Audit',
 	},
 	platformLogosLabel: 'Platforms & technologies we build on',
 	platformLogos: [
@@ -1934,15 +1933,15 @@ detailPageContent.development = {
 		{ image: techLogo5, alt: 'Oaks Craft' },
 		{ image: techLogo6, alt: 'Crazy Cups' },
 	],
-	servicesTitle: 'Every build, every channel.',
+	servicesTitle: 'Services — Web Dev',
 	servicesSubtitle: "From first commit to post-launch support - we handle the full development lifecycle so your team doesn't have to.",
 	services: [
-		{ num: '01', title: 'Shopify Store Development', desc: 'Custom themes, app integrations, and checkout optimization for Shopify merchants ready to scale.', ctaText: 'Learn more', ctaLink: '/services/web-development/shopify-store-development', iconKey: 'shopify' },
-		{ num: '02', title: 'Custom Website Design & Build', desc: 'Fully bespoke sites built on Next.js or headless stacks - no templates, no shortcuts.', ctaText: 'Learn more', ctaLink: '/services/web-development/custom-website-design-build', iconKey: 'code' },
-		{ num: '03', title: 'Redesigns & Migrations', desc: 'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one.', ctaText: 'Learn more', ctaLink: '/services/web-development/redesigns-migrations', iconKey: 'refresh' },
-		{ num: '04', title: 'Landing Pages', desc: 'High-converting campaign pages built for paid traffic - A/B-ready and launched in days, not weeks.', ctaText: 'Learn more', ctaLink: '/services/web-development/landing-pages', iconKey: 'layout' },
-		{ num: '05', title: 'Speed & Performance Optimization', desc: 'Core Web Vitals audits and surgical fixes that cut load time and lift rankings.', ctaText: 'Learn more', ctaLink: '/services/web-development/speed-performance-optimization', iconKey: 'speed' },
-		{ num: '06', title: 'Maintenance & Support', desc: 'Ongoing updates, security patches, and feature rollouts, so your site never stagnates.', ctaText: 'Learn more', ctaLink: '/services/web-development/maintenance-support', iconKey: 'support' },
+		{ num: '01', title: 'Shopify Development', desc: 'Custom Shopify store builds on Shopify 2.0, theme development, and custom app development.', ctaText: 'Learn more', ctaLink: '/services/web-development/shopify-store-development', iconKey: 'shopify' },
+		{ num: '02', title: 'WordPress & WooCommerce', desc: 'Custom WordPress builds, WooCommerce setup, plugin development, and performance optimisation.', ctaText: 'Learn more', ctaLink: '/services/web-development/wordpress-woocommerce', iconKey: 'code' },
+		{ num: '03', title: 'Landing Pages & Sales Funnels', desc: 'High-converting standalone pages and multi-step funnels for paid traffic campaigns.', ctaText: 'Learn more', ctaLink: '/services/web-development/landing-pages', iconKey: 'layout' },
+		{ num: '04', title: 'Website Speed & Performance', desc: 'Core Web Vitals audits, image optimisation, and CDN/caching configuration.', ctaText: 'Learn more', ctaLink: '/services/web-development/speed-performance-optimization', iconKey: 'speed' },
+		{ num: '05', title: 'Maintenance & Support', desc: 'Monthly technical maintenance, uptime monitoring, and content updates on request.', ctaText: 'Learn more', ctaLink: '/services/web-development/maintenance-support', iconKey: 'support' },
+		{ num: '06', title: 'Custom Web Application Development', desc: 'Full-stack web app builds — React, Next.js, Node.js — plus API and internal tooling.', ctaText: 'Learn more', ctaLink: '/services/web-development/custom-web-application-development', iconKey: 'refresh' },
 	],
 	process: {
 		title: 'The unfair advantage.',
@@ -1964,19 +1963,47 @@ detailPageContent.development = {
 			{ image: devRetellAi, title: 'RetellAI Agent Builder', category: 'AI Voice Agent Platform' },
 		],
 	},
+	techStack: {
+		label: 'What we build with',
+		groups: [
+			{ title: 'Frontend', items: 'React, Next.js, Liquid (Shopify), HTML/CSS, Tailwind CSS' },
+			{ title: 'Backend', items: 'Node.js, Python, PHP' },
+			{ title: 'CMS & Ecommerce', items: 'Shopify, Shopify Plus, WordPress, WooCommerce, BigCommerce' },
+			{ title: 'Databases', items: 'MySQL, PostgreSQL, MongoDB' },
+			{ title: 'Hosting & Infrastructure', items: 'Shopify (managed), WP Engine, Cloudflare, AWS, Vercel' },
+		],
+	},
+	faqSubtitle: 'Straight answers about building or maintaining your website.',
+	faq: [
+		{
+			question: 'How long does a website build take?',
+			answer:
+				'Standard Shopify or WordPress builds take 3–6 weeks. Custom builds or full ecommerce stores with complex requirements can take 6–10 weeks. You get a precise timeline in the proposal, not a vague range.',
+		},
+		{
+			question: 'Do you offer ongoing maintenance after launch?',
+			answer:
+				'Yes. We offer monthly maintenance retainers that cover updates, security monitoring, backups, performance checks, and content changes. Most clients stay on a retainer after launch.',
+		},
+		{
+			question: 'Can you migrate my existing website to Shopify or WordPress?',
+			answer:
+				'Yes. Full migrations including product data, customer records, order history, and a 301 redirect strategy to protect your search rankings.',
+		},
+	],
 	cta: {
-		title: 'Ready to build something that sells?',
+		title: 'Your Website Should Be an Asset, Not an Overhead',
 		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
-		buttonText: 'Book A Free Call',
+		buttonText: 'Book a Free Website Audit →',
 		buttonLink: '/contactUs',
 	},
 }
 
 detailPageContent['web-development/shopify-store-development'] = {
-	breadcrumb: ['Services', 'Website Development', 'Shopify Store Development'],
+	breadcrumb: ['Services', 'Website Development', 'Shopify Development'],
 	breadcrumbLinks: ['/services', '/services/web-development'],
 	hero: {
-		tag: 'Shopify Store Development',
+		tag: 'Shopify Development',
 		title: 'Custom Shopify Builds,',
 		titleHighlight: 'Not Modified Templates.',
 		subtitle:
@@ -1988,12 +2015,18 @@ detailPageContent['web-development/shopify-store-development'] = {
 		{ value: '2x', label: 'Avg Conversion Lift' },
 		{ value: '96%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'What this covers',
+	servicesTitle: 'Services — Web Dev',
 	services: [
-		{ num: '01', title: 'Custom Theme Development', desc: 'Shopify 2.0 builds - custom themes or heavily modified bases, section-everywhere.' },
-		{ num: '02', title: 'App Integrations', desc: 'Reviews, email/SMS, upsell, loyalty, and subscription apps wired up correctly.' },
-		{ num: '03', title: 'Checkout Optimization', desc: 'Every unnecessary step removed - checkout friction is pure lost revenue.' },
-		{ num: '04', title: 'Shopify Plus Advisory', desc: 'Flow automations, checkout extensibility, and B2B wholesale configuration.' },
+		{
+			num: '01', title: 'Shopify Development',
+			bullets: [
+				'Custom Shopify store builds on Shopify 2.0',
+				'Theme development, heavy customisation, and feature-level Liquid development',
+				'Custom sections, metafields, and Shopify Functions',
+				'Shopify Plus: checkout extensibility, Shopify Flow, B2B wholesale configuration',
+				'Custom app development and third-party Shopify integrations',
+			],
+		},
 	],
 	process: {
 		title: 'How we build',
@@ -2017,28 +2050,34 @@ detailPageContent['web-development/shopify-store-development'] = {
 	},
 }
 
-detailPageContent['web-development/custom-website-design-build'] = {
-	breadcrumb: ['Services', 'Website Development', 'Custom Website Design & Build'],
+detailPageContent['web-development/wordpress-woocommerce'] = {
+	breadcrumb: ['Services', 'Website Development', 'WordPress & WooCommerce'],
 	breadcrumbLinks: ['/services', '/services/web-development'],
 	hero: {
-		tag: 'Custom Website Design & Build',
-		title: 'Fully Bespoke Sites,',
-		titleHighlight: 'No Templates, No Shortcuts.',
+		tag: 'WordPress & WooCommerce',
+		title: 'Real WordPress Builds,',
+		titleHighlight: 'Not Page-Builder Templates.',
 		subtitle:
-			'Built on Next.js or a headless stack when a theme-based platform can\'t do what your business needs - full control over structure, speed, and functionality from the ground up.',
+			"WordPress and WooCommerce done properly — custom-coded, fast, secure, and built to actually be maintained, not a stack of page-builder plugins fighting each other.",
 	},
 	stats: [
-		{ value: '50+', label: 'Custom Builds Delivered' },
+		{ value: '60+', label: 'WordPress Sites Built' },
 		{ value: '90+', label: 'Avg Performance Score' },
-		{ value: 'Next.js', label: 'Modern Stack' },
+		{ value: 'WooCommerce', label: 'Full Store Setups' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'What this covers',
+	servicesTitle: 'Services — Web Dev',
 	services: [
-		{ num: '01', title: 'Custom Frontend Development', desc: 'Next.js or headless builds with full control over structure and behaviour.' },
-		{ num: '02', title: 'Headless CMS Integration', desc: 'Content managed independently from the frontend, for teams that need it.' },
-		{ num: '03', title: 'API & Third-Party Integrations', desc: 'Custom integrations with whatever tools your business already runs on.' },
-		{ num: '04', title: 'Performance-First Architecture', desc: 'Built fast from the first commit, not optimized after the fact.' },
+		{
+			num: '01', title: 'WordPress & WooCommerce',
+			bullets: [
+				'Custom WordPress builds; not page-builder templates',
+				'WooCommerce setup, product import, and checkout configuration',
+				'Plugin development and custom API integrations',
+				'Performance optimisation: Core Web Vitals, caching layers, CDN setup',
+				'Ongoing security management and WordPress maintenance',
+			],
+		},
 	],
 	process: {
 		title: 'How we build',
@@ -2051,7 +2090,7 @@ detailPageContent['web-development/custom-website-design-build'] = {
 	},
 	relatedServices: [
 		{ title: 'UX/UI Design', link: '/services/ui-ux-design', desc: 'We design before we build - no handoff friction.' },
-		{ title: 'Speed & Performance Optimization', link: '/services/web-development/speed-performance-optimization', desc: 'Keeping a custom build fast as it grows.' },
+		{ title: 'Maintenance & Support', link: '/services/web-development/maintenance-support', desc: 'Keeping your WordPress site secure and updated.' },
 		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
 	],
 	cta: {
@@ -2062,41 +2101,46 @@ detailPageContent['web-development/custom-website-design-build'] = {
 	},
 }
 
-detailPageContent['web-development/redesigns-migrations'] = {
-	breadcrumb: ['Services', 'Website Development', 'Redesigns & Migrations'],
+detailPageContent['web-development/custom-web-application-development'] = {
+	breadcrumb: ['Services', 'Website Development', 'Custom Web Application Development'],
 	breadcrumbLinks: ['/services', '/services/web-development'],
 	hero: {
-		tag: 'Redesigns & Migrations',
-		title: 'Move Platforms Without',
-		titleHighlight: 'Losing Your Rankings.',
+		tag: 'Custom Web Application Development',
+		title: 'When a Website',
+		titleHighlight: "Isn't Enough.",
 		subtitle:
-			'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one - the two things that go wrong most often on a migration, handled deliberately.',
+			'Full-stack web applications for products that need real logic, not just pages — dashboards, internal tools, and platforms built on React, Next.js, and Node.js.',
 	},
 	stats: [
-		{ value: '40+', label: 'Migrations Completed' },
-		{ value: '301', label: 'Redirect Strategy on Every Move' },
-		{ value: '0', label: 'Acceptable Ranking Loss' },
+		{ value: '15+', label: 'Web Apps Delivered' },
+		{ value: 'React', label: 'Next.js / Node.js Stack' },
+		{ value: 'API', label: 'First Integration Approach' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'What this covers',
+	servicesTitle: 'Services — Web Dev',
 	services: [
-		{ num: '01', title: 'Platform Migrations', desc: 'From WooCommerce, BigCommerce, Magento, Wix, or a custom-built store.' },
-		{ num: '02', title: 'Data Migration', desc: 'Products, customer records, and order history transferred cleanly.' },
-		{ num: '03', title: '301 Redirect Strategy', desc: 'Built before launch day specifically to protect your SEO rankings.' },
-		{ num: '04', title: 'Pre-Launch QA', desc: 'Nothing goes live until every link, form, and payment path is verified.' },
+		{
+			num: '01', title: 'Custom Web Application Development',
+			bullets: [
+				'Full-stack web app builds: React, Next.js, Node.js',
+				'API development and third-party service integrations',
+				'Custom internal tools, reporting dashboards, and workflow applications',
+				'Ongoing development retainer for product teams that need a reliable build partner',
+			],
+		},
 	],
 	process: {
-		title: 'How we migrate',
+		title: 'How we build',
 		steps: [
-			{ num: '01', title: 'Audit Current Site', desc: 'Every page, redirect, and ranking keyword catalogued before we touch anything.' },
-			{ num: '02', title: 'Migration Plan', desc: 'Data mapping and redirect strategy built before development starts.' },
-			{ num: '03', title: 'Build & Test', desc: 'New site built and QA\'d against the migration plan.' },
-			{ num: '04', title: 'Launch & Monitor', desc: 'Rankings and traffic monitored closely in the weeks after go-live.' },
+			{ num: '01', title: 'Discovery & Scope', desc: 'Requirements, timeline, and success metrics defined before any code.' },
+			{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
+			{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage - no surprises at launch.' },
+			{ num: '04', title: 'Launch & Support', desc: 'Smooth go-live and ongoing support to keep everything running.' },
 		],
 	},
 	relatedServices: [
-		{ title: 'SEO', link: '/services/digital-marketing/seo', desc: 'Protecting and building on your rankings after a migration.' },
-		{ title: 'Speed & Performance Optimization', link: '/services/web-development/speed-performance-optimization', desc: 'A natural next step once you\'re on the new platform.' },
+		{ title: 'UX/UI Design', link: '/services/ui-ux-design', desc: 'We design before we build - no handoff friction.' },
+		{ title: 'Maintenance & Support', link: '/services/web-development/maintenance-support', desc: 'Ongoing support once your application is live.' },
 		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
 	],
 	cta: {
@@ -2108,10 +2152,10 @@ detailPageContent['web-development/redesigns-migrations'] = {
 }
 
 detailPageContent['web-development/landing-pages'] = {
-	breadcrumb: ['Services', 'Website Development', 'Landing Pages'],
+	breadcrumb: ['Services', 'Website Development', 'Landing Pages & Sales Funnels'],
 	breadcrumbLinks: ['/services', '/services/web-development'],
 	hero: {
-		tag: 'Landing Pages',
+		tag: 'Landing Pages & Sales Funnels',
 		title: 'Built for Paid Traffic,',
 		titleHighlight: 'Launched in Days, Not Weeks.',
 		subtitle:
@@ -2123,12 +2167,18 @@ detailPageContent['web-development/landing-pages'] = {
 		{ value: 'Days', label: 'Not Weeks to Launch' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'What this covers',
+	servicesTitle: 'Services — Web Dev',
 	services: [
-		{ num: '01', title: 'Campaign Landing Pages', desc: 'Standalone pages built to match a specific ad, offer, or audience.' },
-		{ num: '02', title: 'Multi-Step Funnels', desc: 'Upsell, downsell, and order bump logic built into the funnel itself.' },
-		{ num: '03', title: 'Lead Gen Pages', desc: 'Integrated directly with your CRM or email platform on submit.' },
-		{ num: '04', title: 'A/B Test-Ready Variants', desc: 'Built from day one to support testing, not retrofitted for it later.' },
+		{
+			num: '01', title: 'Landing Pages & Sales Funnels',
+			bullets: [
+				'High-converting standalone landing pages for paid traffic campaigns',
+				'Multi-step funnel builds with upsell, downsell, and order bump logic',
+				'Lead generation pages integrated with your CRM or email platform',
+				'Webinar and event registration pages',
+				'A/B test-ready page variants from the initial build',
+			],
+		},
 	],
 	process: {
 		title: 'How we build your pages',
@@ -2153,10 +2203,10 @@ detailPageContent['web-development/landing-pages'] = {
 }
 
 detailPageContent['web-development/speed-performance-optimization'] = {
-	breadcrumb: ['Services', 'Website Development', 'Speed & Performance Optimization'],
+	breadcrumb: ['Services', 'Website Development', 'Website Speed & Performance'],
 	breadcrumbLinks: ['/services', '/services/web-development'],
 	hero: {
-		tag: 'Speed & Performance Optimization',
+		tag: 'Website Speed & Performance',
 		title: 'Every Second of Load Time',
 		titleHighlight: 'Is Lost Revenue.',
 		subtitle:
@@ -2168,12 +2218,18 @@ detailPageContent['web-development/speed-performance-optimization'] = {
 		{ value: '2x', label: 'Avg Conversion Lift' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'What this covers',
+	servicesTitle: 'Services — Web Dev',
 	services: [
-		{ num: '01', title: 'Core Web Vitals Audit', desc: 'Full diagnosis of what is actually slowing your site down.' },
-		{ num: '02', title: 'Image & Asset Optimization', desc: 'Next-gen formats, lazy loading, and compression without visible quality loss.' },
-		{ num: '03', title: 'Code & Render-Blocking Fixes', desc: 'Minification and resolving what blocks the page from rendering fast.' },
-		{ num: '04', title: 'CDN & Caching Setup', desc: 'Server-side and CDN caching configured correctly for your platform.' },
+		{
+			num: '01', title: 'Website Speed & Performance',
+			bullets: [
+				'Core Web Vitals audit and systematic remediation',
+				'Image optimisation and next-gen format (WebP/AVIF) implementation',
+				'Code minification, lazy loading, and render-blocking resource resolution',
+				'CDN setup and server-side caching configuration',
+				'Mobile performance audit — often a separate problem from desktop',
+			],
+		},
 	],
 	process: {
 		title: 'How we optimize your site',
@@ -2213,12 +2269,17 @@ detailPageContent['web-development/maintenance-support'] = {
 		{ value: '<24h', label: 'Avg Response Time' },
 		{ value: '96%', label: 'Retainer Renewal Rate' },
 	],
-	servicesTitle: 'What this covers',
+	servicesTitle: 'Services — Web Dev',
 	services: [
-		{ num: '01', title: 'Monthly Technical Maintenance', desc: 'Updates, security patches, and backups on a predictable schedule.' },
-		{ num: '02', title: 'Uptime Monitoring & Incident Response', desc: 'Issues caught and responded to before they become customer complaints.' },
-		{ num: '03', title: 'Content Updates & New Pages', desc: 'Ongoing content changes and new page builds on request.' },
-		{ num: '04', title: 'Platform Migrations When You Outgrow', desc: 'A clear path forward when your current stack stops fitting.' },
+		{
+			num: '01', title: 'Maintenance & Support',
+			bullets: [
+				'Monthly technical maintenance retainer: updates, security patches, backups',
+				'Uptime monitoring and incident response',
+				'Content updates and new page builds on request',
+				'Platform migrations when your business outgrows the current stack',
+			],
+		},
 	],
 	process: {
 		title: 'How the retainer works',
@@ -2230,8 +2291,8 @@ detailPageContent['web-development/maintenance-support'] = {
 		],
 	},
 	relatedServices: [
-		{ title: 'Speed & Performance Optimization', link: '/services/web-development/speed-performance-optimization', desc: 'Often the first thing a maintenance audit surfaces.' },
-		{ title: 'Redesigns & Migrations', link: '/services/web-development/redesigns-migrations', desc: 'For when a site has outgrown its current platform entirely.' },
+		{ title: 'Website Speed & Performance', link: '/services/web-development/speed-performance-optimization', desc: 'Often the first thing a maintenance audit surfaces.' },
+		{ title: 'Custom Web Application Development', link: '/services/web-development/custom-web-application-development', desc: 'For when a site has outgrown its current platform entirely.' },
 		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
 	],
 	cta: {

@@ -14206,6 +14206,13 @@ textarea,
 .ssp-platform-logos-list { display: flex; min-height: 64px; align-items: center; justify-content: space-between; gap: clamp(20px, 4vw, 65px); }
 .ssp-platform-logos-list img { display: block; max-width: 120px; max-height: 48px; width: auto; height: auto; object-fit: contain; filter: grayscale(1) brightness(2.1); opacity: .86; }
 
+.ssp-tech-stack { max-width: 1220px; margin: 0 auto; padding: 28px 40px 68px; }
+.ssp-tech-stack-label { text-align: center; margin: 0 0 32px; color: #9d9da7; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+.ssp-tech-stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+.ssp-tech-stack-group { border: 1px solid #1a1a1a; border-radius: 12px; padding: 20px; background: #080808; }
+.ssp-tech-stack-group h4 { margin: 0 0 8px; font-size: 13px; font-weight: 600; color: #7c5cbf; text-transform: uppercase; letter-spacing: 0.05em; }
+.ssp-tech-stack-group p { margin: 0; font-size: 14px; color: #ccc; line-height: 1.6; }
+
 .ssp-page--development .ssp-platform-logos-list {
 	-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
 	mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
