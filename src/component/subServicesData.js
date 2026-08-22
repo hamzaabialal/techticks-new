@@ -726,9 +726,11 @@ const detailPageContent = {
 			title: 'Our design process',
 			steps: [
 				{ num: '01', title: 'Discovery', desc: 'We audit what exists, review analytics, and understand your users.' },
-				{ num: '02', title: 'Wireframes', desc: 'Structure before styling - we get this right before anything looks like design.' },
-				{ num: '03', title: 'High-Fidelity Design', desc: 'Full Figma mockups aligned to your brand system.' },
-				{ num: '04', title: 'Handoff', desc: 'Developer-ready Figma files with full annotation, specs, and assets.' },
+				{ num: '02', title: 'Strategy', desc: 'Information architecture, user flows, and content hierarchy.' },
+				{ num: '03', title: 'Wireframes', desc: 'Structure before styling. We get this right before anything looks like design.' },
+				{ num: '04', title: 'High-Fidelity Design', desc: 'Full Figma mockups aligned to your brand system.' },
+				{ num: '05', title: 'Prototype & Review', desc: 'Clickthrough prototype, feedback, iteration.' },
+				{ num: '06', title: 'Handoff', desc: 'Developer-ready Figma files with full annotation, specs, and assets.' },
 			],
 		},
 		relatedServices: [
@@ -760,12 +762,18 @@ const detailPageContent = {
 			{ value: '2wk', label: 'Avg Audit Turnaround' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — UX/UI',
 		services: [
-			{ num: '01', title: 'User Journey Mapping', desc: 'The actual path your customers take through your site, not the one you assume.' },
-			{ num: '02', title: 'Heatmap & Session Recording', desc: 'Hotjar or Microsoft Clarity analysis to see exactly where users hesitate or leave.' },
-			{ num: '03', title: 'Competitor UX Audit', desc: "What's working in your market that you're not doing yet." },
-			{ num: '04', title: 'Funnel Drop-Off Analysis', desc: 'Pinpointing where users leave your funnel and what is causing it.' },
+			{
+				num: '01', title: 'UX Research & Strategy',
+				bullets: [
+					'User journey mapping — the actual path your customers take, not the one you assume',
+					'Heatmap and session recording analysis using Hotjar or Microsoft Clarity',
+					"Competitor UX audit — what's working in your market that you're not doing",
+					'Persona development grounded in real buyer psychology and purchase behaviour',
+					"Funnel drop-off analysis: where users leave and what's causing it",
+				],
+			},
 		],
 		process: {
 			title: 'How we research',
@@ -805,12 +813,18 @@ const detailPageContent = {
 			{ value: 'Figma', label: 'Developer-Ready Handoff' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — UX/UI',
 		services: [
-			{ num: '01', title: 'Low-Fidelity Wireframes', desc: 'Fast structure iteration before any visual design decisions are made.' },
-			{ num: '02', title: 'High-Fidelity Prototypes', desc: 'Interactive, clickable Figma prototypes for stakeholder sign-off and user testing.' },
-			{ num: '03', title: 'Mobile-First by Default', desc: 'Desktop layout comes second - most ecommerce traffic is on a phone.' },
-			{ num: '04', title: 'Design System & Components', desc: 'A component library for consistency at scale as your site grows.' },
+			{
+				num: '01', title: 'Wireframing & Prototyping',
+				bullets: [
+					'Low-fidelity wireframes for fast structure iteration before any design decisions are made',
+					'High-fidelity interactive prototypes in Figma',
+					'Mobile-first by default, desktop layout comes second',
+					'Clickthrough prototype for stakeholder sign-off and user testing',
+					'Design system and component library creation for consistency at scale',
+				],
+			},
 		],
 		process: {
 			title: 'How we build it',
@@ -850,12 +864,18 @@ const detailPageContent = {
 			{ value: '70%', label: 'Of DTC Traffic Is Mobile' },
 			{ value: '96%', label: 'Client Retention' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — UX/UI',
 		services: [
-			{ num: '01', title: 'Homepage & Collection UX', desc: 'A homepage that answers "why you" fast, and collection pages that make browsing easy.' },
-			{ num: '02', title: 'Product Page UX', desc: 'Imagery order, copy gaps, trust signals, and social proof placed where buyers look first.' },
-			{ num: '03', title: 'Checkout Flow Optimisation', desc: 'Every unnecessary field or step removed - checkout friction is pure lost revenue.' },
-			{ num: '04', title: 'Mobile UX Audit & Redesign', desc: 'A dedicated pass on mobile, not an afterthought of the desktop design.' },
+			{
+				num: '01', title: 'Shopify UX Design',
+				bullets: [
+					'Homepage, collection page, and product page UX redesign',
+					'Checkout flow optimisation — every unnecessary step costs conversions',
+					'Navigation and filter/sort UX for large or complex product catalogs',
+					'Mobile UX audit and redesign — most Shopify traffic is on mobile',
+					'A/B test design for structured CRO experiments',
+				],
+			},
 		],
 		process: {
 			title: 'How we redesign your store',
@@ -895,12 +915,18 @@ const detailPageContent = {
 			{ value: 'Material', label: 'Material Design Compliant' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — UX/UI',
 		services: [
-			{ num: '01', title: 'Onboarding Flow Design', desc: 'First impressions that drive activation, not drop-off, in the first session.' },
-			{ num: '02', title: 'Dashboard & Data Visualisation', desc: 'Complex information made scannable and actionable at a glance.' },
-			{ num: '03', title: 'Microanimation & Interaction Specs', desc: 'Motion and feedback specs handed to developers, not left to guesswork.' },
-			{ num: '04', title: 'Figma Handoff', desc: 'Annotated components and spacing specs developers can build from directly.' },
+			{
+				num: '01', title: 'App UI Design',
+				bullets: [
+					'iOS and Android UI following Apple HIG and Material Design principles',
+					'Onboarding flow design — first impressions that drive activation, not confusion',
+					'Dashboard and data visualisation UI for complex information',
+					'Microanimation and interaction specs for developers',
+					'Figma handoff with annotated components and spacing specs',
+				],
+			},
 		],
 		process: {
 			title: 'How we design your app',
@@ -940,12 +966,17 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — UX/UI',
 		services: [
-			{ num: '01', title: 'Marketing Website UI', desc: 'For ecommerce brands, agencies, and SaaS - built to convert, not just look premium.' },
-			{ num: '02', title: 'Landing Page Design', desc: 'High-converting pages for paid traffic, matched to what the ad promised.' },
-			{ num: '03', title: 'Sales Funnel Sequences', desc: 'Multi-step page sequences designed to reduce friction at every step.' },
-			{ num: '04', title: 'UI Component Library', desc: 'A reusable component set aligned to your brand guidelines.' },
+			{
+				num: '01', title: 'Website & Landing Page UI',
+				bullets: [
+					'Marketing website UI for ecommerce brands, agencies, and SaaS',
+					'High-converting landing page design for paid traffic, built to match ad intent',
+					'Sales funnel page sequences designed to reduce friction at every step',
+					'UI component library aligned to your brand guidelines',
+				],
+			},
 		],
 		process: {
 			title: 'How we design your pages',
