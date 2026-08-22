@@ -178,27 +178,51 @@ const detailPageContent = {
 		services: [
 			{
 				num: '01',
-				title: 'Paid Advertising',
-				desc: 'Meta and Google campaigns structured around your numbers — ROAS, CAC, and LTV — not clicks and impressions. Every dollar of spend is tracked, tested, and optimised for measurable returns.',
+				title: 'Meta Ads',
+				desc: 'Facebook and Instagram campaigns structured around your CAC — creative testing, audience strategy, and full-funnel builds that actually scale.',
 				iconKey: 'dollar',
 				ctaText: 'Learn more',
-				ctaLink: '/contactUs',
+				ctaLink: '/services/digital-marketing/meta-ads',
 			},
 			{
 				num: '02',
-				title: 'SEO & Content',
-				desc: 'Technical strength, keyword strategy, and content structure built to rank and convert. We grow organic traffic and long-term discoverability without shortcuts that damage your site later.',
-				iconKey: 'doc',
+				title: 'Google Ads',
+				desc: 'Search, Shopping, and Performance Max campaigns engineered around your ROAS targets — not click volume or impression share.',
+				iconKey: 'target',
 				ctaText: 'Learn more',
-				ctaLink: '/contactUs',
+				ctaLink: '/services/digital-marketing/google-ads',
 			},
 			{
 				num: '03',
-				title: 'Email, SMS & Social',
-				desc: 'Retention and community working alongside paid — lifecycle email and SMS flows plus platform-native social content that keeps customers coming back, not just clicking once.',
+				title: 'SEO',
+				desc: 'Technical SEO, keyword strategy, and content architecture that drives organic traffic and turns visitors into customers.',
+				iconKey: 'doc',
+				ctaText: 'Learn more',
+				ctaLink: '/services/digital-marketing/seo',
+			},
+			{
+				num: '04',
+				title: 'Email & SMS Marketing',
+				desc: 'Lifecycle flows and campaign sends built on Klaviyo, Omnisend, or Postscript — welcome series, abandoned cart, and win-back, tuned to your revenue.',
 				iconKey: 'mail',
 				ctaText: 'Learn more',
-				ctaLink: '/contactUs',
+				ctaLink: '/services/digital-marketing/email-marketing',
+			},
+			{
+				num: '05',
+				title: 'Social Media Marketing',
+				desc: 'Organic social strategy, content creation, and community management across Instagram, TikTok, LinkedIn, and X — built to grow and convert.',
+				iconKey: 'share',
+				ctaText: 'Learn more',
+				ctaLink: '/services/digital-marketing/social-media',
+			},
+			{
+				num: '06',
+				title: 'Content Creation & Copywriting',
+				desc: 'Ad copy, blog content, email copy, and product descriptions — written to rank, convert, and sound like the same brand everywhere.',
+				iconKey: 'badge',
+				ctaText: 'Learn more',
+				ctaLink: '/services/digital-marketing/content-creation',
 			},
 		],
 		// optional final CTA override for page
@@ -393,10 +417,95 @@ const detailPageContent = {
 		],
 	},
 
+	'digital-marketing/email-marketing': {
+		seoTitle: 'Email & SMS Marketing for Ecommerce Brands | TechTicks',
+		seoDescription: 'Lifecycle email and SMS flows built on Klaviyo, Omnisend, or Postscript — welcome series, abandoned cart, and win-back, tuned to your revenue.',
+		breadcrumb: ['Services', 'Digital Marketing', 'Email & SMS Marketing'],
+		breadcrumbLinks: ['/services', '/services/digital-marketing'],
+		hero: {
+			tag: 'Email & SMS Marketing',
+			title: 'Your Best Customers Are',
+			titleHighlight: 'Already on Your List.',
+			subtitle:
+				'Email and SMS are the highest-margin channels most brands underinvest in — no ad spend, and you already have the relationship. We build the flows and campaigns that turn that list into recurring revenue.',
+		},
+		stats: [
+			{ value: '30%+', label: 'Avg Revenue from Flows' },
+			{ value: '60+', label: 'Klaviyo Accounts Managed' },
+			{ value: '6', label: 'Core Flows Built' },
+			{ value: '93%', label: 'Client Retention' },
+		],
+		servicesTitle: 'What we manage',
+		services: [
+			{ num: '01', title: 'Platform Setup & Migration', desc: 'Klaviyo, Omnisend, or Mailchimp — set up correctly or migrated cleanly from your current tool.' },
+			{ num: '02', title: 'Core Automated Flows', desc: 'Welcome series, abandoned cart, browse abandonment, post-purchase, and win-back.' },
+			{ num: '03', title: 'Campaign Calendar', desc: 'Promotional sends built around your actual sales calendar, not a generic template.' },
+			{ num: '04', title: 'List Segmentation & Deliverability', desc: 'Hygiene and segmentation so your emails land in the inbox, not the spam folder.' },
+			{ num: '05', title: 'SMS Campaigns', desc: 'Postscript, Klaviyo SMS, or Attentive — a second high-converting channel alongside email.' },
+			{ num: '06', title: 'A/B Testing', desc: 'Subject lines, preview text, send times, and CTA copy, tested continuously.' },
+		],
+		process: {
+			title: 'How we grow your list revenue',
+			steps: [
+				{ num: '01', title: 'Account Audit', desc: 'We review your current flows, campaigns, and deliverability health.' },
+				{ num: '02', title: 'Flow Build', desc: 'Core automated flows built or rebuilt around your actual customer journey.' },
+				{ num: '03', title: 'Campaign Calendar', desc: 'A promotional send schedule mapped to your sales calendar.' },
+				{ num: '04', title: 'Test & Optimize', desc: 'Ongoing A/B testing and segmentation refinement.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Social Media Marketing', link: '/services/digital-marketing/social-media', desc: 'Building the audience that ends up on your list.' },
+			{ title: 'Content Creation & Copywriting', link: '/services/digital-marketing/content-creation', desc: 'The copy behind every flow and campaign.' },
+			{ title: 'Digital Marketing Hub', link: '/services/digital-marketing', desc: 'See all digital marketing services.' },
+		],
+	},
+
+	'digital-marketing/content-creation': {
+		seoTitle: 'Content Creation & Copywriting for Ecommerce Brands | TechTicks',
+		seoDescription: 'Ad copy, blog content, email copy, and product descriptions for ecommerce brands — written to rank, convert, and sound like the same brand everywhere.',
+		breadcrumb: ['Services', 'Digital Marketing', 'Content Creation & Copywriting'],
+		breadcrumbLinks: ['/services', '/services/digital-marketing'],
+		hero: {
+			tag: 'Content Creation & Copywriting',
+			title: 'Every Channel Needs Words.',
+			titleHighlight: 'Most Brands Reuse the Same Weak Ones.',
+			subtitle:
+				"Ad copy, product descriptions, blog posts, and email — written by people who understand ecommerce, not generic freelance copywriters. Every piece is built for the specific channel it runs on.",
+		},
+		stats: [
+			{ value: '500+', label: 'Pieces of Content Delivered' },
+			{ value: '5', label: 'Channels Covered' },
+			{ value: '72hr', label: 'Avg Turnaround' },
+			{ value: '93%', label: 'Client Retention' },
+		],
+		servicesTitle: 'What we write',
+		services: [
+			{ num: '01', title: 'Ad Copy', desc: 'For Meta, Google, TikTok, and Amazon Sponsored Brands — matched to the platform and the audience.' },
+			{ num: '02', title: 'Blog & SEO Content', desc: 'Articles built for ranking, not just filler to hit a word count.' },
+			{ num: '03', title: 'Email Copy', desc: 'Subject lines, preview text, and body copy that actually gets opened and clicked.' },
+			{ num: '04', title: 'Product Descriptions', desc: 'For Shopify, Amazon, and other platforms — written to answer real buyer questions.' },
+			{ num: '05', title: 'Brand Voice Guidelines', desc: 'So every piece of content sounds like the same company, regardless of who wrote it.' },
+		],
+		process: {
+			title: 'How we produce your content',
+			steps: [
+				{ num: '01', title: 'Brand Voice Discovery', desc: 'We learn how your brand sounds and who it is talking to.' },
+				{ num: '02', title: 'Content Calendar', desc: 'What gets written, for which channel, and on what schedule.' },
+				{ num: '03', title: 'Production & Review', desc: 'Drafted, reviewed, and revised against a simple approval process.' },
+				{ num: '04', title: 'Delivery', desc: 'Copy delivered ready to publish, formatted for its destination.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'SEO', link: '/services/digital-marketing/seo', desc: 'The strategy behind every piece of ranking content.' },
+			{ title: 'Email & SMS Marketing', link: '/services/digital-marketing/email-marketing', desc: 'Where a lot of this copy actually gets sent.' },
+			{ title: 'Digital Marketing Hub', link: '/services/digital-marketing', desc: 'See all digital marketing services.' },
+		],
+	},
+
 	'design': {
-		seoTitle: 'UX/UI Design Services, Shopify UX, App Design, Wireframes & Conversion-Focused Design',
+		seoTitle: 'UX/UI & Graphic Design Services for Ecommerce Brands | TechTicks',
 		seoDescription:
-			'TechTicks delivers UX/UI design for ecommerce brands: user research, Shopify UX optimisation, app UI design, wireframes, prototypes, and CRO-focused design handoffs.',
+			'TechTicks delivers UX/UI design and graphic design for ecommerce brands: conversion-focused interfaces, Amazon creative, brand identity, and marketplace graphics.',
 		pageClass: 'ssp-page--ui-ux-design',
 		testimonialCategories: ['Design'],
 		breadcrumb: ['Services', 'UX/UI & Graphic Design'],
@@ -422,56 +531,24 @@ const detailPageContent = {
 			{ value: '5', label: 'Platforms Covered' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'Every design discipline. One Team.',
-		servicesSubtitle: 'No handoffs to freelancers. Every vertical is in-house and ecommerce-trained.',
+		servicesTitle: 'Two disciplines. One in-house team.',
+		servicesSubtitle: 'No handoffs to freelancers — every vertical below is ecommerce-trained and in-house.',
 		services: [
 			{
 				num: '01',
-				title: 'Website & App UI/UX',
-				desc: 'Conversion-first UX that moves visitors to buyers, built for Shopify, custom DTC, and app storefronts.',
-				ctaText: 'Learn more →',
-				ctaLink: '/contactUs',
+				title: 'UX/UI Design',
+				desc: 'Conversion-first interfaces for Shopify, custom DTC, and apps — user research, wireframes, prototypes, and CRO-focused handoffs.',
+				ctaText: 'View UX/UI Design →',
+				ctaLink: '/services/ui-ux-design',
 				iconKey: 'monitor',
 			},
 			{
 				num: '02',
-				title: 'Amazon & Marketplace Graphics',
-				desc: 'A+ Content, storefront banners, and listing imagery engineered to outperform on Amazon, Walmart, and eBay.',
-				ctaText: 'Learn more →',
-				ctaLink: '/contactUs',
-				iconKey: 'shopify',
-			},
-			{
-				num: '03',
-				title: 'Brand Identity & Logo',
-				desc: 'Visual systems that hold up on packaging, TikTok, and a 40-foot trade-show backdrop — all from one design sprint.',
-				ctaText: 'Learn more →',
-				ctaLink: '/contactUs',
+				title: 'Graphic Design',
+				desc: 'Brand identity, Amazon & marketplace creative, social graphics, ad creative, packaging, and pitch decks.',
+				ctaText: 'View Graphic Design →',
+				ctaLink: '/services/graphic-design',
 				iconKey: 'pen',
-			},
-			{
-				num: '04',
-				title: 'Social Media Design',
-				desc: 'Thumb-stopping creatives for TikTok Shop, Meta, and Pinterest — designed to drive clicks, not just impressions.',
-				ctaText: 'Learn more →',
-				ctaLink: '/contactUs',
-				iconKey: 'share',
-			},
-			{
-				num: '05',
-				title: 'Landing Page Design',
-				desc: 'High-converting landing pages for paid traffic — every element positioned to reduce drop-off and lift CVR.',
-				ctaText: 'Learn more →',
-				ctaLink: '/contactUs',
-				iconKey: 'layout',
-			},
-			{
-				num: '06',
-				title: 'Packaging & Print',
-				desc: 'Retail-ready packaging and insert cards that reinforce brand, drive repeat purchases, and stand out on shelf.',
-				ctaText: 'Learn more →',
-				ctaLink: '/contactUs',
-				iconKey: 'printer',
 			},
 		],
 		growthPartner: {
@@ -535,6 +612,317 @@ const detailPageContent = {
 			title: 'Ready to turn your design into revenue?',
 			subtitle: 'Free audit. No pitch deck. Jut an honest look at what\'s costing you conversions.',
 			buttonText: 'Book A Free Call',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'ui-ux-design': {
+		seoTitle: 'UX/UI Design Services, Shopify UX, App Design, Wireframes & Conversion-Focused Design',
+		seoDescription:
+			'TechTicks delivers UX/UI design for ecommerce brands: user research, Shopify UX optimisation, app UI design, wireframes, prototypes, and CRO-focused design handoffs.',
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'UX/UI Design'],
+		breadcrumbLinks: ['/services', '/services/design'],
+		hero: {
+			tag: 'UX/UI Design',
+			title: 'Good Design Doesn’t Just Look Right.',
+			titleHighlight: 'It Makes People Buy.',
+			subtitle:
+				"Every UX decision we make is tied to a specific behaviour we're trying to change — reducing abandonment, increasing add-to-cart, shortening time-to-purchase. The aesthetics follow the function.",
+			ctaText: 'Book a Free UX Audit',
+			ctaLink: '/contactUs',
+		},
+		stats: [
+			{ value: '150+', label: 'Interfaces Designed' },
+			{ value: '38%', label: 'Avg CVR Lift' },
+			{ value: '72hr', label: 'First Drafts Turnaround' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What we design',
+		services: [
+			{
+				num: '01',
+				title: 'UX Research & Strategy',
+				desc: 'User journey mapping, heatmap and session recording analysis, competitor UX audits, and funnel drop-off analysis.',
+				iconKey: 'target',
+				ctaText: 'Learn more →',
+				ctaLink: '/services/ui-ux-design/ux-research-strategy',
+			},
+			{
+				num: '02',
+				title: 'Wireframing & Prototyping',
+				desc: 'Low-fidelity wireframes, high-fidelity interactive Figma prototypes, and a design system for consistency at scale.',
+				iconKey: 'layout',
+				ctaText: 'Learn more →',
+				ctaLink: '/services/ui-ux-design/wireframing-prototyping',
+			},
+			{
+				num: '03',
+				title: 'Shopify UX Design',
+				desc: 'Homepage, collection, and product page UX, checkout flow optimisation, and mobile UX audits and redesigns.',
+				iconKey: 'shopify',
+				ctaText: 'Learn more →',
+				ctaLink: '/services/ui-ux-design/shopify-ux-design',
+			},
+			{
+				num: '04',
+				title: 'App UI Design',
+				desc: 'iOS and Android UI following Apple HIG and Material Design, onboarding flow design, and dashboard UI.',
+				iconKey: 'monitor',
+				ctaText: 'Learn more →',
+				ctaLink: '/services/ui-ux-design/app-ui-design',
+			},
+			{
+				num: '05',
+				title: 'Website & Landing Page UI',
+				desc: 'Marketing website UI and high-converting landing page design for paid traffic, built to match ad intent.',
+				iconKey: 'code',
+				ctaText: 'Learn more →',
+				ctaLink: '/services/ui-ux-design/website-landing-page-ui',
+			},
+		],
+		process: {
+			title: 'Our design process',
+			steps: [
+				{ num: '01', title: 'Discovery', desc: 'We audit what exists, review analytics, and understand your users.' },
+				{ num: '02', title: 'Wireframes', desc: 'Structure before styling — we get this right before anything looks like design.' },
+				{ num: '03', title: 'High-Fidelity Design', desc: 'Full Figma mockups aligned to your brand system.' },
+				{ num: '04', title: 'Handoff', desc: 'Developer-ready Figma files with full annotation, specs, and assets.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Graphic Design', link: '/services/graphic-design', desc: 'Brand identity and marketplace creative to match your new UX.' },
+			{ title: 'Website Development', link: '/services/web-development', desc: 'We build what we design — no handoff friction.' },
+			{ title: 'Shopify', link: '/shopify', desc: 'See the platform this UX work most often lives on.' },
+		],
+		cta: {
+			title: 'Find Out Exactly Where Your UX Is Losing You Sales',
+			subtitle: "Book a free audit and we'll show you where visitors are dropping off.",
+			buttonText: 'Book a Free UX Audit →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'ui-ux-design/ux-research-strategy': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'UX/UI Design', 'UX Research & Strategy'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/ui-ux-design'],
+		hero: {
+			tag: 'UX Research & Strategy',
+			title: 'Design Decisions Backed by',
+			titleHighlight: 'Real User Behaviour.',
+			subtitle:
+				'We pull your funnel data and watch real sessions before touching Figma — every layout choice that follows is a hypothesis tied to a business metric, not a guess.',
+		},
+		stats: [
+			{ value: '100+', label: 'UX Audits Delivered' },
+			{ value: '38%', label: 'Avg CVR Lift Post-Redesign' },
+			{ value: '2wk', label: 'Avg Audit Turnaround' },
+			{ value: '94%', label: 'Client Satisfaction' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'User Journey Mapping', desc: 'The actual path your customers take through your site, not the one you assume.' },
+			{ num: '02', title: 'Heatmap & Session Recording', desc: 'Hotjar or Microsoft Clarity analysis to see exactly where users hesitate or leave.' },
+			{ num: '03', title: 'Competitor UX Audit', desc: "What's working in your market that you're not doing yet." },
+			{ num: '04', title: 'Funnel Drop-Off Analysis', desc: 'Pinpointing where users leave your funnel and what is causing it.' },
+		],
+		process: {
+			title: 'How we research',
+			steps: [
+				{ num: '01', title: 'Data Pull', desc: 'Analytics, heatmaps, and session recordings gathered and reviewed.' },
+				{ num: '02', title: 'Pattern Finding', desc: 'We identify where and why users are dropping off.' },
+				{ num: '03', title: 'Hypothesis Building', desc: 'Each finding becomes a specific, testable design change.' },
+				{ num: '04', title: 'Handoff to Design', desc: 'Findings feed directly into wireframes and prototypes.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Wireframing & Prototyping', link: '/services/ui-ux-design/wireframing-prototyping', desc: 'Where research findings become structure.' },
+			{ title: 'Shopify UX Design', link: '/services/ui-ux-design/shopify-ux-design', desc: 'Research applied to your storefront specifically.' },
+			{ title: 'UX/UI Design Hub', link: '/services/ui-ux-design', desc: 'See every UX/UI service we offer.' },
+		],
+		cta: {
+			title: 'Find Out Exactly Where Your UX Is Losing You Sales',
+			subtitle: "Book a free audit and we'll show you where visitors are dropping off.",
+			buttonText: 'Book a Free UX Audit →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'ui-ux-design/wireframing-prototyping': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'UX/UI Design', 'Wireframing & Prototyping'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/ui-ux-design'],
+		hero: {
+			tag: 'Wireframing & Prototyping',
+			title: 'Structure Before',
+			titleHighlight: 'Styling.',
+			subtitle:
+				"We get the layout, hierarchy, and flow right before anything looks like design — so revisions happen on a wireframe in an hour, not on finished visuals in a week.",
+		},
+		stats: [
+			{ value: '150+', label: 'Prototypes Built' },
+			{ value: '72hr', label: 'First Wireframes Turnaround' },
+			{ value: 'Figma', label: 'Developer-Ready Handoff' },
+			{ value: '94%', label: 'Client Satisfaction' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Low-Fidelity Wireframes', desc: 'Fast structure iteration before any visual design decisions are made.' },
+			{ num: '02', title: 'High-Fidelity Prototypes', desc: 'Interactive, clickable Figma prototypes for stakeholder sign-off and user testing.' },
+			{ num: '03', title: 'Mobile-First by Default', desc: 'Desktop layout comes second — most ecommerce traffic is on a phone.' },
+			{ num: '04', title: 'Design System & Components', desc: 'A component library for consistency at scale as your site grows.' },
+		],
+		process: {
+			title: 'How we build it',
+			steps: [
+				{ num: '01', title: 'Content & Hierarchy', desc: 'What needs to be on the page, and in what order of importance.' },
+				{ num: '02', title: 'Low-Fi Structure', desc: 'Fast wireframes to lock layout before visual design starts.' },
+				{ num: '03', title: 'Interactive Prototype', desc: 'Clickable Figma prototype ready for stakeholder review.' },
+				{ num: '04', title: 'Refine & Handoff', desc: 'Feedback incorporated, then handed to high-fidelity design.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'UX Research & Strategy', link: '/services/ui-ux-design/ux-research-strategy', desc: 'What informs every wireframing decision.' },
+			{ title: 'App UI Design', link: '/services/ui-ux-design/app-ui-design', desc: 'Where prototypes become polished app interfaces.' },
+			{ title: 'UX/UI Design Hub', link: '/services/ui-ux-design', desc: 'See every UX/UI service we offer.' },
+		],
+		cta: {
+			title: 'Find Out Exactly Where Your UX Is Losing You Sales',
+			subtitle: "Book a free audit and we'll show you where visitors are dropping off.",
+			buttonText: 'Book a Free UX Audit →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'ui-ux-design/shopify-ux-design': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'UX/UI Design', 'Shopify UX Design'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/ui-ux-design'],
+		hero: {
+			tag: 'Shopify UX Design',
+			title: 'Your Shopify Store Should',
+			titleHighlight: 'Sell While You Sleep.',
+			subtitle:
+				'Homepage, collection page, product page, and checkout — redesigned around how buyers actually browse and decide, not how the theme happened to ship.',
+		},
+		stats: [
+			{ value: '90+', label: 'Shopify Stores Redesigned' },
+			{ value: '2x', label: 'Avg Conversion Lift' },
+			{ value: '70%', label: 'Of DTC Traffic Is Mobile' },
+			{ value: '96%', label: 'Client Retention' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Homepage & Collection UX', desc: 'A homepage that answers "why you" fast, and collection pages that make browsing easy.' },
+			{ num: '02', title: 'Product Page UX', desc: 'Imagery order, copy gaps, trust signals, and social proof placed where buyers look first.' },
+			{ num: '03', title: 'Checkout Flow Optimisation', desc: 'Every unnecessary field or step removed — checkout friction is pure lost revenue.' },
+			{ num: '04', title: 'Mobile UX Audit & Redesign', desc: 'A dedicated pass on mobile, not an afterthought of the desktop design.' },
+		],
+		process: {
+			title: 'How we redesign your store',
+			steps: [
+				{ num: '01', title: 'Store Audit', desc: 'Heatmaps, funnel data, and a full page-by-page UX review.' },
+				{ num: '02', title: 'Redesign Priorities', desc: 'Ranked by expected revenue impact, not by what is easiest.' },
+				{ num: '03', title: 'Design & Prototype', desc: 'New UX built in Figma, reviewed before any development starts.' },
+				{ num: '04', title: 'Build & Test', desc: 'Handed to development, then A/B tested against the original.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Shopify', link: '/shopify', desc: 'Full Shopify build and CRO service, this UX work included.' },
+			{ title: 'Website & Landing Page UI', link: '/services/ui-ux-design/website-landing-page-ui', desc: 'For the pages driving paid traffic to your store.' },
+			{ title: 'UX/UI Design Hub', link: '/services/ui-ux-design', desc: 'See every UX/UI service we offer.' },
+		],
+		cta: {
+			title: 'Find Out Exactly Where Your UX Is Losing You Sales',
+			subtitle: "Book a free audit and we'll show you where visitors are dropping off.",
+			buttonText: 'Book a Free UX Audit →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'ui-ux-design/app-ui-design': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'UX/UI Design', 'App UI Design'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/ui-ux-design'],
+		hero: {
+			tag: 'App UI Design',
+			title: 'First Impressions That',
+			titleHighlight: 'Drive Activation, Not Confusion.',
+			subtitle:
+				'iOS and Android interfaces built on real platform conventions — Apple HIG and Material Design — so your app feels native, not like a website squeezed into a frame.',
+		},
+		stats: [
+			{ value: '40+', label: 'App Interfaces Designed' },
+			{ value: 'HIG', label: 'Apple HIG Compliant' },
+			{ value: 'Material', label: 'Material Design Compliant' },
+			{ value: '94%', label: 'Client Satisfaction' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Onboarding Flow Design', desc: 'First impressions that drive activation, not drop-off, in the first session.' },
+			{ num: '02', title: 'Dashboard & Data Visualisation', desc: 'Complex information made scannable and actionable at a glance.' },
+			{ num: '03', title: 'Microanimation & Interaction Specs', desc: 'Motion and feedback specs handed to developers, not left to guesswork.' },
+			{ num: '04', title: 'Figma Handoff', desc: 'Annotated components and spacing specs developers can build from directly.' },
+		],
+		process: {
+			title: 'How we design your app',
+			steps: [
+				{ num: '01', title: 'Platform Research', desc: 'Native conventions for iOS and Android mapped to your product.' },
+				{ num: '02', title: 'Flow & Wireframes', desc: 'Core user flows structured before visual design begins.' },
+				{ num: '03', title: 'High-Fidelity UI', desc: 'Full screen designs aligned to your brand and platform guidelines.' },
+				{ num: '04', title: 'Developer Handoff', desc: 'Annotated Figma files with every spec your dev team needs.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Wireframing & Prototyping', link: '/services/ui-ux-design/wireframing-prototyping', desc: 'Where app flows are structured before final UI.' },
+			{ title: 'Website Development', link: '/services/web-development', desc: 'For the web side of a cross-platform product.' },
+			{ title: 'UX/UI Design Hub', link: '/services/ui-ux-design', desc: 'See every UX/UI service we offer.' },
+		],
+		cta: {
+			title: 'Find Out Exactly Where Your UX Is Losing You Sales',
+			subtitle: "Book a free audit and we'll show you where visitors are dropping off.",
+			buttonText: 'Book a Free UX Audit →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'ui-ux-design/website-landing-page-ui': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'UX/UI Design', 'Website & Landing Page UI'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/ui-ux-design'],
+		hero: {
+			tag: 'Website & Landing Page UI',
+			title: 'Every Element Positioned',
+			titleHighlight: 'to Reduce Drop-Off.',
+			subtitle:
+				'Marketing website UI and landing pages built to match ad intent exactly — a visitor arriving from a specific ad should never have to guess if they landed in the right place.',
+		},
+		stats: [
+			{ value: '200+', label: 'Pages Designed' },
+			{ value: '38%', label: 'Avg CVR Lift' },
+			{ value: '72hr', label: 'First Drafts Turnaround' },
+			{ value: '94%', label: 'Client Satisfaction' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Marketing Website UI', desc: 'For ecommerce brands, agencies, and SaaS — built to convert, not just look premium.' },
+			{ num: '02', title: 'Landing Page Design', desc: 'High-converting pages for paid traffic, matched to what the ad promised.' },
+			{ num: '03', title: 'Sales Funnel Sequences', desc: 'Multi-step page sequences designed to reduce friction at every step.' },
+			{ num: '04', title: 'UI Component Library', desc: 'A reusable component set aligned to your brand guidelines.' },
+		],
+		process: {
+			title: 'How we design your pages',
+			steps: [
+				{ num: '01', title: 'Ad-to-Page Alignment', desc: 'We start from the ad or campaign the page needs to match.' },
+				{ num: '02', title: 'Wireframe', desc: 'Structure and hierarchy locked before visual design begins.' },
+				{ num: '03', title: 'High-Fidelity Design', desc: 'Full page design built to reduce friction at every scroll.' },
+				{ num: '04', title: 'Handoff & Test', desc: 'Developer-ready files, then A/B test variants where useful.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Website Development', link: '/services/web-development', desc: 'We build what we design — no handoff friction.' },
+			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Drive paid traffic to the pages we design.' },
+			{ title: 'UX/UI Design Hub', link: '/services/ui-ux-design', desc: 'See every UX/UI service we offer.' },
+		],
+		cta: {
+			title: 'Find Out Exactly Where Your UX Is Losing You Sales',
+			subtitle: "Book a free audit and we'll show you where visitors are dropping off.",
+			buttonText: 'Book a Free UX Audit →',
 			buttonLink: '/contactUs',
 		},
 	},
@@ -907,12 +1295,12 @@ const detailPageContent = {
 		],
 		servicesTitle: 'What we design',
 		services: [
-			{ num: '01', title: 'Brand Identity & Logo Design', desc: 'Logo design and variants, colour and typography systems, a full brand style guide, and brand application across packaging, social, ads, and web.', iconKey: 'pen' },
-			{ num: '02', title: 'Amazon Creative Design', desc: 'Main image optimisation — the single biggest lever for Amazon click-through rate — plus lifestyle imagery, A+ Content design, and Storefront banners.', iconKey: 'shopify' },
-			{ num: '03', title: 'Social Media Graphics', desc: 'Instagram and Facebook templates, TikTok thumbnails and text overlays, Pinterest pin design, and content calendar graphic packages.', iconKey: 'share' },
-			{ num: '04', title: 'Ad Creative Design', desc: 'Static creatives for Meta in every required size, Google Display sets, TikTok ad overlays and end cards, and email header and banner design.', iconKey: 'layout' },
-			{ num: '05', title: 'Product & Packaging Design', desc: 'Boxes, bags, labels, and custom formats, insert and thank-you card design, and print-ready files with bleed and safe zones handled correctly.', iconKey: 'printer' },
-			{ num: '06', title: 'Pitch Decks & Presentations', desc: 'Investor and client pitch decks, brand presentation templates, and infographic and data visualisation design.', iconKey: 'monitor' },
+			{ num: '01', title: 'Brand Identity & Logo Design', desc: 'Logo design and variants, colour and typography systems, a full brand style guide, and brand application across packaging, social, ads, and web.', iconKey: 'pen', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/brand-identity-logo-design' },
+			{ num: '02', title: 'Amazon Creative Design', desc: 'Main image optimisation — the single biggest lever for Amazon click-through rate — plus lifestyle imagery, A+ Content design, and Storefront banners.', iconKey: 'shopify', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/amazon-creative-design' },
+			{ num: '03', title: 'Social Media Graphics', desc: 'Instagram and Facebook templates, TikTok thumbnails and text overlays, Pinterest pin design, and content calendar graphic packages.', iconKey: 'share', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/social-media-graphics' },
+			{ num: '04', title: 'Ad Creative Design', desc: 'Static creatives for Meta in every required size, Google Display sets, TikTok ad overlays and end cards, and email header and banner design.', iconKey: 'layout', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/ad-creative-design' },
+			{ num: '05', title: 'Product & Packaging Design', desc: 'Boxes, bags, labels, and custom formats, insert and thank-you card design, and print-ready files with bleed and safe zones handled correctly.', iconKey: 'printer', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/product-packaging-design' },
+			{ num: '06', title: 'Pitch Decks & Presentations', desc: 'Investor and client pitch decks, brand presentation templates, and infographic and data visualisation design.', iconKey: 'monitor', ctaText: 'Learn more →', ctaLink: '/services/graphic-design/pitch-decks-presentations' },
 		],
 		process: {
 			title: 'Our design process',
@@ -924,9 +1312,279 @@ const detailPageContent = {
 			],
 		},
 		relatedServices: [
-			{ title: 'UX/UI Design', link: '/services/design', desc: 'Interfaces and store design, the other half of design that converts.' },
+			{ title: 'UX/UI Design', link: '/services/ui-ux-design', desc: 'Interfaces and store design, the other half of design that converts.' },
 			{ title: 'Amazon', link: '/amazon', desc: 'Put your new creative to work on listings and A+ Content.' },
 			{ title: 'Digital Marketing', link: '/services/digital-marketing', desc: 'Put your new ad creative into paid campaigns.' },
+		],
+		cta: {
+			title: 'Your Brand Deserves to Look as Good as the Product Itself',
+			subtitle: "Book a free design consultation and we'll show you where your current visuals are costing you attention.",
+			buttonText: 'Book a Free Design Consultation →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'graphic-design/brand-identity-logo-design': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'Graphic Design', 'Brand Identity & Logo Design'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/graphic-design'],
+		hero: {
+			tag: 'Brand Identity & Logo Design',
+			title: 'A Brand Isn’t a Logo.',
+			titleHighlight: 'It’s Every Touchpoint Working Together.',
+			subtitle:
+				'A logo file with no rules around it falls apart the moment two different platforms need it. We build the whole system — colour, type, usage rules — once, so everything you publish looks like the same company.',
+		},
+		stats: [
+			{ value: '80+', label: 'Brand Systems Built' },
+			{ value: '72hr', label: 'First Concepts Turnaround' },
+			{ value: '100%', label: 'Ecommerce-Trained Team' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Logo Design', desc: 'Primary lockup, secondary variants, favicon, and icon versions for every use case.' },
+			{ num: '02', title: 'Colour & Typography System', desc: 'A palette and type system with clear usage rules, not just a list of hex codes.' },
+			{ num: '03', title: 'Brand Style Guide', desc: 'One reference document so everything you publish looks like the same company.' },
+			{ num: '04', title: 'Brand Application', desc: 'Your new identity applied across packaging, social, ads, and web from day one.' },
+		],
+		process: {
+			title: 'How we build your identity',
+			steps: [
+				{ num: '01', title: 'Discovery', desc: 'We learn your brand, your buyers, and your competitors.' },
+				{ num: '02', title: 'Concepts', desc: 'A small number of genuinely distinct directions, not ten weak variations.' },
+				{ num: '03', title: 'Refinement', desc: 'The chosen direction refined into a complete, flexible system.' },
+				{ num: '04', title: 'Style Guide & Delivery', desc: 'Every file format you need, plus the rules for using them.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Product & Packaging Design', link: '/services/graphic-design/product-packaging-design', desc: 'Where your new identity meets the physical product.' },
+			{ title: 'Social Media Graphics', link: '/services/graphic-design/social-media-graphics', desc: 'Your brand system applied to daily content.' },
+			{ title: 'Graphic Design Hub', link: '/services/graphic-design', desc: 'See every graphic design service we offer.' },
+		],
+		cta: {
+			title: 'Your Brand Deserves to Look as Good as the Product Itself',
+			subtitle: "Book a free design consultation and we'll show you where your current visuals are costing you attention.",
+			buttonText: 'Book a Free Design Consultation →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'graphic-design/amazon-creative-design': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'Graphic Design', 'Amazon Creative Design'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/graphic-design'],
+		hero: {
+			tag: 'Amazon Creative Design',
+			title: 'Your Main Image Is the Single',
+			titleHighlight: 'Biggest Lever for Click-Through Rate.',
+			subtitle:
+				"If your main image doesn't stop the scroll, nothing else on the listing matters — the best copy in the world doesn't get read if nobody clicks. We design every image on your listing to earn the next one.",
+		},
+		stats: [
+			{ value: '300+', label: 'Amazon Listings Designed' },
+			{ value: '5', label: 'Marketplaces Covered' },
+			{ value: '72hr', label: 'First Drafts Turnaround' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Main Image Optimisation', desc: 'The single biggest lever for Amazon click-through rate, designed and tested.' },
+			{ num: '02', title: 'Secondary Image Set', desc: 'Lifestyle shots, infographics, feature callouts, and size comparisons.' },
+			{ num: '03', title: 'A+ Content Design', desc: 'Module layout, brand story, and comparison charts that convert browsers.' },
+			{ num: '04', title: 'Storefront Design', desc: 'Hero banners and category page design for your Amazon Storefront.' },
+		],
+		process: {
+			title: 'How we design your listings',
+			steps: [
+				{ num: '01', title: 'Listing Audit', desc: 'We review your current images against top-performing competitors.' },
+				{ num: '02', title: 'Concepts', desc: 'Main image and A+ Content concepts built around your product\'s strongest angle.' },
+				{ num: '03', title: 'Refinement', desc: 'Iteration until every image earns its place on the page.' },
+				{ num: '04', title: 'Delivery & Upload-Ready Files', desc: 'Every size and format Amazon requires, ready to publish.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Amazon', link: '/amazon', desc: 'Full Amazon management service, this creative work included.' },
+			{ title: 'Brand Identity & Logo Design', link: '/services/graphic-design/brand-identity-logo-design', desc: 'The system your Amazon creative should stay consistent with.' },
+			{ title: 'Graphic Design Hub', link: '/services/graphic-design', desc: 'See every graphic design service we offer.' },
+		],
+		cta: {
+			title: 'Your Brand Deserves to Look as Good as the Product Itself',
+			subtitle: "Book a free design consultation and we'll show you where your current visuals are costing you attention.",
+			buttonText: 'Book a Free Design Consultation →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'graphic-design/social-media-graphics': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'Graphic Design', 'Social Media Graphics'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/graphic-design'],
+		hero: {
+			tag: 'Social Media Graphics',
+			title: 'Consistent Content,',
+			titleHighlight: 'Every Platform, Every Week.',
+			subtitle:
+				'A brand that looks different on every platform looks like it belongs to nobody. We build the templates and produce the graphics so your feed stays consistent without eating your week.',
+		},
+		stats: [
+			{ value: '5', label: 'Platforms Designed For' },
+			{ value: '1000+', label: 'Graphics Produced' },
+			{ value: '72hr', label: 'First Drafts Turnaround' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Instagram & Facebook Templates', desc: 'Post templates, story frames, and highlight covers that stay on-brand every time.' },
+			{ num: '02', title: 'TikTok Thumbnails & Overlays', desc: 'Text overlay graphics and thumbnail design built to earn the tap.' },
+			{ num: '03', title: 'Pinterest Pin Design', desc: 'Pins optimised for saves and click-through, not just aesthetics.' },
+			{ num: '04', title: 'Content Calendar Packages', desc: 'A batch of on-brand graphics delivered together for consistent, planned posting.' },
+		],
+		process: {
+			title: 'How we produce your content',
+			steps: [
+				{ num: '01', title: 'Template System', desc: 'Reusable templates built once, matched to your brand system.' },
+				{ num: '02', title: 'Content Batching', desc: 'Graphics produced in batches so you are never scrambling last-minute.' },
+				{ num: '03', title: 'Review & Approve', desc: 'A simple approval pass before anything goes into your calendar.' },
+				{ num: '04', title: 'Delivery', desc: 'Files delivered ready to schedule, sized correctly per platform.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Ad Creative Design', link: '/services/graphic-design/ad-creative-design', desc: 'When your organic content is ready to become a paid campaign.' },
+			{ title: 'Social Media Marketing', link: '/services/digital-marketing/social-media', desc: 'The strategy and posting behind the graphics.' },
+			{ title: 'Graphic Design Hub', link: '/services/graphic-design', desc: 'See every graphic design service we offer.' },
+		],
+		cta: {
+			title: 'Your Brand Deserves to Look as Good as the Product Itself',
+			subtitle: "Book a free design consultation and we'll show you where your current visuals are costing you attention.",
+			buttonText: 'Book a Free Design Consultation →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'graphic-design/ad-creative-design': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'Graphic Design', 'Ad Creative Design'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/graphic-design'],
+		hero: {
+			tag: 'Ad Creative Design',
+			title: 'Creative Fatigue Is the',
+			titleHighlight: 'Silent ROAS Killer.',
+			subtitle:
+				'The same three creatives run for three months are why your CPMs are climbing. We produce ad creative in every format and size your campaigns actually need, on a schedule that keeps ahead of fatigue.',
+		},
+		stats: [
+			{ value: '500+', label: 'Ad Creatives Produced' },
+			{ value: '4', label: 'Ad Platforms Covered' },
+			{ value: '72hr', label: 'First Drafts Turnaround' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Meta Static & Carousel Creative', desc: 'Single image and carousel formats in every size Meta requires.' },
+			{ num: '02', title: 'Google Display Sets', desc: 'All standard IAB sizes, built once and adapted across the set.' },
+			{ num: '03', title: 'TikTok Ad Overlays & End Cards', desc: 'Text animation frames and end cards built for TikTok\'s native feel.' },
+			{ num: '04', title: 'Email & Banner Design', desc: 'Header graphics and promotional banners matched to your campaigns.' },
+		],
+		process: {
+			title: 'How we produce your creative',
+			steps: [
+				{ num: '01', title: 'Angle & Hook Review', desc: 'We work from what your marketing team knows is converting.' },
+				{ num: '02', title: 'Creative Production', desc: 'A batch of variants produced for testing, not one single execution.' },
+				{ num: '03', title: 'Performance Feedback Loop', desc: 'Winning creative informs the next batch we produce.' },
+				{ num: '04', title: 'Ongoing Refresh', desc: 'New creative delivered on a schedule to stay ahead of fatigue.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Meta Ads', link: '/services/digital-marketing/meta-ads', desc: 'The campaigns your new creative will run in.' },
+			{ title: 'Social Media Graphics', link: '/services/graphic-design/social-media-graphics', desc: 'Organic content this creative can be built from.' },
+			{ title: 'Graphic Design Hub', link: '/services/graphic-design', desc: 'See every graphic design service we offer.' },
+		],
+		cta: {
+			title: 'Your Brand Deserves to Look as Good as the Product Itself',
+			subtitle: "Book a free design consultation and we'll show you where your current visuals are costing you attention.",
+			buttonText: 'Book a Free Design Consultation →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'graphic-design/product-packaging-design': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'Graphic Design', 'Product & Packaging Design'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/graphic-design'],
+		hero: {
+			tag: 'Product & Packaging Design',
+			title: 'The Unboxing Is Part of',
+			titleHighlight: 'the Product.',
+			subtitle:
+				'Packaging is the one piece of marketing every single customer experiences in person. We design it to reinforce your brand, build trust on arrival, and make a repeat purchase more likely.',
+		},
+		stats: [
+			{ value: '60+', label: 'Packaging Projects Delivered' },
+			{ value: 'Print', label: 'Print-Ready File Prep' },
+			{ value: '72hr', label: 'First Concepts Turnaround' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Packaging Design', desc: 'Boxes, bags, labels, tubes, and custom formats designed around your product.' },
+			{ num: '02', title: 'Inserts & Unboxing Experience', desc: 'Insert cards, thank-you cards, and the full unboxing sequence.' },
+			{ num: '03', title: 'Lifestyle Composite Design', desc: 'Product images composited without needing a photographer on hand.' },
+			{ num: '04', title: 'Print-Ready File Prep', desc: 'Bleed, safe zones, and print specifications handled correctly the first time.' },
+		],
+		process: {
+			title: 'How we design your packaging',
+			steps: [
+				{ num: '01', title: 'Format & Constraints', desc: 'Material, printer specs, and budget mapped before design starts.' },
+				{ num: '02', title: 'Concepts', desc: 'Directions grounded in your brand system and shelf or unboxing context.' },
+				{ num: '03', title: 'Refinement', desc: 'Iteration until it is both on-brand and print-feasible.' },
+				{ num: '04', title: 'Print-Ready Delivery', desc: 'Files prepared exactly to your printer\'s specifications.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Brand Identity & Logo Design', link: '/services/graphic-design/brand-identity-logo-design', desc: 'The system your packaging needs to stay consistent with.' },
+			{ title: 'Amazon Creative Design', link: '/services/graphic-design/amazon-creative-design', desc: 'For brands where packaging also shows up in listing photos.' },
+			{ title: 'Graphic Design Hub', link: '/services/graphic-design', desc: 'See every graphic design service we offer.' },
+		],
+		cta: {
+			title: 'Your Brand Deserves to Look as Good as the Product Itself',
+			subtitle: "Book a free design consultation and we'll show you where your current visuals are costing you attention.",
+			buttonText: 'Book a Free Design Consultation →',
+			buttonLink: '/contactUs',
+		},
+	},
+
+	'graphic-design/pitch-decks-presentations': {
+		breadcrumb: ['Services', 'UX/UI & Graphic Design', 'Graphic Design', 'Pitch Decks & Presentations'],
+		breadcrumbLinks: ['/services', '/services/design', '/services/graphic-design'],
+		hero: {
+			tag: 'Pitch Decks & Presentations',
+			title: 'Your Deck Is Judged',
+			titleHighlight: 'Before Anyone Reads a Word.',
+			subtitle:
+				'A cluttered, off-brand deck undercuts a strong pitch before the first slide is even read. We design decks and presentations that make your numbers and your narrative easy to follow, and easy to trust.',
+		},
+		stats: [
+			{ value: '40+', label: 'Decks Designed' },
+			{ value: '72hr', label: 'First Draft Turnaround' },
+			{ value: '100%', label: 'Ecommerce-Trained Team' },
+			{ value: '94%', label: 'Satisfaction Rate' },
+		],
+		servicesTitle: 'What this covers',
+		services: [
+			{ num: '01', title: 'Investor & Client Pitch Decks', desc: 'A professional first impression built to support the story you\'re telling.' },
+			{ num: '02', title: 'Brand Presentation Templates', desc: 'Reusable templates for internal and external presentations.' },
+			{ num: '03', title: 'Infographic & Data Visualisation', desc: 'Numbers made scannable and persuasive, not buried in a table.' },
+			{ num: '04', title: 'Trade Show & Event Collateral', desc: 'Materials that hold up printed large and viewed from across a room.' },
+		],
+		process: {
+			title: 'How we design your deck',
+			steps: [
+				{ num: '01', title: 'Narrative Review', desc: 'We work from your content and story, not a blank template.' },
+				{ num: '02', title: 'Structure & Layout', desc: 'Slide flow and hierarchy locked before visual polish begins.' },
+				{ num: '03', title: 'Visual Design', desc: 'Full design pass aligned to your brand system.' },
+				{ num: '04', title: 'Delivery', desc: 'Editable source files plus a presentation-ready export.' },
+			],
+		},
+		relatedServices: [
+			{ title: 'Brand Identity & Logo Design', link: '/services/graphic-design/brand-identity-logo-design', desc: 'The system every deck we design stays consistent with.' },
+			{ title: 'UX/UI Design', link: '/services/ui-ux-design', desc: 'For product demos and interface walkthroughs within a deck.' },
+			{ title: 'Graphic Design Hub', link: '/services/graphic-design', desc: 'See every graphic design service we offer.' },
 		],
 		cta: {
 			title: 'Your Brand Deserves to Look as Good as the Product Itself',
@@ -968,12 +1626,12 @@ detailPageContent.development = {
 	servicesTitle: 'Every build, every channel.',
 	servicesSubtitle: "From first commit to post-launch support - we handle the full development lifecycle so your team doesn't have to.",
 	services: [
-		{ num: '01', title: 'Shopify Store Development', desc: 'Custom themes, app integrations, and checkout optimization for Shopify merchants ready to scale.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'shopify' },
-		{ num: '02', title: 'Custom Website Design & Build', desc: 'Fully bespoke sites built on Next.js or headless stacks - no templates, no shortcuts.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'code' },
-		{ num: '03', title: 'Redesigns & Migrations', desc: 'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'refresh' },
-		{ num: '04', title: 'Landing Pages', desc: 'High-converting campaign pages built for paid traffic - A/B-ready and launched in days, not weeks.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'layout' },
-		{ num: '05', title: 'Speed & Performance Optimization', desc: 'Core Web Vitals audits and surgical fixes that cut load time and lift rankings.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'speed' },
-		{ num: '06', title: 'Maintenance & Support', desc: 'Ongoing updates, security patches, and feature rollouts, so your site never stagnates.', ctaText: 'Learn more', ctaLink: '/contactUs', iconKey: 'support' },
+		{ num: '01', title: 'Shopify Store Development', desc: 'Custom themes, app integrations, and checkout optimization for Shopify merchants ready to scale.', ctaText: 'Learn more', ctaLink: '/services/web-development/shopify-store-development', iconKey: 'shopify' },
+		{ num: '02', title: 'Custom Website Design & Build', desc: 'Fully bespoke sites built on Next.js or headless stacks - no templates, no shortcuts.', ctaText: 'Learn more', ctaLink: '/services/web-development/custom-website-design-build', iconKey: 'code' },
+		{ num: '03', title: 'Redesigns & Migrations', desc: 'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one.', ctaText: 'Learn more', ctaLink: '/services/web-development/redesigns-migrations', iconKey: 'refresh' },
+		{ num: '04', title: 'Landing Pages', desc: 'High-converting campaign pages built for paid traffic - A/B-ready and launched in days, not weeks.', ctaText: 'Learn more', ctaLink: '/services/web-development/landing-pages', iconKey: 'layout' },
+		{ num: '05', title: 'Speed & Performance Optimization', desc: 'Core Web Vitals audits and surgical fixes that cut load time and lift rankings.', ctaText: 'Learn more', ctaLink: '/services/web-development/speed-performance-optimization', iconKey: 'speed' },
+		{ num: '06', title: 'Maintenance & Support', desc: 'Ongoing updates, security patches, and feature rollouts, so your site never stagnates.', ctaText: 'Learn more', ctaLink: '/services/web-development/maintenance-support', iconKey: 'support' },
 	],
 	process: {
 		title: 'The unfair advantage.',
@@ -995,6 +1653,276 @@ detailPageContent.development = {
 			{ image: devPortfolioSupport, title: 'Ongoing Support Example', category: 'Maintenance & Support' },
 		],
 	},
+	cta: {
+		title: 'Ready to build something that sells?',
+		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
+		buttonText: 'Book A Free Call',
+		buttonLink: '/contactUs',
+	},
+}
+
+detailPageContent['web-development/shopify-store-development'] = {
+	breadcrumb: ['Services', 'Website Development', 'Shopify Store Development'],
+	breadcrumbLinks: ['/services', '/services/web-development'],
+	hero: {
+		tag: 'Shopify Store Development',
+		title: 'Custom Shopify Builds,',
+		titleHighlight: 'Not Modified Templates.',
+		subtitle:
+			'Custom themes, app integrations, and checkout optimization built on Shopify 2.0 — mobile-first, fast-loading, and built to convert from launch day, not patched up after.',
+	},
+	stats: [
+		{ value: '90+', label: 'Shopify Stores Built' },
+		{ value: '90+', label: 'Avg Lighthouse Score' },
+		{ value: '2x', label: 'Avg Conversion Lift' },
+		{ value: '96%', label: 'On-Time Delivery' },
+	],
+	servicesTitle: 'What this covers',
+	services: [
+		{ num: '01', title: 'Custom Theme Development', desc: 'Shopify 2.0 builds — custom themes or heavily modified bases, section-everywhere.' },
+		{ num: '02', title: 'App Integrations', desc: 'Reviews, email/SMS, upsell, loyalty, and subscription apps wired up correctly.' },
+		{ num: '03', title: 'Checkout Optimization', desc: 'Every unnecessary step removed — checkout friction is pure lost revenue.' },
+		{ num: '04', title: 'Shopify Plus Advisory', desc: 'Flow automations, checkout extensibility, and B2B wholesale configuration.' },
+	],
+	process: {
+		title: 'How we build',
+		steps: [
+			{ num: '01', title: 'Discovery & Scope', desc: 'Requirements, timeline, and success metrics defined before any code.' },
+			{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
+			{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage — no surprises at launch.' },
+			{ num: '04', title: 'Launch & Support', desc: 'Smooth go-live and ongoing support to keep everything running.' },
+		],
+	},
+	relatedServices: [
+		{ title: 'Shopify', link: '/shopify', desc: 'Full Shopify management service, this build work included.' },
+		{ title: 'Shopify UX Design', link: '/services/ui-ux-design/shopify-ux-design', desc: 'The design work behind a build like this.' },
+		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
+	],
+	cta: {
+		title: 'Ready to build something that sells?',
+		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
+		buttonText: 'Book A Free Call',
+		buttonLink: '/contactUs',
+	},
+}
+
+detailPageContent['web-development/custom-website-design-build'] = {
+	breadcrumb: ['Services', 'Website Development', 'Custom Website Design & Build'],
+	breadcrumbLinks: ['/services', '/services/web-development'],
+	hero: {
+		tag: 'Custom Website Design & Build',
+		title: 'Fully Bespoke Sites,',
+		titleHighlight: 'No Templates, No Shortcuts.',
+		subtitle:
+			'Built on Next.js or a headless stack when a theme-based platform can\'t do what your business needs — full control over structure, speed, and functionality from the ground up.',
+	},
+	stats: [
+		{ value: '50+', label: 'Custom Builds Delivered' },
+		{ value: '90+', label: 'Avg Performance Score' },
+		{ value: 'Next.js', label: 'Modern Stack' },
+		{ value: '97%', label: 'On-Time Delivery' },
+	],
+	servicesTitle: 'What this covers',
+	services: [
+		{ num: '01', title: 'Custom Frontend Development', desc: 'Next.js or headless builds with full control over structure and behaviour.' },
+		{ num: '02', title: 'Headless CMS Integration', desc: 'Content managed independently from the frontend, for teams that need it.' },
+		{ num: '03', title: 'API & Third-Party Integrations', desc: 'Custom integrations with whatever tools your business already runs on.' },
+		{ num: '04', title: 'Performance-First Architecture', desc: 'Built fast from the first commit, not optimized after the fact.' },
+	],
+	process: {
+		title: 'How we build',
+		steps: [
+			{ num: '01', title: 'Discovery & Scope', desc: 'Requirements, timeline, and success metrics defined before any code.' },
+			{ num: '02', title: 'Design & Prototype', desc: 'Interactive wireframes reviewed and approved before development starts.' },
+			{ num: '03', title: 'Build & Test', desc: 'Development with QA at every stage — no surprises at launch.' },
+			{ num: '04', title: 'Launch & Support', desc: 'Smooth go-live and ongoing support to keep everything running.' },
+		],
+	},
+	relatedServices: [
+		{ title: 'UX/UI Design', link: '/services/ui-ux-design', desc: 'We design before we build — no handoff friction.' },
+		{ title: 'Speed & Performance Optimization', link: '/services/web-development/speed-performance-optimization', desc: 'Keeping a custom build fast as it grows.' },
+		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
+	],
+	cta: {
+		title: 'Ready to build something that sells?',
+		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
+		buttonText: 'Book A Free Call',
+		buttonLink: '/contactUs',
+	},
+}
+
+detailPageContent['web-development/redesigns-migrations'] = {
+	breadcrumb: ['Services', 'Website Development', 'Redesigns & Migrations'],
+	breadcrumbLinks: ['/services', '/services/web-development'],
+	hero: {
+		tag: 'Redesigns & Migrations',
+		title: 'Move Platforms Without',
+		titleHighlight: 'Losing Your Rankings.',
+		subtitle:
+			'Platform migrations and complete redesigns that preserve SEO equity and improve conversion from day one — the two things that go wrong most often on a migration, handled deliberately.',
+	},
+	stats: [
+		{ value: '40+', label: 'Migrations Completed' },
+		{ value: '301', label: 'Redirect Strategy on Every Move' },
+		{ value: '0', label: 'Acceptable Ranking Loss' },
+		{ value: '97%', label: 'On-Time Delivery' },
+	],
+	servicesTitle: 'What this covers',
+	services: [
+		{ num: '01', title: 'Platform Migrations', desc: 'From WooCommerce, BigCommerce, Magento, Wix, or a custom-built store.' },
+		{ num: '02', title: 'Data Migration', desc: 'Products, customer records, and order history transferred cleanly.' },
+		{ num: '03', title: '301 Redirect Strategy', desc: 'Built before launch day specifically to protect your SEO rankings.' },
+		{ num: '04', title: 'Pre-Launch QA', desc: 'Nothing goes live until every link, form, and payment path is verified.' },
+	],
+	process: {
+		title: 'How we migrate',
+		steps: [
+			{ num: '01', title: 'Audit Current Site', desc: 'Every page, redirect, and ranking keyword catalogued before we touch anything.' },
+			{ num: '02', title: 'Migration Plan', desc: 'Data mapping and redirect strategy built before development starts.' },
+			{ num: '03', title: 'Build & Test', desc: 'New site built and QA\'d against the migration plan.' },
+			{ num: '04', title: 'Launch & Monitor', desc: 'Rankings and traffic monitored closely in the weeks after go-live.' },
+		],
+	},
+	relatedServices: [
+		{ title: 'SEO', link: '/services/digital-marketing/seo', desc: 'Protecting and building on your rankings after a migration.' },
+		{ title: 'Speed & Performance Optimization', link: '/services/web-development/speed-performance-optimization', desc: 'A natural next step once you\'re on the new platform.' },
+		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
+	],
+	cta: {
+		title: 'Ready to build something that sells?',
+		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
+		buttonText: 'Book A Free Call',
+		buttonLink: '/contactUs',
+	},
+}
+
+detailPageContent['web-development/landing-pages'] = {
+	breadcrumb: ['Services', 'Website Development', 'Landing Pages'],
+	breadcrumbLinks: ['/services', '/services/web-development'],
+	hero: {
+		tag: 'Landing Pages',
+		title: 'Built for Paid Traffic,',
+		titleHighlight: 'Launched in Days, Not Weeks.',
+		subtitle:
+			"High-converting campaign pages that match what your ad promised — A/B-ready from the first build, so testing doesn't mean waiting on a second development cycle.",
+	},
+	stats: [
+		{ value: '200+', label: 'Landing Pages Built' },
+		{ value: '2x', label: 'Avg Conversion Lift' },
+		{ value: 'Days', label: 'Not Weeks to Launch' },
+		{ value: '97%', label: 'On-Time Delivery' },
+	],
+	servicesTitle: 'What this covers',
+	services: [
+		{ num: '01', title: 'Campaign Landing Pages', desc: 'Standalone pages built to match a specific ad, offer, or audience.' },
+		{ num: '02', title: 'Multi-Step Funnels', desc: 'Upsell, downsell, and order bump logic built into the funnel itself.' },
+		{ num: '03', title: 'Lead Gen Pages', desc: 'Integrated directly with your CRM or email platform on submit.' },
+		{ num: '04', title: 'A/B Test-Ready Variants', desc: 'Built from day one to support testing, not retrofitted for it later.' },
+	],
+	process: {
+		title: 'How we build your pages',
+		steps: [
+			{ num: '01', title: 'Ad-to-Page Alignment', desc: 'We start from the campaign or offer the page needs to match.' },
+			{ num: '02', title: 'Design & Copy', desc: 'Page structure and copy built around the specific offer.' },
+			{ num: '03', title: 'Build & Integrate', desc: 'Built and connected to your CRM, email platform, or checkout.' },
+			{ num: '04', title: 'Launch & Test', desc: 'Live fast, then iterate based on real conversion data.' },
+		],
+	},
+	relatedServices: [
+		{ title: 'Meta Ads', link: '/services/digital-marketing/meta-ads', desc: 'The campaigns these pages are typically built to match.' },
+		{ title: 'Website & Landing Page UI', link: '/services/ui-ux-design/website-landing-page-ui', desc: 'The design work behind a page like this.' },
+		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
+	],
+	cta: {
+		title: 'Ready to build something that sells?',
+		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
+		buttonText: 'Book A Free Call',
+		buttonLink: '/contactUs',
+	},
+}
+
+detailPageContent['web-development/speed-performance-optimization'] = {
+	breadcrumb: ['Services', 'Website Development', 'Speed & Performance Optimization'],
+	breadcrumbLinks: ['/services', '/services/web-development'],
+	hero: {
+		tag: 'Speed & Performance Optimization',
+		title: 'Every Second of Load Time',
+		titleHighlight: 'Is Lost Revenue.',
+		subtitle:
+			'Core Web Vitals audits and surgical fixes that cut load time and lift rankings — for sites we built and sites we didn\'t, diagnosed before anything gets changed.',
+	},
+	stats: [
+		{ value: '100+', label: 'Sites Optimized' },
+		{ value: '90+', label: 'Avg Post-Fix Score' },
+		{ value: '2x', label: 'Avg Conversion Lift' },
+		{ value: '97%', label: 'On-Time Delivery' },
+	],
+	servicesTitle: 'What this covers',
+	services: [
+		{ num: '01', title: 'Core Web Vitals Audit', desc: 'Full diagnosis of what is actually slowing your site down.' },
+		{ num: '02', title: 'Image & Asset Optimization', desc: 'Next-gen formats, lazy loading, and compression without visible quality loss.' },
+		{ num: '03', title: 'Code & Render-Blocking Fixes', desc: 'Minification and resolving what blocks the page from rendering fast.' },
+		{ num: '04', title: 'CDN & Caching Setup', desc: 'Server-side and CDN caching configured correctly for your platform.' },
+	],
+	process: {
+		title: 'How we optimize your site',
+		steps: [
+			{ num: '01', title: 'Performance Audit', desc: 'Every page tested against Core Web Vitals thresholds.' },
+			{ num: '02', title: 'Priority List', desc: 'Fixes ranked by expected impact on load time and rankings.' },
+			{ num: '03', title: 'Implementation', desc: 'Fixes shipped and re-tested against the original baseline.' },
+			{ num: '04', title: 'Ongoing Monitoring', desc: 'Performance tracked so a regression gets caught early.' },
+		],
+	},
+	relatedServices: [
+		{ title: 'SEO', link: '/services/digital-marketing/seo', desc: 'Site speed is one of the ranking factors this feeds directly.' },
+		{ title: 'Maintenance & Support', link: '/services/web-development/maintenance-support', desc: 'Keeping performance from regressing after the fix.' },
+		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
+	],
+	cta: {
+		title: 'Ready to build something that sells?',
+		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
+		buttonText: 'Book A Free Call',
+		buttonLink: '/contactUs',
+	},
+}
+
+detailPageContent['web-development/maintenance-support'] = {
+	breadcrumb: ['Services', 'Website Development', 'Maintenance & Support'],
+	breadcrumbLinks: ['/services', '/services/web-development'],
+	hero: {
+		tag: 'Maintenance & Support',
+		title: 'A Website Is Never',
+		titleHighlight: 'Actually "Done."',
+		subtitle:
+			'Ongoing updates, security patches, and feature rollouts so your site never stagnates — the same team that built it stays on it, instead of handing you off to a support queue.',
+	},
+	stats: [
+		{ value: '60+', label: 'Sites on Retainer' },
+		{ value: '24/7', label: 'Uptime Monitoring' },
+		{ value: '<24h', label: 'Avg Response Time' },
+		{ value: '96%', label: 'Retainer Renewal Rate' },
+	],
+	servicesTitle: 'What this covers',
+	services: [
+		{ num: '01', title: 'Monthly Technical Maintenance', desc: 'Updates, security patches, and backups on a predictable schedule.' },
+		{ num: '02', title: 'Uptime Monitoring & Incident Response', desc: 'Issues caught and responded to before they become customer complaints.' },
+		{ num: '03', title: 'Content Updates & New Pages', desc: 'Ongoing content changes and new page builds on request.' },
+		{ num: '04', title: 'Platform Migrations When You Outgrow', desc: 'A clear path forward when your current stack stops fitting.' },
+	],
+	process: {
+		title: 'How the retainer works',
+		steps: [
+			{ num: '01', title: 'Onboarding Audit', desc: 'We map your current stack, access, and any outstanding issues.' },
+			{ num: '02', title: 'Monthly Maintenance', desc: 'Updates, patches, and backups run on a set schedule.' },
+			{ num: '03', title: 'Requests & Fixes', desc: 'Content changes and bug fixes handled within an agreed turnaround.' },
+			{ num: '04', title: 'Monthly Report', desc: 'A short summary of what was done and what to watch next.' },
+		],
+	},
+	relatedServices: [
+		{ title: 'Speed & Performance Optimization', link: '/services/web-development/speed-performance-optimization', desc: 'Often the first thing a maintenance audit surfaces.' },
+		{ title: 'Redesigns & Migrations', link: '/services/web-development/redesigns-migrations', desc: 'For when a site has outgrown its current platform entirely.' },
+		{ title: 'Website Development Hub', link: '/services/web-development', desc: 'See every development service we offer.' },
+	],
 	cta: {
 		title: 'Ready to build something that sells?',
 		subtitle: "We'll audit your current site and tell you exactly what's costing you conversions, no pitch deck, no pressure.",
