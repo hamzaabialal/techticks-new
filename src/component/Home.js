@@ -24,7 +24,6 @@ import picture19 from '../component/images/slideriImages/Group 320.png'
 import picture20 from '../component/images/slideriImages/Group 321.png'
 import picture21 from '../component/images/slideriImages/Group 322.png'
 import Slider from '../slider'
-import frameIcon from '../component/images/Frame.png'
 import CtaCard from './Cta-card'
 
 import {
@@ -40,7 +39,6 @@ import {
 	FaChevronUp,
 	FaSearch,
 	FaBullhorn,
-	FaShoppingCart,
 	FaUsers,
 } from 'react-icons/fa'
 
