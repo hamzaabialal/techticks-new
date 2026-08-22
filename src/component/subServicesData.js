@@ -1617,12 +1617,18 @@ const detailPageContent = {
 			{ value: '100%', label: 'Ecommerce-Trained Team' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — Graphic Design',
 		services: [
-			{ num: '01', title: 'Logo Design', desc: 'Primary lockup, secondary variants, favicon, and icon versions for every use case.' },
-			{ num: '02', title: 'Colour & Typography System', desc: 'A palette and type system with clear usage rules, not just a list of hex codes.' },
-			{ num: '03', title: 'Brand Style Guide', desc: 'One reference document so everything you publish looks like the same company.' },
-			{ num: '04', title: 'Brand Application', desc: 'Your new identity applied across packaging, social, ads, and web from day one.' },
+			{
+				num: '01', title: 'Brand Identity & Logo Design',
+				bullets: [
+					'Logo design: primary lockup, secondary variants, favicon, and icon versions',
+					'Brand colour palette and typography system with usage rules',
+					'Full brand style guide: so everything you publish looks like the same company',
+					'Brand application across packaging, social, ads, and web',
+					'Brand refresh for brands that have outgrown their current visual identity',
+				],
+			},
 		],
 		process: {
 			title: 'How we build your identity',
@@ -1662,12 +1668,18 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — Graphic Design',
 		services: [
-			{ num: '01', title: 'Main Image Optimisation', desc: 'The single biggest lever for Amazon click-through rate, designed and tested.' },
-			{ num: '02', title: 'Secondary Image Set', desc: 'Lifestyle shots, infographics, feature callouts, and size comparisons.' },
-			{ num: '03', title: 'A+ Content Design', desc: 'Module layout, brand story, and comparison charts that convert browsers.' },
-			{ num: '04', title: 'Storefront Design', desc: 'Hero banners and category page design for your Amazon Storefront.' },
+			{
+				num: '01', title: 'Amazon Creative Design',
+				bullets: [
+					'Main image optimisation: the single biggest lever for Amazon click-through rate',
+					'Secondary image set: lifestyle shots, infographics, feature callouts, size comparisons',
+					'A+ Content design: module layout, brand story, comparison charts',
+					'Amazon Storefront design, hero banners, and category page design',
+					'Sponsored Brand and Sponsored Display ad creative design',
+				],
+			},
 		],
 		process: {
 			title: 'How we design your listings',
@@ -1707,12 +1719,18 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — Graphic Design',
 		services: [
-			{ num: '01', title: 'Instagram & Facebook Templates', desc: 'Post templates, story frames, and highlight covers that stay on-brand every time.' },
-			{ num: '02', title: 'TikTok Thumbnails & Overlays', desc: 'Text overlay graphics and thumbnail design built to earn the tap.' },
-			{ num: '03', title: 'Pinterest Pin Design', desc: 'Pins optimised for saves and click-through, not just aesthetics.' },
-			{ num: '04', title: 'Content Calendar Packages', desc: 'A batch of on-brand graphics delivered together for consistent, planned posting.' },
+			{
+				num: '01', title: 'Social Media Graphics',
+				bullets: [
+					'Instagram and Facebook post templates, story frames, and highlight covers',
+					'TikTok thumbnail design and text overlay graphics',
+					'Pinterest pin design optimised for saves and click-through',
+					'YouTube channel art and thumbnail templates',
+					'Content calendar graphic packages for consistent, on-brand posting',
+				],
+			},
 		],
 		process: {
 			title: 'How we produce your content',
@@ -1752,12 +1770,18 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — Graphic Design',
 		services: [
-			{ num: '01', title: 'Meta Static & Carousel Creative', desc: 'Single image and carousel formats in every size Meta requires.' },
-			{ num: '02', title: 'Google Display Sets', desc: 'All standard IAB sizes, built once and adapted across the set.' },
-			{ num: '03', title: 'TikTok Ad Overlays & End Cards', desc: 'Text animation frames and end cards built for TikTok\'s native feel.' },
-			{ num: '04', title: 'Email & Banner Design', desc: 'Header graphics and promotional banners matched to your campaigns.' },
+			{
+				num: '01', title: 'Ad Creative Design',
+				bullets: [
+					'Static ad creatives for Meta: single image and carousel formats in all required sizes',
+					'Google Display ad sets: all standard IAB sizes',
+					'TikTok ad overlays, end cards, and text animation frames',
+					'Email header graphics and promotional banner design',
+					'Print ad design for brands with offline marketing needs',
+				],
+			},
 		],
 		process: {
 			title: 'How we produce your creative',
@@ -1797,12 +1821,17 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Concepts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — Graphic Design',
 		services: [
-			{ num: '01', title: 'Packaging Design', desc: 'Boxes, bags, labels, tubes, and custom formats designed around your product.' },
-			{ num: '02', title: 'Inserts & Unboxing Experience', desc: 'Insert cards, thank-you cards, and the full unboxing sequence.' },
-			{ num: '03', title: 'Lifestyle Composite Design', desc: 'Product images composited without needing a photographer on hand.' },
-			{ num: '04', title: 'Print-Ready File Prep', desc: 'Bleed, safe zones, and print specifications handled correctly the first time.' },
+			{
+				num: '01', title: 'Product & Packaging Design',
+				bullets: [
+					'Packaging design: boxes, bags, labels, tubes, and custom formats',
+					'Insert cards, thank-you cards, and unboxing experience design',
+					'Lifestyle composite design for product images without a photographer',
+					'Print-ready file preparation with bleed, safe zones, and print specifications',
+				],
+			},
 		],
 		process: {
 			title: 'How we design your packaging',
@@ -1842,12 +1871,17 @@ const detailPageContent = {
 			{ value: '100%', label: 'Ecommerce-Trained Team' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'What this covers',
+		servicesTitle: 'Services — Graphic Design',
 		services: [
-			{ num: '01', title: 'Investor & Client Pitch Decks', desc: 'A professional first impression built to support the story you\'re telling.' },
-			{ num: '02', title: 'Brand Presentation Templates', desc: 'Reusable templates for internal and external presentations.' },
-			{ num: '03', title: 'Infographic & Data Visualisation', desc: 'Numbers made scannable and persuasive, not buried in a table.' },
-			{ num: '04', title: 'Trade Show & Event Collateral', desc: 'Materials that hold up printed large and viewed from across a room.' },
+			{
+				num: '01', title: 'Pitch Decks & Presentations',
+				bullets: [
+					'Investor and client pitch deck design that makes a professional first impression',
+					'Brand presentation templates for internal and external use',
+					'Infographic and data visualisation design',
+					'Trade show materials and event collateral',
+				],
+			},
 		],
 		process: {
 			title: 'How we design your deck',
