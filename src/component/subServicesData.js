@@ -58,7 +58,7 @@ const detailPageContent = {
 			{ value: '96%', label: 'Clients Retention' },
 		],
 		textBlock: {
-			title: 'Why brands that sell on multiple platforms win long-term',
+			title: 'Why Brands That Sell on Multiple Platforms Win Long-Term',
 			paragraphs: [
 				'A brand that sells only on Amazon is one algorithm change away from a bad month. TikTok Shop brands that ignore owned channels are building on rented land. Shopify-only DTC brands pay forever for every customer.',
 				"Multi-channel isn't just a growth strategy - it's a risk management strategy. TechTicks builds and manages your presence across platforms so you're not dependent on any single one.",
@@ -238,14 +238,6 @@ const detailPageContent = {
 				ctaLink: '/services/digital-marketing/content-creation',
 			},
 		],
-		// optional final CTA override for page
-		cta: {
-			title: "Let's Grow Your Store.",
-			subtitle: "Book a free 30-minute audit call. We'll review your current setup and show you exactly where to unlock more revenue.",
-			buttonText: 'Book A Free Call',
-			buttonLink: '/contactUs',
-			variantClass: '',
-		},
 		process: {
 			title: 'How it works',
 			subtitle: 'A process built for compounding.',
@@ -255,6 +247,32 @@ const detailPageContent = {
 				{ num: '03', title: 'Execution', desc: 'Campaigns, creative, flows and content go live - built, launched and managed by our specialists.' },
 				{ num: '04', title: 'Optimization & Reporting', desc: 'Weekly testing, budget reallocation and transparent reporting that compound results over time.' },
 			],
+		},
+		faqSubtitle: 'Straight answers about how we run digital marketing.',
+		faq: [
+			{
+				question: 'Should we run Meta Ads and Google Ads at the same time?',
+				answer:
+					"In most cases, yes. Meta and Google serve different stages of the buyer journey — Meta builds awareness and demand, Google captures it. Brands running both typically see a better blended ROAS because each channel plugs the gaps the other can't fill.",
+			},
+			{
+				question: "What's the minimum ad budget you recommend?",
+				answer:
+					"For Meta or Google, we recommend at least $3,000/month per platform. Below that threshold, the campaign learning phases take too long and you're optimising on insufficient data. We'll tell you honestly if now isn't the right time.",
+			},
+			{
+				question: 'How long does SEO take?',
+				answer:
+					'Technical fixes can move the needle in 4–8 weeks. Content and link building typically takes 3–6 months before you see meaningful ranking movement. Anyone who tells you differently is selling you something. We set honest timelines from the start.',
+			},
+		],
+		// optional final CTA override for page
+		cta: {
+			title: 'Marketing That Keeps Working After You Stop Paying for It',
+			subtitle: "Book a free marketing audit. We'll review your current setup and show you exactly where to unlock more revenue.",
+			buttonText: 'Book a Free Marketing Audit →',
+			buttonLink: '/contactUs',
+			variantClass: '',
 		},
 	},
 
