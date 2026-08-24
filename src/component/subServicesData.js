@@ -138,7 +138,7 @@ const detailPageContent = {
 		},
 		portfolio: {
 			title: 'Let The Results Do The Talking',
-			subtitle: 'A look at the type of ecommerce work we deliver — not specific client case studies.',
+			subtitle: 'A look at the type of ecommerce work we deliver - not specific client case studies.',
 			items: [
 				{ image: ecomPortfolioAmazon, title: 'Amazon Listing Design', category: 'Amazon A+ Content & Listings' },
 				{ image: ecomPortfolioSaas, title: 'SaaS Platform Store', category: 'Shopify & Custom Development' },
@@ -253,7 +253,7 @@ const detailPageContent = {
 			{
 				question: 'Should we run Meta Ads and Google Ads at the same time?',
 				answer:
-					"In most cases, yes. Meta and Google serve different stages of the buyer journey — Meta builds awareness and demand, Google captures it. Brands running both typically see a better blended ROAS because each channel plugs the gaps the other can't fill.",
+					"In most cases, yes. Meta and Google serve different stages of the buyer journey - Meta builds awareness and demand, Google captures it. Brands running both typically see a better blended ROAS because each channel plugs the gaps the other can't fill.",
 			},
 			{
 				question: "What's the minimum ad budget you recommend?",
@@ -294,14 +294,14 @@ const detailPageContent = {
 			{ value: '6mo', label: 'Avg Time to Results' },
 			{ value: '91%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — Digital Marketing',
+		servicesTitle: 'Services - Digital Marketing',
 		services: [
 			{
 				num: '01', title: 'Search Engine Optimisation (SEO)',
 				bullets: [
 					'Technical SEO audit: crawlability, indexation, page speed, Core Web Vitals',
 					'On-page optimisation: title tags, meta descriptions, headings, schema markup, internal linking',
-					"Keyword research and content gap analysis — finding the searches your competitors are capturing",
+					"Keyword research and content gap analysis - finding the searches your competitors are capturing",
 					'Content strategy: blog posts, category pages, and product page SEO',
 					'Link building: outreach campaigns, guest posts, and digital PR',
 					'Monthly ranking reports with competitor movement tracking',
@@ -342,7 +342,7 @@ const detailPageContent = {
 			{ value: '50+', label: 'Accounts Managed' },
 			{ value: '88%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — Digital Marketing',
+		servicesTitle: 'Services - Digital Marketing',
 		services: [
 			{
 				num: '01', title: 'Google Ads',
@@ -352,7 +352,7 @@ const detailPageContent = {
 					'Display and YouTube for awareness and retargeting',
 					'Conversion tracking setup: GA4, Google Tag Manager, server-side where needed',
 					'Competitor conquest campaigns and branded defence',
-					'Landing page review — we flag conversion issues that are silently killing your ad performance',
+					'Landing page review - we flag conversion issues that are silently killing your ad performance',
 				],
 			},
 		],
@@ -390,7 +390,7 @@ const detailPageContent = {
 			{ value: '200+', label: 'Creatives Tested' },
 			{ value: '90%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — Digital Marketing',
+		servicesTitle: 'Services - Digital Marketing',
 		services: [
 			{
 				num: '01', title: 'Meta Ads (Facebook & Instagram)',
@@ -400,7 +400,7 @@ const detailPageContent = {
 					'Audience architecture: interest stacking, behavioural targeting, lookalikes, custom audiences',
 					'Retargeting sequences for cart abandoners, PDP viewers, past purchasers, and video watchers',
 					'Dynamic product ads (DPA) using your live product catalog feed',
-					"Weekly creative performance analysis — killing what doesn't work, scaling what does",
+					"Weekly creative performance analysis - killing what doesn't work, scaling what does",
 				],
 			},
 		],
@@ -438,7 +438,7 @@ const detailPageContent = {
 			{ value: '8.4%', label: 'Avg Engagement Rate' },
 			{ value: '95%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — Digital Marketing',
+		servicesTitle: 'Services - Digital Marketing',
 		services: [
 			{
 				num: '01', title: 'Social Media Management',
@@ -485,7 +485,7 @@ const detailPageContent = {
 			{ value: '6', label: 'Core Flows Built' },
 			{ value: '93%', label: 'Client Retention' },
 		],
-		servicesTitle: 'Services — Digital Marketing',
+		servicesTitle: 'Services - Digital Marketing',
 		services: [
 			{
 				num: '01', title: 'Email & SMS Marketing',
@@ -533,7 +533,7 @@ const detailPageContent = {
 			{ value: '72hr', label: 'Avg Turnaround' },
 			{ value: '93%', label: 'Client Retention' },
 		],
-		servicesTitle: 'Services — Digital Marketing',
+		servicesTitle: 'Services - Digital Marketing',
 		services: [
 			{
 				num: '01', title: 'Content Creation & Copywriting',
@@ -780,14 +780,14 @@ const detailPageContent = {
 			{ value: '2wk', label: 'Avg Audit Turnaround' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'Services — UX/UI',
+		servicesTitle: 'Services - UX/UI',
 		services: [
 			{
 				num: '01', title: 'UX Research & Strategy',
 				bullets: [
-					'User journey mapping — the actual path your customers take, not the one you assume',
+					'User journey mapping - the actual path your customers take, not the one you assume',
 					'Heatmap and session recording analysis using Hotjar or Microsoft Clarity',
-					"Competitor UX audit — what's working in your market that you're not doing",
+					"Competitor UX audit - what's working in your market that you're not doing",
 					'Persona development grounded in real buyer psychology and purchase behaviour',
 					"Funnel drop-off analysis: where users leave and what's causing it",
 				],
@@ -831,7 +831,7 @@ const detailPageContent = {
 			{ value: 'Figma', label: 'Developer-Ready Handoff' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'Services — UX/UI',
+		servicesTitle: 'Services - UX/UI',
 		services: [
 			{
 				num: '01', title: 'Wireframing & Prototyping',
@@ -882,15 +882,15 @@ const detailPageContent = {
 			{ value: '70%', label: 'Of DTC Traffic Is Mobile' },
 			{ value: '96%', label: 'Client Retention' },
 		],
-		servicesTitle: 'Services — UX/UI',
+		servicesTitle: 'Services - UX/UI',
 		services: [
 			{
 				num: '01', title: 'Shopify UX Design',
 				bullets: [
 					'Homepage, collection page, and product page UX redesign',
-					'Checkout flow optimisation — every unnecessary step costs conversions',
+					'Checkout flow optimisation - every unnecessary step costs conversions',
 					'Navigation and filter/sort UX for large or complex product catalogs',
-					'Mobile UX audit and redesign — most Shopify traffic is on mobile',
+					'Mobile UX audit and redesign - most Shopify traffic is on mobile',
 					'A/B test design for structured CRO experiments',
 				],
 			},
@@ -933,13 +933,13 @@ const detailPageContent = {
 			{ value: 'Material', label: 'Material Design Compliant' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'Services — UX/UI',
+		servicesTitle: 'Services - UX/UI',
 		services: [
 			{
 				num: '01', title: 'App UI Design',
 				bullets: [
 					'iOS and Android UI following Apple HIG and Material Design principles',
-					'Onboarding flow design — first impressions that drive activation, not confusion',
+					'Onboarding flow design - first impressions that drive activation, not confusion',
 					'Dashboard and data visualisation UI for complex information',
 					'Microanimation and interaction specs for developers',
 					'Figma handoff with annotated components and spacing specs',
@@ -984,7 +984,7 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Client Satisfaction' },
 		],
-		servicesTitle: 'Services — UX/UI',
+		servicesTitle: 'Services - UX/UI',
 		services: [
 			{
 				num: '01', title: 'Website & Landing Page UI',
@@ -1083,7 +1083,7 @@ const detailPageContent = {
 			{ value: '3x', label: 'Avg GMV Growth in 90 Days' },
 			{ value: '92%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — TikTok Shop',
+		servicesTitle: 'Services - TikTok Shop',
 		services: [
 			{
 				num: '01', title: 'TikTok Shop Setup & Optimisation', iconKey: 'shopify',
@@ -1091,7 +1091,7 @@ const detailPageContent = {
 					'Account registration, business verification, and product catalog setup',
 					"Listing optimisation for TikTok's shopping and discovery algorithm",
 					'Pricing, shipping, and promotional campaign configuration',
-					"Shop health monitoring and policy compliance — TikTok moves fast on violations",
+					"Shop health monitoring and policy compliance - TikTok moves fast on violations",
 				],
 			},
 			{
@@ -1108,7 +1108,7 @@ const detailPageContent = {
 				num: '03', title: 'UGC & Content Strategy', iconKey: 'pen',
 				bullets: [
 					"Content briefs that give creators a direction without killing their authenticity",
-					'Hook strategy — the first 2-3 seconds of a TikTok video decide everything',
+					'Hook strategy - the first 2-3 seconds of a TikTok video decide everything',
 					'Formats that work: product demos, transformations, testimonials, POV unboxing',
 					'Identifying your best organic content and turning it into Spark Ads',
 				],
@@ -1126,7 +1126,7 @@ const detailPageContent = {
 				num: '05', title: 'TikTok LIVE Commerce', iconKey: 'monitor',
 				bullets: [
 					'LIVE shopping event planning, scripting, and scheduling',
-					'Host selection and briefing — brand team or external creator',
+					'Host selection and briefing - brand team or external creator',
 					'Pre-LIVE promotional strategy to build the audience before you go live',
 					'Post-LIVE analysis and optimisation for the next session',
 				],
@@ -1198,7 +1198,7 @@ const detailPageContent = {
 			{ value: '2x', label: 'Avg Conversion Lift After CRO' },
 			{ value: '96%', label: 'Client Retention' },
 		],
-		servicesTitle: 'Services — Shopify',
+		servicesTitle: 'Services - Shopify',
 		services: [
 			{
 				num: '01', title: 'Custom Shopify Store Development', iconKey: 'shopify',
@@ -1212,8 +1212,8 @@ const detailPageContent = {
 			{
 				num: '02', title: 'Shopify App Stack & Integrations', iconKey: 'code',
 				bullets: [
-					"Reviews: Judge.me, Yotpo, Okendo — we'll recommend based on your catalog and review volume",
-					'Email & SMS: Klaviyo, Postscript, Omnisend — setup, flows, and ongoing management',
+					"Reviews: Judge.me, Yotpo, Okendo - we'll recommend based on your catalog and review volume",
+					'Email & SMS: Klaviyo, Postscript, Omnisend - setup, flows, and ongoing management',
 					'Upsell & cross-sell: ReConvert, Rebuy, Frequently Bought Together',
 					'Loyalty: Smile.io, LoyaltyLion, for brands with repeat purchase potential',
 					'Subscriptions: Recharge, Skio, for consumables or subscription-model products',
@@ -1223,7 +1223,7 @@ const detailPageContent = {
 			{
 				num: '03', title: 'Conversion Rate Optimisation (CRO)', iconKey: 'target',
 				bullets: [
-					'Heatmap and session recording analysis — we watch where users get confused or leave',
+					'Heatmap and session recording analysis - we watch where users get confused or leave',
 					'Funnel audit: homepage to PDP to cart to checkout, finding the drop-off points',
 					'Product page improvements: imagery order, copy gaps, trust signals, social proof placement',
 					'Checkout simplification: every extra field costs conversions',
@@ -1236,13 +1236,13 @@ const detailPageContent = {
 					'Full migrations from WooCommerce, BigCommerce, Magento, Wix, and custom-built stores',
 					'Product data, customer records, and order history all transferred cleanly',
 					'301 redirect strategy built before launch day to protect SEO rankings',
-					'Pre-launch QA checklist — nothing goes live until every link, form, and payment works',
+					'Pre-launch QA checklist - nothing goes live until every link, form, and payment works',
 				],
 			},
 			{
 				num: '05', title: 'Ongoing Shopify Management', iconKey: 'support',
 				bullets: [
-					'Monthly performance reviews and CRO iteration — one launch is never the end',
+					'Monthly performance reviews and CRO iteration - one launch is never the end',
 					'Theme updates, app management, and bug fixes',
 					'Shopify Plus advisory: when it makes financial sense to upgrade',
 					'New collection launches, seasonal campaign builds, and sale event setups',
@@ -1323,12 +1323,12 @@ const detailPageContent = {
 			{ value: '2 Day', label: 'Delivery Badge Strategy' },
 			{ value: '90%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — Walmart',
+		servicesTitle: 'Services - Walmart',
 		services: [
 			{
 				num: '01', title: 'Walmart Seller Center Setup & Management', iconKey: 'badge',
 				bullets: [
-					"Seller application support — getting approved is step one, and it's not always straightforward",
+					"Seller application support - getting approved is step one, and it's not always straightforward",
 					'Full account configuration: payments, tax setup, shipping settings, return policies',
 					'Account health and performance scorecard monitoring',
 					'Policy compliance, case filing, and seller support management',
@@ -1339,7 +1339,7 @@ const detailPageContent = {
 				bullets: [
 					'Keyword research using Walmart-specific tooling alongside Helium 10 data',
 					"Title, description, and product attribute optimisation for Walmart's search algorithm",
-					'Category mapping and taxonomy setup done correctly — miscategorisation kills visibility',
+					'Category mapping and taxonomy setup done correctly - miscategorisation kills visibility',
 					"Rich media content where eligible: Walmart's equivalent of Amazon's A+ Content",
 				],
 			},
@@ -1357,7 +1357,7 @@ const detailPageContent = {
 				bullets: [
 					'WFS onboarding, eligibility assessment, and first inbound shipment planning',
 					'Inventory management and reorder planning to avoid stockouts',
-					'2-day delivery badge strategy — it meaningfully improves conversion rates',
+					'2-day delivery badge strategy - it meaningfully improves conversion rates',
 				],
 			},
 			{
@@ -1413,12 +1413,12 @@ const detailPageContent = {
 			{ value: 'Top Rated', label: 'Seller Status Strategy' },
 			{ value: '88%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — eBay',
+		servicesTitle: 'Services - eBay',
 		services: [
 			{
 				num: '01', title: 'eBay Store Setup & Branding', iconKey: 'badge',
 				bullets: [
-					'Store subscription setup — Basic, Premium, or Anchor based on your catalog size',
+					'Store subscription setup - Basic, Premium, or Anchor based on your catalog size',
 					'Store design: banners, logo placement, category structure, and store branding',
 					'Shipping policies, return policies, and payment options configured for buyer trust',
 					'Top Rated Seller status strategy from day one',
@@ -1436,7 +1436,7 @@ const detailPageContent = {
 			{
 				num: '03', title: 'eBay Promoted Listings', iconKey: 'dollar',
 				bullets: [
-					'Promoted Listings Standard and Advanced — understanding which to use and when',
+					'Promoted Listings Standard and Advanced - understanding which to use and when',
 					'Ad rate strategy that improves visibility without shredding your margin',
 					'Campaign tracking and regular optimisation',
 					'Promoted Listings Express for time-sensitive or clearance inventory',
@@ -1445,7 +1445,7 @@ const detailPageContent = {
 			{
 				num: '04', title: 'Repricing & Inventory Management', iconKey: 'shuffle',
 				bullets: [
-					'Competitive repricing strategy — winning the sale without racing to the bottom',
+					'Competitive repricing strategy - winning the sale without racing to the bottom',
 					'Repricing tool setup and management (ChannelAdvisor, Sellbrite, or others)',
 					'Inventory sync across eBay, Amazon, and Shopify to prevent oversells',
 					'Multi-location inventory management for high-volume sellers',
@@ -1456,7 +1456,7 @@ const detailPageContent = {
 				bullets: [
 					'Defect rate, late shipment, and buyer feedback monitoring',
 					'Case management and dispute resolution',
-					'Selling limits increase strategy — getting your limits raised faster',
+					'Selling limits increase strategy - getting your limits raised faster',
 					"Regular growth reviews: what's selling, what's not, what to list next",
 				],
 			},
@@ -1504,12 +1504,12 @@ const detailPageContent = {
 			{ value: 'Star Seller', label: 'Status Strategy' },
 			{ value: '93%', label: 'Retention Rate' },
 		],
-		servicesTitle: 'Services — Etsy',
+		servicesTitle: 'Services - Etsy',
 		services: [
 			{
 				num: '01', title: 'Etsy Shop Setup & Optimisation', iconKey: 'badge',
 				bullets: [
-					'Shop name, banner, logo, bio, and about page — everything buyers see before they click a listing',
+					'Shop name, banner, logo, bio, and about page - everything buyers see before they click a listing',
 					'Announcement and policy setup: shipping timelines, returns, FAQs, written to convert, not just to comply',
 					'Star Seller criteria management: response rate, dispatch time, 5-star reviews',
 					'Shop section structure for discoverability and cross-selling',
@@ -1528,7 +1528,7 @@ const detailPageContent = {
 			{
 				num: '03', title: 'Etsy Ads Management', iconKey: 'dollar',
 				bullets: [
-					'Daily budget management and listing selection — not everything should be advertised',
+					'Daily budget management and listing selection - not everything should be advertised',
 					'ROAS tracking and optimisation to ensure ads are paying for themselves',
 					'Offsite Ads decision: opt-in or out based on your margins and category',
 					'Regular campaign reviews and spend reallocation',
@@ -1538,10 +1538,10 @@ const detailPageContent = {
 				num: '04', title: 'Growth & Review Strategy', iconKey: 'target',
 				bullets: [
 					"Seasonal planning: holiday peaks, Valentine's, Mother's Day, where Etsy earns big",
-					'New listing cadence — fresh listings get an algorithmic boost, and we use it',
+					'New listing cadence - fresh listings get an algorithmic boost, and we use it',
 					"Review acquisition using Etsy's built-in tools (ToS-compliant)",
 					'Repeat customer strategy: message follow-ups, coupon codes, loyalty offers',
-					'Full SEO audit for existing shops — ranking gap identification and fix plan',
+					'Full SEO audit for existing shops - ranking gap identification and fix plan',
 				],
 			},
 		],
@@ -1635,7 +1635,7 @@ const detailPageContent = {
 			{ value: '100%', label: 'Ecommerce-Trained Team' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'Services — Graphic Design',
+		servicesTitle: 'Services - Graphic Design',
 		services: [
 			{
 				num: '01', title: 'Brand Identity & Logo Design',
@@ -1686,7 +1686,7 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'Services — Graphic Design',
+		servicesTitle: 'Services - Graphic Design',
 		services: [
 			{
 				num: '01', title: 'Amazon Creative Design',
@@ -1737,7 +1737,7 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'Services — Graphic Design',
+		servicesTitle: 'Services - Graphic Design',
 		services: [
 			{
 				num: '01', title: 'Social Media Graphics',
@@ -1788,7 +1788,7 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Drafts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'Services — Graphic Design',
+		servicesTitle: 'Services - Graphic Design',
 		services: [
 			{
 				num: '01', title: 'Ad Creative Design',
@@ -1839,7 +1839,7 @@ const detailPageContent = {
 			{ value: '72hr', label: 'First Concepts Turnaround' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'Services — Graphic Design',
+		servicesTitle: 'Services - Graphic Design',
 		services: [
 			{
 				num: '01', title: 'Product & Packaging Design',
@@ -1889,7 +1889,7 @@ const detailPageContent = {
 			{ value: '100%', label: 'Ecommerce-Trained Team' },
 			{ value: '94%', label: 'Satisfaction Rate' },
 		],
-		servicesTitle: 'Services — Graphic Design',
+		servicesTitle: 'Services - Graphic Design',
 		services: [
 			{
 				num: '01', title: 'Pitch Decks & Presentations',
@@ -1940,7 +1940,7 @@ detailPageContent.development = {
 			{ text: 'les Every Single Day' },
 		],
 		subtitle:
-			"You can have great products, a healthy ad budget, and a strong brand and still have a website that loses buyers before they buy. Load time, navigation, product page layout, checkout friction — any one of these can be the reason your conversion rate is lower than it should be. TechTicks builds websites that are fast, clear, and commercially effective. And for existing sites, we find the exact problems before recommending anything.",
+			"You can have great products, a healthy ad budget, and a strong brand and still have a website that loses buyers before they buy. Load time, navigation, product page layout, checkout friction - any one of these can be the reason your conversion rate is lower than it should be. TechTicks builds websites that are fast, clear, and commercially effective. And for existing sites, we find the exact problems before recommending anything.",
 		ctaText: 'Book a Free Website Audit',
 	},
 	platformLogosLabel: 'Platforms & technologies we build on',
@@ -1951,7 +1951,7 @@ detailPageContent.development = {
 		{ image: techLogo5, alt: 'Oaks Craft' },
 		{ image: techLogo6, alt: 'Crazy Cups' },
 	],
-	servicesTitle: 'Services — Web Dev',
+	servicesTitle: 'Services - Web Dev',
 	servicesSubtitle: "From first commit to post-launch support - we handle the full development lifecycle so your team doesn't have to.",
 	services: [
 		{ num: '01', title: 'Shopify Development', desc: 'Custom Shopify store builds on Shopify 2.0, theme development, and custom app development.', ctaText: 'Learn more', ctaLink: '/services/web-development/shopify-store-development', iconKey: 'shopify' },
@@ -1959,7 +1959,7 @@ detailPageContent.development = {
 		{ num: '03', title: 'Landing Pages & Sales Funnels', desc: 'High-converting standalone pages and multi-step funnels for paid traffic campaigns.', ctaText: 'Learn more', ctaLink: '/services/web-development/landing-pages', iconKey: 'layout' },
 		{ num: '04', title: 'Website Speed & Performance', desc: 'Core Web Vitals audits, image optimisation, and CDN/caching configuration.', ctaText: 'Learn more', ctaLink: '/services/web-development/speed-performance-optimization', iconKey: 'speed' },
 		{ num: '05', title: 'Maintenance & Support', desc: 'Monthly technical maintenance, uptime monitoring, and content updates on request.', ctaText: 'Learn more', ctaLink: '/services/web-development/maintenance-support', iconKey: 'support' },
-		{ num: '06', title: 'Custom Web Application Development', desc: 'Full-stack web app builds — React, Next.js, Node.js — plus API and internal tooling.', ctaText: 'Learn more', ctaLink: '/services/web-development/custom-web-application-development', iconKey: 'refresh' },
+		{ num: '06', title: 'Custom Web Application Development', desc: 'Full-stack web app builds - React, Next.js, Node.js - plus API and internal tooling.', ctaText: 'Learn more', ctaLink: '/services/web-development/custom-web-application-development', iconKey: 'refresh' },
 	],
 	process: {
 		title: 'The unfair advantage.',
@@ -2033,7 +2033,7 @@ detailPageContent['web-development/shopify-store-development'] = {
 		{ value: '2x', label: 'Avg Conversion Lift' },
 		{ value: '96%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'Services — Web Dev',
+	servicesTitle: 'Services - Web Dev',
 	services: [
 		{
 			num: '01', title: 'Shopify Development',
@@ -2076,7 +2076,7 @@ detailPageContent['web-development/wordpress-woocommerce'] = {
 		title: 'Real WordPress Builds,',
 		titleHighlight: 'Not Page-Builder Templates.',
 		subtitle:
-			"WordPress and WooCommerce done properly — custom-coded, fast, secure, and built to actually be maintained, not a stack of page-builder plugins fighting each other.",
+			"WordPress and WooCommerce done properly - custom-coded, fast, secure, and built to actually be maintained, not a stack of page-builder plugins fighting each other.",
 	},
 	stats: [
 		{ value: '60+', label: 'WordPress Sites Built' },
@@ -2084,7 +2084,7 @@ detailPageContent['web-development/wordpress-woocommerce'] = {
 		{ value: 'WooCommerce', label: 'Full Store Setups' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'Services — Web Dev',
+	servicesTitle: 'Services - Web Dev',
 	services: [
 		{
 			num: '01', title: 'WordPress & WooCommerce',
@@ -2127,7 +2127,7 @@ detailPageContent['web-development/custom-web-application-development'] = {
 		title: 'When a Website',
 		titleHighlight: "Isn't Enough.",
 		subtitle:
-			'Full-stack web applications for products that need real logic, not just pages — dashboards, internal tools, and platforms built on React, Next.js, and Node.js.',
+			'Full-stack web applications for products that need real logic, not just pages - dashboards, internal tools, and platforms built on React, Next.js, and Node.js.',
 	},
 	stats: [
 		{ value: '15+', label: 'Web Apps Delivered' },
@@ -2135,7 +2135,7 @@ detailPageContent['web-development/custom-web-application-development'] = {
 		{ value: 'API', label: 'First Integration Approach' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'Services — Web Dev',
+	servicesTitle: 'Services - Web Dev',
 	services: [
 		{
 			num: '01', title: 'Custom Web Application Development',
@@ -2185,7 +2185,7 @@ detailPageContent['web-development/landing-pages'] = {
 		{ value: 'Days', label: 'Not Weeks to Launch' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'Services — Web Dev',
+	servicesTitle: 'Services - Web Dev',
 	services: [
 		{
 			num: '01', title: 'Landing Pages & Sales Funnels',
@@ -2236,7 +2236,7 @@ detailPageContent['web-development/speed-performance-optimization'] = {
 		{ value: '2x', label: 'Avg Conversion Lift' },
 		{ value: '97%', label: 'On-Time Delivery' },
 	],
-	servicesTitle: 'Services — Web Dev',
+	servicesTitle: 'Services - Web Dev',
 	services: [
 		{
 			num: '01', title: 'Website Speed & Performance',
@@ -2245,7 +2245,7 @@ detailPageContent['web-development/speed-performance-optimization'] = {
 				'Image optimisation and next-gen format (WebP/AVIF) implementation',
 				'Code minification, lazy loading, and render-blocking resource resolution',
 				'CDN setup and server-side caching configuration',
-				'Mobile performance audit — often a separate problem from desktop',
+				'Mobile performance audit - often a separate problem from desktop',
 			],
 		},
 	],
@@ -2287,7 +2287,7 @@ detailPageContent['web-development/maintenance-support'] = {
 		{ value: '<24h', label: 'Avg Response Time' },
 		{ value: '96%', label: 'Retainer Renewal Rate' },
 	],
-	servicesTitle: 'Services — Web Dev',
+	servicesTitle: 'Services - Web Dev',
 	services: [
 		{
 			num: '01', title: 'Maintenance & Support',

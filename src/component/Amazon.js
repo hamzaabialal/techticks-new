@@ -89,7 +89,7 @@ const HowItworks = () => {
 
 			<section className='ssp-services'>
 				<div className='ssp-section-header'>
-					<h2>Services — Amazon</h2>
+					<h2>Services - Amazon</h2>
 				</div>
 				<div className='ssp-services-grid ssp-services-grid--bullets'>
 					<div className='ssp-service-card'>
@@ -111,7 +111,7 @@ const HowItworks = () => {
 							<li>Titles, bullets, and descriptions that rank in search and convert on the page</li>
 							<li>Backend search term optimisation and subject matter field strategy</li>
 							<li>Main image split-test planning (your main image is your single biggest conversion lever)</li>
-							<li>Mobile-first review — over 60% of Amazon traffic comes from a phone</li>
+							<li>Mobile-first review - over 60% of Amazon traffic comes from a phone</li>
 						</ul>
 					</div>
 					<div className='ssp-service-card'>
@@ -129,7 +129,7 @@ const HowItworks = () => {
 						<h3>Full Seller Central Account Management</h3>
 						<ul className='ssp-card-bullets'>
 							<li>Account health monitoring, case management, and Amazon seller support escalation</li>
-							<li>ASIN suppression recovery — we've brought back a lot of dead listings</li>
+							<li>ASIN suppression recovery - we've brought back a lot of dead listings</li>
 							<li>FBA shipment planning and IPI score management</li>
 							<li>Review strategy that actually works within Amazon's Terms of Service</li>
 							<li>Variation restructuring, parent-child setup, and catalog organisation</li>
@@ -143,7 +143,7 @@ const HowItworks = () => {
 							<li>Brand Registry application support and troubleshooting</li>
 							<li>IP Accelerator guidance for faster trademark registration</li>
 							<li>Counterfeit seller and listing hijacker monitoring and reporting</li>
-							<li>Amazon Brand Analytics — turning data into decisions</li>
+							<li>Amazon Brand Analytics - turning data into decisions</li>
 						</ul>
 					</div>
 					<div className='ssp-service-card'>
