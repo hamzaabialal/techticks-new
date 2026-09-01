@@ -1,7 +1,7 @@
 // TEMPORARY — delete this file after use
 import { createClient } from '@libsql/client'
-import { ensureAuthSchema } from './_lib/users-repo.js'
-import { hashPassword } from './_lib/auth.js'
+import { ensureAuthSchema } from '../_lib/users-repo.js'
+import { hashPassword } from '../_lib/auth.js'
 
 const ONE_TIME_TOKEN = process.env.RESET_TOKEN
 
