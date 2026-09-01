@@ -3,7 +3,7 @@ import { createClient } from '@libsql/client'
 import { ensureAuthSchema } from './_lib/users-repo.js'
 import { hashPassword } from './_lib/auth.js'
 
-const ONE_TIME_TOKEN = 'tt-reset-2026'
+const ONE_TIME_TOKEN = process.env.RESET_TOKEN
 
 export default async function handler(req, res) {
 	if (req.method !== 'POST') return res.status(405).end()
